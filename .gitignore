@@ -17,3 +17,6 @@ error_log
 /protected
 /templates
 /tutorials
+
+.DS_Store
+Thumbs.db
