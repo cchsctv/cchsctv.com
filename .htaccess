@@ -1,0 +1,30 @@
+
+RewriteOptions inherit
+RewriteEngine on
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+ErrorDocument 404 /404.html
+RewriteCond %{HTTP_HOST} ^cchsctv\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cchsctv\.com$
+RewriteRule ^live$ "http\:\/\/www\.useducationtv\.com\/default\.aspx\?sid\=35967" [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^western$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=38024" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^everglades$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=38692" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^flanagan$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=36199" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^piper$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=66869" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^nova$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=66171" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^miramar$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=37391" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^stoneman$ "http\:\/\/www\.useducationtv\.com\/main\.aspx\?sid\=35967\&pid\=36201" [R=301,L]
+

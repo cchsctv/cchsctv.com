@@ -1,0 +1,15 @@
+*.mov
+*.mp4
+*.psd
+hi_res
+
+/video.html
+
+/booked
+/cgi-bin
+/cguide
+/episodes
+/pdf
+/protected
+/templates
+/tutorials

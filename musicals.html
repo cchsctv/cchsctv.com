@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width = 740">
+    <title>CTV - Video</title>
+
+    <link type="text/css" href="http://cchsctv.com/jplay/dist/skin/pink.flag/css/jplayer.pink.flag.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://cchsctv.com/jplay/dist/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="http://cchsctv.com/jplay/dist/add-on/jplayer.playlist.min.js"></script>
+
+
+
+
+ <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N"
+	}, [
+
+    				{
+			title:"CTV #114 - CTV: The Musical",
+			artist:"Aired: March 11, 2007<br>Featuring: Let's Get Down to Business, Seasons of School, A Whole New Building, Question of the Week",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/musical.mov",
+			poster:"ctv_images/ctvmstill3.jpg"
+		},
+				{
+			title:"CTV #147 - CTV: The Musical 2",
+			artist:"Aired: May 16, 2008<br>Featuring: Good Morning, Cell Phone, Ms. Doll Walks, Walk It Out",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv147.mov",
+			poster:""
+		},
+				{
+			title:"CTV #178 - CTV: The Musical 3",
+			artist:"Aired: May 15, 2009<br>Featuring: No Scrubs, Don't Sleep, My Name Is, Hit Me Baby",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv178.mov",
+			poster:""
+		},
+				{
+			title:"CTV #210 - CTV: The Musical 4",
+			artist:"Aired: May 14, 2010<br>Featuring: Good Morning Cooper, I Think I'm Gonna Like It Here, El Tango de Exams, Everyone Has A's",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv210.mov",
+			poster:""
+		},
+				{
+			title:"CTV #242 - CTV: The Musical 5",
+			artist:"Aired: May 6, 2011<br>Featuring: I.S. Rock, Skippin' a Test, Prom Date, Hall Pass, Cooper State",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv242.mp4",
+			poster:""
+		},
+				{
+			title:"CTV #275 - CTV: The Musical 6",
+			artist:"Aired: May 4, 2012<br>Featuring: Wake Me Up, Hurry Up Gurrrl, Wendy",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv275.mp4",
+			poster:""
+		},
+				{
+			title:"CTV #307 - CTV: The Musical 7",
+			artist:"Aired: May 3, 2013<br>Featuring: 7:45, Randi Glance, Burrito Ave., I live Cooper",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv307.mp4",
+			poster:""
+		},
+				{
+			title:"CTV #340 - CTV: The Musical 8",
+			artist:"Aired: May 2, 2014<br>Featuring: Happy, Partition, New Building",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv340.mp4",
+			poster:""
+		},
+				{
+			title:"CTV #372 - CTV: The Musical 9",
+			artist:"Aired: May 1, 2015<br>Featuring: Hote in Herre, Someone Stop The Freshmen, Cooper State of Mind, It's Going Down",
+			free:false,
+			m4v: "http://www.cchsctv.com/episodes/ctv372_comp.mp4",
+			poster:""
+		},
+    {
+        title:"CTV #403 - CTV: The Musical 10",
+        artist:"Aired: May 6,2016<br>Featuring: High School Musical",
+        free:false,
+        m4v: "http://www.cchsctv.com/episodes/ctv403.mp4",
+        poster:"ctv_images/videoblankl.jpg"
+    },
+    {
+        title:"CTV #434 - CTV: The Musical 11",
+        artist:"Aired: May 12,2017<br>Featuring: Chardo's Ipod",
+        free:false,
+        m4v: "http://www.cchsctv.com/episodes/ctv434.mp4",
+        poster:"ctv_images/videoblankl.jpg"
+    },
+			], {
+		playlistOptions: {
+			enableRemoveControls: false
+		},
+		swfPath: "http://www.cchsctv.com/jplay/dist/jplayer/",
+		solution: 'html, flash',
+		supplied: "m4v",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		audioFullScreen: true,
+	});
+
+
+
+
+
+
+
+
+
+	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_N")});
+});
+//]]>
+</script>
+
+
+<style>
+body
+{
+background-image:url("ctv_images/background_slim.jpg");
+background-repeat:no-repeat;
+background-position:center top;
+background-color:#c30e0e;
+
+}
+</style>
+
+<style type="text/css">
+
+p.style{
+	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color:white;
+	margin:0px;
+	letter-spacing:1px;
+}
+p.head{
+	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	font-size: 26px;
+	color:white;
+	margin:8px;
+	font-weight: bold;
+}
+p.name{
+	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	color:white;
+	margin:5px;
+	font-weight: bold;
+	text-shadow: -2px 2px #000000;
+}
+p.sub{
+	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color:white;
+	margin:5px;
+	text-shadow: -2px 2px #000000;
+}
+</style>
+
+  </head>
+
+  <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
+<a name="top"></a>
+
+<div style="position:absolute; width:720px; top:0px; left:50%; margin-left:-360px;">
+
+<div style="width:720px; height:137px;"><a href="index.html"><img src="ctv_images/ctvhead.png" border="0"></a></div>
+
+<div style="width:720px; height:57px;">
+<img src="ctv_images/buttons.jpg" alt="" usemap="#map1429419286195" border="0"><map id="map1429419286195" name="map1429419286195"><area shape="rect" coords="39,15,107,40" title="Video" alt="Video" href="video.html" target="_self"><area shape="rect" coords="146,16,297,40" title="Cast & Crew" alt="Cast & Crew" href="cast.html" target="_self"><area shape="rect" coords="330,16,418,39" title="Alumni" alt="Alumni" href="alumni.html" target="_self"><area shape="rect" coords="455,15,544,38" title="Awards" alt="Awards" href="awards.html" target="_self"><area shape="rect" coords="584,14,682,39" title="Contact" alt="Contact" href="contact.html" target="_self"></map>
+</div>
+
+<!-- PAGE BEGIN--><div style="width:700px; background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
+
+
+
+
+
+<div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player">
+	<div class="jp-type-playlist">
+		<div id="jquery_jplayer_N" class="jp-jplayer"></div>
+		<div class="jp-gui">
+			<div class="jp-video-play">
+				<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+			</div>
+			<div class="jp-interface">
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+				<div class="jp-details">
+					<div class="jp-title" aria-label="title">&nbsp;</div>
+				</div>
+				<div class="jp-controls-holder">
+					<div class="jp-volume-controls">
+						<button class="jp-mute" role="button" tabindex="0">mute</button>
+						<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+						</div>
+					</div>
+					<div class="jp-controls">
+						<button class="jp-previous" role="button" tabindex="0">previous</button>
+						<button class="jp-play" role="button" tabindex="0">play</button>
+						<button class="jp-stop" role="button" tabindex="0">stop</button>
+						<button class="jp-next" role="button" tabindex="0">next</button>
+					</div>
+					<div class="jp-toggles">
+						<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+						<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+						<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul>
+				<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+				<li></li>
+			</ul>
+		</div>
+		<div class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		</div>
+	</div>
+</div>
+
+
+
+
+<div style="clear: both;"></div>
+
+<div style="background-color:black; width:700px;">
+<!--<a href="javascript:;" id="playlist-setPlaylist-ctv14">[CTV 2014]</a> | <a href="javascript:;" id="playlist-setPlaylist-ctv13">[CTV 2013]</a> | <a href="javascript:;" id="playlist-setPlaylist-ctv12">[CTV 2012]</a> | <a href="javascript:;" id="playlist-setPlaylist-ctv11">[CTV 2011]</a>  | <a href="javascript:;" id="playlist-setPlaylist-ctv10">[CTV 2010]</a>   | <a href="javascript:;" id="playlist-setPlaylist-ctv09">[CTV 2009]</a>   | <a href="javascript:;" id="playlist-setPlaylist-ctv08">[CTV 2008]</a> )
+-->
+</div>
+
+
+
+
+</div> <!-- white box -->
+
+<div style="width:720px; margin-top:5px; margin-bottom:75px;">
+<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
+</div>
+
+</div> <!-- overall -->
+
+
+
+<script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.js"></script>
+  </body>
+
+</html>
