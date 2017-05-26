@@ -5,7 +5,7 @@
 .ftpquota
 hi_res
 .htaccess
-
+error_log
 
 /video.html
 
