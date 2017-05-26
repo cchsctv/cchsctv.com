@@ -2,6 +2,8 @@
 *.mp4
 *.psd
 hi_res
+.htaccess
+
 
 /video.html
 
