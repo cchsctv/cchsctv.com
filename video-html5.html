@@ -239,21 +239,10 @@
 
         <table id=playlist>
           <tr>
-            <td href="#" onclick=set_video("ctv436.mp4");>CTV #436 - Underclassmen Show<span>
-    Aired: May 26th, 2017<br>
-    Featuring: Water Safety, Boys Football, Stange Addictions</span>
+            <td href="#" onclick=set_video("ctv400.mp4");>CTV #888 - Example Show<span>
+    Aired: October 7th, 1998<br>
+    Featuring: Chua's Birthday, HTML5, and XML!</span>
             </td>
-          </tr>
-          <tr>
-            <td href="#" onclick=set_video("ctv435.mp4");>CTV #435 - Senior Finale<span>
-    Aired: May 19th, 2017<br>
-    Featuring: C/O 2017</span>
-            </td>
-          </tr>
-          <tr>
-            <td href="#" onclick=set_video("ctv434.mp4");>CTV THE MUSICAL<span>
-              Aired: May 12th, 2017<br>
-              Special Event #434</td>
           </tr>
           </table>
 
@@ -263,7 +252,13 @@ var table = document.getElementById('playlist');
 var source = document.createElement('source');
 var srcvideo = document.getElementById('srcvideo');
 var videoload = false;
-table.rows[0].cells[0].onclick();
+
+
+loadXMLDoc(2017).then(function(year) {
+  table.rows[0].cells[0].onclick();
+  autoplay();
+})
+
 
 
 function playpause() {
@@ -282,7 +277,7 @@ function autoplay() {
     }, 1000);
   }
 }
-autoplay()
+
 
 function set_video(epnum){
   epnum = "episodes/"+epnum
@@ -307,23 +302,28 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function loadXMLDoc() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    //if (this.readyState == 4 && this.status == 200) {
-    if (this.readyState == 4) {
-      xml2table(this);
-    }
-  };
-  xmlhttp.open("GET", "video.xml", true);
-  xmlhttp.send();
+function loadXMLDoc(year) {
+  return new Promise(function(resolve){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4) {
+        xml2table(this, year);
+        resolve(year);
+      }
+    };
+    xmlhttp.open("GET", "video.xml", true);
+    xmlhttp.send();
+
+  });
 }
-function xml2table(xml) {
+
+function xml2table(xml,year) {
   var i;
   var xmlDoc = xml.responseXML;
   var table="";
   //var x = xmlDoc.getElementsByTagName("episode");
-  var x =xmlDoc.querySelectorAll('[year="2017"]');
+  var x =xmlDoc.querySelectorAll('[year="'+year+'"]');
   for (i = 0; i <x.length; i++) {
     table += "<tr><td href=\"#\" onclick=set_video(\"" +
     x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
@@ -337,7 +337,7 @@ function xml2table(xml) {
   }
   document.getElementById("playlist").innerHTML = table;
 }
-loadXMLDoc();
+
 </script>
 <div style="margin-top:20px">
 <div class="yearbox">
