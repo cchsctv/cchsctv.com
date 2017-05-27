@@ -140,6 +140,8 @@ table span a {
 }
 tr:hover{
  background:#AA0000;
+ -webkit-transition: background .4s; /* Safari */
+ transition: background .4s;
 }
 td, th {
     border-bottom: 1px solid #dddddd;
@@ -206,12 +208,18 @@ function myFunction() {
 <!--
 <div style="width:690px; height:325px; background-image:url(ctv_images/homeimg16-8.jpg); background-color:#000000; background-size: 690px 325px; float:left; border:5px solid white; border-right:0px;">
 -->
-<video controls id="video" poster="ctv_images/videoblankl.jpg">
-  <source id="srcvideo" src="episodes/ctv433.mp4">
+<video controls id="video" poster="ctv_images/videoblankl.jpg" onClick="playpause()">
+  <source id="srcvideo" src="">
 </video>
 
 
 <table id=playlist>
+  <tr>
+    <td href="#" onclick=set_video("ctv436.mp4");>CTV #436 - Underclassmen Show<span>
+    Aired: May 26th, 2017<br>
+    Featuring: Water Safety, Boys Football, Stange Addictions</span>
+    </td>
+  </tr>
   <tr>
     <td href="#" onclick=set_video("ctv435.mp4");>CTV #435 - Senior Finale<span>
     Aired: May 19th, 2017
@@ -220,46 +228,58 @@ function myFunction() {
   </tr>
   <tr>
     <td href="#" onclick=set_video("ctv434.mp4");>CTV THE MUSICAL<span>
-    Aired: May 12th, 2017<br> Special Event #434</td>
+    Aired: May 12th, 2017<br>
+    Special Event #434</td>
   </tr>
 </table>
 
 <script type="text/javascript">
 var video = document.getElementById('video');
+var table = document.getElementById('playlist');
+var source = document.createElement('source');
+var srcvideo = document.getElementById('srcvideo');
+var videoload = false;
+table.rows[0].cells[0].onclick();
 
+
+function playpause() {
+  if (video.paused){
+    video.play();
+  } else {
+    video.pause();
+  }
+}
 
 function autoplay() {
   if (getParameterByName('autoplay')){
-    var table = document.getElementById('playlist');
-    table.rows[0].cells[0].onclick;
-    video.play();
+    setTimeout(function() {
+      video.play();
+      videoload = "true";
+    }, 1000);
   }
 }
 autoplay()
 
 function set_video(epnum){
 epnum = "episodes/"+epnum
-var source = document.createElement('source');
-var srcvideo = document.getElementById('srcvideo');
 //video.pause();
 srcvideo.setAttribute('src', epnum);
-video.load();
-video.play();
+if (videoload === false){
+  videoload = true;
+  video.load();
+} else {
+  video.load();
+  video.play();
+}
 //video.replaceChild(source, source);
 //video.appendChild(source);
-
 /*
 if (false) {
-
   console.log("has children");
 } else {
-
   console.log("doesn not hhave children");
 }
 */
-
-
-
 //video.setAttribute('poster', 'ctv_images/16arch.jpg');
 
 }
