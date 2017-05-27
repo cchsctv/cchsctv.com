@@ -135,6 +135,12 @@ table span {
   font-size: .8em;
   color:#888888;
 }
+table span a {
+  float:right
+}
+tr:hover{
+ background:#AA0000;
+}
 td, th {
     border-bottom: 1px solid #dddddd;
     text-align: left;
@@ -186,12 +192,12 @@ function myFunction() {
 </script>
 
 <div class="topnav" id="myTopnav">
-  <a href="http://www.cchsctv.com/index-new.html">Home</a>
-  <a href="http://www.cchsctv.com/video.html">Video</a>
-  <a href="http://www.cchsctv.com/cast.html">Cast & Crew</a>
-  <a href="http://www.cchsctv.com/awards.html">Awards</a>
-  <a href="http://www.cchsctv.com/alumni.html">Alumni</a>
-  <a href="http://www.cchsctv.com/contact.html">Contact</a>
+  <a href="index-new.html">Home</a>
+  <a href="video.html">Video</a>
+  <a href="cast.html">Cast & Crew</a>
+  <a href="awards.html">Awards</a>
+  <a href="alumni.html">Alumni</a>
+  <a href="contact.html">Contact</a>
   <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -201,38 +207,72 @@ function myFunction() {
 <div style="width:690px; height:325px; background-image:url(ctv_images/homeimg16-8.jpg); background-color:#000000; background-size: 690px 325px; float:left; border:5px solid white; border-right:0px;">
 -->
 <video controls id="video" poster="ctv_images/videoblankl.jpg">
+  <source id="srcvideo" src="episodes/ctv433.mp4">
 </video>
 
 
-<table>
+<table id=playlist>
   <tr>
-    <td>CTV #435 - Senior Finale<span>
-    Aired: May 19th, 2017<br>Featuring: C/O 2017</span></td>
+    <td href="#" onclick=set_video("ctv435.mp4");>CTV #435 - Senior Finale<span>
+    Aired: May 19th, 2017
+    <br>Featuring: C/O 2017</span>
+    </td>
   </tr>
   <tr>
-    <td>CTV THE MUSICAL<span>
+    <td href="#" onclick=set_video("ctv434.mp4");>CTV THE MUSICAL<span>
     Aired: May 12th, 2017<br> Special Event #434</td>
   </tr>
 </table>
 
 <script type="text/javascript">
 var video = document.getElementById('video');
+
+
+function autoplay() {
+  if (getParameterByName('autoplay')){
+    var table = document.getElementById('playlist');
+    table.rows[0].cells[0].onclick;
+    video.play();
+  }
+}
+autoplay()
+
+function set_video(epnum){
+epnum = "episodes/"+epnum
 var source = document.createElement('source');
-
-source.setAttribute('src', 'episodes/ctv433.mp4');
-
-video.appendChild(source);
+var srcvideo = document.getElementById('srcvideo');
+//video.pause();
+srcvideo.setAttribute('src', epnum);
 video.load();
 video.play();
-//video.setAttribute('poster', 'ctv_images/16arch.jpg');
+//video.replaceChild(source, source);
+//video.appendChild(source);
+
 /*
-setTimeout(function() {
-    video.pause();
-    source.setAttribute('src', 'episodes/ctv434.mp4');
-    video.load();
-    video.play();
-}, 3000);
+if (false) {
+
+  console.log("has children");
+} else {
+
+  console.log("doesn not hhave children");
+}
 */
+
+
+
+//video.setAttribute('poster', 'ctv_images/16arch.jpg');
+
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 </script>
 
 <div class="yearbox">
@@ -286,7 +326,7 @@ setTimeout(function() {
     vertical-align: bottom;
     ">
 <p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
-<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
+<p class="style" style="float:right">Website by: <a href="alumni.html#08">Dean D'Agati</a></p>
 </div>
 
 <div style=""><center><!-- Start of StatCounter Code -->
@@ -300,7 +340,7 @@ setTimeout(function() {
 
 
 
-<script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
+<script type="text/javascript" src="scripts/retina.min.js"></script>
   </body>
 
 </html>
