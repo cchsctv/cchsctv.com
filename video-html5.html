@@ -2,161 +2,190 @@
 <html lang="en">
 
 <head>
-  <link rel="shortcut icon" href="ctv_images/favicon.png" >
+  <link rel="shortcut icon" href="ctv_images/favicon.png">
   <meta charset="utf-8">
   <!--<meta name = "viewport" content = "width = 740">-->
-  <meta name = "viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width">
   <title>CTV - Cooper City High School</title>
 
-<style>
-body
-{
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
-}
-</style>
-<!-- REVERT COLOR #c30e0e EA80B0-->
-<style type="text/css">
-p.style{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color:white;
-	margin:0px;
-	letter-spacing:1px;
-}
-.topnav {
-  text-align: center;
-  overflow: hidden;
-  background-color: #000000; /* Black */
-  width:100%;
-}
-.topnav a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  margin-left: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 15px;
-  padding: 3px 3px; /*15 , 17.9*/
-  text-decoration: none;
-  font-size: 28px;
-	font-family: Helvetica, Arial, sans-serif;
-}
-.topnav a:hover {
-  cursor: pointer;
-   text-decoration:underline;
-   transition: 0.6s;
-}
-.topnav a:first-child {
-  display: none;
-}
-.topnav .icon {
-  display: none;
-}
-.main {
-  margin:0% 5%;
-  width:700px;
-  left: 50%;
-  text-align: center;
-}
-.yearbox{
-  width:168px;
-  height:95px;
-  width: calc(25% - 6px);
-  height:auto;
-  background-color:#000000;
-  float:left;
-  border:1px solid #ffffff;
-  margin:2px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.yearbox img {
-  width:100%;
-}
-@media screen and (max-width: 710px) {
-  .topnav a:not(:nth-child(2)) {display: none;}
-  .topnav a:nth-child(2) {display: inherit;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav a {
-    float: left;
-  }
-  .yearbox{
-    width: calc(50% - 6px);
-  }
-}
-@media screen and (max-width: 710px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .main {
-    width:inherit;
-  }
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-video {
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin-bottom: 2px;
-}
-table {
-    text-align: center;
-    font-size: 1em;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 96%;
-    margin: 0 2%;
-    color:#ffffff;
-}
-tbody{
-  vertical-align:middle;
-  align-self: center;
-}
-table span {
-  font-size: .8em;
-  color:#888888;
-}
-table span a {
-  float:right
-}
-tr:hover{
- background:#AA0000;
- -webkit-transition: background .4s; /* Safari */
- transition: background .4s;
-}
-td, th {
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-</style>
+  <style>
+    body {
+      background-image: url("ctv_images/background_slim.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-color: #c30e0e;
+    }
+  </style>
+  <!-- REVERT COLOR #c30e0e EA80B0-->
+  <style type="text/css">
+    p.style {
+      font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: white;
+      margin: 0px;
+      letter-spacing: 1px;
+      display: block;
+    }
+
+    .topnav {
+      text-align: center;
+      overflow: hidden;
+      background-color: #000000;
+      /* Black */
+      width: 100%;
+    }
+
+    .topnav a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      margin-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 15px;
+      padding: 3px 3px;
+      /*15 , 17.9*/
+      text-decoration: none;
+      font-size: 28px;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .topnav a:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transition: 0.6s;
+    }
+
+    .topnav a:first-child {
+      display: none;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .main {
+      margin: 0% 5%;
+      width: 700px;
+      left: 50%;
+      text-align: center;
+    }
+
+    .yearbox {
+      width: 168px;
+      height: 95px;
+      width: calc(25% - 6px);
+      height: auto;
+      background-color: #000000;
+      float: left;
+      border: 1px solid #ffffff;
+      margin: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .yearbox img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 710px) {
+      .topnav a:not(:nth-child(2)) {
+        display: none;
+      }
+      .topnav a:nth-child(2) {
+        display: inherit;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      .topnav a {
+        float: left;
+      }
+      .yearbox {
+        width: calc(50% - 6px);
+      }
+    }
+
+    @media screen and (max-width: 710px) {
+      .topnav.responsive {
+        position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .main {
+        width: inherit;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin-bottom: 2px;
+    }
+
+    table {
+      text-align: center;
+      font-size: 1em;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 96%;
+      margin: 0 2%;
+      color: #ffffff;
+    }
+
+    tbody {
+      vertical-align: middle;
+      align-self: center;
+      cursor: pointer
+    }
+
+    table span {
+      font-size: .8em;
+      color: #888888;
+    }
+
+    table span a {
+      float: right
+    }
+
+    tr:hover {
+      background: #AA0000;
+      -webkit-transition: background .4s;
+      /* Safari */
+      transition: background .4s;
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+  </style>
 
 </head>
 
 <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
+  <div>
+    <div class="main">
 
-<div class="main">
-
-<div style="
+      <div style="
     position: absolute;
     left: 50%;
     margin-right: -50%;
@@ -164,7 +193,7 @@ td, th {
     top:0;
     overflow: hidden;
 ">
-  <a href="index.html">
+        <a href="index.html">
     <img src="ctv_images/ctvhead.png" data-rjs="2" style="
     height: 137px;
     width: 717px;
@@ -173,65 +202,60 @@ td, th {
     overflow-y:hidden;
     ">
   </a>
-</div>
+      </div>
 
-
-<div style="width:inherit; background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
+      <div style="width:inherit; background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
     top: 137px;
     position: absolute;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -0%)">
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
 
-<div class="topnav" id="myTopnav">
-  <a href="index-new.html">Home</a>
-  <a href="video.html">Video</a>
-  <a href="cast.html">Cast & Crew</a>
-  <a href="awards.html">Awards</a>
-  <a href="alumni.html">Alumni</a>
-  <a href="contact.html">Contact</a>
-  <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-
-
-<!-- HOME PAGE IMAGE DIMENSIONS 1380 X 650 -->
-<!--
-<div style="width:690px; height:325px; background-image:url(ctv_images/homeimg16-8.jpg); background-color:#000000; background-size: 690px 325px; float:left; border:5px solid white; border-right:0px;">
--->
-<video controls id="video" poster="ctv_images/videoblankl.jpg" onClick="playpause()">
-  <source id="srcvideo" src="">
-</video>
+        <div class="topnav" id="myTopnav">
+          <a href="index-new.html">Home</a>
+          <a href="video.html">Video</a>
+          <a href="cast.html">Cast & Crew</a>
+          <a href="awards.html">Awards</a>
+          <a href="alumni.html">Alumni</a>
+          <a href="contact.html">Contact</a>
+          <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
 
 
-<table id=playlist>
-  <tr>
-    <td href="#" onclick=set_video("ctv436.mp4");>CTV #436 - Underclassmen Show<span>
+        <video controls id="video" poster="ctv_images/videoblankl.jpg" onClick="playpause()">
+          <source id="srcvideo" src="">
+        </video>
+
+
+        <table id=playlist>
+          <tr>
+            <td href="#" onclick=set_video("ctv436.mp4");>CTV #436 - Underclassmen Show<span>
     Aired: May 26th, 2017<br>
     Featuring: Water Safety, Boys Football, Stange Addictions</span>
-    </td>
-  </tr>
-  <tr>
-    <td href="#" onclick=set_video("ctv435.mp4");>CTV #435 - Senior Finale<span>
-    Aired: May 19th, 2017
-    <br>Featuring: C/O 2017</span>
-    </td>
-  </tr>
-  <tr>
-    <td href="#" onclick=set_video("ctv434.mp4");>CTV THE MUSICAL<span>
-    Aired: May 12th, 2017<br>
-    Special Event #434</td>
-  </tr>
-</table>
+            </td>
+          </tr>
+          <tr>
+            <td href="#" onclick=set_video("ctv435.mp4");>CTV #435 - Senior Finale<span>
+    Aired: May 19th, 2017<br>
+    Featuring: C/O 2017</span>
+            </td>
+          </tr>
+          <tr>
+            <td href="#" onclick=set_video("ctv434.mp4");>CTV THE MUSICAL<span>
+              Aired: May 12th, 2017<br>
+              Special Event #434</td>
+          </tr>
+          </table>
 
 <script type="text/javascript">
 var video = document.getElementById('video');
@@ -261,27 +285,16 @@ function autoplay() {
 autoplay()
 
 function set_video(epnum){
-epnum = "episodes/"+epnum
-//video.pause();
-srcvideo.setAttribute('src', epnum);
-if (videoload === false){
-  videoload = true;
-  video.load();
-} else {
-  video.load();
-  video.play();
-}
-//video.replaceChild(source, source);
-//video.appendChild(source);
-/*
-if (false) {
-  console.log("has children");
-} else {
-  console.log("doesn not hhave children");
-}
-*/
-//video.setAttribute('poster', 'ctv_images/16arch.jpg');
-
+  epnum = "episodes/"+epnum
+  //video.pause();
+  srcvideo.setAttribute('src', epnum);
+  if (videoload === false){
+    videoload = true;
+    video.load();
+  } else {
+    video.load();
+    video.play();
+  }
 }
 
 function getParameterByName(name, url) {
@@ -293,8 +306,40 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-</script>
 
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    //if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState == 4) {
+      xml2table(this);
+    }
+  };
+  xmlhttp.open("GET", "video.xml", true);
+  xmlhttp.send();
+}
+function xml2table(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="";
+  //var x = xmlDoc.getElementsByTagName("episode");
+  var x =xmlDoc.querySelectorAll('[year="2017"]');
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td href=\"#\" onclick=set_video(\"" +
+    x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
+    "\");>" +
+    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+    "<span> Aired: " +
+    x[i].getElementsByTagName("aired")[0].childNodes[0].nodeValue +
+    "<br>Featuring: " +
+    x[i].getElementsByTagName("featuring")[0].childNodes[0].nodeValue +
+    "</span></td></tr>";
+  }
+  document.getElementById("playlist").innerHTML = table;
+}
+loadXMLDoc();
+</script>
+<div style="margin-top:20px">
 <div class="yearbox">
   <a href="javascript:;" id="playlist-setPlaylist-ctv16">
   <img src="ctv_images/16arch.jpg" width="168" border="0">
@@ -335,19 +380,20 @@ function getParameterByName(name, url) {
   <a>
   <img src="ctv_images/noprior.jpg" width="168" border="0">
 </a></div>
+</div>
 
-</div> <!-- overall -->
+
 <div style="
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -0%);
-    display:inline-block;
-    vertical-align: bottom;
-    ">
+  display:block;
+  transform: translate(0%, 40px);
+  ">
 <p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
 <p class="style" style="float:right">Website by: <a href="alumni.html#08">Dean D'Agati</a></p>
 </div>
+
+</div><!-- overall -->
+</div>
+
 
 <div style=""><center><!-- Start of StatCounter Code -->
   <script type="text/javascript" language="javascript">var sc_project=2428704; var sc_invisible=0; var sc_partition=23; var sc_security="3467593b"; </script>
