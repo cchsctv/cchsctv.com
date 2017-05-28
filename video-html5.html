@@ -4,8 +4,9 @@
 <head>
   <link rel="shortcut icon" href="ctv_images/favicon.png">
   <meta charset="utf-8">
-  <!--<meta name = "viewport" content = "width = 740">-->
-  <meta name="viewport" content="width=device-width">
+  <!--<meta name = "viewport" content = "width = 740">
+  <meta name="viewport" content="width=device-width">-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CTV - Cooper City High School</title>
 
   <style>
@@ -14,6 +15,7 @@
       background-repeat: no-repeat;
       background-position: center top;
       background-color: #c30e0e;
+      overflow-x:hidden;
     }
   </style>
   <!-- REVERT COLOR #c30e0e EA80B0-->
@@ -26,7 +28,6 @@
       letter-spacing: 1px;
       display: block;
     }
-
     .topnav {
       text-align: center;
       overflow: hidden;
@@ -34,7 +35,6 @@
       /* Black */
       width: 100%;
     }
-
     .topnav a {
       display: inline-block;
       color: #f2f2f2;
@@ -46,31 +46,27 @@
       padding: 3px 3px;
       /*15 , 17.9*/
       text-decoration: none;
-      font-size: 28px;
+      font-size: 26px;
       font-family: Helvetica, Arial, sans-serif;
     }
-
     .topnav a:hover {
       cursor: pointer;
       text-decoration: underline;
       transition: 0.6s;
     }
-
     .topnav a:first-child {
       display: none;
     }
-
     .topnav .icon {
       display: none;
     }
-
     .main {
       margin: 0% 5%;
       width: 700px;
       left: 50%;
       text-align: center;
+      overflow: hidden
     }
-
     .yearbox {
       width: 168px;
       height: 95px;
@@ -84,12 +80,52 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
-
     .yearbox img {
       width: 100%;
     }
-
-    @media screen and (max-width: 710px) {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin-bottom: 2px;
+    }
+    table {
+      text-align: center;
+      font-size: 1em;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 96%;
+      margin: 0 2%;
+      color: #ffffff;
+    }
+    tbody {
+      vertical-align: middle;
+      align-self: center;
+      cursor: pointer
+    }
+    table span {
+      font-size: .8em;
+      color: #888888;
+    }
+    table span a {
+      float: right
+    }
+    tr:hover {
+      background: #AA0000;
+      -webkit-transition: background .4s;
+      /* Safari */
+      transition: background .4s;
+    }
+    td, th {
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    @media only screen and (max-width: 710px) {
       .topnav a:not(:nth-child(2)) {
         display: none;
       }
@@ -107,8 +143,7 @@
         width: calc(50% - 6px);
       }
     }
-
-    @media screen and (max-width: 710px) {
+    @media only screen and (max-width: 710px) {
       .topnav.responsive {
         position: relative;
       }
@@ -126,57 +161,6 @@
         width: inherit;
       }
     }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    video {
-      width: 100%;
-      height: auto;
-      display: flex;
-      margin-bottom: 2px;
-    }
-
-    table {
-      text-align: center;
-      font-size: 1em;
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 96%;
-      margin: 0 2%;
-      color: #ffffff;
-    }
-
-    tbody {
-      vertical-align: middle;
-      align-self: center;
-      cursor: pointer
-    }
-
-    table span {
-      font-size: .8em;
-      color: #888888;
-    }
-
-    table span a {
-      float: right
-    }
-
-    tr:hover {
-      background: #AA0000;
-      -webkit-transition: background .4s;
-      /* Safari */
-      transition: background .4s;
-    }
-
-    td,
-    th {
-      border-bottom: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
   </style>
 
 </head>
@@ -192,17 +176,17 @@
     transform: translate(-50%, -0%);
     top:0;
     overflow: hidden;
+    width: inherit;
 ">
+
         <a href="index.html">
     <img src="ctv_images/ctvhead.png" data-rjs="2" style="
     height: 137px;
     width: 717px;
-    max-width:none;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    max-width: inherit;
     ">
   </a>
-      </div>
+</div>
 
       <div style="width:inherit; background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
     top: 137px;
