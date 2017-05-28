@@ -252,9 +252,11 @@ var table = document.getElementById('playlist');
 var source = document.createElement('source');
 var srcvideo = document.getElementById('srcvideo');
 var videoload = false;
-
+var xml_load = false;
+var xmlhttp = new XMLHttpRequest();
 
 loadXMLDoc(2017).then(function(year) {
+  videoload = false;
   table.rows[0].cells[0].onclick();
   autoplay();
 })
@@ -304,17 +306,23 @@ function getParameterByName(name, url) {
 
 function loadXMLDoc(year) {
   return new Promise(function(resolve){
-    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       //if (this.readyState == 4 && this.status == 200) {
-      if (this.readyState == 4) {
-        xml2table(this, year);
+      if (xmlhttp.readyState == 4) {
+        xml2table(xmlhttp, year);
         resolve(year);
       }
     };
-    xmlhttp.open("GET", "video.xml", true);
-    xmlhttp.send();
-
+    if (xml_load == false) {
+      xmlhttp.open("GET", "video.xml", true);
+      xmlhttp.send();
+      xml_load = true;
+  } else if (xml_load == true) {
+      xml2table(xmlhttp, year);
+      resolve(year);
+      videoload = false;
+      table.rows[0].cells[0].onclick();
+  }
   });
 }
 
@@ -341,39 +349,39 @@ function xml2table(xml,year) {
 </script>
 <div style="margin-top:20px">
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv16">
+  <a href="javascript:loadXMLDoc(2016);">
   <img src="ctv_images/16arch.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv15">
+  <a href="javascript:loadXMLDoc(2015);">
   <img src="ctv_images/15arch.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv14">
+  <a href="javascript:loadXMLDoc(2014);">
   <img src="ctv_images/14arch-d.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv13">
+  <a href="javascript:loadXMLDoc(2013);">
   <img src="ctv_images/13arch-d.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv12">
+  <a href="javascript:loadXMLDoc(2012);">
   <img src="ctv_images/12arch-d.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv11">
+  <a href="javascript:loadXMLDoc(2011);">
   <img src="ctv_images/11arch-d.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv10">
+  <a href="javascript:loadXMLDoc(2010);">
   <img src="ctv_images/10arch-d.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv09">
+  <a href="javascript:loadXMLDoc(2009);">
   <img src="ctv_images/09arch.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
-  <a href="javascript:;" id="playlist-setPlaylist-ctv08">
+  <a href="javascript:loadXMLDoc(2008);">
   <img src="ctv_images/08arch.jpg" width="168" border="0">
 </a></div>
 <div class="yearbox">
