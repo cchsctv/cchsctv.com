@@ -1097,7 +1097,7 @@
     <video>ctv279.mp4</video>
   </episode>
 
-  <episode year="2013">
+  <episode year="2013" special="underclassmen">
     <title>CTV #278</title>
     <aired>August 24, 2012</aired>
     <featuring>School Construction, CCHS New Teachers, Confessional(Web Only), Five 5econds 5horts</featuring>
@@ -1110,14 +1110,14 @@
     <video>ctv277.mp4</video>
   </episode>
 
-  <episode year="2012">
+  <episode year="2012" special="senior">
     <title>CTV #276 - 2012 Senior Finale</title>
     <aired>Aired: May 18, 2012</aired>
     <featuring>Now and Then, Colleges, Music Video, Five 5econd 5horts</featuring>
     <video>ctv276.mp4</video>
   </episode>
 
-  <episode year="2012">
+  <episode year="2012" special="musical">
     <title>CTV #275 - CTV: The Musical 6</title>
     <aired>Aired: May 4, 2012</aired>
     <featuring>Wake Me Up, Hurry Up Gurrrl, Wendy</featuring>
@@ -1326,14 +1326,14 @@
     <featuring>Construction, Football, CTV: The Office, Color War</featuring>
     <video>ctv246.mp4</video>
   </episode>
-  <episode year="2011">
+  <episode year="2011" special="underclassmen">
     <title>CTV #245 - Underclassmen Finale</title>
     <aired>May 27, 2011</aired>
     <featuring>Teacher Makeover, Spring Football, Know Your Stars, Paranormal Activity</featuring>
     <video>ctv245.mp4</video>
   </episode>
 
-  <episode year="2011">
+  <episode year="2011" special="senior">
     <title>CTV #244 - 2011 Senior Finale</title>
     <aired>May 20, 2011</aired>
     <featuring>60 Seconds, Donkeyface, Epic Meal Time, Senior Goodbyes</featuring>
@@ -1347,7 +1347,7 @@
     <video>ctv243.mp4</video>
   </episode>
 
-  <episode year="2011">
+  <episode year="2011" special="musical">
     <title>CTV #242 - CTV: The Musical 5</title>
     <aired>May 6, 2011</aired>
     <featuring>I.S. Rock, Skippin' a Test, Prom Date, Hall Pass, Cooper State</featuring>
@@ -1550,21 +1550,21 @@
     <featuring>Budget Cuts, 60 Seconds, Football Kickoff, Look-a-Likes, First Day Freshman</featuring>
     <video>ctv213.mp4</video>
   </episode>
-  <episode year="2010">
+  <episode year="2010" special="underclassmen">
     <title>CTV #212 - Underclassmen Finale</title>
     <aired>May 28, 2010</aired>
     <featuring>Senior Breakfast, 60 Seconds, Football, Moment With ... Seth?, Batman</featuring>
     <video>ctv212.mov</video>
   </episode>
 
-  <episode year="2010">
+  <episode year="2010" special="senior">
     <title>CTV #211 - 2010 Senior Finale</title>
     <aired>May 22, 2010</aired>
     <featuring>Where we came from, Senior Confessions, A moment with Taylor, CXTV</featuring>
     <video>ctv211.mov</video>
   </episode>
 
-  <episode year="2010">
+  <episode year="2010" special="musical">
     <title>CTV #210 - CTV: The Musical 4</title>
     <aired>May 14, 2010</aired>
     <featuring>Good Morning Cooper, I Think I'm Gonna Like It Here, El Tango de Exams, Everyone Has A's</featuring>
@@ -1773,21 +1773,22 @@
     <featuring>Class of 2013, Budget Cuts, Player Profile: T. Will, News in 60 Seconds</featuring>
     <video>ctv181.mov</video>
   </episode>
-  <episode year="2009">
+
+  <episode year="2009" special="underclassmen">
     <title>CTV #180 - Underclassmen Finale</title>
     <aired>May 29, 2009</aired>
     <featuring>Senior Memoir, School Cutbacks, Harry Potter: CTV Style, Spiderman</featuring>
     <video>ctv180.mov</video>
   </episode>
 
-  <episode year="2009">
+  <episode year="2009" special="senior">
     <title>CTV #179 - 2009 Senior Finale</title>
     <aired>May 22, 2009</aired>
     <featuring>Prom '09, A Message for the Seniors, Exploring CCHS, The Final Electives</featuring>
     <video>ctv179.mov</video>
   </episode>
 
-  <episode year="2009">
+  <episode year="2009" special="musical">
     <title>CTV #178 - CTV: The Musical 3</title>
     <aired>May 15, 2009</aired>
     <featuring>No Scrubs, Don't Sleep, My Name Is, Hit Me Baby</featuring>
@@ -1988,6 +1989,254 @@
     <aired>August 22, 2008</aired>
     <featuring>In the Eyes of a Freshman, SGA Update, Warped Tour, Off-Campus QOW</featuring>
     <video>ctv150.mov</video>
+  </episode>
+  <episode year="2008" special="underclassmen">
+    <title>CTV #149 - Underclassmen Finale</title>
+    <aired>May 30, 2008</aired>
+    <featuring>Senior Breakfast, What if I were President? CXTV, Underclassmen Confessions</featuring>
+    <video>ctv149.mov</video>
+  </episode>
+
+  <episode year="2008" special="senior">
+    <title>CTV #148 - 2008 Senior Finale</title>
+    <aired>May 22, 2008</aired>
+    <featuring>Prom 08, Making of CTV The Musical 2, Senior Confessions, QOW</featuring>
+    <video>ctv148.mov</video>
+  </episode>
+
+  <episode year="2008" special="musical">
+    <title>CTV #147 - CTV: The Musical 2</title>
+    <aired>May 16, 2008</aired>
+    <featuring>Good Morning, Cell Phone, Ms. Doll Walks, Walk It Out</featuring>
+    <video>ctv147.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #146</title>
+    <aired>May 9, 2008</aired>
+    <featuring>AP Testing, Volleyball Champions, How To Catch A Cheater, Tyler & The Box</featuring>
+    <video>ctv146.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #145</title>
+    <aired>May 2, 2008</aired>
+    <featuring>Founders Day, Underwater Photo, A Moment With Taylor, Getting to Know The Toddlers</featuring>
+    <video>ctv145.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #144</title>
+    <aired>April 25, 2008</aired>
+    <featuring>Invisible Children, Multicultural Show, Best Buddies Crazy Feets, Substitute Interview</featuring>
+    <video>ctv144.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #143</title>
+    <aired>April 18, 2008</aired>
+    <featuring>Peace Festival, Open Mic Night, CTV Sports Talk, CTV: The Office Part 4</featuring>
+    <video>ctv143.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #142</title>
+    <aired>April 11, 2008</aired>
+    <featuring>Prom Ticket Madness, Barber Shop, YOU do Question of The Week, Europe 08</featuring>
+    <video>ctv142.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #141</title>
+    <aired>March 20, 2008</aired>
+    <featuring>I Love Math, Relay For Life, Pi Day, A Plethora of Sports</featuring>
+    <video>ctv141.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #140</title>
+    <aired>March 7, 2008</aired>
+    <featuring>Grease Opens, Best Buddies Day, Food Prep Gone!?, CTV: The Office Part 3</featuring>
+    <video>ctv140.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #139</title>
+    <aired>February 29, 2008</aired>
+    <featuring>DECA States, Grase, Powder Puff Football, Look-A-Likes</featuring>
+    <video>ctv139.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #138</title>
+    <aired>February 22, 2008</aired>
+    <featuring>Lunar Eclipse, Water Polo, CTV: The Office Part 2, Kosher Boi</featuring>
+    <video>ctv138.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #137</title>
+    <aired>February 15, 2008</aired>
+    <featuring>Underwater Anchors, Valentine's Day, Love Cures, American Idol</featuring>
+    <video>ctv137.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #136</title>
+    <aired>February 8, 2008</aired>
+    <featuring>Jamie Wins!, Best Buddies, CTV Rides, CTV: The Office Part 1</featuring>
+    <video>ctv136.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #135</title>
+    <aired>February 1, 2008</aired>
+    <featuring>Construction Delays, Cooper City Election, Live Webcast Recap, Grease Try-Outs</featuring>
+    <video>ctv135.mp4</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #134</title>
+    <aired>January 11, 2008
+    </aired>
+    <featuring>Senior Updates, Brittany Mullen Feature, A Plethora of Sports!, School Is Cool</featuring>
+    <video>ctv134.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #133 - Holiday Special</title>
+    <aired>December 21, 2007
+    </aired>
+    <featuring>Holiday Shopping, Year In Review, Night Before Christmas, LIVE Countdown To Winter Break</featuring>
+    <video>ctv133.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #132</title>
+    <aired>December 14, 2007
+    </aired>
+    <featuring>Mr. Cowboy Pagent, Senior Breakfast, CTV Day, CXTV</featuring>
+    <video>ctv132.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #131</title>
+    <aired>December 7, 2007
+    </aired>
+    <featuring>Pardon The Interruption, Varsity Basketball, Chanukah, Look-A-Likes</featuring>
+    <video>ctv131.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #130</title>
+    <aired>November 30, 2007
+    </aired>
+    <featuring>Pardon The Interruption, Varsity Basketball, CTV Rides, TV1 Music Video</featuring>
+    <video>ctv130.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #129</title>
+    <aired>November 21, 2007
+    </aired>
+    <featuring>Reel Big Fish, Student Spotlight, Look-A-Likes, CTV is Thankful</featuring>
+    <video>ctv129.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #128</title>
+    <aired>November 16, 2007
+    </aired>
+    <featuring>Soup-er Bowl Recap, V-Football VS. Flanagan, Artist Profile, Prank Calls</featuring>
+    <video>ctv128.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #127 - Homecoming Special</title>
+    <aired>November 9, 2007
+    </aired>
+    <featuring>Crazy Feats Recap, Homecoming Carnival, Homecoming Dance, Karaoke</featuring>
+    <video>ctv127.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #126 - Halloween Special</title>
+    <aired>November 2, 2007
+    </aired>
+    <featuring>Storytime With Scaffetti, Halloween @ The Justers, Football Recap, Pumpkin Decorating</featuring>
+    <video>ctv126.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #125</title>
+    <aired>October 19, 2007
+    </aired>
+    <featuring>The Art of Freestylin', Varsity Football VS Nova, Volleyball Senior Night, Substitute Profile</featuring>
+    <video>ctv125.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #124</title>
+    <aired>October 12, 2007
+    </aired>
+    <featuring>CCHS Fashion Show, Teacher Of The Year, Varsity Football VS St. Thomas, CCHS INK 2</featuring>
+    <video>ctv124.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #123</title>
+    <aired>October 5, 2007
+    </aired>
+    <featuring>Variety Show Hosts, FPSA Districts, Leaving School Early, Homecoming Tips</featuring>
+    <video>ctv123.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #122</title>
+    <aired>September 27, 2007
+    </aired>
+    <featuring>This episode is legit lost. Like seriously, nobody knows what happened to it. It's weird.</featuring>
+    <video>ctv122.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #121</title>
+    <aired>September 21, 2007
+    </aired>
+    <featuring>Did You Know?, Undefeated Cowboys!, CTV Rides, Daft Punk Outro</featuring>
+    <video>ctv121.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #120</title>
+    <aired>September 14, 2007
+    </aired>
+    <featuring>Remembering Sept. 11th, Player Profile: Geoff Turnquest, Kanye or 50?!, Joshua Blaine</featuring>
+    <video>ctv120.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #119</title>
+    <aired>September 7, 2007
+    </aired>
+    <featuring>Best Buddies, CCHS INK, The ID Scandal of 2007, Finish The Lyric</featuring>
+    <video>ctv119.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #118</title>
+    <aired>August 31, 2007
+    </aired>
+    <featuring>VOICES Assembly, Overcrowded New Building, Curing Boredom, Finish The Lyric</featuring>
+    <video>ctv118.mov</video>
+  </episode>
+
+  <episode year="2008">
+    <title>CTV #117 - Back To School Special</title>
+    <aired>August 24, 2007
+    </aired>
+    <featuring>Late for School Intro, New Building is Open!, C/O 2011 Freshmen, Shaq at CCHS!?</featuring>
+    <video>ctv117.mov</video>
   </episode>
 
 </episodes>
