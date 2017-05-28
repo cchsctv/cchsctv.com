@@ -17,6 +17,7 @@ error_log
 /protected
 /templates
 /tutorials
+/test
 
 .DS_Store
 Thumbs.db
