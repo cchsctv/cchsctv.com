@@ -17,6 +17,7 @@
       background-color: #c30e0e;
       background-size: 720px 140px ;
       overflow-x:hidden;
+      margin: 0;
     }
   </style>
   <!-- REVERT COLOR #c30e0e EA80B0-->
@@ -72,7 +73,11 @@
       width: 700px;
       left: 50%;
       text-align: center;
-      overflow: hidden
+      overflow: hidden;
+      position: absolute;
+      margin-right: -50%;
+      transform: translate(-50%, -0%);
+      vertical-align: top;
     }
     .yearbox {
       width: 168px;
@@ -169,7 +174,7 @@
         text-align: left;
       }
       .main {
-        width: calc(100% - 20px);
+        width: calc(100% - 0px);
       }
     }
   </style>
@@ -179,14 +184,11 @@
 <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
     <div class="main">
-      <a class="footer" href="index.html"> <img src="ctv_images/background_logo.png" style="width:100%; max-width: 248px; top:0" data-rjs="3">  </a>
+      <a class="" href="index.html" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
 
-      <div style="width:inherit; background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
-    top: 140px;
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -0%)">
+      <div style=" background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
+
+    vertical-align: top;">
         <script>
           function myFunction() {
             var x = document.getElementById("myTopnav");
