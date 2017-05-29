@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- USE "&amp;" IN PLACE OF "&" -->
+<!-- USE "SPECIAL=" FOR MUSICAL/SENIOR/UNDERCLASSMEN -->
+<!-- "YEAR=" IS THE GRADUATING YEAR -->
 <eps>
   <ep year="2017" special="underclassmen">
     <title>CTV #436 - Underclassmen Show</title>
