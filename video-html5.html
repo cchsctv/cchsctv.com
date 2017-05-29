@@ -20,19 +20,26 @@
   </style>
   <!-- REVERT COLOR #c30e0e EA80B0-->
   <style type="text/css">
-    p.style {
+    .footer {
       font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
       font-size: 14px;
       color: white;
       margin: 0px;
       letter-spacing: 1px;
+      position: absolute;
       display: block;
+      width: calc(100% + 20px);
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 0%);
     }
+    .footer .left {float:left}
+    .footer .right {float:right}
+    .footer .bottom {padding-top: 3rem;}
     .topnav {
       text-align: center;
       overflow: hidden;
       background-color: #000000;
-      /* Black */
       width: 100%;
     }
     .topnav a {
@@ -142,6 +149,9 @@
       .yearbox {
         width: calc(50% - 6px);
       }
+      .footer .left {float:none}
+      .footer .right {float:none}
+      .footer .bottom {padding: 0px}
     }
     @media only screen and (max-width: 720px) {
       .topnav.responsive {
@@ -333,7 +343,7 @@ function xml2table(xml,year) {
 }
 
 </script>
-<div style="margin-top:20px">
+<div style="margin-top:20px; display:inline-block;">
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2016);">
   <img src="ctv_images/16arch.jpg" width="168" border="0">
@@ -377,28 +387,26 @@ function xml2table(xml,year) {
 </div>
 
 
-<div style="
-  display:block;
-  transform: translate(0%, 40px);
-  ">
-<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
-<p class="style" style="float:right">Website by: <a href="alumni.html#08">Dean D'Agati</a></p>
-</div>
-
-</div><!-- overall -->
-</div>
 
 
-<div style=""><center><!-- Start of StatCounter Code -->
+
+
+
+<div class="footer">
+<p class="left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="right">Website by: <a href="alumni.html#08">Dean D'Agati</a></p>
+
+
+<div class ="bottom" style=""><center><!-- Start of StatCounter Code -->
   <script type="text/javascript" language="javascript">var sc_project=2428704; var sc_invisible=0; var sc_partition=23; var sc_security="3467593b"; </script>
   <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
   <noscript>
     <img src="http://c24.statcounter.com/counter.php?sc_project=2428704&amp;java=0&amp;security=3467593b&amp;invisible=0" alt="web hit counter" border="0"></a>
   </noscript>
   <!-- End of StatCounter Code --></center></div>
-
-
-
+</div><!-- overall -->
+</div>
+</div>
 
 <script type="text/javascript" src="scripts/retina.min.js"></script>
   </body>
