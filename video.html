@@ -211,13 +211,13 @@
           <a href="index.html">Home</a>
           <a href="video.html">Video</a>
           <a href="cast.html">Cast & Crew</a>
-          <a href="awards.html">Awards</a>
           <a href="alumni.html">Alumni</a>
+          <a href="awards.html">Awards</a>
           <a href="contact.html">Contact</a>
           <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
 
-        <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="ctv_images/videoblankl.jpg" style="margin-bottom:1rem"
+        <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="ctv_images/videoblankl.jpg"
         data-setup='{"playbackRates": [1, 1.5, 2]}' onClick="playpause()">
           <source id="srcvideo" src="episodes/ctv400.mp4" >
         </video>
@@ -225,7 +225,7 @@
 <script src="http://vjs.zencdn.net/5.19.2/video.min.js"></script>
 
 
-        <table id=playlist>
+        <table id=playlist style="margin-top:1rem">
         <!--
           <tr>
             <td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
@@ -243,10 +243,10 @@ video = videojs('video'); //video.js, remove for html5 player
 var table = document.getElementById('playlist');
 var source = document.createElement('source');
 var srcvideo = document.getElementById('srcvideo');
-var videoload = false;
-var xml_load = false;
 var xmlhttp = new XMLHttpRequest();
 var active_video;
+var videoload = false;
+var xml_load = false;
 
 loadXMLDoc(2017).then(function(year) { //CHANGE THIS TO THE CURRENT YEAR
   videoload = false;
