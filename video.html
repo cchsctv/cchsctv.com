@@ -28,16 +28,19 @@
       color: white;
       margin: 0px;
       letter-spacing: 1px;
-      position: absolute;
-      display: block;
-      width: calc(100% + 20px);
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, 0%);
     }
-    .footer .left {float:left}
-    .footer .right {float:right}
-    .footer .bottom {padding-top: 3rem;}
+    .footer .left {
+      float:left;
+      margin: inherit;
+    }
+    .footer .right {
+      float:right;
+      margin: inherit;
+    }
+    .footer .bottom {
+      padding-top: 2rem;
+      margin: inherit;
+    }
     .topnav {
       text-align: center;
       overflow: hidden;
@@ -134,6 +137,7 @@
     }
     td, th {
       border-bottom: 1px solid #dddddd;
+      border-top: 1px solid #dddddd;
       text-align: left;
       padding: 8px;
     }
@@ -210,7 +214,7 @@
           <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
 
-        <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="ctv_images/videoblankl.jpg"
+        <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="ctv_images/videoblankl.jpg" style="margin-bottom:1rem"
         data-setup='{"playbackRates": [1, 1.5, 2]}' onClick="playpause()">
           <source id="srcvideo" src="episodes/ctv400.mp4" >
         </video>
@@ -347,7 +351,7 @@ function xml2table(xml,year) {
 }
 
 </script>
-<div style="margin-top:20px; display:inline-block;">
+<div style="margin-top:1rem; display:inline-block;">
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2016);">
   <img src="ctv_images/16arch.jpg" width="168" border="0">
@@ -393,7 +397,7 @@ function xml2table(xml,year) {
 
 
 
-
+</div><!-- overall -->
 
 
 <div class="footer">
@@ -408,7 +412,7 @@ function xml2table(xml,year) {
     <img src="http://c24.statcounter.com/counter.php?sc_project=2428704&amp;java=0&amp;security=3467593b&amp;invisible=0" alt="web hit counter" border="0"></a>
   </noscript>
   <!-- End of StatCounter Code --></center></div>
-</div><!-- overall -->
+
 </div>
 </div>
 
