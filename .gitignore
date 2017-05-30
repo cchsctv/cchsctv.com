@@ -7,7 +7,7 @@ hi_res
 .htaccess
 error_log
 
-/video.html
+/video.xml
 
 /booked
 /cgi-bin
