@@ -208,7 +208,7 @@
         </script>
 
         <div class="topnav" id="myTopnav">
-          <a href="index-new.html">Home</a>
+          <a href="index.html">Home</a>
           <a href="video.html">Video</a>
           <a href="cast.html">Cast & Crew</a>
           <a href="awards.html">Awards</a>
@@ -337,6 +337,7 @@ function loadXMLDoc(year) {
       resolve(year);
       videoload = false;
       table.rows[0].cells[0].onclick();
+      video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
   }
   });
 }
