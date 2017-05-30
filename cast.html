@@ -3,21 +3,82 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width = 740">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CTV - Cast & Crew</title>
 
 <style>
-body
-{
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
-
+body {
+  background-image: url(ctv_images/background_slim.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #c30e0e;
+  background-size: 720px 140px ;
+  overflow-x:hidden;
+  margin: 0;
 }
 </style>
 
 <style type="text/css">
+.footer {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+  letter-spacing: 1px;
+}
+.footer .left {
+  float:left;
+  margin: inherit;
+}
+.footer .right {
+  float:right;
+  margin: inherit;
+}
+.footer .bottom {
+  padding-top: 2rem;
+  margin: inherit;
+}
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  padding: 3px 3px;
+  /*15 , 17.9*/
+  text-decoration: none;
+  font-size: 26px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.topnav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.6s;
+}
+.topnav a:first-child {
+  display: none;
+}
+.topnav .icon {
+  display: none;
+}
+.main {
+  width: 700px;
+  left: 50%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -0%);
+  vertical-align: top;
+}
 p.style{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
 	font-size: 14px;
@@ -32,6 +93,7 @@ p.head{
 	margin:8px;
 	font-weight: bold;
 	letter-spacing:2px;
+  width:100%;
 }
 p.name{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
@@ -57,83 +119,175 @@ p.pichardo{
 	line-height:150%;
 	letter-spacing:1px;
 }
+.bardivider {
+  width: calc(100% - 10px);
+  height:50px;
+  background-color:#505050;
+  float:left;
+  border:5px solid white;
+  border-bottom:0px;
+  text-align:center;"
+}
+.mugshot_container {
+  width:226.8px;
+  width: calc(33% - 5px);
+  height:190px;
+  background-color:#c30e0e;
+  border:5px solid white;
+  border-right:0px;
+  border-bottom:0px;
+  float:left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mugshot {
+  width:226.8px;
+  width:100%;
+  height:168.8px;
+  height:auto;
+  background-size: 226.8px 169.8px;
+  background-color:#000000;
+  float:left;
+  position:relative;
+}
+@media only screen and (max-width: 720px) {
+  .topnav a:not(:nth-child(3)) {
+    display: none;
+  }
+  .topnav a:nth-child(3) {
+    display: inherit;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a {
+    margin-bottom: 0px;
+    float: left;
+  }
+  .mugshot_container {
+    width: calc(100% - 10px)
+  }
+  .footer .left {float:none}
+  .footer .right {float:none}
+  .footer .bottom {padding: 0px}
+}
+@media only screen and (max-width: 720px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .main {
+    width: calc(100% - 0px);
+  }
+}
+</style>
 </style>
 
   </head>
 
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
+      <div class="main">
+        <a class="" href="index.html" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
 
-<div style="position:absolute; width:720px; top:0px; left:50%; margin-left:-360px;">
+        <div style=" background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
 
-<div style="width:720px; height:137px;"><a href="index.html"><img src="ctv_images/ctvhead.png" data-rjs="2"></a></div>
+      vertical-align: top;">
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+          </script>
 
-<div style="width:720px; height:57px;">
-<img src="ctv_images/buttons.jpg" data-rjs="2" alt="" usemap="#map1429419286195" border="0"><map id="map1429419286195" name="map1429419286195"><area shape="rect" coords="39,15,107,40" title="Video" alt="Video" href="video.html" target="_self"><area shape="rect" coords="146,16,297,40" title="Cast & Crew" alt="Cast & Crew" href="cast.html" target="_self"><area shape="rect" coords="330,16,418,39" title="Alumni" alt="Alumni" href="alumni.html" target="_self"><area shape="rect" coords="455,15,544,38" title="Awards" alt="Awards" href="awards.html" target="_self"><area shape="rect" coords="584,14,682,39" title="Contact" alt="Contact" href="contact.html" target="_self"></map>
-</div>
+          <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="video.html">Video</a>
+            <a href="cast.html">Cast & Crew</a>
+            <a href="alumni.html">Alumni</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+
 
 <!-- PAGE BEGIN-->
-<div style="width:700px; background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
+<div style="background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
 
 <!--<div style="width:342px; height:800px; background-image:url(ctv_images/homepic_edit1.jpg); background-color:#ffff00; float:left; border:5px solid white; border-right:0px;"></div>
 <div style="width:343px; height:800px; overflow:auto; background-color:#505050; float:left; border:5px solid white; border-bottom:0px;">words words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words words</div>
 -->
 <div style="clear:both"></div>
 
-<div style="width:690px; height:50px; background-color:#505050; float:left; border:5px solid white; border-bottom:0px; text-align:center;"><p class="head">OFFICERS</p></div>
+<div class="bardivider"><p class="head">OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/lianchung.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/lianchung.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Lian Chung-Valuntas</p>
     </div>
   </div><p class="sub">President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/lexidelgado.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/lexidelgado.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Lexi Delgado</p>
     </div>
   </div><p class="sub">Vice President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/isytocci.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/isytocci.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Isabella Tocci</p>
     </div>
   </div><p class="sub">Assistant Vice President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/caseychapter.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/caseychapter.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Casey Chapter</p>
     </div>
   </div><p class="sub">Secretary</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/felipelopez.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/felipelopez.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Felipe Lopez</p>
     </div>
   </div><p class="sub">Treasurer</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/samanthatowle.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/samanthatowle.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Samantha Towle</p>
     </div>
   </div><p class="sub">Historian</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/harrisness.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/harrisness.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Harris Ness</p>
     </div>
   </div><p class="sub">Bussiness Manager</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/jakobwolk.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/jakobwolk.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jakob Wolk</p>
     </div>
   </div><p class="sub">Equipment Manager</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/jasonchua.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
+<div class="mugshot_container">
+  <divclass="mugshot" style="background-image:url(ctv_images/staff/jasonchua.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
     <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jason Chua</p>
     </div>
   </div><p class="sub">Senior Operations Manager</p>
