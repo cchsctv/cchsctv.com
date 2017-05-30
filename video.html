@@ -144,6 +144,11 @@
       text-align: left;
       padding: 8px;
     }
+    .download {
+      float:right;
+      color: lightblue;
+      font-size: .8rem
+    }
     @media only screen and (max-width: 720px) {
       .topnav a:not(:nth-child(2)) {
         display: none;
@@ -226,12 +231,14 @@
 
 
         <table id=playlist style="margin-top:1rem">
-        <!--
+          <!--
           <tr>
             <td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
+            <a class="download" href="episodes/ctv400.mp4">mp4</a>
             CTV #888 - Example Show<span>
             Aired: October 7th, 1998<br>
             Featuring: Chua's Birthday, HTML5, and XML!</span>
+
             </td>
           </tr>
         -->
@@ -350,7 +357,9 @@ function xml2table(xml,year) {
   for (i = 0; i <x.length; i++) {
     table += "<tr><td href=\"#\"  id=\"" +
     x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
-    "\" onclick=set_video(this.id);>" +
+    "\" onclick=set_video(this.id);><a class=\"download\" href=\"episodes/" +
+    x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
+    "\">(mp4)</a>"+
     x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
     "<span> Aired: " +
     x[i].getElementsByTagName("aired")[0].childNodes[0].nodeValue +
