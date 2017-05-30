@@ -248,7 +248,7 @@ var xml_load = false;
 var xmlhttp = new XMLHttpRequest();
 var active_video;
 
-loadXMLDoc(2017).then(function(year) {
+loadXMLDoc(2017).then(function(year) { //CHANGE THIS TO THE CURRENT YEAR
   videoload = false;
   table.rows[0].cells[0].onclick();
   autoplay();
@@ -257,7 +257,6 @@ loadXMLDoc(2017).then(function(year) {
 video.on('ended', function() {
   active_video = active_video.match(/\d\d\d/i);
   epnum = active_video-1;
-  console.log(epnum);
   var suffix;
   if (epnum <= 212) {
     suffix = ".mov"
