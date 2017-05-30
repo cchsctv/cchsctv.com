@@ -129,6 +129,9 @@
     table span a {
       float: right
     }
+    .hover {
+      background: #AA0000;
+    }
     tr:hover {
       background: #AA0000;
       -webkit-transition: background .4s;
@@ -223,11 +226,12 @@
 
 
         <table id=playlist>
-          <!--
+        <!--
           <tr>
-            <td href="#" onclick=set_video("ctv400.mp4");>CTV #888 - Example Show<span>
-    Aired: October 7th, 1998<br>
-    Featuring: Chua's Birthday, HTML5, and XML!</span>
+            <td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
+            CTV #888 - Example Show<span>
+            Aired: October 7th, 1998<br>
+            Featuring: Chua's Birthday, HTML5, and XML!</span>
             </td>
           </tr>
         -->
@@ -285,7 +289,11 @@ function autoplay() {
 
 
 function set_video(epnum){
-  active_video = epnum;
+  hover = document.getElementsByClassName("hover")
+  while (hover.length){
+  hover[0].className = hover[0].className.replace(/\bhover\b/g, "");
+  };
+  active_video = epnum
   vurl = "episodes/"+epnum;
   //video.pause();
   //srcvideo.setAttribute('src', epnum);
@@ -294,9 +302,12 @@ function set_video(epnum){
     videoload = true;
     video.load();
   } else {
+
     video.load();
     video.play();
   }
+  document.getElementById(active_video).classList.add("hover");
+  //document.getElementById(active_video).className += " hover";
 }
 
 function getParameterByName(name, url) {
@@ -337,9 +348,9 @@ function xml2table(xml,year) {
   //var x = xmlDoc.getElementsByTagName("episode");
   var x =xmlDoc.querySelectorAll('[year="'+year+'"]');
   for (i = 0; i <x.length; i++) {
-    table += "<tr><td href=\"#\" onclick=set_video(\"" +
+    table += "<tr><td href=\"#\"  id=\"" +
     x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
-    "\");>" +
+    "\" onclick=set_video(this.id);>" +
     x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
     "<span> Aired: " +
     x[i].getElementsByTagName("aired")[0].childNodes[0].nodeValue +
