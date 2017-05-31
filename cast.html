@@ -128,49 +128,25 @@ p.pichardo{
   border-bottom:0px;
   text-align:center;"
 }
-.mugshot_container {
-  width:226.8px;
-  width: calc(33% - 5px);
-  height:190px;
-  background-color:#c30e0e;
-  border:5px solid white;
-  border-right:0px;
-  border-bottom:0px;
-
-  width: calc(33% - 5px);
-  height: auto;
-  float: left;
-  justify-content: space-between;
-}
-.mugtesto {
+.officer_container {
   width: calc(33% - 5px);
   border:5px solid white;
-  border-right:0px;
-  border-bottom:0px;
-  background-color:#c30e0e;
-  width: calc(33% - 5px);
-  height: auto;
-  float: left;
-  justify-content: space-between;
-}
-.mugtesti {
+  border-right:none;
+  border-bottom:none;
   background-color:#c30e0e;
   height: auto;
   float: left;
   justify-content: space-between;
 }
-.mugshot_container img {
+.officer_container img {
   width: 100%;
+  height: auto;
 }
-.mugshot {
-  width:226.8px;
-  width:100%;
-  height:168.8px;
-  height:auto;
-  background-size: 226.8px 169.8px;
-  background-color:#000000;
-  float:left;
-  position:relative;
+.officer_inner {
+  background-color:#c30e0e;
+  height: auto;
+  float: left;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 720px) {
   .topnav a:not(:nth-child(3)) {
@@ -187,16 +163,19 @@ p.pichardo{
     margin-bottom: 0px;
     float: left;
   }
-  .mugshot_container {
-    width: calc(100% - 10px)
-  }
-  .mugshot {
-    float:left;
-    position:relative;
-  }
   .footer .left {float:none}
   .footer .right {float:none}
   .footer .bottom {padding: 0px}
+}
+@media only screen and (max-width: 680px) {
+  .officer_container {
+    width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 420px) {
+  .officer_container {
+    width: calc(100% - 10px);
+  }
 }
 @media only screen and (max-width: 720px) {
   .topnav.responsive {
@@ -261,20 +240,8 @@ p.pichardo{
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
-<div class="mugtesto">
-  <img src="ctv_images/staff/lianchung.jpg" data-rjs="2" style="width:100%; height:auto">
-  <div class="mugtesti">
-  <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
-    <p class="name" style="text-align:left;">Lian Chung-Valuntas</p>
-  </div>
-  <div style="position:relative;">
-    <p class="sub" style="position:relative; text-align:left;">President</p>
-  </div>
-  </div>
-</div>
-
-<div class="mugtesto">
-  <img src="ctv_images/staff/lianchung.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/lianchung.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Lian Chung-Valuntas</p>
     </div>
@@ -282,8 +249,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">President</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/lexidelgado.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/lexidelgado.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Lexi Delgado</p>
     </div>
@@ -291,17 +258,17 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Vice President</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/isytocci.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/isytocci.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Isabella Tocci</p>
     </div>
   <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Assistant Vice President</p>
+  <p class="sub" style="position:relative; text-align:left;">Asst. Vice President</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/caseychapter.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/caseychapter.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Casey Chapter</p>
     </div>
@@ -309,8 +276,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Secretary</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/felipelopez.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/felipelopez.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Felipe Lopez</p>
     </div>
@@ -318,8 +285,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Treasurer</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/samanthatowle.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/samanthatowle.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Samantha Towle</p>
     </div>
@@ -327,8 +294,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Historian</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/harrisness.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/harrisness.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Harris Ness</p>
     </div>
@@ -336,8 +303,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Bussiness Manager</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/jakobwolk.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/jakobwolk.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Jakob Wolk</p>
     </div>
@@ -345,8 +312,8 @@ p.pichardo{
   <p class="sub" style="position:relative; text-align:left;">Equipment Manager</p>
 </div>
 </div>
-<div class="mugtesto">
-  <img src="ctv_images/staff/jasonchua.jpg" data-rjs="2" style="width:100%; height:auto">
+<div class="officer_container">
+  <img src="ctv_images/staff/jasonchua.jpg" data-rjs="2">
     <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
   <p class="name" style="text-align:left;">Jason Chua</p>
     </div>
