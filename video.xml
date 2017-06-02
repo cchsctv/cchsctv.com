@@ -4,9 +4,15 @@
 <!-- "YEAR=" IS THE GRADUATING YEAR -->
 <eps>
   <ep year="2017" special="underclassmen">
+    <title>CTV #437 - Best of the Year</title>
+    <aired>June 2nd, 2017</aired>
+    <ft>Catsby, Students vs. Faculty, Newbie Tags</ft>
+    <video>ctv437.mp4</video>
+  </ep>
+  <ep year="2017" special="underclassmen">
     <title>CTV #436 - Underclassmen Show</title>
     <aired>May 26th, 2017</aired>
-    <ft>Water Safety, Boys Football, Stange Addictions</ft>
+    <ft>Water Safety, Boys Football, Strange Addictions</ft>
     <video>ctv436.mp4</video>
   </ep>
 
