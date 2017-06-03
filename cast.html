@@ -161,6 +161,15 @@ p.pichardo{
   float: left;
   justify-content: space-between;
 }
+.chardo_bio {
+  width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  width: calc(100% - 10px);
+  background-color:#505050;
+  float:left;
+  border:5px solid white;
+  text-align:center;
+  background-color:#b2b2b2;
+}
 @media only screen and (max-width: 720px) {
   .topnav a:not(:nth-child(3)) {
     display: none;
@@ -193,7 +202,7 @@ p.pichardo{
     width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 400px) {
   .officer_container {
     width: calc(100% - 10px);
   }
@@ -398,8 +407,8 @@ p.pichardo{
 <div class="staff_container">
   <img src="ctv_images/staff/krzyszakorytkowski.jpg" data-rjs="2">
   <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
-  <p class="name" style="text-align:left;">Krzysza Korytkowski</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">News Director</p></div>
+  <p class="name" style="text-align:left;">Krzysza Korytkowski</p>
+  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">News Director</p></div></div>
 </div>
 <div class="staff_container">
   <img src="ctv_images/staff/jessicaless.jpg" data-rjs="2">
@@ -414,8 +423,8 @@ p.pichardo{
 <div class="staff_container">
   <img src="ctv_images/staff/jemmamiller.jpg" data-rjs="2">
   <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
-  <p class="name" style="text-align:left;">Jemma Miller</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Entertainment Director</p></div>
+  <p class="name" style="text-align:left;">Jemma Miller</p>
+  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Entertainment Director</p></div></div>
 </div>
 <div class="staff_container">
   <img src="ctv_images/nophoto.jpg" data-rjs="2">
@@ -460,8 +469,8 @@ p.pichardo{
 <div class="staff_container">
   <img src="ctv_images/staff/annavillalonga.jpg" data-rjs="2">
   <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
-  <p class="name" style="text-align:left;">Anna Villalonga</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Sports Director</p></div>
+  <p class="name" style="text-align:left;">Anna Villalonga</p>
+  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Sports Director</p></div></div>
 </div>
 
 <!-- END STAFF -->
@@ -475,31 +484,52 @@ p.pichardo{
 
 
 
-<div style="width:690px; height:50px; background-color:#505050; float:left; border:5px solid white; border-bottom:0px; text-align:center;"><p class="head">ADVISOR</p></div>
+<div class="bardivider"><p class="head">ADVISOR</p></div>
 <!-- BEGIN ADVISOR -->
 <!-- ALL PICTURES MUST BE 170x170 -->
-<div style="width:168.8px; height:168.8px; background-image:url(ctv_images/staff/pichardo.jpg"><div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
-  <p class="name" style="text-align:left;">Mr. Pichardo</p></div></div>
-<div style="width:521.4px; height:168.8px; background-image:url(); background-color:#b2b2b2; float:left; border:5px solid white; border-right:0px; border-bottom:0px; border-left:0px; position:relative;"><p class="pichardo" style="text-align:justify; text-indent:50px;">Since joining CTV in 2005, <b>Alfredo Pichardo</b> has worked to bring his real world experience into the classroom. Having worked as a Coordinating Producer, Technical Operations Manager, and Studio Camera Operator for networks such as Univision, Telemundo, NBC, CBS, and MTV, Mr. Pichardo is able to prepare CTV students for careers in television far beyond what can be taught from a textbook. He has a wife, three kids, and a CTV family that wouldn’t be the same without him.</p><p class="pichardo" style="text-align:center;">Email: <a href="mailto:apichardo@cchsctv.com">apichardo@cchsctv.com</a>&nbsp;&nbsp;&nbsp;Resume: <a href="http://cchsctv.com/pdf/pichardoresume.pdf" target="_blank">(click here)</a></p></div>
+<div class="chardo_bio">
+  <div class="officer_container" style="border: 0px; padding: 5px; background-color:#b2b2b2">
+    <img src="ctv_images/staff/pichardo.jpg" data-rjs="2" style="">
+    <div style="position:absolute; background-color:rgba(0, 0, 0, 0.8); transform:translateY(-1.9em)">
+    <p class="name" style="text-align:left;">Mr. Pichardo</p></div>
+  </div>
+  <p class="pichardo" style="text-align:justify; text-indent:50px;">
+    Since joining CTV in 2005, <b>Alfredo Pichardo</b> has worked to bring his real world
+    experience into the classroom. Having worked as a Coordinating Producer, Technical Operations Manager,
+    and Studio Camera Operator for networks such as Univision, Telemundo, NBC, CBS, and MTV, Mr. Pichardo is
+    able to prepare CTV students for careers in television far beyond what can be taught from a textbook.
+    He has a wife, three kids, and a CTV family that wouldn’t be the same without him.
+  </p><p class="pichardo" style="text-align:center;">Email:
+    <a href="mailto:apichardo@cchsctv.com">apichardo@cchsctv.com</a>&nbsp;&nbsp;&nbsp;Resume:
+    <a href="http://cchsctv.com/pdf/pichardoresume.pdf" target="_blank">(click here)</a>
+  </p>
+</div>
 <!-- END ADVISOR -->
 
 
-<div style="width:700px; height:5px; background-color:white; float:left;"></div>
 
 
 <div style="clear:both"></div>
 </div> <!-- white box -->
 
-<div style="width:720px; margin-top:5px; margin-bottom:75px;">
-<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
-<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
-</div>
-</div>
-
 </div> <!-- overall -->
-<!-- New retina.js script. -->
-<script type="text/javascript" src="/scripts/retina.test.js"></script>
+<div class="footer">
+<p class="left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="right">Website by: <a href="alumni.html#08">Dean D'Agati</a></p>
 
+
+<div class ="bottom" style=""><center><!-- Start of StatCounter Code -->
+  <script type="text/javascript" language="javascript">var sc_project=2428704; var sc_invisible=0; var sc_partition=23; var sc_security="3467593b"; </script>
+  <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <img src="http://c24.statcounter.com/counter.php?sc_project=2428704&amp;java=0&amp;security=3467593b&amp;invisible=0" alt="web hit counter" border="0"></a>
+  </noscript>
+  <!-- End of StatCounter Code --></center></div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="scripts/retina.min.js"></script>
   </body>
 
 </html>
