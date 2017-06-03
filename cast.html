@@ -184,9 +184,20 @@ p.pichardo{
   .officer_container {
     width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
   }
+  .staff_container {
+    width: calc(calc(calc(100% - 5px) * 0.33) - 5px);
+  }
+}
+@media only screen and (max-width: 580px) {
+  .staff_container {
+    width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  }
 }
 @media only screen and (max-width: 420px) {
   .officer_container {
+    width: calc(100% - 10px);
+  }
+  .staff_container {
     width: calc(100% - 10px);
   }
 }
@@ -208,7 +219,6 @@ p.pichardo{
     width: calc(100% - 0px);
   }
 }
-</style>
 </style>
 
   </head>
