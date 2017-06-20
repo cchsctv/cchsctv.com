@@ -39,8 +39,7 @@ p.large{
   background-color:rgba(0, 0, 0, 0.6);
 }
 p.oname{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: 1em;
 	color:white;
 	margin:0px;
 	margin-top:8px;
@@ -48,8 +47,7 @@ p.oname{
 	text-align:center;
 }
 p.oposition{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 10px;
+	font-size: .75em;
 	color:#c30e0e;
 	margin:0px;
 	letter-spacing:1px;
@@ -58,7 +56,6 @@ p.oposition{
 	text-align:center;
 }
 .footer {
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: white;
   margin: 0px;
@@ -117,11 +114,14 @@ p.oposition{
   transform: translate(-50%, -0%);
   vertical-align: top;
 }
-.twitter-box {
+.inner {
+  width: calc(100% - 10px);
+}
+.embed-box {
   width:calc(100% - 10px) ;
   height:405px;
-  background-color:#ffffff;
-  border:5px solid white;
+  background-color:#292F33;
+  border:5px solid #292F33;
 }
 img {
     max-width: 100%;
@@ -129,6 +129,7 @@ img {
 }
 iframe {
   width: calc(100% - 10px);
+  width: 100%;
 }
 @media only screen and (max-width: 720px) {
   .topnav a:not(:nth-child(1)) {
@@ -235,7 +236,7 @@ iframe {
 
 
 <!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE -->
-	<div style="border:5px solid white; position:relative;">
+	<div style="line-height:0;width:100%">
     <a href="http://cchsctv.com/video.html?autoplay=true">
     <img src="ctv_images/thisweekbar.png" data-rjs="2">
     </a>
@@ -246,17 +247,12 @@ iframe {
 		<a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 	</p></td></tr></table></div>-->
 
-<!-- Twitter Embed-->
-<div class="twitter-box" style="overflow:hidden; position:relative;">
-    <a class="twitter-timeline" data-height="405" data-dnt="true" data-theme="dark" href="https://twitter.com/cchsctv">Tweets by cchsctv</a>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
 
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
-<div style="width:100%; height:405px; background-color:#c30e0e; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">
+<div style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
 
-<p class="oname" style="font-weight:bold; margin-right:0px; margin-bottom:10px; margin-top 10px; text-align:center; color:#c30e0e;">2016-2017 CTV OFFICERS</p>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2016-2017 CTV OFFICERS</p>
 <p class="oname">Lian Chung-Valuntas</p></td>
 <p class="oposition">PRESIDENT</p></td>
 <p class="oname">Lexi Delgado</p></td>
@@ -275,21 +271,28 @@ iframe {
 <p class="oposition">Equipment Manager</p></td>
 <p class="oname">Jason Chua</p></td>
 <p class="oposition">Senior Ops Manager</p></td>
-<p class="style" style="margin-top:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
+<p class="style" style="padding:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
 	</div>
 
+<!-- Twitter Embed-->
+<div class="embed-box" style="overflow:hidden; position:relative;">
+    <a class="twitter-timeline" data-height="405" data-dnt="true" data-theme="dark" href="https://twitter.com/cchsctv">Tweets by cchsctv</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<!-- ScoreStream Bar -->
+<div style="width:100%;overflow:hidden; position:relative;">
+  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
+</div>
 
 <!-- Lariat Embed -->
-<div style="width:100%; height:405px; background-color:#ffffff; border:5px solid white; border-top:0px; border-right:0px">
-  <div class="wordpress-box" style="overflow:hidden;">
+<div style="height:100%; background-color:#ffffff;">
+  <div class="embed-box" style="overflow:hidden;">
     <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
     <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
   </div>
 </div>
-<!-- ScoreStream Bar -->
-<div style="padding:0px 5px 0px 5px; overflow:hidden; position:relative;">
-  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
-</div>
+
 
 <!--
 <center><img src="ctv_images/lower-banner.jpg" width="690" alt="" usemap="imgmap20155214647" data-rjs="2">
