@@ -11,10 +11,13 @@
 <style>
 body
 {
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
+  background-image: url(ctv_images/background_slim.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #c30e0e;
+  background-size: 720px 140px ;
+  overflow-x:hidden;
+  margin: 0;
 }
 </style>
 <!-- REVERT COLOR #c30e0e EA80B0-->
@@ -27,7 +30,9 @@ p.style{
 	margin:0px;
 	letter-spacing:1px;
 }
+
 p.large{
+  line-height: normal;
   font-size: .9em;
   padding: 2%;
 	letter-spacing:1px;
@@ -54,6 +59,16 @@ p.oposition{
 	font-weight:bold;
 	text-transform: uppercase;
 	text-align:center;
+}
+.bar {
+  width:100%;
+  background-position: center top;
+  background-size:cover;
+}
+p.bar {
+  border:none;
+  vertical-align: middle;
+  font-size: 1.3em;
 }
 .footer {
   font-size: 14px;
@@ -149,9 +164,27 @@ iframe {
   .footer .left {float:none}
   .footer .right {float:none}
   .footer .bottom {padding: 0px}
+  .bar{
+    width: calc(100% + 20px);
+    transform: translateX(-10px);
+  }
+  p.bar {
+    width: calc(100% - 20px);
+    transform: translateX(10px);
+  }
 }
 @media only screen and (max-width: 540px){
-  p.large {font-size: .8em;}
+  p.large {
+    font-size: .8em;
+    background-color: black;
+    background-color:#292F33;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+  }
+  .bar {
+    border-top: 10px solid black
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -206,13 +239,9 @@ iframe {
           </div>
 
 
-<!-- HOME PAGE IMAGE DIMENSIONS 1380 X 650 -->
-<!--
-<div style="width:690px; height:325px; background-image:url(ctv_images/homeimg16-8.jpg); background-color:#000000; background-size: 690px 325px; float:left; border:5px solid white; border-right:0px;">
--->
-<div style="background-color:#000000; position:relative;">
+<div style="background-color:#000000; position:relative; line-height:0;">
   <img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">
-  <div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%;  top:0px;">
+  <div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
     <a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
     <div class="fb-like" data-href="https://facebook.com/cchsctv" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
@@ -226,24 +255,22 @@ iframe {
         }(document, 'script', 'facebook-jssdk'));
       </script>
   </div>
-  <div style="background-color:rgba(0, 0, 0, 0.6);">
+  <div>
       <p class="large" align="center">CTV is one of America's leading high school television production programs. Based at Cooper City High School in Cooper City, Florida, we create content for CCHS students, the South Florida community, and beyond.
-      </p></td></tr>
+      </p>
   </div>
 </div>
 
 
-<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE -->
-	<div style="line-height:0;width:100%">
-    <a href="http://cchsctv.com/video.html?autoplay=true">
-    <img src="ctv_images/thisweekbar.png" data-rjs="2">
-    </a>
-  </div>
+<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE-->
+  <div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table width="100%"><tr><td><p class="bar">
+    <a href="video.html?autoplay=true">Watch This Weeks Episode</a>
+  </p></td></tr></table></div>
 
 <!-- TO CHANGE RED BAR, USE THIS CODE
-	<div style="width:690px; height:50px; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/barblank.png); background-size: 690px 50px; data-rjs="2; background-size: 690px 50px;"><table width="690" height="50"><tr><td><p class="bar">
-		<a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
-	</p></td></tr></table></div>-->
+<div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table width="100%"><tr><td><p class="bar">
+  <a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
+</p></td></tr></table></div> -->
 
 
 
@@ -293,7 +320,7 @@ iframe {
 
 
 <!--
-<center><img src="ctv_images/lower-banner.jpg" width="690" alt="" usemap="imgmap20155214647" data-rjs="2">
+<center  style="line-height:0;width:100%"><img src="ctv_images/lower-banner.jpg" alt="" usemap="imgmap20155214647" data-rjs="2">
   <map id="imgmap20155214647" name="imgmap20155214647">
     <area shape="rect" alt="Cooper City High" title="" coords="88,49,195,71" href="http://www.coopercityhigh.net" target="_blank" />
     <area shape="rect" alt="Broward County Public Schools" title="" coords="322,50,432,72" href="http://www.browardschools.com" target="_blank" />
