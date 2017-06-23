@@ -278,7 +278,7 @@
       <p class="competitiontitle">2017 FSPA States</p><p class="competitionloc">Orlando, Florida - April 26th, 2017</p>
     </div>
   </div>
-<a href="javascript:myBlurFunction2(1);">
+<a href="javascript:popupfunction(1,'overlay','video');">
   <div class="awards" style="background-image:url(ctv_images/1stplace.png);" data-rjs="3">
     <span style="line-height:75px;"></span>
     <div style="vertical-align:middle; display:inline-block;">
@@ -294,7 +294,7 @@
       <p class="sub">Jason Chua</p>
     </div>
   </div>
-  <a href="javascript:myBlurFunction4(1);">
+  <a href="javascript:popupfunction(1,'overlay2','video2');">
   <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2">
     <span style="line-height:75px;"></span>
     <div style="vertical-align:middle; display:inline-block;">
@@ -317,7 +317,7 @@
       <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p>
     </div>
   </div>
-<a href="javascript:myBlurFunction3(1);">
+<a href="javascript:popupfunction(1,'overlay3','video3');">
   <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
     <span style="line-height:75px;"></span>
     <div style="vertical-align:middle; display:inline-block;">
@@ -381,7 +381,7 @@
         <p class="competitionloc">Anaheim California - March 31st, 2017</p>
     </div>
   </div>
-  <a href="javascript:myBlurFunction(1);">
+  <a href="javascript:popupfunction(1,'overlay4','video4');">
     <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
       <span style="line-height:75px;"></span>
       <div style="vertical-align:middle; display:inline-block;">
@@ -885,109 +885,38 @@
 
 }
 </style>
+
 <script>
-var myBlurFunction = function(state) {
-    /* state can be 1 or 0 */
-    var containerElement = document.getElementById('main_container');
-    var overlayEle = document.getElementById('overlay');
-    var overallEle = document.getElementById('overall');
-    var videoEle = document.getElementById('video');
-    var popupEle = document.getElementById('popup');
+var popupfunction = function(state, overlay, video){
+  var overlayEle = document.getElementById(overlay);
+  var overallEle = document.getElementById('overall');
+  var videoEle = document.getElementById(video);
+  var popupEle = document.getElementById('popup');
 
-    if (state) {
+  if (state === 1) {
 
-        popupEle.style.filter= 'blur(0px)';
+      popupEle.style.filter= 'blur(0px)';
 
-        overlayEle.style.transition ='.5s';
-        overlayEle.style.display = 'block';
+      overlayEle.style.transition ='.5s';
+      overlayEle.style.display = 'block';
 
+      overallEle.style.filter = 'blur(10px)';
+      overallEle.style.transition = '0.5s';
 
-        overallEle.style.filter = 'blur(10px)';
-        overallEle.style.transition = '0.5s';
-        videoEle.style.transition = '0.5s';
-        videoEle.play();
-    } else {
+      videoEle.style.transition = '0.5s';
+      videoEle.play();
+  } else {
 
-        popupEle.style.filter= 'blur(0px)';
-        overlayEle.style.transition ='0.9s';
-        overlayEle.style.display = 'none';
+      popupEle.style.filter= 'blur(0px)';
+      overlayEle.style.transition ='0.9s';
+      overlayEle.style.display = 'none';
 
-        overallEle.style.transition = '0.5s';
-        overallEle.style.filter = 'blur(0px)';
+      overallEle.style.transition = '0.5s';
+      overallEle.style.filter = 'blur(0px)';
 
-        videoEle.pause();
-    }
-};
-var myBlurFunction2 = function(state) {
-    /* state can be 1 or 0 */
-    var containerElement = document.getElementById('main_container');
-    var overlayEle = document.getElementById('overlay2');
-    var overallEle = document.getElementById('overall');
-    var videoEle = document.getElementById('video2');
-
-    if (state) {
-        overlayEle.style.transition ='.5s';
-        overlayEle.style.display = 'block';
-
-
-        overallEle.style.filter = 'blur(10px)';
-        overallEle.style.transition= '0.3s';
-        videoEle.play();
-    } else {
-        overlayEle.style.transition ='.9s';
-        overlayEle.style.display = 'none';
-        overallEle.style.transition = '0.5s';
-        overallEle.style.filter = 'blur(0px)';
-        videoEle.pause();
-    }
-};
-
-var myBlurFunction3 = function(state) {
-    /* state can be 1 or 0 */
-    var containerElement = document.getElementById('main_container');
-    var overlayEle = document.getElementById('overlay3');
-    var overallEle = document.getElementById('overall');
-    var videoEle = document.getElementById('video3');
-
-    if (state) {
-        overlayEle.style.transition ='.5s';
-        overlayEle.style.display = 'block';
-
-
-        overallEle.style.filter = 'blur(10px)';
-        overallEle.style.transition= '0.3s';
-        videoEle.play();
-    } else {
-        overlayEle.style.transition ='.9s';
-        overlayEle.style.display = 'none';
-        overallEle.style.transition = '0.5s';
-        overallEle.style.filter = 'blur(0px)';
-        videoEle.pause();
-    }
-};
-var myBlurFunction4 = function(state) {
-    /* state can be 1 or 0 */
-    var containerElement = document.getElementById('main_container');
-    var overlayEle = document.getElementById('overlay4');
-    var overallEle = document.getElementById('overall');
-    var videoEle = document.getElementById('video4');
-
-    if (state) {
-        overlayEle.style.transition ='.5s';
-        overlayEle.style.display = 'block';
-
-
-        overallEle.style.filter = 'blur(10px)';
-        overallEle.style.transition= '0.3s';
-        videoEle.play();
-    } else {
-        overlayEle.style.transition ='.9s';
-        overlayEle.style.display = 'none';
-        overallEle.style.transition = '0.5s';
-        overallEle.style.filter = 'blur(0px)';
-        videoEle.pause();
-    }
-};
+      videoEle.pause();
+  }
+}
 </script>
 
 
@@ -1001,28 +930,28 @@ var myBlurFunction4 = function(state) {
 
 </div></div></div> <!-- overall -->
 
-<div id="overlay" class ="overlay">
+<div id="overlay4" class ="overlay">
   <div id="popup">
-    <a href="javascript:myBlurFunction(0);">
+    <a href="javascript:popupfunction(0,'overlay4','video4');">
       <button id="x-button" style="float: right;">
         <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
       </img>
       </button>
-      <video id="video" width= "700px" controls>
+      <video id="video4" width= "700px" controls>
         <source id="EP431" src="/episodes/ctv431.mp4" type="video/mp4">
       </video>
     </a>
   </div>
 </div>
 
-<div id="overlay2" class ="overlay">
+<div id="overlay" class ="overlay">
   <div id="popup">
-    <a href="javascript:myBlurFunction2(0);">
+    <a href="javascript:popupfunction(0,'overlay','video');">
       <button id="x-button" style="float: right;">
         <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
       </img>
       </button>
-      <video  id="video2" width= "700px" controls>
+      <video  id="video" width= "700px" controls>
         <source id="NewsPKG" src="/episodes/Competition/FSPAS1stNewsPKG.mp4" type="video/mp4">
       </video>
     </a>
@@ -1030,7 +959,7 @@ var myBlurFunction4 = function(state) {
 </div>
 <div id="overlay3" class ="overlay">
   <div id="popup">
-    <a href="javascript:myBlurFunction3(0);">
+    <a href="javascript:popupfunction(0,'overlay3','video3');">
       <button id="x-button" style="float: right;">
         <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
       </img>
@@ -1041,14 +970,14 @@ var myBlurFunction4 = function(state) {
     </a>
   </div>
 </div>
-<div id="overlay4" class ="overlay">
+<div id="overlay2" class ="overlay">
   <div id="popup">
-    <a href="javascript:myBlurFunction4(0);">
+    <a href="javascript:popupfunction(0,'overlay2','video2');">
       <button id="x-button" style="float: right;">
         <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
       </img>
       </button>
-      <video id="video4" width= "700px" controls>
+      <video id="video2" width= "700px" controls>
         <source id="Collab" src="/episodes/Competition/FSPAS2ndCollab.mp4" type="video/mp4">
       </video>
     </a>

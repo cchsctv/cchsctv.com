@@ -235,21 +235,29 @@ p.name{
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
 <p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay','video');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
   <p class="head">OTS News Package</p>
 <p class="sub">Casey Chapter, Lexi Delgado</p></div></div>
+</a>
+
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
   <p class="head">OTS News Photography</p>
 <p class="sub">Jason Chua</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay2','video2');">
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
   <p class="head">OTS Collaborative Commercial</p>
 <p class="sub">Alexa Pichardo</p></div></div>
+</a>
+
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -260,21 +268,28 @@ p.name{
 <div class="award_text">
   <p class="head">Public Service Announcement</p>
 <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay3','video3');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
   <p class="head">Broadcast Profile</p>
 <p class="sub">Lexi Delgado</p></div></div>
+</a>
+
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
   <p class="head">Quick Turn - Cooking Video</p>
 <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay5','video5');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
   <p class="head">Broadcast Show Opening</p>
 <p class="sub">Lexi Delgado, Jason Chua</p></div></div>
+</a>
 <!--
 <div class="award_container">
   <img src="ctv_images/excellent.png); background-size: 377.5px 82px; padding-left:90px; float:left; border:5px solid white; border-right:0px; border-bottom:0px;" data-rjs="3"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
@@ -334,11 +349,15 @@ p.name{
 <div class="compitition">
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay4','video4');">
 <div class="award_container">
   <img src="ctv_images/3rdplace.png">
 <div class="award_text">
   <p class="head">Crazy 8 - Broadcast Morning Show</p>
 <p class="sub">Staff</p></div></div>
+</a>
+
 <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
 <!-- AWARD GROUP END -->
 
@@ -354,11 +373,15 @@ p.name{
 <div class="award_text">
   <p class="head">OTS Selfie</p>
 <p class="sub">Samantha Towle</p></div></div>
+
+<a href="javascript:popupfunction(1,'overlay6','video6');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
   <p class="head">Silent Movie</p>
 <p class="sub">Krzysza Korytkowski, Alexa Pichardo, Andrew Rothschild</p></div></div>
+</a>
+
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
@@ -1121,6 +1144,77 @@ p.name{
 
 
 <div style="width:100%; height:50px; background-color:#000000; text-align:center"><span style="line-height:44px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="style" style="text-align:center">Pre-2006 awards are not available online.</p></div></div>
+<!--Pop Up-->
+<style>
+.blur   {
+  filter:blur(5px);
+
+}
+.overlay    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+
+
+}
+
+#popup {
+    /*border: 2px solid #c30e0e;*/
+    position: absolute;
+    width: 57%;
+    height: auto;
+    left: 0%;
+    right: 0%;
+    top: 25%;
+    bottom: 0%;
+    margin: auto;
+    /*filter: blur(5px);*/
+}
+
+#x-button {
+    font-family:monospace;
+    background-color:  rgba(255, 0, 0, 0);
+    border: 0px solid #4CAF50;
+
+}
+</style>
+
+<script>
+var popupfunction = function(state, overlay, video){
+  var overlayEle = document.getElementById(overlay);
+  var overallEle = document.getElementById('overall');
+  var videoEle = document.getElementById(video);
+  var popupEle = document.getElementById('popup');
+
+  if (state === 1) {
+
+      popupEle.style.filter= 'blur(0px)';
+
+      overlayEle.style.transition ='.5s';
+      overlayEle.style.display = 'block';
+
+      overallEle.style.filter = 'blur(10px)';
+      overallEle.style.transition = '0.5s';
+
+      videoEle.style.transition = '0.5s';
+      videoEle.play();
+  } else {
+
+      popupEle.style.filter= 'blur(0px)';
+      overlayEle.style.transition ='0.9s';
+      overlayEle.style.display = 'none';
+
+      overallEle.style.transition = '0.5s';
+      overallEle.style.filter = 'blur(0px)';
+
+      videoEle.pause();
+  }
+}
+</script>
 
 
 
@@ -1132,6 +1226,85 @@ p.name{
 </div>
 
 </div> <!-- overall -->
+
+<div id="overlay" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay','video');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video  id="video" width= "100%" controls>
+        <source id="NewsPKG" src="/episodes/Competition/FSPAS1stNewsPKG.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay2" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay2','video2');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video2" width= "100%" controls>
+        <source id="Collab" src="episodes/Competition/FSPAS2ndCollab.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay3" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay3','video3');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video3" width= "100%" controls>
+        <source id="Profile" src="/episodes/Competition/FSPASAFProfile.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay4" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay4','video4');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video4" width= "100%" controls>
+        <source id="EP431" src="/episodes/ctv431.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay5" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay5','video5');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video5" width= "100%" controls>
+        <source id="ShowOpen" src="/episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay6" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay6','video6');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video6" width= "50%" controls>
+        <source id="ShowOpen" src="/episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
 
 
 <script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
