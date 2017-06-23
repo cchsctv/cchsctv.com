@@ -198,7 +198,11 @@ p.name{
 </style>
 
   </head>
-
+<div id="overall" >
+<video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" data-setup='{"playbackRates": [1, 1.5, 2]}'>
+  <source id="srcvideo" src="episodes/ctv400.mp4" >
+</video>
+</div>
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
       <div class="main">
@@ -230,13 +234,14 @@ p.name{
 
 
 <!-- IMAGE -->
+
 <div class="compitition_container">
   <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
 <p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay','video');">
+<a onclick="onVideoClick('episodes/Competition/FSPAS1stNewsPKG.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -250,7 +255,7 @@ p.name{
   <p class="head">OTS News Photography</p>
 <p class="sub">Jason Chua</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay2','video2');">
+<a onclick="onVideoClick('episodes/Competition/FSPAS2ndCollab.mp4');">
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
@@ -269,7 +274,7 @@ p.name{
   <p class="head">Public Service Announcement</p>
 <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay3','video3');">
+<a onclick="episodes/Competition/FSPASAFProfile.mp4">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -283,7 +288,7 @@ p.name{
   <p class="head">Quick Turn - Cooking Video</p>
 <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay5','video5');">
+<a onclick="/episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -350,7 +355,7 @@ p.name{
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay4','video4');">
+<a onclick="episodes/ctv431.mp4">
 <div class="award_container">
   <img src="ctv_images/3rdplace.png">
 <div class="award_text">
@@ -374,7 +379,7 @@ p.name{
   <p class="head">OTS Selfie</p>
 <p class="sub">Samantha Towle</p></div></div>
 
-<a href="javascript:popupfunction(1,'overlay6','video6');">
+<a onclick="episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -1148,72 +1153,127 @@ p.name{
 <style>
 .blur   {
   filter:blur(5px);
-
 }
-.overlay    {
-    position: fixed;
-    display: none;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: 999;
-
-
+#overall {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.0);
+  display: none;
+  cursor: pointer;
 }
-
-#popup {
-    /*border: 2px solid #c30e0e;*/
-    position: absolute;
-    width: 57%;
-    height: auto;
-    left: 0%;
-    right: 0%;
-    top: 25%;
-    bottom: 0%;
-    margin: auto;
-    /*filter: blur(5px);*/
+#video {
+  z-index: 9999;
+  width: inherit;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
-#x-button {
-    font-family:monospace;
-    background-color:  rgba(255, 0, 0, 0);
-    border: 0px solid #4CAF50;
-
+.main div a p{
+  text-decoration: underline;
+}
+.main div a div:not(.topnav){
+  transition: 0.2s;
+}
+.main div a div:hover:not(.topnav){
+  filter: brightness(1.5);
 }
 </style>
-
+<link href="http://vjs.zencdn.net/5.19.2/video-js.min.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/5.19.2/video.min.js"></script>
 <script>
-var popupfunction = function(state, overlay, video){
-  var overlayEle = document.getElementById(overlay);
-  var overallEle = document.getElementById('overall');
-  var videoEle = document.getElementById(video);
-  var popupEle = document.getElementById('popup');
+
+var video = document.getElementById('video');
+video = videojs('video');
+
+document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
+
+//stolen from https://www.reddit.com/r/HTML/comments/31xiwa
+function onVideoClick(srcvideo) {
+/*
+    document.getElementById("video_pop").innerHTML = "<video autoplay controls id=\"the_Video\"><source src=\""+theLink+"\" type=\"video/webm\"></video>";
+
+    document.getElementById("video_pop").innerHTML = "<video autoplay controls id=\"video\" class=\"video-js vjs-16-9 vjs-big-play-centered\"><source id=\"the_Video\" src=\""+theLink+"\"></video>";
+*/
+
+    document.getElementById("overall").style.display="block";
+      document.getElementById("overall").style.background = "rgba(0,0,0,0.9)";
+    document.getElementById("overall").style.transition = '0.5s';
+
+
+    popupfunction(1)
+    video.src(srcvideo);
+    video.load();
+    video.play();
+}
+
+function onPopClick() {
+    document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
+    document.getElementById("overall").style.transition = '0.5s';
+    document.getElementById("overall").style.display="none";
+    document.getElementById("overall").innerHTML = "";
+}
+
+var element = document.getElementById("overall");
+
+element.onclick = (function (onclick) {
+  return function(evt) {
+    // reference to event to pass argument properly
+    evt  = evt || event;
+
+    // onClick even still works in the DOM
+    if (onclick) {
+      onclick(evt);
+    }
+    // new code that will happen when you click only if you click on the background.
+     if (evt.target == element) {
+       element.style.display="none";
+       popupfunction(2)
+       video.pause();
+     }
+
+  }
+})(element.onclick);
+
+
+//var popupfunction = function(state, overlay, video){
+function popupfunction(state){
+  //var overlayEle = document.getElementById(overlay);
+  //var overallEle = document.getElementById('overall');
+  var overallEle = document.getElementsByClassName('main')[0]
+
+  //var videoEle = document.getElementById(video);
+  //var popupEle = document.getElementById('popup');
 
   if (state === 1) {
 
-      popupEle.style.filter= 'blur(0px)';
+      //popupEle.style.filter= 'blur(0px)';
 
-      overlayEle.style.transition ='.5s';
-      overlayEle.style.display = 'block';
+      //overlayEle.style.transition ='.5s';
+      //overlayEle.style.display = 'block';
 
       overallEle.style.filter = 'blur(10px)';
       overallEle.style.transition = '0.5s';
 
-      videoEle.style.transition = '0.5s';
-      videoEle.play();
+      //videoEle.style.transition = '0.5s';
+      //videoEle.play();
   } else {
 
-      popupEle.style.filter= 'blur(0px)';
-      overlayEle.style.transition ='0.9s';
-      overlayEle.style.display = 'none';
+      //popupEle.style.filter= 'blur(0px)';
+      //overlayEle.style.transition ='0.9s';
+      //overlayEle.style.display = 'none';
 
       overallEle.style.transition = '0.5s';
       overallEle.style.filter = 'blur(0px)';
 
-      videoEle.pause();
+      //videoEle.pause();
   }
 }
+
 </script>
 
 
@@ -1226,7 +1286,7 @@ var popupfunction = function(state, overlay, video){
 </div>
 
 </div> <!-- overall -->
-
+<!--
 <div id="overlay" class ="overlay">
   <div id="popup">
     <a href="javascript:popupfunction(0,'overlay','video');">
@@ -1305,7 +1365,7 @@ var popupfunction = function(state, overlay, video){
     </a>
   </div>
 </div>
-
+-->
 
 <script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
   </body>
