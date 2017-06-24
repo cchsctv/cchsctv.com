@@ -1,49 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name = "viewport" content = "width = 740">
-    <title>CTV - Cast & Crew</title>
-
+<head>
+  <link rel="shortcut icon" href="ctv_images/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTV - Cooper City High School</title>
 <style>
-body
-{
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
-
+body {
+  background-image: url(ctv_images/background_slim.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #c30e0e;
+  background-size: 720px 140px ;
+  overflow-x:hidden;
+  margin: 0;
 }
 </style>
 
 <style type="text/css">
+.footer {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+  letter-spacing: 1px;
+}
+.footer .left {
+  float:left;
+  margin: inherit;
+}
+.footer .right {
+  float:right;
+  margin: inherit;
+}
+.footer .bottom {
+  padding-top: 2rem;
+  margin: inherit;
+}
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  margin: 10px auto;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.topnav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.6s;
+}
+.topnav a:first-child {
+  display: none;
+}
+.topnav .icon {
+  display: none;
+}
+.main {
+  width: 720px;
+  left: 50%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -0%);
+  vertical-align: top;
+}
 p.style{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 1.2em;
 	color:white;
 	margin:0px;
 	letter-spacing:1px;
 }
 p.head{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 26px;
+	font-size: 1.5em;
 	color:white;
-	margin:8px;
+	margin:8px 0;
 	font-weight: bold;
 	letter-spacing:2px;
+  width:100%;
 }
-p.name{
+.name {
+  position:absolute;
+  background-color:rgba(0, 0, 0, 0.8);
+  transform:translateY(calc(-.9em - 50%));
+  transform:translateY(-100%);
+}
+.name p{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: .9em;
 	color:white;
 	margin:5px;
 	font-weight: bold;
 	text-shadow: -2px 2px #000000;
+  text-align:left;
+}
+.director {
+  position:absolute;
+  transform:translateY(calc(-0.15em - 200%));
+  background-color:rgba(195, 14, 14, 0.8);
 }
 p.sub{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: .75em;
 	color:white;
 	margin:5px;
   font-weight: bold;
@@ -51,11 +123,122 @@ p.sub{
 }
 p.pichardo{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: .9em;
 	color:black;
 	margin:5px;
 	line-height:150%;
 	letter-spacing:1px;
+}
+.bardivider {
+  width: calc(100% - 10px);
+  background-color:#505050;
+  float:left;
+  border:5px solid white;
+  border-bottom:0px;
+  text-align:center;"
+}
+.officer_container {
+  width: calc(calc(calc(100% - 5px) * 0.3333) - 5px);
+  border:5px solid white;
+  border-right:none;
+  border-bottom:none;
+  background-color:#c30e0e;
+  height: auto;
+  float: left;
+  justify-content: space-between;
+}
+.staff_container {
+  width: calc(calc(calc(100% - 5px) * 0.25) - 5px);
+  border:5px solid white;
+  border-right:none;
+  border-bottom:none;
+  height: auto;
+  float: left;
+  justify-content: space-between;
+}
+.officer_container img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.staff_container img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.officer_inner {
+  background-color:#c30e0e;
+  height: auto;
+  float: left;
+  justify-content: space-between;
+}
+.chardo_bio {
+  width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  width: calc(100% - 10px);
+  background-color:#505050;
+  float:left;
+  border:5px solid white;
+  text-align:center;
+  background-color:#b2b2b2;
+}
+@media only screen and (max-width: 720px) {
+  .topnav {display: block;}
+  .topnav a:not(:nth-child(3)) {
+    display: none;
+  }
+  .topnav a:nth-child(3) {
+    display: inherit;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a {
+    margin-bottom: 0px;
+    float: left;
+  }
+  .footer .left {float:none}
+  .footer .right {float:none}
+  .footer .bottom {padding: 0px}
+}
+@media only screen and (max-width: 680px) {
+  .officer_container {
+    width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  }
+  .staff_container {
+    width: calc(calc(calc(100% - 5px) * 0.33) - 5px);
+  }
+}
+@media only screen and (max-width: 580px) {
+  .staff_container {
+    width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  }
+}
+@media only screen and (max-width: 400px) {
+  .officer_container {
+    width: calc(100% - 10px);
+  }
+  .staff_container {
+    width: calc(100% - 10px);
+  }
+}
+@media only screen and (max-width: 720px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .main {
+    width: calc(100% - 0px);
+  }
 }
 </style>
 
@@ -63,189 +246,302 @@ p.pichardo{
 
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
+      <div class="main">
+        <a class="" href="index.html" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="max-width:100%; height:auto;" data-rjs="3">  </a>
 
-<div style="position:absolute; width:720px; top:0px; left:50%; margin-left:-360px;">
+        <div style=" background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
 
-<div style="width:720px; height:137px;"><a href="index.html"><img src="ctv_images/ctvhead.png" data-rjs="2"></a></div>
+      vertical-align: top;">
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+          </script>
 
-<div style="width:720px; height:57px;">
-<img src="ctv_images/buttons.jpg" data-rjs="2" alt="" usemap="#map1429419286195" border="0"><map id="map1429419286195" name="map1429419286195"><area shape="rect" coords="39,15,107,40" title="Video" alt="Video" href="video.html" target="_self"><area shape="rect" coords="146,16,297,40" title="Cast & Crew" alt="Cast & Crew" href="cast.html" target="_self"><area shape="rect" coords="330,16,418,39" title="Alumni" alt="Alumni" href="alumni.html" target="_self"><area shape="rect" coords="455,15,544,38" title="Awards" alt="Awards" href="awards.html" target="_self"><area shape="rect" coords="584,14,682,39" title="Contact" alt="Contact" href="contact.html" target="_self"></map>
-</div>
+          <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="video.html">Video</a>
+            <a href="cast.html">Cast & Crew</a>
+            <a href="alumni.html">Alumni</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+
 
 <!-- PAGE BEGIN-->
-<div style="width:700px; background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
 
-<!--<div style="width:342px; height:800px; background-image:url(ctv_images/homepic_edit1.jpg); background-color:#ffff00; float:left; border:5px solid white; border-right:0px;"></div>
-<div style="width:343px; height:800px; overflow:auto; background-color:#505050; float:left; border:5px solid white; border-bottom:0px;">words words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words wordswords words words</div>
--->
 <div style="clear:both"></div>
 
-<div style="width:690px; height:50px; background-color:#505050; float:left; border:5px solid white; border-bottom:0px; text-align:center;"><p class="head">OFFICERS</p></div>
+<div class="bardivider"><p class="head">2016-2017 OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/lianchung.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Lian Chung-Valuntas</p>
+<div class="officer_container">
+  <img src="ctv_images/staff/lianchung.jpg" data-rjs="2">
+    <div class="name">
+  <p>Lian Chung-Valuntas</p>
     </div>
-  </div><p class="sub">President</p>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/lexidelgado.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Lexi Delgado</p>
-    </div>
-  </div><p class="sub">Vice President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/isytocci.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Isabella Tocci</p>
+<div class="officer_container">
+  <img src="ctv_images/staff/lexidelgado.jpg" data-rjs="2">
+    <div class="name">
+  <p>Lexi Delgado</p>
     </div>
-  </div><p class="sub">Assistant Vice President</p>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Vice President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/caseychapter.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Casey Chapter</p>
-    </div>
-  </div><p class="sub">Secretary</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/felipelopez.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Felipe Lopez</p>
+<div class="officer_container">
+  <img src="ctv_images/staff/isytocci.jpg" data-rjs="2">
+    <div class="name">
+  <p>Isabella Tocci</p>
     </div>
-  </div><p class="sub">Treasurer</p>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Asst. Vice President</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/samanthatowle.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Samantha Towle</p>
-    </div>
-  </div><p class="sub">Historian</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/harrisness.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Harris Ness</p>
+<div class="officer_container">
+  <img src="ctv_images/staff/caseychapter.jpg" data-rjs="2">
+    <div class="name">
+  <p>Casey Chapter</p>
     </div>
-  </div><p class="sub">Bussiness Manager</p>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Secretary</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/jakobwolk.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jakob Wolk</p>
-    </div>
-  </div><p class="sub">Equipment Manager</p>
 </div>
-<div style="width:226.8px; height:190px; background-color:#c30e0e; float:left; border:5px solid white; border-right:0px; border-bottom:0px;">
-  <div style="width:226.8px; height:168.8px; background-size: 226.8px 169.8px; background-image:url(ctv_images/staff/jasonchua.jpg); background-color:#000000; float:left; position:relative;" data-rjs="2">
-    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jason Chua</p>
+<div class="officer_container">
+  <img src="ctv_images/staff/felipelopez.jpg" data-rjs="2">
+    <div class="name">
+  <p>Felipe Lopez</p>
     </div>
-  </div><p class="sub">Senior Operations Manager</p>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Treasurer</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/samanthatowle.jpg" data-rjs="2">
+    <div class="name">
+  <p>Samantha Towle</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Historian</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/harrisness.jpg" data-rjs="2">
+    <div class="name">
+  <p>Harris Ness</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Bussiness Manager</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/jakobwolk.jpg" data-rjs="2">
+    <div class="name">
+  <p>Jakob Wolk</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Equipment Manager</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/jasonchua.jpg" data-rjs="2">
+    <div class="name">
+  <p>Jason Chua</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Senior Operations Manager</p>
+</div>
 </div>
 
 <!-- END OFFICERS -->
 
-<div style="width:690px; height:50px; background-color:#505050; float:left; border:5px solid white; border-bottom:0px; text-align:center;"><p class="head">STAFF</p></div>
+<div class="bardivider"><p class="head">2016-2017 STAFF</p></div>
 
 <!-- BEGIN STAFF -->
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/kiarabencosme.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Kiara Bencosme</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/kiarabencosme.jpg" data-rjs="2">
+  <div class="name">
+  <p>Kiara Bencosme</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/ashtonbosse.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Ashton Bosse</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/ashtonbosse.jpg" data-rjs="2">
+  <div class="name">
+  <p>Ashton Bosse</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/markbrent.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Mark Brent</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/markbrent.jpg" data-rjs="2">
+  <div class="name">
+  <p>Mark Brent</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/gabrielacarbone.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Gabriela Carbone</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/gabrielacarbone.jpg" data-rjs="2">
+  <div class="name">
+  <p>Gabriela Carbone</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/emilyehrlich.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Emily Ehrlich</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/emilyehrlich.jpg" data-rjs="2">
+  <div class="name">
+  <p>Emily Ehrlich</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/briannafranco.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Brianna Franco</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/briannafranco.jpg" data-rjs="2">
+  <div class="name">
+  <p>Brianna Franco</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/madisongailboord.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Madison Gailboord</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/madisongailboord.jpg" data-rjs="2">
+  <div class="name">
+  <p>Madison Gailboord</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/adamglantz.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Adam Glantz</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/adamglantz.jpg" data-rjs="2">
+  <div class="name">
+  <p>Adam Glantz</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/lyndseykleiman.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Lyndsey Kleiman</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/lyndseykleiman.jpg" data-rjs="2">
+  <div class="name">
+  <p>Lyndsey Kleiman</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/krzyszakorytkowski.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Krzysza Korytkowski</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">News Director</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/krzyszakorytkowski.jpg" data-rjs="2">
+  <div class="director"><p class="sub">News Director</p></div>
+  <div class="name">
+  <p>Krzysza Korytkowski</p>
+
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/jessicaless.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jessica Less</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/jacobmayer.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jacob Mayer</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/jessicaless.jpg" data-rjs="2">
+  <div class="name">
+  <p>Jessica Less</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/jemmamiller.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Jemma Miller</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Entertainment Director</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/jacobmayer.jpg" data-rjs="2">
+  <div class="name">
+  <p>Jacob Mayer</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/nophoto.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Sergio Owen</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/jemmamiller.jpg" data-rjs="2">
+  <div class="director"><p class="sub">Entertainment Director</p></div>
+  <div class="name">
+  <p>Jemma Miller</p>
+  </div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/alexapichardo.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Alexa Pichardo</p></div>
+<div class="staff_container">
+  <img src="ctv_images/nophoto.jpg" data-rjs="2">
+  <div class="name">
+  <p>Sergio Owen</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/kallirodgers.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Kalli Rogers</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/alexapichardo.jpg" data-rjs="2">
+  <div class="name">
+  <p>Alexa Pichardo</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/andrewrothschild.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Andrew Rothschild</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/kallirodgers.jpg" data-rjs="2">
+  <div class="name">
+  <p>Kalli Rogers</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/justinerusso.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Justine Russo</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/andrewrothschild.jpg" data-rjs="2">
+  <div class="name">
+  <p>Andrew Rothschild</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/daniellesiso.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Danielle Siso</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/justinerusso.jpg" data-rjs="2">
+  <div class="name">
+  <p>Justine Russo</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/rebeccasmitherman.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Rebecca Smitherman</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/daniellesiso.jpg" data-rjs="2">
+  <div class="name">
+  <p>Danielle Siso</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/douglasweimann.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Douglas Weimann</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/rebeccasmitherman.jpg" data-rjs="2">
+  <div class="name">
+  <p>Rebecca Smitherman</p></div>
 </div>
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/annavillalonga.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Anna Villalonga</p></div>
-  <div style="position:absolute; bottom:26px; background-color:rgba(195, 14, 14, 0.8)"><p class="sub">Sports Director</p></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/douglasweimann.jpg" data-rjs="2">
+  <div class="name">
+  <p>Douglas Weimann</p></div>
+</div>
+<div class="staff_container">
+  <img src="ctv_images/staff/annavillalonga.jpg" data-rjs="2">
+  <div class="director"><p class="sub">Sports Director</p></div>
+  <div class="name">
+  <p>Anna Villalonga</p>
+  </div>
 </div>
 
 <!-- END STAFF -->
 
 <!-- BLANK CAST BOX
-<div style="width:168.8px; height:168.8px; background-size: 168.8px 169.8px; background-image:url(ctv_images/staff/nophoto.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
-  <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Anna Villalonga-Diez</p></div></div>
+<div class="staff_container">
+  <img src="ctv_images/staff/nophoto.jpg" data-rjs="2">
+  <div class="name">
+  <p>Anna Villalonga-Diez</p></div></div>
 -->
 
 
 
-<div style="width:690px; height:50px; background-color:#505050; float:left; border:5px solid white; border-bottom:0px; text-align:center;"><p class="head">ADVISOR</p></div>
+<div class="bardivider"><p class="head">ADVISOR</p></div>
 <!-- BEGIN ADVISOR -->
 <!-- ALL PICTURES MUST BE 170x170 -->
-<div style="width:168.8px; height:168.8px; background-image:url(ctv_images/staff/pichardo.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="name">Mr. Pichardo</p></div></div>
-<div style="width:521.4px; height:168.8px; background-image:url(); background-color:#b2b2b2; float:left; border:5px solid white; border-right:0px; border-bottom:0px; border-left:0px; position:relative;"><p class="pichardo" style="text-align:justify; text-indent:50px;">Since joining CTV in 2005, <b>Alfredo Pichardo</b> has worked to bring his real world experience into the classroom. Having worked as a Coordinating Producer, Technical Operations Manager, and Studio Camera Operator for networks such as Univision, Telemundo, NBC, CBS, and MTV, Mr. Pichardo is able to prepare CTV students for careers in television far beyond what can be taught from a textbook. He has a wife, three kids, and a CTV family that wouldn’t be the same without him.</p><p class="pichardo" style="text-align:center;">Email: <a href="mailto:apichardo@cchsctv.com">apichardo@cchsctv.com</a>&nbsp;&nbsp;&nbsp;Resume: <a href="http://cchsctv.com/pdf/pichardoresume.pdf" target="_blank">(click here)</a></p></div>
+<div class="chardo_bio">
+  <div class="officer_container" style="border: 0px; padding: 5px; background-color:#b2b2b2">
+    <img src="ctv_images/staff/pichardo.jpg" data-rjs="2" style="">
+    <div class="name">
+    <p>Mr. Pichardo</p></div>
+  </div>
+  <p class="pichardo" style="text-align:justify; text-indent:50px;">
+    Since joining CTV in 2005, <b>Alfredo Pichardo</b> has worked to bring his real world
+    experience into the classroom. Having worked as a Coordinating Producer, Technical Operations Manager,
+    and Studio Camera Operator for networks such as Univision, Telemundo, NBC, CBS, and MTV, Mr. Pichardo is
+    able to prepare CTV students for careers in television far beyond what can be taught from a textbook.
+    He has a wife, three kids, and a CTV family that wouldn’t be the same without him.
+  </p><p class="pichardo" style="text-align:center;">Email:
+    <a href="mailto:apichardo@cchsctv.com">apichardo@cchsctv.com</a>&nbsp;&nbsp;&nbsp;Resume:
+    <a href="http://cchsctv.com/pdf/pichardoresume.pdf" target="_blank">(click here)</a>
+  </p>
+</div>
 <!-- END ADVISOR -->
 
 
-<div style="width:700px; height:5px; background-color:white; float:left;"></div>
 
 
 <div style="clear:both"></div>
-</div> <!-- white box -->
-
-<div style="width:720px; margin-top:5px; margin-bottom:75px;">
-<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
-<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
-</div>
 
 </div> <!-- overall -->
-<!-- New retina.js script. -->
-<script type="text/javascript" src="/scripts/retina.test.js"></script>
+<div class="footer">
+<p class="left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="right">Website by <a href="alumni.html#08">Dean D'Agati</a>, <a href="alumni.html#17">Jason Chua</a></p>
 
+<div class ="bottom" style=""><center><!-- Start of StatCounter Code -->
+  <script type="text/javascript" language="javascript">var sc_project=2428704; var sc_invisible=0; var sc_partition=23; var sc_security="3467593b"; </script>
+  <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+  <noscript>
+    <img src="http://c24.statcounter.com/counter.php?sc_project=2428704&amp;java=0&amp;security=3467593b&amp;invisible=0" alt="web hit counter" border="0"></a>
+  </noscript>
+  <!-- End of StatCounter Code --></center></div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="scripts/retina.min.js"></script>
   </body>
 
 </html>

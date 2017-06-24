@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="shortcut icon" href="ctv_images/favicon.png" > <!--Tabbar logo-->
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width,initial-scale=1">
+    <title>CTV - Awards</title>
+
+
+<div id="overall">
+
+<style>
+  body{
+    /*  background-image:url("ctv_images/background_slim.jpg");*/
+      background-repeat:no-repeat;
+      background-position:center top;
+      background-color:#c30e0e;
+    }
+</style>
+<style type="text/css">
+  p.style{
+	   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	   font-size: 14px;
+     color:white;
+	   margin:0px;
+	   letter-spacing:1px
+    }
+  p.sub{
+	   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	   font-size: 14px;
+	   color:black;
+     margin:0px
+  }
+  p.head{
+	   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+     font-size: 18px;
+     font-weight: bold;
+     color:black;
+     margin:0px
+  }
+  p.competitiontitle{
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color:white;
+    margin:5px;
+    letter-spacing:1px
+  }
+  p.competitionloc{
+	  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+	  font-size: 14px;
+	  color:white;
+    margin:5px;
+    margin-top:-5px;
+    letter-spacing:1px
+  }
+  p.name{
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:white;
+    margin:5px;
+    font-weight: bold;
+    text-shadow: -2px 2px #000000;
+  }
+  .videoposition{
+    padding-left: 6px;
+    padding-top: 4.4px;
+  }
+  .row:nth-of-type(even) {
+    background: #F0F0F0;
+  }
+  .button {
+
+   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+   background-color: #000000; /* Black */
+   border: none;
+   color: white;
+   margin-left: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 7px;
+   padding: 3px 3px; /*15 , 17.9*/
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 31px;
+   display: inline-block;
+   position: relative;
+   padding-bottom: 3px;
+   cursor: pointer;
+  }
+
+  .button:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .4s ease, background-color .4s ease;
+  cursor: pointer;
+  }
+
+  .button:hover:after {
+  width: 100%;
+  background: white;
+  cursor: pointer;
+
+  }
+
+  .back {
+   background-color: black;
+   height: 65px;
+   width: 720px;
+   left: 0px;
+   top: 137px;
+  }
+
+  .footer {
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+    margin: 0px;
+    letter-spacing: 1px;
+  }
+  .footer .left {
+    float:left;
+    margin: inherit;
+  }
+  .footer .right {
+    float:right;
+    margin: inherit;
+  }
+  .footer .bottom {
+    padding-top: 2rem;
+    margin: inherit;
+  }
+  .topnav {
+    text-align: center;
+    overflow: hidden;
+    background-color: #000000;
+    width: 100%;
+  }
+  .topnav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    padding: 3px 3px;
+    /*15 , 17.9*/
+    text-decoration: none;
+    font-size: 26px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .topnav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.6s;
+  }
+  .topnav a:first-child {
+    display: none;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  .main {
+    width: calc(100% - 625px);
+    left: 50%;
+    text-align: center;
+    /*overflow: hidden;*/
+    position: absolute;
+    margin-right: -50%;
+    transform: translate(-50%, -0%);
+    vertical-align: top;
+  }
+  @media only screen and (max-width: 720px) {
+    .topnav a:not(:nth-child(2)) {
+      display: none;
+    }
+    .topnav a:nth-child(2) {
+      display: inherit;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav a {
+      margin-bottom: 0px;
+      float: left;
+    }
+    .yearbox {
+      width: calc(50% - 6px);
+    }
+    .footer .left {float:none}
+    .footer .right {float:none}
+    .footer .bottom {padding: 0px}
+  }
+  @media only screen and (max-width: 720px) {
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .main {
+      width: calc(100% - 0px);
+    }
+  }
+ .awards {
+   width: calc(36.07% + .02px);
+   height:82px;
+   background-size: 377.5px 82px;
+   padding-left:90px;
+   float:left;
+   border:5px solid white;
+   border-right:0px;
+   border-bottom:0px;
+ }
+</style>
+
+</head>
+
+<body link="#ffffff" vlink="#ffffff" alink="#FF0000">
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+<div class = "main">
+  <center>
+  <img src="ctv_images/background_slim.jpg"></img>
+</center>
+    <div style="position:absolute; top:0px; left:50%; margin-left:-360px;">
+
+      <div style="height:137px;"><a href="index-2018.html"><img src="ctv_images/ctvhead.png" data-rjs="2" border="0"></a></div>
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="video.html">Video</a>
+        <a href="cast.html">Cast & Crew</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="awards.html">Awards</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+    <!-- DIV FOR WHOLE PAGE -->
+    <div style="background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
+
+
+    <!-- <img src="ctv_images/ctvawards.jpg">-->
+    <div style="height:50px; float:left; border:5px solid white; border-bottom:0px;">
+      <img src="ctv_images/clickonaward.png" width="690" height="50" data-rjs="2">
+    </div>
+
+<!-- AWARD GROUP START -->
+
+<!-- IMAGE -->
+  <div style="width: 98.5%; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1617fspastates.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="3">
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">2017 FSPA States</p><p class="competitionloc">Orlando, Florida - April 26th, 2017</p>
+    </div>
+  </div>
+<a href="javascript:popupfunction(1,'overlay','video');">
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png);" data-rjs="3">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS News Package</p>
+      <p class="sub">Casey Chapter, Lexi Delgado</p>
+    </div>
+  </div>
+</a>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png);" data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS News Photography</p>
+      <p class="sub">Jason Chua</p>
+    </div>
+  </div>
+  <a href="javascript:popupfunction(1,'overlay2','video2');">
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Collaborative Commercial</p>
+      <p class="sub">Alexa Pichardo</p>
+    </div>
+  </div>
+</a>
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Broadcast Evaluation</p>
+      <p class="sub">Staff</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Public Service Announcement</p>
+      <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p>
+    </div>
+  </div>
+<a href="javascript:popupfunction(1,'overlay3','video3');">
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Broadcast Profile</p>
+      <p class="sub">Lexi Delgado</p>
+    </div>
+  </div>
+</a>
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Quick Turn - Cooking Video</p>
+      <p class="sub">Jason Chua, Gabriella Carbone, Andrew Rothschild</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Broadcast Show Opening</p>
+      <p class="sub">Lexi Delgado, Jason Chua</p>
+    </div>
+  </div>
+<!--
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Broadcast Profile</p><p class="sub">Lian Chung‐Valuntas, Ana Villalonga</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Feature Package</p><p class="sub">Casey Chapter, Andrew Rothschild, Gabriella Carbone</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Quick Turn ‐ Cooking Video</p><p class="sub">Harris Ness, Isabella Tocci, Rebecca Smitherman</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Quick Turn ‐ Cooking Video</p><p class="sub">Lexi Delgado, Alexa Pichardo, Brianna Franco</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Short Film</p><p class="sub">Felipe Lopez, Ashton Bosse, Jacob Mayer</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/excellent.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Sports Package</p><p class="sub">Lexi Delgado, Casey Chapter</p></div></div>
+-->
+
+  <!--
+      DO NOT DISPLAY THE HONORABLE MENTIONS WITHOUT SHOWING THE EXCELLENTS!
+      EXCELLENT SUBMISSIONS ARE HIGHER SCORING THAN HONORABLE MENTION SUBMISSIONS.
+      SEE THE SPRING DIGITAL SCORING SHEETS FOR MORE INFORMATION.
+      -CHUA
+  -->
+
+<!--
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">News Package</p><p class="sub">Lexi Delgado, Felipe Lopez</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Profile Story</p><p class="sub">Isabella Tocci, Harris Ness, Ashton Bosse, Jessica Less</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
+  <p class="head">Quick Turn ‐ Deadline News Package</p><p class="sub">Casey Chapter, Lian Chung‐Valuntas</p></div></div>
+-->
+
+<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/17stn.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+        <p class="competitiontitle">2017 STN Nationals</p>
+        <p class="competitionloc">Anaheim California - March 31st, 2017</p>
+    </div>
+  </div>
+  <a href="javascript:popupfunction(1,'overlay4','video4');">
+    <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
+      <span style="line-height:75px;"></span>
+      <div style="vertical-align:middle; display:inline-block;">
+        <p class="head">Crazy 8 - Broadcast Morning Show</p>
+        <p class="sub">Staff</p>
+      </div>
+    </div>
+  </a>
+
+
+
+<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/fspad16.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;">
+
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">2016-2017 FSPA District 7</p>
+      <p class="competitionloc">Davie, Florida - October 22nd, 2016</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Selfie</p>
+      <p class="sub">Samantha Towle</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Silent Movie</p>
+      <p class="sub">Krzysza Korytkowski, Alexa Pichardo, Andrew Rothschild</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Silent Movie</p>
+      <p class="sub">Ashton Bosse, Lexi Delgado, Danielle Sisso</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Deadline Broadcast Commentary</p>
+      <p class="sub">Anna Villalonga, Mark Brent, Harris Ness</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Deadline Commentary</p>
+      <p class="sub">Doug Weimann, Jemma Miller, Emily Ehrlich</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Illustration</p>
+      <p class="sub">Madison Gailboord</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Broadcast Commentary</p>
+      <p class="sub">Lyndsey Kleiman, Brianna Franco, Gabby Carbone</p>
+    </div>
+  </div>
+
+<!-- DO NOT DELETE THIS LINE -->
+  <div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1516fspastates.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;" data-rjs="2">
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">2016 FSPA States</p>
+      <p class="competitionloc">Orlando, Florida - April 25th, 2016</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/bestofthebest.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Broadcast Show Opening</p>
+      <p class="sub">Shawn Ebanks</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/allflorida.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Broadcast Evaluation</p>
+      <p class="sub">Staff</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS News Feature</p>
+      <p class="sub">Yarden Ben-David, Seren Markovich</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Short Story</p>
+      <p class="sub">Shawn Ebanks, Lexi Abrahamoff, Jennifer Nevins, Samantha Towle</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">News Feature</p>
+      <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p>
+    </div>
+  </div>
+<!-- DO NOT DELETE THIS LINE -->
+<div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/stngeneric2.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;">
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">STN Challenges</p>
+      <p class="competitionloc">2015-2016</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">News Feature</p>
+      <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p>
+    </div>
+  </div>
+<!-- DO NOT DELETE THIS LINE -->
+<div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/16stn.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;">
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">2016 STN Nationals</p>
+      <p class="competitionloc">Atlanta, Georgia - March 13th, 2016</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Crazy 8 - Broadcast Morning Show</p>
+      <p class="sub">Staff</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">News Scriptwriting</p>
+      <p class="sub">Seren Markovich</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Action Sports Editing</p>
+      <p class="sub">Kalli Rogers</p>
+    </div>
+  </div>
+<!-- DO NOT DELETE THIS LINE -->
+<div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1516fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2015-2016 FSPA District 7</p><p class="competitionloc">Davie, Florida - November 7, 2015</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS "Selfie"</p>
+      <p class="sub">Jaycee Albury</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Feature Package</p>
+      <p class="sub">Jessica Johnson, Emily Ehrlich, Felipe Lopez</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Deadline Package</p>
+      <p class="sub">Yarden Ben-David, Isabella Tocci, Krzysza Korytkowski</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Play-By-Play Coverage</p>
+      <p class="sub">Trace Austin, Karina Suarez, Samantha Towle</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Live To Tape</p>
+      <p class="sub">Yarden Ben-David, Kalli Rogers</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">OTS Commentary</p>
+      <p class="sub">Jemma Miller, Michael Lynn, Lyndsey Kleiman</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Play-By-Play Coverage</p>
+      <p class="sub">Samantha Fowler, Anna Villalonga</p>
+    </div>
+  </div>
+<!-- DO NOT DELETE THIS LINE -->
+<div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+
+
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+  <div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/15stn.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;">
+
+    <div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)">
+      <p class="competitiontitle">2015 STN Nationals</p>
+      <p class="competitionloc">San Diego, California - April 4, 2015</p>
+    </div>
+  </div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+    <span style="line-height:75px;"></span>
+    <div style="vertical-align:middle; display:inline-block;">
+      <p class="head">Short Story</p>
+      <p class="sub">Halle Kilman, Shawn Ebanks, Karina Suarez</p>
+    </div>
+    </div>
+    <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2">
+      <span style="line-height:75px;"></span>
+      <div style="vertical-align:middle; display:inline-block;">
+        <p class="head">Movie Trailer</p>
+        <p class="sub">Samantha Caldwell, Zachary Zucker, Jennifer Nevins, Andrew Shweky</p>
+      </div>
+    </div>
+<!-- DO NOT DELETE THIS LINE -->
+<div style="clear:both"></div>
+<!-- AWARD GROUP END -->
+
+
+<!-- AWARD GROUP START -->
+
+<!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1415fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2014-2015 FSPA District 7</p><p class="competitionloc">Deerfield Beach, Florida - November 1, 2014</p></div></div>
+<div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Short Story</p><p class="sub">Shailee Ben-David, Hayley Hudson, Jennifer Nevins, Neve Kantor</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video Photojournalism</p><p class="sub">Austen Prager, Shailee Ben-David, Trace Austin</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Man on The Street</p><p class="sub">Zackary Zucker, Hayley Hudson, Halle Kilman, Neve Kantor</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Broadcast Show Opening</p><p class="sub">Halle Kilman, Jason Chua</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">News Stand-up</p><p class="sub">Zachery Levine, Samantha Caldwell, Zachary Zucker, Madison Sica</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Halle Kilman</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Product Commercial</p><p class="sub">Zachary Churnetski, Shawn Ebanks, Brandon Aguiar, Samantha Fowler</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1314fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2013-2014 FSPA District 7</p><p class="competitionloc">Deerfield Beach, Florida - October 19, 2013</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Show Intro</p><p class="sub">Wasim Hyatt, Rachel Broccoli, Madison Sica, Morgan Correa</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">News Story Editing</p><p class="sub">Alexis Sherwood-Cotto, Samantha Puglisi</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Commercial</p><p class="sub">Maddison Braddy, Kyle Sabrin, Jordan Burgs</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">News Package Editing</p><p class="sub">Brooke Sustrin, Olivia Pascale-Wong, Austen Prager, Thais Ackerman</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Leanne Bonello, Brandon Aguiar, Casey Guarasci</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">On The Spot Script Writing</p><p class="sub">Hayley Hudson, Jason Fabiano</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/13stn3.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2013 STN Nationals</p><p class="competitionloc">Los Angeles, California - March 10, 2013</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">STN Excellence Award</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sixty Second Silent</p><p class="sub">Jazlyn Cartaya</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sports Highlights</p><p class="sub">Trent Austin</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Short Story</p><p class="sub">Noah Avidan, Rachel Broccoli</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1213fspa2.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2012-2013 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - October 20, 2012</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Mitchel Worley, Noah Avidan, Alexis Sherwood-Cotto</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Scriptwriting</p><p class="sub">Anastasia Pavlinskaya, Alexis Marx, Marti Wein</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has a Story</p><p class="sub">Anastasia Pavlinskaya, Jason Fabiano, Jeremy Haas</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/12stn.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2012 STN Nationals</p><p class="competitionloc">Dallas, Texas - March 24, 2012</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sweet 16</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Spot Feature</p><p class="sub">Tara Butler, Alexis Marx</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Convention Recap</p><p class="sub">Wasim Hayatt</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1112fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2011-2012 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - October 15, 2011</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Melanie Berra, Taylor Mandel, Michelle Wasserstrom, Laura Goldman</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Yasmin Flasterstein, Haley Castor, Natalie McPherson</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Cody Erickson, James Hirschfeld, Mitchell Worley, Noah Avidan</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/11stn.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2011 STN Nationals</p><p class="competitionloc">Orlando, Florida - March 12, 2011</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Laptop Journalism</p><p class="sub">Jenny Tintner</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sweet 16</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Spot Feature</p><p class="sub">Tara Butler, Danielle Noble</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Convention Recap</p><p class="sub">Khaled Hassan</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Documentary</p><p class="sub">Myles Sica, Maxine Shepard</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/stngeneric2.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">STN National Challenges</p><p class="competitionloc">2010-2011</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sports Challenge</p><p class="sub">Myles Sica, Jody Steel, Tara Butler, TJ Burch</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">News Challenge</p><p class="sub">Jenny Tintner, Dillon Puswald, Maxine Shepard, Sarah Morris</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/1011fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2010-2011 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - October 2010</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Myles Sica, Cody Erickson, Dillon Puswald</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Jody Steel, Jenny Tintner, Myles Sica</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Maxine Shepard, Melanie Berra, Hannah Sutker</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Show Intro</p><p class="sub">Seth Lyon, Mary Newsome, Michelle Goldman</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Kristen Garcia, Tara Butler, TJ Burch</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/pichardo1.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">CCHS Teacher Of The Year</p><p class="competitionloc">Cooper City, Florida - 2010-2011</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Teacher Of The Year</p><p class="sub">Mr. Alfredo Pichardo</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/10stn3.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2010 STN Nationals</p><p class="competitionloc">Anaheim, California - March 2010</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">STN Excellence Award</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Documentary</p><p class="sub">Nicole Payton, Angela Robledo</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Tell The Story Editing</p><p class="sub">Jessica Alpern, Lauren Lopilato</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Broadcast News Writing</p><p class="sub">Maxine Shepard</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Brittany Stout, Michael Tintner</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">News Challenge</p><p class="sub">Jody Steel, Angela Robledo, Max Mittler, Ben Cohen</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/0910fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2009-2010 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - October 3, 2009</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Myles Sica, Dustin Schrieber, Ben Cohen</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">PSA</p><p class="sub">Brittany Stout, Michael Tintner</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Francesca Capua, Nicole Payton, Angela Robledo</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Taylor Slingerland, Maxine Shepard</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Show Intro</p><p class="sub">Jody Steel, Max Mittler</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/btn09.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">BTN Awards</p><p class="competitionloc">Fort Lauderdale, Florida - 2008-2009</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Best School News Show</p><p class="sub">CTV News</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/09stn2.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2009 STN Nationals</p><p class="competitionloc">Orlando, Florida - March 2009</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sweet 16</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Spot Feature</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Broadcast News Writing</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sports Challenge</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/honorablemention.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Documentary</p><p class="sub">CTV News</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/0809fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2008-2009 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - September 27, 2008</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Monica Berra, Taylor Slingerland</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Amanda Katz, Monica Berra, Brittany Reeber</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Amanda Katz, Tyler Routley</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/0708fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2007-2008 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - September 29, 2007</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Dean D'Agati, Travis Burch</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Web Design</p><p class="sub">Dean D'Agati</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Amanda Katz, Monica Berra</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/ctv08.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">BTN Awards</p><p class="competitionloc">Fort Lauderdale, Florida - 2007-2008</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Best School News Show</p><p class="sub">CTV News</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Teacher Of The Year</p><p class="sub">Mr. Alfredo Pichardo</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/07showopen.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2007 STN Nationals</p><p class="competitionloc">(submission only) - 2007</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/3rdplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Show Opening</p><p class="sub">Dean D'Agati</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/0607fspastates.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2006-2007 FSPA States</p><p class="competitionloc">Tampa, Florida - April 12-14 2007</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Sports Journalism</p><p class="sub">Brandon Block, Travis Burch</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Video-Photo Journalism</p><p class="sub">Justin Vandenbroek, Ben Juster</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Web Design</p><p class="sub">Dean D'Agati</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+  <!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+  <!-- AWARD GROUP START -->
+  <!-- IMAGE --><div style="width:690px; height:250px; background-size: 690px 250px; background-image:url(ctv_images/0607fspa.jpg); background-color:#000000; float:left; border:5px solid white; border-right:0px; border-bottom:0px; position:relative;"><div style="position:absolute; bottom:0px; background-color:rgba(0, 0, 0, 0.8)"><p class="competitiontitle">2006-2007 FSPA Districts</p><p class="competitionloc">Deerfield Beach, Florida - October 2006</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/1stplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Script Writing</p><p class="sub">Melissa Egan, Ashley Stout</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Web Design</p><p class="sub">Melissa Egan, Ashley Stout</p></div></div>
+  <div class="awards" style="background-image:url(ctv_images/2ndplace.png); " data-rjs="2"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="head">Every Student Has A Story</p><p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <!-- AWARD GROUP END -->
+
+
+
+
+<div style="width:690px; height:50px; background-color:#000000; border:5px solid white; text-align:center"><span style="line-height:44px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="style" style="text-align:center">Pre-2006 awards are not available online.</p></div></div>
+</div>
+
+
+<!-- Blur Effect -->
+<style>
+.blur   {
+  filter:blur(5px);
+
+}
+.overlay    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+
+
+}
+
+#popup {
+    /*border: 2px solid #c30e0e;*/
+    position: absolute;
+    width: 700px;
+    height: 60%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    /*filter: blur(5px);*/
+}
+
+#x-button {
+    font-family:monospace;
+    background-color:  rgba(255, 0, 0, 0);
+    border: 0px solid #4CAF50;
+
+}
+</style>
+
+<script>
+var popupfunction = function(state, overlay, video){
+  var overlayEle = document.getElementById(overlay);
+  var overallEle = document.getElementById('overall');
+  var videoEle = document.getElementById(video);
+  var popupEle = document.getElementById('popup');
+
+  if (state === 1) {
+
+      popupEle.style.filter= 'blur(0px)';
+
+      overlayEle.style.transition ='.5s';
+      overlayEle.style.display = 'block';
+
+      overallEle.style.filter = 'blur(10px)';
+      overallEle.style.transition = '0.5s';
+
+      videoEle.style.transition = '0.5s';
+      videoEle.play();
+  } else {
+
+      popupEle.style.filter= 'blur(0px)';
+      overlayEle.style.transition ='0.9s';
+      overlayEle.style.display = 'none';
+
+      overallEle.style.transition = '0.5s';
+      overallEle.style.filter = 'blur(0px)';
+
+      videoEle.pause();
+  }
+}
+</script>
+
+
+
+</div> <!-- white box -->
+<div class="footer">
+<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
+</div>
+
+
+</div></div></div> <!-- overall -->
+
+<div id="overlay4" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay4','video4');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video4" width= "700px" controls>
+        <source id="EP431" src="/episodes/ctv431.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+
+<div id="overlay" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay','video');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video  id="video" width= "700px" controls>
+        <source id="NewsPKG" src="/episodes/Competition/FSPAS1stNewsPKG.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay3" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay3','video3');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video3" width= "700px" controls>
+        <source id="Profile" src="/episodes/Competition/FSPASAFProfile.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+<div id="overlay2" class ="overlay">
+  <div id="popup">
+    <a href="javascript:popupfunction(0,'overlay2','video2');">
+      <button id="x-button" style="float: right;">
+        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
+      </img>
+      </button>
+      <video id="video2" width= "700px" controls>
+        <source id="Collab" src="/episodes/Competition/FSPAS2ndCollab.mp4" type="video/mp4">
+      </video>
+    </a>
+  </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
+  </body>
+
+</html>

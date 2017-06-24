@@ -4,42 +4,47 @@
   <head>
     <link rel="shortcut icon" href="ctv_images/favicon.png" >
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width = 740">
+    <!--<meta name = "viewport" content = "width = 740">-->
+    <meta name = "viewport" content="width=device-width">
     <title>CTV - Cooper City High School</title>
 
 <style>
 body
 {
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
-
+  background-image: url(ctv_images/background_slim.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #c30e0e;
+  background-size: 720px 140px ;
+  overflow-x:hidden;
+  margin: 0;
 }
 </style>
 <!-- REVERT COLOR #c30e0e EA80B0-->
-
-
 <style type="text/css">
+p {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  color:white;
+}
 p.style{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color:white;
 	margin:0px;
 	letter-spacing:1px;
 }
+
 p.large{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color:white;
-	margin:5px;
+  line-height: normal;
+  font-size: .9em;
+  padding: 2%;
 	letter-spacing:1px;
 	font-weight:bold;
 	text-shadow: 2px 2px 2px #000000;
+  position: absolute;
+  text-align: center;
+  bottom: -1em;
+  background-color:rgba(0, 0, 0, 0.6);
 }
 p.oname{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: 1em;
 	color:white;
 	margin:0px;
 	margin-top:8px;
@@ -47,8 +52,7 @@ p.oname{
 	text-align:center;
 }
 p.oposition{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 10px;
+	font-size: .75em;
 	color:#c30e0e;
 	margin:0px;
 	letter-spacing:1px;
@@ -56,14 +60,149 @@ p.oposition{
 	text-transform: uppercase;
 	text-align:center;
 }
-p.bar{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	color:white;
-	margin:0px;
-	letter-spacing:1px;
-	font-weight:bold;
-		text-align:center;
+.bar {
+  width:100%;
+  background-position: center top;
+  background-size:cover;
+}
+p.bar {
+  border:none;
+  vertical-align: middle;
+  font-size: 1.3em;
+}
+.footer {
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+  letter-spacing: 1px;
+}
+.footer .left {
+  float:left;
+  margin: inherit;
+}
+.footer .right {
+  float:right;
+  margin: inherit;
+}
+.footer .bottom {
+  padding-top: 2rem;
+  margin: inherit;
+}
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  margin: 10px auto;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.topnav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.6s;
+}
+.topnav a:first-child {
+  display: none;
+}
+.topnav .icon {
+  display: none;
+}
+.main {
+  width: 720px;
+  left: 50%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -0%);
+  vertical-align: top;
+}
+.inner {
+  width: calc(100% - 10px);
+}
+.embed-box {
+  width:calc(100% - 10px) ;
+  height:405px;
+  background-color:#292F33;
+  border:5px solid #292F33;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+  width: calc(100% - 10px);
+  width: 100%;
+}
+@media only screen and (max-width: 720px) {
+  .topnav {display: block;}
+  .topnav a:not(:nth-child(1)) {
+    display: none;
+  }
+  .topnav a:nth-child(1) {
+    display: inherit;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a {
+    margin-bottom: 0px;
+    float: left;
+  }
+  .footer .left {float:none}
+  .footer .right {float:none}
+  .footer .bottom {padding: 0px}
+  .bar{
+    width: calc(100% + 20px);
+    transform: translateX(-10px);
+  }
+  p.bar {
+    width: calc(100% - 20px);
+    transform: translateX(10px);
+  }
+}
+@media only screen and (max-width: 540px){
+  p.large {
+    font-size: .8em;
+    background-color: black;
+    background-color:#292F33;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+  }
+  .bar {
+    border-top: 10px solid black
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .main {
+    width: calc(100% - 0px);
+  }
 }
 </style>
 
@@ -71,26 +210,38 @@ p.bar{
 
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
-<div style="position:absolute; width:720px; top:0px; left:50%; margin-left:-360px;">
+      <div class="main">
+        <a class="" href="index.html" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
 
-<div style="width:720px; height:137px;"><img src="ctv_images/ctvhead.png" data-rjs="2"></div>
+        <div style=" background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
 
-<div style="width:720px; height:57px;">
-<img src="ctv_images/buttons.jpg" alt="" usemap="#map1429419286195" border="0" data-rjs="2">
-<map id="map1429419286195" name="map1429419286195">
-  <area shape="rect" coords="39,15,107,40" title="Video" alt="Video" href="video.html" target="_self">
-  <area shape="rect" coords="146,16,297,40" title="Cast & Crew" alt="Cast & Crew" href="cast.html" target="_self">
-  <area shape="rect" coords="330,16,418,39" title="Alumni" alt="Alumni" href="alumni.html" target="_self">
-  <area shape="rect" coords="455,15,544,38" title="Awards" alt="Awards" href="awards.html" target="_self">
-  <area shape="rect" coords="584,14,682,39" title="Contact" alt="Contact" href="contact.html" target="_self">
-</map>
-</div>
+      vertical-align: top;">
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+          </script>
 
-<div style="width:700px; background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
+          <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="video.html">Video</a>
+            <a href="cast.html">Cast & Crew</a>
+            <a href="alumni.html">Alumni</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
 
-<!-- HOME PAGE IMAGE DIMENSIONS 1380 X 650 -->
-<div style="width:690px; height:325px; background-image:url(ctv_images/homeimg16-8.jpg); background-color:#000000; background-size: 690px 325px; float:left; border:5px solid white; border-right:0px;">
-  <div style="width:680px; height:245px; text-align:right; padding:5px;"><a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
+
+<div style="background-color:#000000; position:relative; line-height:0;">
+  <img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">
+  <div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
+    <a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
     <div class="fb-like" data-href="https://facebook.com/cchsctv" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
       <div id="fb-root"></div>
@@ -103,88 +254,88 @@ p.bar{
         }(document, 'script', 'facebook-jssdk'));
       </script>
   </div>
-  <div style="display: table-cell; vertical-align: bottom; height: 70px; width: 690px; background-color:rgba(0, 0, 0, 0.6);">
-    <table border="0" width="690" height="70"><tr><td>
+  <div>
       <p class="large" align="center">CTV is one of America's leading high school television production programs. Based at Cooper City High School in Cooper City, Florida, we create content for CCHS students, the South Florida community, and beyond.
-      </p></td></tr>
-    </table>
+      </p>
   </div>
 </div>
 
 
-<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE -->
-	<div style="width:690px; height:50px; float:left; border:5px solid white; border-top:0px; border-right:0px">
-    <a href="http://cchsctv.com/video.html?autoplay=true">
-    <img src="ctv_images/thisweekbar.png" width="690" height="50" data-rjs="2">
-  </div>
+<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE-->
+  <div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table width="100%"><tr><td><p class="bar">
+    <a href="video.html?autoplay=true">Watch This Weeks Episode</a>
+  </p></td></tr></table></div>
 
 <!-- TO CHANGE RED BAR, USE THIS CODE
-	<div style="width:690px; height:50px; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/barblank.png); background-size: 690px 50px; data-rjs="2; background-size: 690px 50px;"><table width="690" height="50"><tr><td><p class="bar">
-		<a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
-	</p></td></tr></table></div>-->
+<div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table width="100%"><tr><td><p class="bar">
+  <a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
+</p></td></tr></table></div> -->
 
-<!-- Twitter Embed-->
-  <div style="width:260px; height:405px; background-color:#ffffff; float:left; border:5px solid white; border-top:0px; border-right:0px"><div class="twitter-box" style="width:260; overflow:hidden; position:relative;">
-  <div class="inner" style="margin: -2px 0 0 -2px;">
-    <a class="twitter-timeline" data-width="260" data-height="405" data-dnt="true" data-theme="dark" href="https://twitter.com/cchsctv">Tweets by cchsctv</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  </div></div>
 
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
-<div style="width:160px; height:405px; background-color:#c30e0e; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">
+<div style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
 
-<p class="oname" style="font-weight:bold; margin-right:0px; margin-bottom:10px; margin-top 10px; text-align:center; color:#c30e0e;">2017-2018 CTV OFFICERS</p>
-<p class="oname">Casey Chapter</p></td>
-<p class="oposition">President</p></td>
-<p class="oname">Ashton Bosse</p></td>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2016-2017 CTV OFFICERS</p>
+<p class="oname">Lian Chung-Valuntas</p></td>
+<p class="oposition">PRESIDENT</p></td>
+<p class="oname">Lexi Delgado</p></td>
 <p class="oposition">Vice President</p></td>
-<p class="oname">Jakob Wolk</p></td>
+<p class="oname">Isabella Tocci</p></td>
 <p class="oposition">Asst Vice President</p></td>
-<p class="oname">Gabriela Carbone</p></td>
+<p class="oname">Casey Chapter</p></td>
 <p class="oposition">Secretary</p></td>
-<p class="oname">Brianna Franco</p></td>
+<p class="oname">Felipe Lopez</p></td>
 <p class="oposition">Treasurer</p></td>
-<p class="oname">Rebecca Smitherman</p></td>
+<p class="oname">Samantha Towle</p></td>
 <p class="oposition">Historian</p></td>
-<p class="oname">Alexa Pichardo</p></td>
+<p class="oname">Harris Ness</p></td>
 <p class="oposition">Business Manager</p></td>
-<p class="oname">Andrew Rothschild</p></td>
+<p class="oname">Jakob Wolk</p></td>
 <p class="oposition">Equipment Manager</p></td>
-<p class="oname">Jacob Mayer</p></td>
-<p class="oposition">Operations Manager</p></td>
-<p class="style" style="margin-top:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
+<p class="oname">Jason Chua</p></td>
+<p class="oposition">Senior Ops Manager</p></td>
+<p class="style" style="padding:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
 	</div>
 
+<!-- Twitter Embed-->
+<div class="embed-box" style="overflow:hidden; position:relative;">
+    <a class="twitter-timeline" data-height="405" data-dnt="true" data-theme="dark" href="https://twitter.com/cchsctv">Tweets by cchsctv</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<!-- ScoreStream Bar -->
+<div style="width:100%;overflow:hidden; position:relative;">
+  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
+</div>
 
 <!-- Lariat Embed -->
-<div style="width:260px; height:405px; background-color:#ffffff; float:left; border:5px solid white; border-top:0px; border-right:0px">
-  <div class="wordpress-box" style="width:260; overflow:hidden;">
-    <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" width="260"style="z-index: 0"></a>
+<div style="height:100%; background-color:#ffffff;">
+  <div class="embed-box" style="overflow:hidden;">
+    <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
     <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
   </div>
 </div>
-<!-- ScoreStream Bar -->
-<div style="padding:0px 5px 0px 5px; float:left; overflow:hidden; position:relative;">
-  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
-</div>
 
-<center><img src="ctv_images/lower-banner.jpg" width="690" alt="" usemap="imgmap20155214647" data-rjs="2">
+
+<!--
+<center  style="line-height:0;width:100%"><img src="ctv_images/lower-banner.jpg" alt="" usemap="imgmap20155214647" data-rjs="2">
   <map id="imgmap20155214647" name="imgmap20155214647">
     <area shape="rect" alt="Cooper City High" title="" coords="88,49,195,71" href="http://www.coopercityhigh.net" target="_blank" />
     <area shape="rect" alt="Broward County Public Schools" title="" coords="322,50,432,72" href="http://www.browardschools.com" target="_blank" />
     <area shape="rect" alt="Cooper City, Florida" title="" coords="564,49,660,70" href="http://www.coopercityfl.org" target="_blank" />
   </map></center>
+-->
 
 
-</div> <!-- white box -->
+</div><!-- overall -->
 
-<div style="width:720px; margin-top:5px; margin-bottom:75px;">
-<p class="style" style="float:left">CTV - Cooper City High School - Cooper City, FL</p>
-<p class="style" style="float:right">Website by: <a href="http://cchsctv.com/alumni.html#08">Dean D'Agati</a></p>
-</div>
 
-<div style="width:700px;"><center><!-- Start of StatCounter Code -->
+<div class="footer">
+<p class="left">CTV - Cooper City High School - Cooper City, FL</p>
+<p class="right">Website by <a href="alumni.html#08">Dean D'Agati</a>, <a href="alumni.html#17">Jason Chua</a></p>
+
+<div class ="bottom" style=""><center><!-- Start of StatCounter Code -->
   <script type="text/javascript" language="javascript">var sc_project=2428704; var sc_invisible=0; var sc_partition=23; var sc_security="3467593b"; </script>
   <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
   <noscript>
@@ -192,10 +343,10 @@ p.bar{
   </noscript>
   <!-- End of StatCounter Code --></center></div>
 
-</div> <!-- overall -->
+</div>
+</div>
 
-
-<script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
+<script type="text/javascript" src="scripts/retina.min.js"></script>
   </body>
 
 </html>
