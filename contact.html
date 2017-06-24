@@ -2,28 +2,99 @@
 <html lang="en">
 
   <head>
+    <link rel="shortcut icon" href="ctv_images/favicon.png" >
     <meta charset="utf-8">
-    <meta name = "viewport" content = "width = 740">
-    <title>CTV - Contact</title>
-    
+    <!--<meta name = "viewport" content = "width = 740">-->
+    <meta name = "viewport" content="width=device-width">
+    <title>CTV - Cooper City High School</title>
+
 <style>
 body
 {
-background-image:url("ctv_images/background_slim.jpg");
-background-repeat:no-repeat;
-background-position:center top;
-background-color:#c30e0e;
-
+  background-image: url(ctv_images/background_slim.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #c30e0e;
+  background-size: 720px 140px ;
+  overflow-x:hidden;
+  margin: 0;
 }
 </style>
 
-<style type="text/css">					
+<style type="text/css">
+.footer {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+  letter-spacing: 1px;
+}
+.footer .left {
+  float:left;
+  margin: inherit;
+}
+.footer .right {
+  float:right;
+  margin: inherit;
+}
+.footer .bottom {
+  padding-top: 2rem;
+  margin: inherit;
+}
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  margin: 10px auto;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.topnav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.6s;
+}
+.topnav a:first-child {
+  display: none;
+}
+.topnav .icon {
+  display: none;
+}
+.main {
+  width: 720px;
+  left: 50%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -0%);
+  vertical-align: top;
+}
+p {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  color:white;
+}
 p.style{
-	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
 	font-size: 12px;
-	color:white;
 	margin:5px;
 	letter-spacing: 1px;
+}
+p.style{
+  font-size:.75em;
+  color:white;
+	margin:5px;
+	letter-spacing:1px;
+  text-align: left;
 }
 p.head{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
@@ -32,6 +103,7 @@ p.head{
 	margin:5px;
 	letter-spacing: 2px;
 	font-weight: bold;
+  text-align: left;
 }
 p.foot{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
@@ -39,23 +111,99 @@ p.foot{
 	color:white;
 	margin:0px;
 	letter-spacing: 1px;
-}	
+}
+#form {
+  width:295px;
+  height:540px;
+  float:left;
+}
+#left {
+  width:calc(100% - 295px);
+  height:auto;
+  background-color:black;
+  float:left;
+}
+iframe {
+  border: none;
+}
+@media only screen and (max-width: 720px) {
+  .topnav {display: block;}
+  .topnav a:not(:nth-child(2)) {
+    display: none;
+  }
+  .topnav a:nth-child(2) {
+    display: inherit;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a {
+    margin-bottom: 0px;
+    float: left;
+  }
+  .footer .left {float:none}
+  .footer .right {float:none}
+  .footer .bottom {padding: 0px}
+}
+@media only screen and (max-width: 540px) {
+  #form {
+    width: 100%;
+  }
+  #left {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .main {
+    width: calc(100% - 0px);
+  }
+}
 </style>
 
   </head>
-  
+
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
 
+      <div class="main">
+        <a class="" href="index.html" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
 
-<div style="position:absolute; width:720px; top:0px; left:50%; margin-left:-360px;">
+        <div style=" background-color:#e8e8e8; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;
 
-<div style="width:720px; height:137px;"><a href="index.html"><img src="ctv_images/ctvhead.png" border="0"></a></div>
+      vertical-align: top;">
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+          </script>
 
-<div style="width:720px; height:57px;">
-<img src="ctv_images/buttons.jpg" alt="" usemap="#map1429419286195" border="0"><map id="map1429419286195" name="map1429419286195"><area shape="rect" coords="39,15,107,40" title="Video" alt="Video" href="video.html" target="_self"><area shape="rect" coords="146,16,297,40" title="Cast & Crew" alt="Cast & Crew" href="cast.html" target="_self"><area shape="rect" coords="330,16,418,39" title="Alumni" alt="Alumni" href="alumni.html" target="_self"><area shape="rect" coords="455,15,544,38" title="Awards" alt="Awards" href="awards.html" target="_self"><area shape="rect" coords="584,14,682,39" title="Contact" alt="Contact" href="contact.html" target="_self"></map>
-</div>
-
-<div style="width:700px; background-color:#ffffff; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;">
+          <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="video.html">Video</a>
+            <a href="cast.html">Cast & Crew</a>
+            <a href="alumni.html">Alumni</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
 
 
 <!--
@@ -64,9 +212,10 @@ p.foot{
 -->
 
 
-<div style="width:295px; height:540px; background-color:white; border:5px solid white; border-right:0px solid white; float:left;"><iframe width="295" height="540" style="border:0" src="form/contactform.php"></iframe></div>
-<div style="width:390px; height:540px; background-color:black; border:5px solid white; float:left;"><iframe width="390" height="300" frameborder="0" style="border:0px solid white; border-bottom:5px solid white;" src="https://www.google.com/maps/embed/v1/place?q=Cooper%20City%20High%20School%2C%20Stirling%20Road%2C%20Cooper%20City%2C%20FL%2C%20United%20States&key=AIzaSyA0jZjxgVDZbl314IrGeVx7ghoYYC41WZE&zoom=7"></iframe>
+  <iframe id="form" style="border:0" src="http://cchsctv.com/form/contactform.php"></iframe>
 
+<div id="left" style="">
+  <iframe width="100%" height="300" style="border:0px solid white; border-bottom:5px solid white;" src="https://www.google.com/maps/embed/v1/place?q=Cooper%20City%20High%20School%2C%20Stirling%20Road%2C%20Cooper%20City%2C%20FL%2C%20United%20States&key=AIzaSyA0jZjxgVDZbl314IrGeVx7ghoYYC41WZE&zoom=7"></iframe>
 
 
 <p class="head">VIA EMAIL</p>
@@ -82,7 +231,7 @@ p.foot{
 
 
 
-<center><img src="ctv_images/lower-banner.jpg" width="690" alt="" usemap="imgmap20155214647"><map id="imgmap20155214647" name="imgmap20155214647"><area shape="rect" alt="Cooper City High" title="" coords="88,49,195,71" href="http://www.coopercityhigh.net" target="_blank" /><area shape="rect" alt="Broward County Public Schools" title="" coords="322,50,432,72" href="http://www.browardschools.com" target="_blank" /><area shape="rect" alt="Cooper City, Florida" title="" coords="564,49,660,70" href="http://www.coopercityfl.org" target="_blank" /></map></center>
+<center><img style="width:calc(100% - 10px); border-top:5px solid white; height:auto" src="ctv_images/lower-banner.jpg" alt="" usemap="imgmap20155214647"><map id="imgmap20155214647" name="imgmap20155214647"><area shape="rect" alt="Cooper City High" title="" coords="88,49,195,71" href="http://www.coopercityhigh.net" target="_blank" /><area shape="rect" alt="Broward County Public Schools" title="" coords="322,50,432,72" href="http://www.browardschools.com" target="_blank" /><area shape="rect" alt="Cooper City, Florida" title="" coords="564,49,660,70" href="http://www.coopercityfl.org" target="_blank" /></map></center>
 
 
 
@@ -98,5 +247,5 @@ p.foot{
 
 <script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.js"></script>
   </body>
-  
+
 </html>
