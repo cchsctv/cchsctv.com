@@ -200,7 +200,7 @@ p.name{
   </head>
 <div id="overall" >
 <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" data-setup='{"playbackRates": [1, 1.5, 2]}'>
-  <source id="srcvideo" src="episodes/ctv400.mp4" >
+  <source id="srcvideo" src="episodes/ctv400.mp4" height="320">
 </video>
 </div>
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
@@ -274,7 +274,7 @@ p.name{
   <p class="head">Public Service Announcement</p>
 <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
 
-<a onclick="episodes/Competition/FSPASAFProfile.mp4">
+<a onclick="onVideoClick('episodes/Competition/FSPASAFProfile.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -288,7 +288,7 @@ p.name{
   <p class="head">Quick Turn - Cooking Video</p>
 <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
 
-<a onclick="/episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4">
+<a onclick="onVideoClick('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -355,7 +355,7 @@ p.name{
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div></div>
 
-<a onclick="episodes/ctv431.mp4">
+<a onclick="onVideoClick('episodes/ctv431.mp4');">
 <div class="award_container">
   <img src="ctv_images/3rdplace.png">
 <div class="award_text">
@@ -379,7 +379,7 @@ p.name{
   <p class="head">OTS Selfie</p>
 <p class="sub">Samantha Towle</p></div></div>
 
-<a onclick="episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4">
+<a onclick="onVideoClick('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -1162,16 +1162,20 @@ p.name{
   background: rgba(0,0,0,0.0);
   display: none;
   cursor: pointer;
+  overflow: scroll;
 }
-#video {
+#video:not(.vjs-fullscreen) {
   z-index: 9999;
-  width: inherit;
-  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  height:405px;
+  width: 720px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  padding:0;
 }
 .main div a p{
   text-decoration: underline;
@@ -1199,10 +1203,10 @@ function onVideoClick(srcvideo) {
 
     document.getElementById("video_pop").innerHTML = "<video autoplay controls id=\"video\" class=\"video-js vjs-16-9 vjs-big-play-centered\"><source id=\"the_Video\" src=\""+theLink+"\"></video>";
 */
-
+document.getElementById("overall").style.transition = '0.5s';
     document.getElementById("overall").style.display="block";
-      document.getElementById("overall").style.background = "rgba(0,0,0,0.9)";
-    document.getElementById("overall").style.transition = '0.5s';
+    document.getElementById("overall").style.background = "rgba(0,0,0,0.9)";
+
 
 
     popupfunction(1)
