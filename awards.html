@@ -144,6 +144,9 @@ p.name{
   width:100%;
   height:auto;
 }
+a .award_container {
+  cursor: pointer;
+}
 .award_text {
   position:absolute;
   vertical-align:middle;
@@ -159,10 +162,9 @@ p.name{
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.0);
+  background: rgba(0,0,0,0.4);
   display: none;
   cursor: pointer;
-  overflow: none;
 }
 #video:not(.vjs-fullscreen) {
   z-index: 9999;
@@ -285,7 +287,7 @@ p.name{
   <p class="title">2017 FSPA States</p>
 <p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPAS1stNewsPKG.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPAS1stNewsPKG.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -299,7 +301,7 @@ p.name{
   <p class="head">OTS News Photography</p>
 <p class="sub">Jason Chua</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPAS2ndCollab.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPAS2ndCollab.mp4');">
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
@@ -318,7 +320,7 @@ p.name{
   <p class="head">Public Service Announcement</p>
 <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPASAFProfile.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPASAFProfile.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -332,7 +334,7 @@ p.name{
   <p class="head">Quick Turn - Cooking Video</p>
 <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -399,7 +401,7 @@ p.name{
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div></div>
 
-<a onclick="onVideoClick('episodes/ctv431.mp4');">
+<a onclick="video_popup('episodes/ctv431.mp4');">
 <div class="award_container">
   <img src="ctv_images/3rdplace.png">
 <div class="award_text">
@@ -423,7 +425,7 @@ p.name{
   <p class="head">OTS Selfie</p>
 <p class="sub">Samantha Towle</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -1203,79 +1205,57 @@ p.name{
 <script>
 
 var video = document.getElementById('video');
+var main = document.getElementsByClassName('main')[0]
+var overall = document.getElementById("overall");
 video = videojs('video');
 
-document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
 
-//stolen from https://www.reddit.com/r/HTML/comments/31xiwa
-function onVideoClick(srcvideo) {
-document.getElementById("overall").style.transition = '0.5s';
-    document.getElementById("overall").style.display="block";
-    document.getElementById("overall").style.background = "rgba(0,0,0,0.3)";
-
-    popupfunction(1)
+function video_popup(srcvideo) {
+    overall.style.display="block";
+    main.style.filter = 'blur(5px)';
+    main.style.transition = '0.5s';
     video.src(srcvideo);
     video.load();
     video.play();
 }
 
-function onPopClick() {
-    document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
-    document.getElementById("overall").style.transition = '0.5s';
-    document.getElementById("overall").style.display="none";
-    document.getElementById("overall").innerHTML = "";
+function video_dismiss(){
+  overall.style.display="none";
+  main.style.transition = '0.5s';
+  main.style.filter = 'blur(0px)';
+  video.pause();
+  video.exitFullscreen();
 }
 
-var element = document.getElementById("overall");
-
-element.onclick = (function (onclick) {
+//stolen from https://www.reddit.com/r/HTML/comments/31xiwa
+overall.onclick = (function (onclick) {
   return function(evt) {
     // reference to event to pass argument properly
     evt  = evt || event;
-
     // onClick even still works in the DOM
     if (onclick) {
       onclick(evt);
     }
     // new code that will happen when you click only if you click on the background.
-     if (evt.target == element) {
-       popupfunction(2);
+     if (evt.target == overall) {
+       video_dismiss();
      }
-
   }
-})(element.onclick);
-
-
-function popupfunction(state){
-  var overallEle = document.getElementsByClassName('main')[0]
-  if (state === 1) {
-      overallEle.style.filter = 'blur(10px)';
-      overallEle.style.transition = '0.5s';
-  } else {
-      overallEle.style.transition = '0.5s';
-      overallEle.style.filter = 'blur(0px)';
-      element.style.display="none";
-      video.pause();
-  }
-}
+})(overall.onclick);
 
 var Button = videojs.getComponent('Button');
 var MyButton = videojs.extend(Button, {
   constructor: function() {
     Button.apply(this, arguments);
     this.addClass( 'vjs-icon-cancel' );
-    /* initialize your button */
   },
   handleClick: function() {
-    popupfunction(2);
+    video_dismiss();
   }
 });
 videojs.registerComponent('MyButton', MyButton);
 video.getChild('controlBar').addChild('myButton', {});
-
 </script>
-
-
 
 
 </div> <!-- white box -->
