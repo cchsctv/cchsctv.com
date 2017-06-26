@@ -22,73 +22,6 @@ body
 </style>
 
 <style type="text/css">
-.footer {
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: white;
-  margin: 0px;
-  letter-spacing: 1px;
-}
-.footer .left {
-  float:left;
-  margin: inherit;
-}
-.footer .right {
-  float:right;
-  margin: inherit;
-}
-.footer .bottom {
-  padding-top: 2rem;
-  margin: inherit;
-}
-.topnav {
-  text-align: center;
-  overflow: hidden;
-  background-color: #000000;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.topnav a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  margin: 10px auto;
-  padding: 3px;
-  text-decoration: none;
-  font-size: 26px;
-  font-family: Helvetica, Arial, sans-serif;
-}
-.topnav a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  transition: 0.6s;
-}
-.topnav a:first-child {
-  display: none;
-}
-.topnav .icon {
-  display: none;
-}
-.main {
-  width: 720px;
-  left: 50%;
-  text-align: center;
-  overflow: hidden;
-  position: absolute;
-  margin-right: -50%;
-  transform: translate(-50%, -0%);
-  vertical-align: top;
-}
-p {
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-  color:white;
-}
-p.style{
-	font-size: 12px;
-	margin:5px;
-	letter-spacing: 1px;
-}
 p.style{
   font-size:.75em;
   color:white;
@@ -126,26 +59,6 @@ p.foot{
 iframe {
   border: none;
 }
-@media only screen and (max-width: 720px) {
-  .topnav {display: block;}
-  .topnav a:not(:nth-child(6)) {
-    display: none;
-  }
-  .topnav a:nth-child(6) {
-    display: inherit;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav a {
-    margin-bottom: 0px;
-    float: left;
-  }
-  .footer .left {float:none}
-  .footer .right {float:none}
-  .footer .bottom {padding: 0px}
-}
 @media only screen and (max-width: 540px) {
   #form {
     width: 100%;
@@ -155,25 +68,15 @@ iframe {
   }
 }
 @media only screen and (max-width: 720px) {
-  .topnav.responsive {
-    position: relative;
+  .topnav a:not(:nth-child(6)) {
+    display: none;
   }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .main {
-    width: calc(100% - 0px);
+  .topnav a:nth-child(6) {
+    display: inherit;
   }
 }
 </style>
-
+<link href="style.css" rel="stylesheet">
   </head>
 
   <body link="#ffffff" vlink="#ffffff" alink="#FF0000">
