@@ -144,6 +144,9 @@ p.name{
   width:100%;
   height:auto;
 }
+a .award_container {
+  cursor: pointer;
+}
 .award_text {
   position:absolute;
   vertical-align:middle;
@@ -153,6 +156,37 @@ p.name{
   left: 25%;
   max-height: 68%;
   line-height: 1em;
+}
+#overall {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  cursor: pointer;
+}
+#video:not(.vjs-fullscreen) {
+  z-index: 9999;
+  max-width: 720px;
+  max-height: 405px;
+  height: 56.25vw;
+  width: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding:0;
+}
+.main div a p{
+  text-decoration: underline;
+}
+.main div a div:not(.topnav){
+  transition: 0.2s;
+}
+.main div a div:hover:not(.topnav){
+  filter: brightness(1.5);
 }
 @media only screen and (max-width: 580px) {
   .award_container {width:calc(100% - 10px)}
@@ -176,6 +210,18 @@ p.name{
   .footer .left {float:none}
   .footer .right {float:none}
   .footer .bottom {padding: 0px}
+  #video:not(.vjs-fullscreen) {
+    max-width: none;
+    max-height: none;
+    height: 56.25vw;
+    width: inherit;
+  }
+}
+@media only screen and (max-height: 405px) {
+  #video:not(.vjs-fullscreen){
+    max-height: 100%;
+    width: 177.77vh;
+  }
 }
 @media only screen and (max-width: 720px) {
   .topnav.responsive {
@@ -199,7 +245,7 @@ p.name{
 
   </head>
 <div id="overall" >
-<video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" data-setup='{"playbackRates": [1, 1.5, 2]}'>
+<video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" data-setup='{"playbackRates": [1, 1.25, 1.5]}'>
   <source id="srcvideo" src="episodes/ctv400.mp4" height="320">
 </video>
 </div>
@@ -241,7 +287,7 @@ p.name{
   <p class="title">2017 FSPA States</p>
 <p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPAS1stNewsPKG.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPAS1stNewsPKG.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -255,7 +301,7 @@ p.name{
   <p class="head">OTS News Photography</p>
 <p class="sub">Jason Chua</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPAS2ndCollab.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPAS2ndCollab.mp4');">
 <div class="award_container">
   <img src="ctv_images/2ndplace.png">
 <div class="award_text">
@@ -274,7 +320,7 @@ p.name{
   <p class="head">Public Service Announcement</p>
 <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPASAFProfile.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPASAFProfile.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -288,7 +334,7 @@ p.name{
   <p class="head">Quick Turn - Cooking Video</p>
 <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4');">
 <div class="award_container">
   <img src="ctv_images/allflorida.png">
 <div class="award_text">
@@ -355,7 +401,7 @@ p.name{
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div></div>
 
-<a onclick="onVideoClick('episodes/ctv431.mp4');">
+<a onclick="video_popup('episodes/ctv431.mp4');">
 <div class="award_container">
   <img src="ctv_images/3rdplace.png">
 <div class="award_text">
@@ -379,7 +425,7 @@ p.name{
   <p class="head">OTS Selfie</p>
 <p class="sub">Samantha Towle</p></div></div>
 
-<a onclick="onVideoClick('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4');">
+<a onclick="video_popup('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4');">
 <div class="award_container">
   <img src="ctv_images/1stplace.png">
 <div class="award_text">
@@ -1146,141 +1192,70 @@ p.name{
 <!-- AWARD GROUP END -->
 
 
-
-
-<div style="width:100%; height:50px; background-color:#000000; text-align:center"><span style="line-height:44px;"></span><div style="vertical-align:middle; display:inline-block;"><p class="style" style="text-align:center">Pre-2006 awards are not available online.</p></div></div>
+<div style="width:100%; height:50px; background-color:#000000; text-align:center">
+  <span style="line-height:44px;"></span>
+  <div style="vertical-align:middle; display:inline-block;">
+    <p class="style" style="text-align:center">Pre-2006 awards are not available online.</p>
+  </div>
+</div>
 <!--Pop Up-->
-<style>
-.blur   {
-  filter:blur(5px);
-}
-#overall {
-  z-index: 99;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.0);
-  display: none;
-  cursor: pointer;
-  overflow: scroll;
-}
-#video:not(.vjs-fullscreen) {
-  z-index: 9999;
-  max-width: 90%;
-  max-height: 90%;
-  height:405px;
-  width: 720px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding:0;
-}
-.main div a p{
-  text-decoration: underline;
-}
-.main div a div:not(.topnav){
-  transition: 0.2s;
-}
-.main div a div:hover:not(.topnav){
-  filter: brightness(1.5);
-}
-</style>
+
 <link href="http://vjs.zencdn.net/5.19.2/video-js.min.css" rel="stylesheet">
 <script src="http://vjs.zencdn.net/5.19.2/video.min.js"></script>
 <script>
 
 var video = document.getElementById('video');
+var main = document.getElementsByClassName('main')[0]
+var overall = document.getElementById("overall");
 video = videojs('video');
 
-document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
 
-//stolen from https://www.reddit.com/r/HTML/comments/31xiwa
-function onVideoClick(srcvideo) {
-/*
-    document.getElementById("video_pop").innerHTML = "<video autoplay controls id=\"the_Video\"><source src=\""+theLink+"\" type=\"video/webm\"></video>";
-
-    document.getElementById("video_pop").innerHTML = "<video autoplay controls id=\"video\" class=\"video-js vjs-16-9 vjs-big-play-centered\"><source id=\"the_Video\" src=\""+theLink+"\"></video>";
-*/
-document.getElementById("overall").style.transition = '0.5s';
-    document.getElementById("overall").style.display="block";
-    document.getElementById("overall").style.background = "rgba(0,0,0,0.3)";
-
-
-
-    popupfunction(1)
+function video_popup(srcvideo) {
+    overall.style.display="block";
+    main.style.filter = 'blur(5px)';
+    main.style.transition = '0.5s';
     video.src(srcvideo);
     video.load();
     video.play();
 }
 
-function onPopClick() {
-    document.getElementById("overall").style.background = "rgba(0,0,0,0.0)";
-    document.getElementById("overall").style.transition = '0.5s';
-    document.getElementById("overall").style.display="none";
-    document.getElementById("overall").innerHTML = "";
+function video_dismiss(){
+  overall.style.display="none";
+  main.style.transition = '0.5s';
+  main.style.filter = 'blur(0px)';
+  video.pause();
+  video.exitFullscreen();
 }
 
-var element = document.getElementById("overall");
-
-element.onclick = (function (onclick) {
+//stolen from https://www.reddit.com/r/HTML/comments/31xiwa
+overall.onclick = (function (onclick) {
   return function(evt) {
     // reference to event to pass argument properly
     evt  = evt || event;
-
     // onClick even still works in the DOM
     if (onclick) {
       onclick(evt);
     }
     // new code that will happen when you click only if you click on the background.
-     if (evt.target == element) {
-       element.style.display="none";
-       popupfunction(2)
-       video.pause();
+     if (evt.target == overall) {
+       video_dismiss();
      }
-
   }
-})(element.onclick);
+})(overall.onclick);
 
-
-//var popupfunction = function(state, overlay, video){
-function popupfunction(state){
-  //var overlayEle = document.getElementById(overlay);
-  //var overallEle = document.getElementById('overall');
-  var overallEle = document.getElementsByClassName('main')[0]
-
-  //var videoEle = document.getElementById(video);
-  //var popupEle = document.getElementById('popup');
-
-  if (state === 1) {
-
-      //popupEle.style.filter= 'blur(0px)';
-
-      //overlayEle.style.transition ='.5s';
-      //overlayEle.style.display = 'block';
-
-      overallEle.style.filter = 'blur(10px)';
-      overallEle.style.transition = '0.5s';
-
-      //videoEle.style.transition = '0.5s';
-      //videoEle.play();
-  } else {
-
-      //popupEle.style.filter= 'blur(0px)';
-      //overlayEle.style.transition ='0.9s';
-      //overlayEle.style.display = 'none';
-
-      overallEle.style.transition = '0.5s';
-      overallEle.style.filter = 'blur(0px)';
-
-      //videoEle.pause();
+var Button = videojs.getComponent('Button');
+var MyButton = videojs.extend(Button, {
+  constructor: function() {
+    Button.apply(this, arguments);
+    this.addClass( 'vjs-icon-cancel' );
+  },
+  handleClick: function() {
+    video_dismiss();
   }
-}
-
+});
+videojs.registerComponent('MyButton', MyButton);
+video.getChild('controlBar').addChild('myButton', {});
 </script>
-
-
 
 
 </div> <!-- white box -->
@@ -1290,87 +1265,6 @@ function popupfunction(state){
 </div>
 
 </div> <!-- overall -->
-<!--
-<div id="overlay" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay','video');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video  id="video" width= "100%" controls>
-        <source id="NewsPKG" src="/episodes/Competition/FSPAS1stNewsPKG.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
-<div id="overlay2" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay2','video2');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video id="video2" width= "100%" controls>
-        <source id="Collab" src="episodes/Competition/FSPAS2ndCollab.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
-<div id="overlay3" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay3','video3');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video id="video3" width= "100%" controls>
-        <source id="Profile" src="/episodes/Competition/FSPASAFProfile.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
-<div id="overlay4" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay4','video4');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video id="video4" width= "100%" controls>
-        <source id="EP431" src="/episodes/ctv431.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
-<div id="overlay5" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay5','video5');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video id="video5" width= "100%" controls>
-        <source id="ShowOpen" src="/episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
-<div id="overlay6" class ="overlay">
-  <div id="popup">
-    <a href="javascript:popupfunction(0,'overlay6','video6');">
-      <button id="x-button" style="float: right;">
-        <img src="ctv_images/XBUTTON.png" style="height: 30px; width: 30px; position: absolute; top:-25px; right: 0px;">
-      </img>
-      </button>
-      <video id="video6" width= "50%" controls>
-        <source id="ShowOpen" src="/episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior.mp4" type="video/mp4">
-      </video>
-    </a>
-  </div>
-</div>
--->
-
 <script type="text/javascript" src="http://www.cchsctv.com/scripts/retina.min.js"></script>
   </body>
 
