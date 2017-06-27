@@ -43,9 +43,8 @@ p {
   text-decoration: underline;
   transition: 0.6s;
 }
-.topnav .icon {
-  display: none;
-}
+.topnav .icon {display: none;}
+.topnav a:first-child {display: none;}
 .main {
   width: 720px;
   left: 50%;
