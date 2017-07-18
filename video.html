@@ -164,7 +164,6 @@ var table = document.getElementById('playlist');
 var source = document.createElement('source');
 var srcvideo = document.getElementById('srcvideo');
 var xmlhttp = new XMLHttpRequest();
-var active_video;
 var videoload = false;
 var xml_load = false;
 
@@ -175,15 +174,10 @@ loadXMLDoc(2017).then(function(year) { //CHANGE THIS TO THE CURRENT YEAR
 })
 
 video.on('ended', function() {
-  active_video = active_video.match(/\d\d\d/i);
-  epnum = active_video-1;
-  var suffix;
-  if (epnum <= 212) {
-    suffix = ".mov"
-  } else {
-    suffix = ".mp4"
-  }
-  epnum = "ctv"+epnum+suffix;
+  epnum = document.getElementsByClassName("hover")[0].parentElement.nextElementSibling.childNodes[0].id
+  //active_video = active_video.match(/\d\d\d/i);
+  //epnum = active_video-1;
+  //epnum2file();
   set_video(epnum);
 });
 
@@ -198,7 +192,18 @@ function playpause() {
 }
 
 function autoplay() {
-  if (getParameterByName('autoplay')){
+  if (URLParams.special){
+    loadXMLDoc("special");
+  }
+  if (URLParams.year){
+    loadXMLDoc(URLParams.year);
+  }
+  if (URLParams.episode){
+    epnum=URLParams.episode[0];
+    videoload = false;
+    epnum2file();
+  }
+  if (URLParams.autoplay){
     setTimeout(function() {
       video.play();
       videoload = "true";
@@ -210,9 +215,9 @@ function autoplay() {
 function set_video(epnum){
   hover = document.getElementsByClassName("hover")
   while (hover.length){
-  hover[0].className = hover[0].className.replace(/\bhover\b/g, "");
+  hover[0].className = hover[0].classList.remove("hover");
   };
-  active_video = epnum
+  var active_video = epnum
   vurl = "episodes/"+epnum;
   //video.pause();
   //srcvideo.setAttribute('src', epnum);
@@ -226,49 +231,67 @@ function set_video(epnum){
     video.play();
   }
   document.getElementById(active_video).classList.add("hover");
-  //document.getElementById(active_video).className += " hover";
 }
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+function epnum2file(){
+  var suffix;
+  if (epnum <= 212) {
+    suffix = ".mov"
+  } else {
+    suffix = ".mp4"
+  }
+  epnum = "ctv"+epnum+suffix;
+  set_video(epnum);
 }
+
+var URLParams = {};
+if (location.search) location.search.substr(1).split("&").forEach(function(item) {
+    var s = item.split("="),
+        k = s[0],
+        v = s[1] && decodeURIComponent(s[1]); //  null-coalescing / short-circuit
+    //(k in qd) ? qd[k].push(v) : qd[k] = [v]
+    (URLParams[k] = URLParams[k] || []).push(v) // null-coalescing / short-circuit
+})
 
 function loadXMLDoc(year) {
+  if (isNaN(year)){
+    year=URLParams[year].join("\"],[special=\"")
+    var selector="[special=\""+year+"\"]"
+    video.poster("ctv_images/videoblankl.jpg")
+  } else {
+    var selector="[year=\""+year+"\"]"
+    if (xml_load == true) {
+      video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
+    }
+  }
   return new Promise(function(resolve){
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        xml2table(xmlhttp, year);
-        resolve(year);
+        xml2table(xmlhttp, selector);
+        resolve("done!");
       }
     };
     if (xml_load == false) {
       xmlhttp.open("GET", "video.xml", true);
       xmlhttp.send();
       xml_load = true;
-  } else if (xml_load == true) {
-      xml2table(xmlhttp, year);
-      resolve(year);
-      videoload = false;
-      table.rows[0].cells[0].onclick();
-      video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
-  }
+    } else if (xml_load == true) {
+    xml2table(xmlhttp, selector);
+    resolve("done!");
+    videoload = false;
+    table.rows[0].cells[0].onclick();
+    };
   });
 }
 
-function xml2table(xml,year) {
+function xml2table(xml,selector) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="";
+  var tableTMP="";
   //var x = xmlDoc.getElementsByTagName("episode");
-  var x =xmlDoc.querySelectorAll('[year="'+year+'"]');
+  var x =xmlDoc.querySelectorAll(selector);
   for (i = 0; i <x.length; i++) {
-    table += "<tr><td href=\"#\"  id=\"" +
+    tableTMP += "<tr><td href=\"#\"  id=\"" +
     x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
     "\" onclick=set_video(this.id);><a class=\"download\" href=\"episodes/" +
     x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
@@ -280,50 +303,50 @@ function xml2table(xml,year) {
     x[i].getElementsByTagName("ft")[0].childNodes[0].nodeValue +
     "</span></td></tr>";
   }
-  document.getElementById("playlist").innerHTML = table;
+  document.getElementById("playlist").innerHTML = tableTMP;
 }
 
 </script>
 <div style="margin-top:1rem; display:inline-block;">
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2016);">
-  <img src="ctv_images/16arch.jpg" width="168" border="0">
+  <img src="ctv_images/16arch.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2015);">
-  <img src="ctv_images/15arch.jpg" width="168" border="0">
+  <img src="ctv_images/15arch.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2014);">
-  <img src="ctv_images/14arch-d.jpg" width="168" border="0">
+  <img src="ctv_images/14arch-d.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2013);">
-  <img src="ctv_images/13arch-d.jpg" width="168" border="0">
+  <img src="ctv_images/13arch-d.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2012);">
-  <img src="ctv_images/12arch-d.jpg" width="168" border="0">
+  <img src="ctv_images/12arch-d.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2011);">
-  <img src="ctv_images/11arch-d.jpg" width="168" border="0">
+  <img src="ctv_images/11arch-d.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2010);">
-  <img src="ctv_images/10arch-d.jpg" width="168" border="0">
+  <img src="ctv_images/10arch-d.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2009);">
-  <img src="ctv_images/09arch.jpg" width="168" border="0">
+  <img src="ctv_images/09arch.jpg">
 </a></div>
 <div class="yearbox">
   <a href="javascript:loadXMLDoc(2008);">
-  <img src="ctv_images/08arch.jpg" width="168" border="0">
+  <img src="ctv_images/08arch.jpg">
 </a></div>
 <div class="yearbox">
   <a>
-  <img src="ctv_images/noprior.jpg" width="168" border="0">
+  <img src="ctv_images/noprior.jpg">
 </a></div>
 </div>
 
