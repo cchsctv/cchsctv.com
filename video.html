@@ -142,6 +142,7 @@ td, th {
 
 <script src="http://vjs.zencdn.net/5.19.2/video.min.js"></script>
 
+<p><a id=permalink class="download" style="float:none" href="/video.html?episode=400">cchsctv.com/video.html?episode=400 </a></p>
 
         <table id=playlist style="margin-top:1rem">
           <!--
@@ -202,6 +203,18 @@ function autoplay() {
     epnum=URLParams.episode[0];
     videoload = false;
     epnum2file();
+    var found = xmlhttp.responseXML.evaluate("/*/ep[video = \'"+epnum+"\']", xmlhttp.responseXML);
+    function getNodes(iterator) {
+    var nodes = [],
+    next = iterator.iterateNext();
+    nodes.push(next);
+    return nodes;
+    }
+    getNodes(found).forEach(function (node) {
+      loadXMLDoc(node.getAttribute("year"));
+      videoload = false;
+      set_video(epnum);
+    });
   }
   if (URLParams.autoplay){
     setTimeout(function() {
@@ -219,18 +232,18 @@ function set_video(epnum){
   };
   var active_video = epnum
   vurl = "episodes/"+epnum;
-  //video.pause();
-  //srcvideo.setAttribute('src', epnum);
-  video.src(vurl); //video.js, remove for html5 player
+  video.src(vurl);
   if (videoload === false){
     videoload = true;
     video.load();
   } else {
-
     video.load();
     video.play();
   }
   document.getElementById(active_video).classList.add("hover");
+  active_video = active_video.match(/\d\d\d/i);
+  document.getElementById("permalink").href = "/video.html?episode="+active_video+"&autoplay"
+  document.getElementById("permalink").innerHTML = "cchsctv.com/video.html?episode="+active_video
 }
 
 function epnum2file(){
@@ -241,7 +254,6 @@ function epnum2file(){
     suffix = ".mp4"
   }
   epnum = "ctv"+epnum+suffix;
-  set_video(epnum);
 }
 
 var URLParams = {};
