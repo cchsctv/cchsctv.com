@@ -64,6 +64,8 @@ p.oposition{
   width:100%;
   background-position: center top;
   background-size:cover;
+  border:solid black;
+  border-width: 10px 0;
 }
 p.bar {
   border:none;
@@ -74,18 +76,29 @@ p.bar {
   width: calc(100% - 10px);
 }
 .embed-box {
-  width:calc(100% - 10px) ;
-  height:405px;
   background-color:#292F33;
-  border:5px solid #292F33;
+  line-height: 0;
 }
 img {
   max-width: 100%;
   height: auto;
 }
 iframe {
-  width: calc(100% - 10px);
   width: 100%;
+  max-width: none !important;
+}
+.column{
+  width: 50%;
+  height: 27em;
+  box-sizing: border-box;
+}
+.column.right{float:right;}
+.column.left{float:left;}
+.column iframe{
+  height: 27em !important;
+}
+.blog-description{
+  min-height: 2.6em;
 }
 @media only screen and (max-width: 720px) {
   .topnav a:not(:nth-child(1)) {
@@ -105,6 +118,11 @@ iframe {
   .topnav a:first-child {display: block !important;}
 }
 @media only screen and (max-width: 540px){
+  .column{
+    width: 100%;
+    height: auto;
+    float: none !important;
+  }
   p.large {
     font-size: .8em;
     background-color: black;
@@ -112,9 +130,6 @@ iframe {
     position: relative;
     margin: 0;
     bottom: 0;
-  }
-  .bar {
-    border-top: 10px solid black
   }
 }
 </style>
@@ -167,10 +182,12 @@ iframe {
         }(document, 'script', 'facebook-jssdk'));
       </script>
   </div>
+  <!--
   <div>
       <p class="large" align="center">CTV is one of America's leading high school television production programs. Based at Cooper City High School in Cooper City, Florida, we create content for CCHS students, the South Florida community, and beyond.
       </p>
   </div>
+  -->
 </div>
 
 
@@ -184,11 +201,12 @@ iframe {
   <a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
 
-
+<div class="column right" style="background-color:black;padding: 1em;">
+<p style="text-align:justify; font-size:1.25em">CTV is one of America's leading high school television production programs. Based at Cooper City High School in Cooper City, Florida, we create content for CCHS students, the South Florida community, and beyond.</p>
+</div>
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
-<div style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
-
+<div class="column left" style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
 <p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2016-2017 CTV OFFICERS</p>
 <p class="oname">Lian Chung-Valuntas</p></td>
 <p class="oposition">PRESIDENT</p></td>
@@ -209,26 +227,26 @@ iframe {
 <p class="oname">Jason Chua</p></td>
 <p class="oposition">Senior Ops Manager</p></td>
 <p class="style" style="padding:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
-	</div>
+</div>
+
+<!-- ScoreStream Bar -->
+<div class="embed-box bar" style="overflow:hidden; position:relative;">
+  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
+</div>
 
 <!-- Twitter Embed-->
-<div class="embed-box" style="overflow:hidden; position:relative;">
+<div class="twitter embed-box column right" style="overflow:hidden; position:relative;">
     <a class="twitter-timeline" data-height="405" data-dnt="true" data-theme="dark" href="https://twitter.com/cchsctv">Tweets by cchsctv</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<!-- ScoreStream Bar -->
-<div style="width:100%;overflow:hidden; position:relative;">
-  <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
-</div>
+
 
 <!-- Lariat Embed -->
-<div style="height:100%; background-color:#ffffff;">
-  <div class="embed-box" style="overflow:hidden;">
+  <div class="embed-box column" style="overflow:hidden;">
     <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
     <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
   </div>
-</div>
 
 
 <!--
