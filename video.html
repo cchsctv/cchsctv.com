@@ -104,6 +104,11 @@ td, th {
     display: inherit;
   }
   .yearbox {
+    width: calc(33.33% - 6px);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .yearbox {
     width: calc(50% - 6px);
   }
 }
@@ -166,6 +171,9 @@ td, th {
           </table>
 
 <script type="text/javascript">
+
+var active_year = 2017; //CHANGE THIS TO THE CURRENT YEAR
+
 var video = document.getElementById('video');
 video = videojs('video'); //video.js, remove for html5 player
 var table = document.getElementById('playlist');
@@ -175,7 +183,7 @@ var xmlhttp = new XMLHttpRequest();
 var videoload = false;
 var xml_load = false;
 
-loadXMLDoc(2017).then(function(year) { //CHANGE THIS TO THE CURRENT YEAR
+loadXMLDoc(active_year).then(function(year) {
   videoload = false;
   table.rows[0].cells[0].onclick();
   autoplay();
@@ -277,6 +285,9 @@ function loadXMLDoc(year) {
     year=URLParams[year].join("\"],[special=\"")
     var selector="[special=\""+year+"\"]"
     video.poster("ctv_images/videoblankl.jpg")
+  } else if(year==active_year) {
+    var selector="[year=\""+year+"\"]"
+    video.poster("ctv_images/videoblankl.jpg")
   } else {
     var selector="[year=\""+year+"\"]"
     if (xml_load == true) {
@@ -327,46 +338,54 @@ function xml2table(xml,selector) {
 
 </script>
 <div style="margin-top:1rem; display:inline-block;">
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2016);">
-  <img src="ctv_images/16arch.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2015);">
-  <img src="ctv_images/15arch.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2014);">
-  <img src="ctv_images/14arch-d.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2013);">
-  <img src="ctv_images/13arch-d.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2012);">
-  <img src="ctv_images/12arch-d.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2011);">
-  <img src="ctv_images/11arch-d.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2010);">
-  <img src="ctv_images/10arch-d.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2009);">
-  <img src="ctv_images/09arch.jpg">
-</a></div>
-<div class="yearbox">
-  <a href="javascript:loadXMLDoc(2008);">
-  <img src="ctv_images/08arch.jpg">
-</a></div>
-<div class="yearbox">
-  <a>
-  <img src="ctv_images/noprior.jpg">
-</a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(active_year);">
+    <img src="ctv_images/arch.png" data-rjs="3">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2017);">
+    <img src="ctv_images/17arch.jpg" data-rjs="2">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2016);">
+    <img src="ctv_images/16arch.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2015);">
+    <img src="ctv_images/15arch.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2014);">
+    <img src="ctv_images/14arch-d.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2013);">
+    <img src="ctv_images/13arch-d.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2012);">
+    <img src="ctv_images/12arch-d.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2011);">
+    <img src="ctv_images/11arch-d.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2010);">
+    <img src="ctv_images/10arch-d.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2009);">
+    <img src="ctv_images/09arch.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a href="javascript:loadXMLDoc(2008);">
+    <img src="ctv_images/08arch.jpg">
+  </a></div>
+  <div class="yearbox">
+    <a>
+    <img src="ctv_images/noprior.jpg">
+  </a></div>
 </div>
 
 
