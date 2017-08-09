@@ -343,16 +343,24 @@ function xml2table(xml,selector) {
   //var x = xmlDoc.getElementsByTagName("episode");
   var x =xmlDoc.querySelectorAll(selector);
   for (i = 0; i <x.length; i++) {
+    var video_table = x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue
+    var title_table = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue
+    var aired_table = x[i].getElementsByTagName("aired")[0].childNodes[0].nodeValue
+    var featu_table = x[i].getElementsByTagName("ft")[0].childNodes[0].nodeValue
+
     tableTMP += "<tr><td href=\"#\"  id=\"" +
-    x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
+    video_table +
     "\" onclick=set_video(this.id);><a class=\"download\" href=\"episodes/" +
-    x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue +
-    "\"download>(mp4)</a>"+
-    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+    video_table +
+    "\"download>("+
+    //TODO detect file extentions of length other than 3
+    video_table.substr(x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue.length - 3) +
+    ")</a>"+
+    title_table  +
     "<span> Aired: " +
-    x[i].getElementsByTagName("aired")[0].childNodes[0].nodeValue +
+    aired_table +
     "<br>Featuring: " +
-    x[i].getElementsByTagName("ft")[0].childNodes[0].nodeValue +
+    featu_table +
     "</span></td></tr>";
   }
   document.getElementById("playlist").innerHTML = tableTMP;
