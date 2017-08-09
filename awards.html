@@ -27,20 +27,20 @@ body {
 <style type="text/css">
 p.style{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+  font-size: .9em;
 	color:white;
 	margin:0px;
 	letter-spacing:1px
 }
 p.sub{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+  font-size: .9em;
 	color:black;
 	margin:0px
 }
 p.head{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 18px;
+  font-size: 1.1em;
 	font-weight: bold;
 	color:black;
 	margin:0px
@@ -60,7 +60,7 @@ p.head{
 }
 .compitition .title{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 22px;
+  font-size: 1.25em;
 	font-weight: bold;
 	color:white;
 	margin:5px;
@@ -68,7 +68,7 @@ p.head{
 }
 .compitition .loc{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: .9em;
 	color:white;
 	margin:5px;
 	margin-top:-5px;
@@ -76,7 +76,7 @@ p.head{
 }
 p.name{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: .9em;
 	color:white;
 	margin:5px;
 	font-weight: bold;
@@ -136,6 +136,12 @@ a .award_container {
 .main div a div:hover:not(.topnav){
   filter: brightness(1.5);
 }
+@media only screen and (max-height: 405px) {
+  #video:not(.vjs-fullscreen){
+    max-height: 100%;
+    width: 177.77vh;
+  }
+}
 @media only screen and (max-width: 580px) {
   .award_container {width:calc(100% - 10px)}
 }
@@ -146,17 +152,32 @@ a .award_container {
   }
   .topnav a:nth-child(5) {
     display: inherit;
+  }
   #video:not(.vjs-fullscreen) {
     max-width: none;
     max-height: none;
     height: 56.25vw;
     width: inherit;
   }
-}
-@media only screen and (max-height: 405px) {
-  #video:not(.vjs-fullscreen){
-    max-height: 100%;
-    width: 177.77vh;
+  .compitition_container img {
+    width: calc(100% + 20px);
+    transform: translateX(-10px);
+  }
+  .compitition_container:not(:nth-of-type(2)) img {
+    border-top: solid black 10px;
+  }
+  .compitition{
+    position: relative;
+    bottom: 4px;
+    background-color: black;
+    padding: 5px;
+  }
+  .compitition .title {
+    margin-top: 0;
+  }
+  .compitition .loc {
+    margin-bottom: 0;
+
   }
 }
 </style>
