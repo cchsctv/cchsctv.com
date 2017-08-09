@@ -255,11 +255,11 @@ function set_video(videoname){
   };
   vurl = "episodes/"+videoname;
   video.src(vurl);
+  video.load();
   if (videoload === false){
     videoload = true;
-    video.load();
+
   } else {
-    video.load();
     video.play();
   }
   document.getElementById(videoname).classList.add("hover");
@@ -295,13 +295,15 @@ var URLParams = {};
 if (location.search) location.search.substr(1).split("&").forEach(function(item) {
     var s = item.split("="),
         k = s[0],
-        v = s[1] && decodeURIComponent(s[1]); //  null-coalescing / short-circuit
-    //(k in qd) ? qd[k].push(v) : qd[k] = [v]
-    (URLParams[k] = URLParams[k] || []).push(v) // null-coalescing / short-circuit
+        v = s[1] && decodeURIComponent(s[1]);
+    (URLParams[k] = URLParams[k] || []).push(v)
 })
 
 function load_xml_doc(year, initiator) {
-  if(initiator==1){url_ops=false}
+  if(initiator==1){
+    url_ops=false
+    window.scrollTo(0,0)
+  }
   if (isNaN(year)){
     year=URLParams[year].join("\"],[special=\"")
     year="[special=\""+year+"\"]"
@@ -353,8 +355,8 @@ function xml2table(xml,selector) {
     "\" onclick=set_video(this.id);><a class=\"download\" href=\"episodes/" +
     video_table +
     "\"download>("+
-    //TODO detect file extentions of length other than 3
-    video_table.substr(x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue.length - 3) +
+    //TODO handle if file has no extention
+    video_table.split('.').pop() +
     ")</a>"+
     title_table  +
     "<span> Aired: " +
