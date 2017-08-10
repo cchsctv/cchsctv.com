@@ -9,7 +9,9 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 
 </head>
 <body>
-<link href="style.css" rel="stylesheet">
+<style type="text/css">
+<?php include 'style.css'; ?>
+</style>
 <div class="main">
   <a class="" href="index.php" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
   <div style="background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;vertical-align: top;">
@@ -23,6 +25,10 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
       }
     }
   </script>
+  <noscript>
+    <style type="text/css">
+    <style>
+  </noscript>
   <div class="topnav" id="myTopnav">
     <a href="index.php">Home</a>
     <a href="video.php">Video</a>

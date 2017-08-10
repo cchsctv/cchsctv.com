@@ -9,7 +9,6 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 
 <!DOCTYPE html>
 <!--
-
  CCCCCTTTTTTTTVV     VV
 CC       TTT   VV   VV
 CC       TTT    VV VV

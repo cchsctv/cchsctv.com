@@ -76,10 +76,15 @@ iframe {
   height: 27em;
   box-sizing: border-box;
 }
-.column.right{float:right;}
-.column.left{float:left;}
+.column.right{
+	float:right;
+	border-left: 5px solid black;
+}
+.column.left {
+	border-right: 5px solid black;
+}
 .column iframe{
-  height: 27em !important;
+  height: 100% !important;
 }
 .blog-description{
   min-height: 2.6em;
@@ -104,9 +109,12 @@ iframe {
 @media only screen and (max-width: 540px){
   .column{
     width: 100%;
-    height: auto;
+    height: 27em;
     float: none !important;
   }
+	.column.left {
+		border-top: 10px solid black;
+	}
   p.large {
     font-size: .8em;
     background-color: black;
@@ -204,10 +212,20 @@ require 'topnav.php';
 
 
 <!-- Lariat Embed -->
-  <div class="embed-box column" style="overflow:hidden;">
-    <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
-    <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
-  </div>
+<div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;display:flex;flex-direction:column">
+	<div style="display:block;line-height:1em;width:100%;border-bottom: 1px solid rgba(145,165,180,.6);height:44px;text-indent: 10px;">
+		<p style="font-size:1.5em;line-height:0;text-align:left;">The Lariat</p>
+	</div>
+	<iframe src="lariat_forwarder.php" style="border:none;flex-grow:1;"></iframe>
+	<div style="display:block;line-height:1em;width:100%;border-top: 1px solid rgba(145,165,180,.6);height:46px">
+		<p>The Newspaper of Cooper City High School</p>
+	</div>
+
+	<!--
+  <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
+  <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
+	 -->
+</div>
 
 
 <!--
