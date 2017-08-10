@@ -212,12 +212,12 @@ require 'topnav.php';
 
 
 <!-- Lariat Embed -->
-<div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;display:flex;flex-direction:column">
-	<div style="display:block;line-height:1em;width:100%;border-bottom: 1px solid rgba(145,165,180,.6);height:44px;text-indent: 10px;">
-		<p style="font-size:1.5em;line-height:0;text-align:left;">The Lariat</p>
+<div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;display:flex;flex-direction:column;text-align:left;">
+	<div style="display:block;line-height:1em;width:100%;border-bottom: 1px solid rgba(145,165,180,.6);height:44px;text-indent: 10px;padding:10px 0;box-sizing: border-box;">
+		<a style="font-size:1.25em;line-height: 1.25em;text-decoration:none" href="thelariatonline.com">The Lariat</a>
 	</div>
 	<iframe src="lariat_forwarder.php" style="border:none;flex-grow:1;"></iframe>
-	<div style="display:block;line-height:1em;width:100%;border-top: 1px solid rgba(145,165,180,.6);height:46px">
+	<div style="display:block;text-align:center;line-height:1em;width:100%;border-top: 1px solid rgba(145,165,180,.6);height:46px">
 		<p>The Newspaper of Cooper City High School</p>
 	</div>
 

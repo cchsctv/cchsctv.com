@@ -13,7 +13,10 @@ body {
   overflow-x:hidden;
   margin: 0;
 }
-a {color: white;}
+a {
+  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+  color: white;
+}
 p {
   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   color:white;

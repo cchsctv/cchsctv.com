@@ -40,15 +40,17 @@ require 'header.php';
     background-color: #292F33;
     margin:0
   }
-  a {color: white;}
+  a {color: #1b95e0;;}
   p {
     font-size: .95em;
     line-height: 1.5;
     font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
     color:white;
     padding:10px;
-  }
-  p:not(:first-child) {
     border-top: 1px solid rgba(145,165,180,.6);
+  }
+  p:first-child {
+    border-top:none;
+    padding-top: 0;
   }
 </style>
