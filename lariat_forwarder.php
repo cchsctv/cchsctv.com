@@ -11,6 +11,10 @@ require 'header.php';
 <base target="_parent">
 </head>
 <body>
+	<div class="bar top">
+		<a class="title" href="http://thelariatonline.com">The Lariat</a>
+	</div>
+<div class="scroller">
 <?php
 	$rss = new DOMDocument();
 	$rss->load('http://thelariatonline.com/feed/');
@@ -35,12 +39,20 @@ require 'header.php';
 		echo '<br>'.$description.'</p>';
 	}
 ?>
+<p> Read more stories at <a href="http://thelariatonline.com">TheLariatOnline.com</a></p>
+</div>
+<div class="bar bottom">
+	<p class="footer">The Newspaper of Cooper City High School</p>
+</div>
 <style type="text/css">
   body {
     background-color: #292F33;
     margin:0
   }
-  a {color: #1b95e0;;}
+  a {
+		font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+		color: #1b95e0;
+	}
   p {
     font-size: .95em;
     line-height: 1.5;
@@ -53,4 +65,44 @@ require 'header.php';
     border-top:none;
     padding-top: 0;
   }
+	.bar {
+		background-color: #292F33;
+		display:block;
+		line-height:1em;
+		width:100%;
+		text-indent: 10px;
+		box-sizing: border-box;
+	}
+	.bar.top {
+		padding: 10px;
+		height: 45px;
+		border-bottom: 1px solid rgba(145,165,180,.6);
+		top:0;
+	}
+	.bar.bottom {
+		padding: 3px;
+		height: 47px;
+		border-top: 1px solid rgba(145,165,180,.6);
+		bottom:0;
+	}
+	.title {
+		font-size:1.25em;
+		line-height: 1.25em;
+		text-decoration:none;
+		color:white
+	}
+	.title:hover {
+		text-decoration: underline;
+	}
+	p.footer {
+		font-size:.75em;
+		line-height: normal;
+		text-decoration:none;
+		color:white
+	}
+	.scroller {
+		height: calc(100vh - 92px);
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
 </style>

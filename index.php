@@ -84,7 +84,9 @@ iframe {
 	border-right: 5px solid black;
 }
 .column iframe{
-  height: 100% !important;
+  height: 27em !important;
+	overflow-y: scroll; /* has to be scroll, not auto */
+	-webkit-overflow-scrolling: touch;
 }
 .blog-description{
   min-height: 2.6em;
@@ -109,12 +111,16 @@ iframe {
 @media only screen and (max-width: 540px){
   .column{
     width: 100%;
-    height: 27em;
     float: none !important;
   }
 	.column.left {
+		border: none;
 		border-top: 10px solid black;
 	}
+	.column.right {
+		border: none;
+	}
+	.column.autoheight {height: auto;}
   p.large {
     font-size: .8em;
     background-color: black;
@@ -165,7 +171,7 @@ require 'topnav.php';
   <a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
 
-<div class="column right" style="background-color:black;padding:.5em;
+<div class="column right autoheight" style="background-color:black;padding:.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;">
@@ -195,7 +201,7 @@ require 'topnav.php';
 <p class="oposition">Equipment Manager</p></td>
 <p class="oname">Jason Chua</p></td>
 <p class="oposition">Senior Ops Manager</p></td>
-<p class="style" style="padding:10px; text-align:center; font-size:10px;"><a href="cast.html">View our full cast &raquo;</a></p>
+<p class="style" style="padding:10px; text-align:center; font-size:.6em;"><a href="cast.html">View our full cast &raquo;</a></p>
 </div>
 
 <!-- ScoreStream Bar -->
@@ -213,13 +219,8 @@ require 'topnav.php';
 
 <!-- Lariat Embed -->
 <div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;display:flex;flex-direction:column;text-align:left;">
-	<div style="display:block;line-height:1em;width:100%;border-bottom: 1px solid rgba(145,165,180,.6);height:44px;text-indent: 10px;padding:10px 0;box-sizing: border-box;">
-		<a style="font-size:1.25em;line-height: 1.25em;text-decoration:none" href="thelariatonline.com">The Lariat</a>
-	</div>
-	<iframe src="lariat_forwarder.php" style="border:none;flex-grow:1;"></iframe>
-	<div style="display:block;text-align:center;line-height:1em;width:100%;border-top: 1px solid rgba(145,165,180,.6);height:46px">
-		<p>The Newspaper of Cooper City High School</p>
-	</div>
+
+	<iframe src="lariat_forwarder.php" style="border:none;"></iframe>
 
 	<!--
   <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
