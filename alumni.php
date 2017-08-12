@@ -9,15 +9,16 @@ $page_title = "Alumni";
 require 'header.php';
 ?>
 <style type="text/css">
-p.style{
+p {
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+}
+p.style{
 	font-size: 14px;
 	color:white;
 	margin:0px;
 	letter-spacing:1px;
 }
 p.alum{
-	font-family: HelveticaNeue-Light, font, Arial, Helvetica, sans-serif;
   text-align: left;
 	font-size: 14px;
 	color:black;
@@ -25,17 +26,16 @@ p.alum{
 	margin:0px;
 }
 b.name{
+	padding-left: 0.25em;
 	font-size: 18px;
 }
 p.title {
   text-align: center;
   font-size: 18px;
-	line-height: normal;
 }
 .row {
-  width:692px;
-  width:calc(100% - 8px);
-  padding:.25em;
+  width:100%;
+	line-height: 1.75em
 }
 .row:nth-of-type(even) {
 	background: #F0F0F0;
@@ -45,9 +45,14 @@ p.title {
 	background: #FFFFFF;
   background: #303030;
 }
+.row .title{
+	background-color: #c30e0e;
+	width:100%;
+}
 .class_of {
   width:100%;
   height:auto;
+	display: block;
 }
 .stripe {
   border-bottom: 10px black solid;
@@ -59,6 +64,11 @@ p.title {
   .topnav a:nth-child(4) {
     display: inherit;
   }
+	.class_of {
+		width: calc(100% + 20px);
+		transform: translateX(-10px);
+		border-bottom: 10px solid black;
+	}
 }
 </style>
 
