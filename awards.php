@@ -31,7 +31,7 @@ p.head{
   text-align: left;
   position:absolute;
   background-color:rgba(0, 0, 0, 0.8);
-  bottom: 0;
+  bottom: 5px;
 }
 .compitition_container {
   line-height: 0;
@@ -40,6 +40,7 @@ p.head{
 .compitition_container img {
   width: 100%;
   height: auto;
+  margin-bottom: 5px;
 }
 .compitition .title{
   font-size: 1.25em;
@@ -63,10 +64,10 @@ p.name{
 	text-shadow: -2px 2px #000000;
 }
 .award_container {
-  line-height: 0;
   position:relative;
   float:left;
-  width: 50%;
+  width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
+  padding: 0 0 0 5px;
 }
 .award_container img {
   width:100%;
@@ -90,7 +91,7 @@ a .award_container {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.75);
   display: none;
   cursor: pointer;
 }
@@ -126,7 +127,7 @@ a .award_container {
   }
 }
 @media only screen and (max-width: 580px) {
-  .award_container {width:100%}
+  .award_container {width:calc(100% - 10px)}
 }
 @media only screen and (max-width: 720px) {
   .topnav {display: block;}
@@ -1106,8 +1107,8 @@ function video_popup(srcvideo) {
 }
 
 function video_dismiss(){
-  overall.style.display="none";
   main.style.transition = '0.5s';
+  overall.style.display="none";
   main.style.filter = 'blur(0px)';
   video.pause();
   video.exitFullscreen();
