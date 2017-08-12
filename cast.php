@@ -66,15 +66,16 @@ p.pichardo{
   background-color: #c30e0e;
   float:left;
   text-align:center;
-  border:0 solid #383838;
-  margin-top: 5;
+  border: solid black;
+	border-width: 0;
+  margin-top: 5px;
 }
 .officer_container {
   width: calc(calc(calc(100% - 5px) * 0.3333) - 5px);
   border:5px solid #383838;
   border-right:none;
   border-bottom:none;
-  background-color:#c30e0e;
+  background-color:black;
   height: auto;
   float: left;
   justify-content: space-between;
@@ -124,6 +125,7 @@ p.pichardo{
   .bardivider{
     width: calc(100% + 20px);
     transform: translateX(-10px);
+		border-width: 10px 0;
   }
 }
 @media only screen and (max-width: 680px) {
@@ -150,13 +152,13 @@ p.pichardo{
 }
 </style>
 <?php
-require 'topnav.php';
+include 'topnav.php';
 ?>
 <!-- PAGE BEGIN-->
 
 <div style="clear:both"></div>
 
-<div class="bardivider" style="margin:0"><p class="head">2016-2017 OFFICERS</p></div>
+<div class="bardivider" style="margin:0;border-top:none"><p class="head">2016-2017 OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
@@ -376,7 +378,7 @@ require 'topnav.php';
 
 
 
-<div class="bardivider"><p class="head">ADVISOR</p></div>
+<div class="bardivider" style="border-bottom:none"><p class="head">ADVISOR</p></div>
 <!-- BEGIN ADVISOR -->
 <!-- ALL PICTURES MUST BE 170x170 -->
 <div class="chardo_bio">
