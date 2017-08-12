@@ -82,21 +82,7 @@ p.pichardo{
   float: left;
   justify-content: space-between;
 }
-.staff_container {
-  width: calc(calc(calc(100% - 5px) * 0.25) - 5px);
-  border:5px solid #383838;
-  border-right:none;
-  border-bottom:none;
-  height: auto;
-  float: left;
-  justify-content: space-between;
-}
 .officer_container img {
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-.staff_container img {
   width: 100%;
   height: auto;
   vertical-align: middle;
@@ -106,6 +92,20 @@ p.pichardo{
   height: auto;
   float: left;
   justify-content: space-between;
+}
+.staff_container {
+  width: calc(calc(calc(100% - 5px) * 0.25) - 5px);
+  border:5px solid #383838;
+  border-right:none;
+  border-bottom:none;
+  height: auto;
+  float: left;
+  justify-content: space-between;
+}
+.staff_container img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 .chardo_bio {
   width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
@@ -251,6 +251,7 @@ include 'topnav.php';
 <div class="bardivider"><p class="head">2016-2017 STAFF</p></div>
 
 <!-- BEGIN STAFF -->
+<!-- STAFF PICTURES MUST HAVE SQUARE (170x170) ASPECT RATIO -->
 <div class="staff_container">
   <img src="ctv_images/staff/kiarabencosme.jpg" data-rjs="2">
   <div class="name">
