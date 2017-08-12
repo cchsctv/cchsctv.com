@@ -14,7 +14,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 </style>
 <div class="main">
   <a class="" href="index.php" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
-  <div style="background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;vertical-align: top;">
+  <div class="content_container" style="background-color:#383838; border-left-style:solid; border-right-style:solid; border-bottom-style:solid; border-width:10px;vertical-align: top;">
   <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");

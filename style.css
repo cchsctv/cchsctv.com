@@ -74,6 +74,14 @@ p {
   transform: translate(-50%, -0%);
   vertical-align: top;
 }
+.content_container {
+  background-color:#383838;
+  border-left-style:solid;
+  border-right-style:solid;
+  border-bottom-style:solid;
+  border-width:10px;
+  vertical-align: top;
+}
 @media only screen and (max-width: 720px) {
   .topnav {display: block;}
   .topnav a.icon {
