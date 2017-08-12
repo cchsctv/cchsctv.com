@@ -7,6 +7,8 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "Cast";
 require 'header.php';
+
+
 ?>
 <style type="text/css">
 p.style{
@@ -383,7 +385,7 @@ include 'topnav.php';
 <!-- ALL PICTURES MUST BE 170x170 -->
 <div class="chardo_bio">
   <div class="officer_container" style="border: 0px; padding-right:10px; background-color:black">
-    <img src="ctv_images/staff/pichardo.jpg" data-rjs="2" style="">
+    <img src="ctv_images/staff/pichardo.jpg">
     <div class="name">
     <p>Mr. Pichardo</p></div>
   </div>
