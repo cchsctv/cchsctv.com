@@ -57,10 +57,10 @@ table span a {
   float: right
 }
 .hover {
-  background: #AA0000;
+  background: #c30e0e;
 }
 tr:hover {
-  background: #AA0000;
+  background: #c30e0e;
   -webkit-transition: background .4s;
   /* Safari */
   transition: background .4s;
