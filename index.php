@@ -163,7 +163,7 @@ require 'topnav.php';
 
 <!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE-->
   <div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="bar">
-    <a href="video.html?autoplay=true">Watch This Week's Episode</a>
+    <a href="video.php?autoplay=true">Watch This Week's Episode</a>
   </p></td></tr></table></div>
 
 <!-- TO CHANGE RED BAR, USE THIS CODE
