@@ -21,8 +21,7 @@ p.style{
 p.alum{
   text-align: left;
 	font-size: 14px;
-	color:black;
-  color:lightgrey;
+	color:white;
 	margin:0px;
 }
 b.name{

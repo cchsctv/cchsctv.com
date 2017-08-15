@@ -13,7 +13,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 <?php include 'style.css'; ?>
 </style>
 <div class="main">
-  <a class="" href="index.php" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" style="" data-rjs="3">  </a>
+  <a class="" href="index.php" style="display:block; line-height:0"> <img src="ctv_images/background_logo.png" data-rjs="3">  </a>
   <div class="content_container">
   <script>
     function myFunction() {

@@ -111,9 +111,6 @@ a .award_container {
 .main div a p{
   text-decoration: underline;
 }
-.main div a div:not(.topnav){
-  transition: 0.2s;
-}
 .main div a div:hover:not(.topnav){
   filter: brightness(1.5);
 }
