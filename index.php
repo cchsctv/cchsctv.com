@@ -168,7 +168,7 @@ require 'topnav.php';
 
 <!-- TO CHANGE RED BAR, USE THIS CODE
 <div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="bar">
-  <a href="http://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
+  <a href="https://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
 
 <div class="column right autoheight" style="background-color:black;padding:.5em;
@@ -223,8 +223,8 @@ require 'topnav.php';
 	<iframe src="lariat_forwarder.php" style="border:none;"></iframe>
 
 	<!--
-  <a class="wordpress-timeline" href="http://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
-  <script type="text/javascript" src="http://widgets.wp.com/platform.js"></script>
+  <a class="wordpress-timeline" href="https://thelariatonline.com" lang="en" data-theme="dark" data-link-color="#aaaaff" height="510.2" style="z-index: 0"></a>
+  <script type="text/javascript" src="https://widgets.wp.com/platform.js"></script>
 	 -->
 </div>
 

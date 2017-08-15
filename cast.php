@@ -398,7 +398,7 @@ include 'topnav.php';
     He has a wife, three kids, and a CTV family that wouldn’t be the same without him.
   </p><p class="pichardo" style="text-align:center;">Email:
     <a href="mailto:apichardo@cchsctv.com">apichardo@cchsctv.com</a>&nbsp;&nbsp;&nbsp;Resume:
-    <a href="http://cchsctv.com/pdf/pichardoresume.pdf" target="_blank">(click here)</a>
+    <a href="pdf/pichardoresume.pdf" target="_blank">(click here)</a>
   </p>
 </div>
 <!-- END ADVISOR -->
