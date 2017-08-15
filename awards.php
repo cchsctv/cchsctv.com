@@ -1084,8 +1084,8 @@ require 'topnav.php';
 </div>
 <!--Pop Up-->
 
-<link href="http://vjs.zencdn.net/5.19.2/video-js.min.css" rel="stylesheet">
-<script src="http://vjs.zencdn.net/5.19.2/video.min.js"></script>
+<link href="https://vjs.zencdn.net/5.19.2/video-js.min.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/5.19.2/video.min.js"></script>
 <script>
 
 var video = document.getElementById('video');
