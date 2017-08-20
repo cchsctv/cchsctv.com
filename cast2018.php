@@ -54,6 +54,7 @@ p.sub{
 	margin:5px;
   font-weight: bold;
 	letter-spacing:1px;
+	background-color:rgba(195, 14, 14, 0.8); /*REMOVE THIS*/
 }
 p.pichardo{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
@@ -160,14 +161,14 @@ include 'topnav.php';
 
 <div style="clear:both"></div>
 
-<div class="bardivider" style="margin:0;border-top:none"><p class="head">2016-2017 OFFICERS</p></div>
+<div class="bardivider" style="margin:0;border-top:none"><p class="head">2017-2018 OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
 <div class="officer_container">
   <img src="ctv_images/staff/lianchung.jpg" data-rjs="2">
     <div class="name">
-  <p>Lian Chung-Valuntas</p>
+  <p>Casey Chapter</p>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">President</p>
@@ -176,7 +177,7 @@ include 'topnav.php';
 <div class="officer_container">
   <img src="ctv_images/staff/lexidelgado.jpg" data-rjs="2">
     <div class="name">
-  <p>Lexi Delgado</p>
+  <p>Ashton Bosse</p>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Vice President</p>
@@ -185,7 +186,7 @@ include 'topnav.php';
 <div class="officer_container">
   <img src="ctv_images/staff/isytocci.jpg" data-rjs="2">
     <div class="name">
-  <p>Isabella Tocci</p>
+  <p>Jakob Wolk</p>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Asst. Vice President</p>
