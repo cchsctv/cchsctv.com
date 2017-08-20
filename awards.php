@@ -117,6 +117,16 @@ a .award_container {
 .compitition_container:not(:nth-of-type(2)) {
   border-top: solid black 10px;
 }
+.hidden {
+  height:0;
+  visibility:hidden;
+}
+.no_margin img{
+  margin:0;
+}
+.no_margin .compitition {
+  bottom:0;
+}
 @media only screen and (max-height: 405px) {
   #video:not(.vjs-fullscreen){
     max-height: 100%;
@@ -140,7 +150,7 @@ a .award_container {
     height: 56.25vw;
     width: inherit;
   }
-  .compitition_container img {
+  .compitition_container>img {
     width: calc(100% + 20px);
     transform: translateX(-10px);
   }
@@ -149,16 +159,20 @@ a .award_container {
     background-color: black;
     padding: .5em 0;
   }
+  .compitition_container:not(:nth-of-type(2)) {
+    border-top: 0px;
+    border-bottom: solid black 10px;
+  }
+  .no_border{
+    border-bottom: 0px !important;
+  }
+  .award_container {
+    float: none;
+  }
 }
-.hidden {
-  height:0;
-  visibility:hidden;
-}
-.no_margin img{
-  margin:0;
-}
-.no_margin .compitition {
-  bottom:0;
+.partition {
+  /*border-top: solid black 10px;*/
+  clear: both;
 }
 </style>
 
@@ -172,11 +186,11 @@ a .award_container {
 require 'topnav.php';
 ?>
 
-
+<!--<div class="compitition_container" href="#" onclick="awards_vis(this.getElementsByTagName('img')[0].src)">-->
 <!-- IMAGE -->
 
-<div class="compitition_container">
-  <img src="ctv_images/1617fspastates.jpg" href="#" onclick="awards_vis(this.src)" data-rjs="3">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
 <p class="loc">Orlando, Florida - April 26th, 2017</p></div>
@@ -285,13 +299,13 @@ require 'topnav.php';
 <p class="sub">Casey Chapter, Lian Chung‐Valuntas</p></div></div>
 -->
 
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/17stn.jpg" href="#" onclick="awards_vis(this.src)" data-rjs="2">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/17stn.jpg" data-rjs="2">
 <div class="compitition">
   <p class="title">2017 STN Nationals</p>
 <p class="loc">Anaheim California - March 31st, 2017</p></div>
@@ -305,13 +319,13 @@ require 'topnav.php';
   </a>
 </div>
 
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/fspad16.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/fspad16.jpg">
 <div class="compitition">
   <p class="title">2016-2017 FSPA District 7</p>
 <p class="loc">Davie, Florida - October 22nd, 2016</p></div>
@@ -355,13 +369,13 @@ require 'topnav.php';
     <p class="head">OTS Broadcast Commentary</p>
   <p class="sub">Lyndsey Kleiman, Brianna Franco, Gabriela Carbone</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1516fspastates.jpg" href="#" onclick="awards_vis(this.src)" data-rjs="2">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1516fspastates.jpg" data-rjs="2">
   <div class="compitition">
     <p class="title">2016 FSPA States</p>
     <p class="loc">Orlando, Florida - April 25th, 2016</p>
@@ -393,13 +407,13 @@ require 'topnav.php';
     <p class="head">News Feature</p>
   <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/stngeneric2.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/stngeneric2.jpg">
   <div class="compitition">
     <p class="title">STN Challenges</p>
   <p class="loc">2015-2016</p></div>
@@ -409,13 +423,13 @@ require 'topnav.php';
     <p class="head">News Feature</p>
   <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/16stn.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/16stn.jpg">
 <div class="compitition">
   <p class="title">2016 STN Nationals</p>
 <p class="loc">Atlanta, Georgia - March 13th, 2016</p></div>
@@ -435,15 +449,15 @@ require 'topnav.php';
     <p class="head">Action Sports Editing</p>
   <p class="sub">Kalli Rogers</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1516fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1516fspa.jpg">
 <div class="compitition">
   <p class="title">2015-2016 FSPA District 7</p>
 <p class="loc">Davie, Florida - November 7, 2015</p></div>
@@ -483,14 +497,14 @@ require 'topnav.php';
     <p class="head">Play-By-Play Coverage</p>
   <p class="sub">Samantha Fowler, Anna Villalonga</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/15stn.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/15stn.jpg">
 <div class="compitition">
   <p class="title">2015 STN Nationals</p>
 <p class="loc">San Diego, California - April 4, 2015</p></div>
@@ -505,14 +519,14 @@ require 'topnav.php';
     <p class="head">Movie Trailer</p>
   <p class="sub">Samantha Caldwell, Zachary Zucker, Jennifer Nevins, Andrew Shweky</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1415fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1415fspa.jpg">
 <div class="compitition">
   <p class="title">2014-2015 FSPA District 7</p>
 <p class="loc">Deerfield Beach, Florida - November 1, 2014</p></div>
@@ -552,14 +566,14 @@ require 'topnav.php';
     <p class="head">Product Commercial</p>
   <p class="sub">Zachary Churnetski, Shawn Ebanks, Brandon Aguiar, Samantha Fowler</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1314fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1314fspa.jpg">
 <div class="compitition">
   <p class="title">2013-2014 FSPA District 7</p>
 <p class="loc">Deerfield Beach, Florida - October 19, 2013</p></div>
@@ -594,14 +608,14 @@ require 'topnav.php';
     <p class="head">On The Spot Script Writing</p>
   <p class="sub">Hayley Hudson, Jason Fabiano</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/13stn3.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/13stn3.jpg">
 <div class="compitition">
   <p class="title">2013 STN Nationals</p>
 <p class="loc">Los Angeles, California - March 10, 2013</p></div>
@@ -626,14 +640,14 @@ require 'topnav.php';
     <p class="head">Short Story</p>
   <p class="sub">Noah Avidan, Rachel Broccoli</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1213fspa2.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1213fspa2.jpg">
 <div class="compitition">
   <p class="title">2012-2013 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - October 20, 2012</p></div>
@@ -653,14 +667,14 @@ require 'topnav.php';
     <p class="head">Every Student Has a Story</p>
   <p class="sub">Anastasia Pavlinskaya, Jason Fabiano, Jeremy Haas</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/12stn.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/12stn.jpg">
 <div class="compitition">
   <p class="title">2012 STN Nationals</p>
 <p class="loc">Dallas, Texas - March 24, 2012</p></div>
@@ -680,14 +694,14 @@ require 'topnav.php';
     <p class="head">Convention Recap</p>
   <p class="sub">Wasim Hayatt</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1112fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1112fspa.jpg">
 <div class="compitition">
   <p class="title">2011-2012 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - October 15, 2011</p></div>
@@ -707,14 +721,14 @@ require 'topnav.php';
     <p class="head">Video-Photo Journalism</p>
   <p class="sub">Cody Erickson, James Hirschfeld, Mitchell Worley, Noah Avidan</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/11stn.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/11stn.jpg">
 <div class="compitition">
   <p class="title">2011 STN Nationals</p>
 <p class="loc">Orlando, Florida - March 12, 2011</p></div>
@@ -744,14 +758,14 @@ require 'topnav.php';
     <p class="head">Documentary</p>
   <p class="sub">Myles Sica, Maxine Shepard</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/stngeneric2.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/stngeneric2.jpg">
 <div class="compitition">
   <p class="title">STN National Challenges</p>
 <p class="loc">2010-2011</p></div>
@@ -766,14 +780,14 @@ require 'topnav.php';
     <p class="head">News Challenge</p>
   <p class="sub">Jenny Tintner, Dillon Puswald, Maxine Shepard, Sarah Morris</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/1011fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1011fspa.jpg">
 <div class="compitition">
   <p class="title">2010-2011 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - October 2010</p></div>
@@ -803,14 +817,14 @@ require 'topnav.php';
     <p class="head">PSA</p>
   <p class="sub">Kristen Garcia, Tara Butler, TJ Burch</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/pichardo1.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/pichardo1.jpg">
 <div class="compitition">
   <p class="title">CCHS Teacher Of The Year</p>
 <p class="loc">Cooper City, Florida - 2010-2011</p></div>
@@ -820,14 +834,14 @@ require 'topnav.php';
     <p class="head">Teacher Of The Year</p>
     <p class="sub">Mr. Alfredo Pichardo</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/10stn3.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/10stn3.jpg">
 <div class="compitition">
   <p class="title">2010 STN Nationals</p>
 <p class="loc">Anaheim, California - March 2010</p></div>
@@ -862,14 +876,14 @@ require 'topnav.php';
     <p class="head">News Challenge</p>
   <p class="sub">Jody Steel, Angela Robledo, Max Mittler, Ben Cohen</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/0910fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/0910fspa.jpg">
 <div class="compitition">
   <p class="title">2009-2010 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - October 3, 2009</p></div>
@@ -899,14 +913,14 @@ require 'topnav.php';
     <p class="head">Show Intro</p>
   <p class="sub">Jody Steel, Max Mittler</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/btn09.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/btn09.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
 <p class="loc">Fort Lauderdale, Florida - 2008-2009</p></div>
@@ -916,14 +930,14 @@ require 'topnav.php';
     <p class="head">Best School News Show</p>
   <p class="sub">CTV News</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/09stn2.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/09stn2.jpg">
 <div class="compitition">
   <p class="title">2009 STN Nationals</p>
 <p class="loc">Orlando, Florida - March 2009</p></div>
@@ -953,14 +967,14 @@ require 'topnav.php';
     <p class="head">Documentary</p>
   <p class="sub">CTV News</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/0809fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/0809fspa.jpg">
 <div class="compitition">
   <p class="title">2008-2009 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - September 27, 2008</p></div>
@@ -980,14 +994,14 @@ require 'topnav.php';
     <p class="head">Video-Photo Journalism</p>
   <p class="sub">Amanda Katz, Tyler Routley</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/0708fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/0708fspa.jpg">
 <div class="compitition">
   <p class="title">2007-2008 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - September 29, 2007</p></div>
@@ -1012,14 +1026,14 @@ require 'topnav.php';
     <p class="head">Script Writing</p>
   <p class="sub">Amanda Katz, Monica Berra</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/ctv08.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/ctv08.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
 <p class="loc">Fort Lauderdale, Florida - 2007-2008</p></div>
@@ -1034,14 +1048,14 @@ require 'topnav.php';
     <p class="head">Teacher Of The Year</p>
   <p class="sub">Mr. Alfredo Pichardo</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/07showopen.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/07showopen.jpg">
 <div class="compitition">
   <p class="title">2007 STN Nationals</p>
 <p class="loc">(submission only) - 2007</p></div>
@@ -1051,14 +1065,14 @@ require 'topnav.php';
     <p class="head">Show Opening</p>
   <p class="sub">Dean D'Agati</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/0607fspastates.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/0607fspastates.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA States</p>
 <p class="loc">Tampa, Florida - April 12-14 2007</p></div>
@@ -1083,14 +1097,14 @@ require 'topnav.php';
     <p class="head">Every Student Has A Story</p>
   <p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
-  <img src="ctv_images/0607fspa.jpg" href="#" onclick="awards_vis(this.src)">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/0607fspa.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA Districts</p>
 <p class="loc">Deerfield Beach, Florida - October 2006</p></div>
@@ -1110,7 +1124,7 @@ require 'topnav.php';
     <p class="head">Every Student Has A Story</p>
   <p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
 </div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
@@ -1178,21 +1192,25 @@ var MyButton = videojs.extend(Button, {
 videojs.registerComponent('MyButton', MyButton);
 video.getChild('controlBar').addChild('myButton', {});
 
-var awards = document.getElementsByClassName('award_container')
 
+var awards = document.getElementsByClassName('award_container')
 var compitition = document.getElementsByClassName('compitition_container')
 
 for (i = 0; i < awards.length; i++) {
   awards[i].classList.add("hidden")
 }
 for (i = 0; i < compitition.length; i++) {
-  compitition[i].classList.add("no_margin")
+  compitition[i].classList.add("no_margin");
+  compitition[i].classList.add("no_border");
 }
 
-function awards_vis(src) {
-  awards2toggle = findImagesByRegexp(src)[0].parentNode.getElementsByClassName('award_container')
-  compitition2toggle = findImagesByRegexp(src)[0].parentNode
-    if (awards2toggle[0].classList.contains("hidden")) {
+
+function awards_vis(target) {
+  awards2toggle = target.getElementsByClassName('award_container');
+  compitition2toggle = target;
+  border2toggle_m = target;
+
+  if (awards2toggle[0].classList.contains("hidden")) {
     for (i = 0; i < awards2toggle.length; i++) {
       awards2toggle[i].classList.remove("hidden");
     }
@@ -1201,23 +1219,18 @@ function awards_vis(src) {
       awards2toggle[i].classList.add("hidden");
     }
   }
+
   if (compitition2toggle.classList.contains("no_margin")) {
     compitition2toggle.classList.remove("no_margin");
   } else {
     compitition2toggle.classList.add("no_margin");
   }
-}
 
-function findImagesByRegexp(regexp, parentNode) {
-   var images = Array.prototype.slice.call((parentNode || document).getElementsByTagName('img'));
-   var length = images.length;
-   var ret = [];
-   for(var i = 0; i < length; ++i) {
-      if(images[i].src.search(regexp) != -1) {
-         ret.push(images[i]);
-      }
-   }
-   return ret;
+  if (border2toggle_m.classList.contains("no_border")) {
+    border2toggle_m.classList.remove("no_border");
+  } else {
+    border2toggle_m.classList.add("no_border");
+  }
 }
 
 </script>
