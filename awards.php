@@ -171,7 +171,6 @@ a .award_container {
   }
 }
 .partition {
-  /*border-top: solid black 10px;*/
   clear: both;
 }
 </style>
@@ -185,8 +184,36 @@ a .award_container {
 <?php
 require 'topnav.php';
 ?>
+<?php
+//TEMPLATE FOR ADDING MORE AWARDS
+/*
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
+<div class="compitition">
+  <p class="title">2017 FSPA States</p>
+<p class="loc">Orlando, Florida - April 26th, 2017 &#x25BC;</p></div>
 
-<!--<div class="compitition_container" href="#" onclick="awards_vis(this.getElementsByTagName('img')[0].src)">-->
+  <a onclick="video_popup('episodes/Competition/video.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Name of Compitition</p>
+  <p class="sub">Person's names</p></div></div>
+  </a>
+
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Name of Compitition</p>
+  <p class="sub">Person's names</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+*/ ?>
+
+<!-- AWARD GROUP START -->
 <!-- IMAGE -->
 
 <div class="compitition_container" href="#" onclick="awards_vis(this)">
