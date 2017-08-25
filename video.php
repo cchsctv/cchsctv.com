@@ -128,7 +128,7 @@ require 'topnav.php';
 
 <script type="text/javascript">
 
-var active_year = 2017; //CHANGE THIS TO THE CURRENT YEAR
+var active_year = 2018; //CHANGE THIS TO THE CURRENT YEAR
 
 var video = document.getElementById('video');
 video = videojs('video'); //video.js, remove for html5 player
