@@ -4,6 +4,12 @@
 <!-- USE "SPECIAL=" FOR MUSICAL/SENIOR/UNDERCLASSMEN -->
 <!-- "YEAR=" IS THE GRADUATING YEAR -->
 <eps>
+  <ep year="2018">
+    <title>CTV #438</title>
+    <aired>August 25th, 2017</aired>
+    <ft>,New Teachers,Volleyball,Cooper Code</ft>
+    <video>ctv438.mp4</video>
+  </ep>
   <ep year="2017">
     <title>CTV #437 - Best of the Year</title>
     <aired>June 2nd, 2017</aired>
