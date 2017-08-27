@@ -199,7 +199,7 @@ require 'topnav.php';
 <p class="oposition">Business Manager</p></td>
 <p class="oname">Andrew Rothschild</p></td>
 <p class="oposition">Equipment Manager</p></td>
-<p class="oname">Jacob Mayoe</p></td>
+<p class="oname">Jacob Mayer</p></td>
 <p class="oposition">Operatons Manager</p></td>
 <p class="style" style="padding:10px; text-align:center; font-size:.6em;"><a href="cast.html">View our full cast &raquo;</a></p>
 </div>
