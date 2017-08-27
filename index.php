@@ -71,16 +71,22 @@ iframe {
   width: 100%;
   max-width: none !important;
 }
-.column{
-  width: 50%;
-  height: 27em;
+.column.container{
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+	width: 100%;
+  /*width: 50%;
+  height: 27em;*/
   box-sizing: border-box;
 }
 .column.right{
-	float:right;
+	/*float:right;*/
+	width: 50%;
 	border-left: 5px solid black;
 }
 .column.left {
+	width: 50%;
 	border-right: 5px solid black;
 }
 .column iframe{
@@ -109,16 +115,18 @@ iframe {
   .topnav a:first-child {display: block !important;}
 }
 @media only screen and (max-width: 540px){
-  .column{
+  .column.container{
+		flex-direction: column;
     width: 100%;
-    float: none !important;
   }
 	.column.left {
 		border: none;
 		border-top: 10px solid black;
+		width: 100%;
 	}
 	.column.right {
 		border: none;
+		width: 100%;
 	}
 	.column.autoheight {height: auto;}
   p.large {
@@ -171,6 +179,8 @@ require 'topnav.php';
   <a href="https://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
 
+<div class="column container">
+
 <div class="column right autoheight" style="background-color:black;padding:.5em;
   display: flex;
   justify-content: center;
@@ -204,10 +214,14 @@ require 'topnav.php';
 <p class="style" style="padding:10px; text-align:center; font-size:.6em;"><a href="cast.html">View our full cast &raquo;</a></p>
 </div>
 
+</div>
+
 <!-- ScoreStream Bar -->
 <div class="embed-box bar" style="overflow:hidden; position:relative;padding:0">
   <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
 </div>
+
+<div class="column container">
 
 <!-- Twitter Embed-->
 <div class="twitter embed-box column right" style="overflow:hidden; position:relative;">
@@ -218,7 +232,7 @@ require 'topnav.php';
 
 
 <!-- Lariat Embed -->
-<div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;display:flex;flex-direction:column;text-align:left;">
+<div class="embed-box column left" style="overflow:hidden;padding:0;position:relative;text-align:left;">
 
 	<iframe src="lariat_forwarder.php" style="border:none;"></iframe>
 
@@ -228,6 +242,7 @@ require 'topnav.php';
 	 -->
 </div>
 
+</div>
 
 <!--
 <center  style="line-height:0;width:100%"><img src="ctv_images/lower-banner.jpg" alt="" usemap="imgmap20155214647" data-rjs="2">

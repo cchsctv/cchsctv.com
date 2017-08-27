@@ -40,7 +40,7 @@ p.head{
 .compitition_container img {
   width: 100%;
   height: auto;
-  margin-bottom: 5px;
+  margin-bottom:5px;
 }
 .compitition .title{
   font-size: 1.25em;
@@ -114,8 +114,18 @@ a .award_container {
 .main div a div:hover:not(.topnav){
   filter: brightness(1.5);
 }
-.compitition_container:not(:nth-of-type(2)) img {
+.compitition_container:not(:nth-of-type(2)) {
   border-top: solid black 10px;
+}
+.hidden {
+  height:0;
+  visibility:hidden;
+}
+.no_margin img{
+  margin:0;
+}
+.no_margin .compitition {
+  bottom:0;
 }
 @media only screen and (max-height: 405px) {
   #video:not(.vjs-fullscreen){
@@ -140,7 +150,7 @@ a .award_container {
     height: 56.25vw;
     width: inherit;
   }
-  .compitition_container img {
+  .compitition_container>img {
     width: calc(100% + 20px);
     transform: translateX(-10px);
   }
@@ -149,6 +159,19 @@ a .award_container {
     background-color: black;
     padding: .5em 0;
   }
+  .compitition_container:not(:nth-of-type(2)) {
+    border-top: 0px;
+    border-bottom: solid black 10px;
+  }
+  .no_border{
+    border-bottom: 0px !important;
+  }
+  .award_container {
+    float: none;
+  }
+}
+.partition {
+  clear: both;
 }
 </style>
 
@@ -161,70 +184,99 @@ a .award_container {
 <?php
 require 'topnav.php';
 ?>
-
-
+<?php
+//TEMPLATE FOR ADDING MORE AWARDS
+/*
+<!-- AWARD GROUP START -->
 <!-- IMAGE -->
-
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
-<p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
+<p class="loc">Orlando, Florida - April 26th, 2017 &#x25BC;</p></div>
 
-<a onclick="video_popup('episodes/Competition/FSPAS1stNewsPKG_WEB.mp4');">
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS News Package</p>
-<p class="sub">Casey Chapter, Lexi Delgado</p></div></div>
-</a>
+  <a onclick="video_popup('episodes/Competition/video.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Name of Compitition</p>
+  <p class="sub">Person's names</p></div></div>
+  </a>
 
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS News Photography</p>
-<p class="sub">Jason Chua</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Name of Compitition</p>
+  <p class="sub">Person's names</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+*/ ?>
 
-<a onclick="video_popup('episodes/Competition/FSPAS2ndCollab_WEB.mp4');">
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Collaborative Commercial</p>
-<p class="sub">Alexa Pichardo</p></div></div>
-</a>
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
 
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Evaluation</p>
-<p class="sub">Staff</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Public Service Announcement</p>
-<p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
+<div class="compitition">
+  <p class="title">2017 FSPA States</p>
+<p class="loc">Orlando, Florida - April 26th, 2017 &#x25BC;</p></div>
 
-<a onclick="video_popup('episodes/Competition/FSPASAFProfile_WEB.mp4');">
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Profile</p>
-<p class="sub">Lexi Delgado</p></div></div>
-</a>
+  <a onclick="video_popup('episodes/Competition/FSPAS1stNewsPKG_WEB.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS News Package</p>
+  <p class="sub">Casey Chapter, Lexi Delgado</p></div></div>
+  </a>
 
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Quick Turn - Cooking Video</p>
-<p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS News Photography</p>
+  <p class="sub">Jason Chua</p></div></div>
 
-<a onclick="video_popup('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening_WEB.mp4');">
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Show Opening</p>
-<p class="sub">Lexi Delgado, Jason Chua</p></div></div>
-</a>
+  <a onclick="video_popup('episodes/Competition/FSPAS2ndCollab_WEB.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Collaborative Commercial</p>
+  <p class="sub">Alexa Pichardo</p></div></div>
+  </a>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Evaluation</p>
+  <p class="sub">Staff</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Public Service Announcement</p>
+  <p class="sub">Gabriela Carbone, Justine Russo, Madison Gailboord</p></div></div>
+
+  <a onclick="video_popup('episodes/Competition/FSPASAFProfile_WEB.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile</p>
+  <p class="sub">Lexi Delgado</p></div></div>
+  </a>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Cooking Video</p>
+  <p class="sub">Jason Chua, Gabriela Carbone, Andrew Rothschild</p></div></div>
+
+  <a onclick="video_popup('episodes/Competition/FSPA%20States%20-%20All%20Florida%20Broadcast%20Show%20Opening_WEB.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Show Opening</p>
+  <p class="sub">Lexi Delgado, Jason Chua</p></div></div>
+  </a>
+</div>
 <!--
 <div class="award_container">
   <img src="ctv_images/excellent.png); background-size: 377.5px 82px; padding-left:90px; float:left; border:5px solid white; border-right:0px; border-bottom:0px;" data-rjs="3"><span style="line-height:75px;"></span><div style="vertical-align:middle; display:inline-block;">
@@ -274,805 +326,832 @@ require 'topnav.php';
 <p class="sub">Casey Chapter, Lian Chung‐Valuntas</p></div></div>
 -->
 
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/17stn.jpg" data-rjs="2">
 <div class="compitition">
   <p class="title">2017 STN Nationals</p>
-<p class="loc">Anaheim California - March 31st, 2017</p></div></div>
+<p class="loc">Anaheim California - March 31st, 2017 &#x25BC;</p></div>
 
-<a onclick="video_popup('episodes/ctv431.mp4');">
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Crazy 8 - Broadcast Morning Show</p>
-<p class="sub">Staff</p></div></div>
-</a>
+  <a onclick="video_popup('episodes/ctv431.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Crazy 8 - Broadcast Morning Show</p>
+  <p class="sub">Staff</p></div></div>
+  </a>
+</div>
 
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/fspad16.jpg">
 <div class="compitition">
   <p class="title">2016-2017 FSPA District 7</p>
-<p class="loc">Davie, Florida - October 22nd, 2016</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Selfie</p>
-<p class="sub">Samantha Towle</p></div></div>
+<p class="loc">Davie, Florida - October 22nd, 2016 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Selfie</p>
+  <p class="sub">Samantha Towle</p></div></div>
 
-<a onclick="video_popup('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior_WEB.mp4');">
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Silent Movie</p>
-<p class="sub">Krzysza Korytkowski, Alexa Pichardo, Andrew Rothschild</p></div></div>
-</a>
+  <a onclick="video_popup('episodes/Competition/FSPA%20Districts%201st%20Place%20Silent%20Movie%20-%20The%20Silent%20Savior_WEB.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Silent Movie</p>
+  <p class="sub">Krzysza Korytkowski, Alexa Pichardo, Andrew Rothschild</p></div></div>
+  </a>
 
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Silent Movie</p>
-<p class="sub">Ashton Bosse, Lexi Delgado, Danielle Sisso</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Deadline Broadcast Commentary</p>
-<p class="sub">Anna Villalonga, Mark Brent, Harris Ness</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Deadline Commentary</p>
-<p class="sub">Doug Weimann, Jemma Miller, Emily Ehrlich</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Illustration</p>
-<p class="sub">Madison Gailboord</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Broadcast Commentary</p>
-<p class="sub">Lyndsey Kleiman, Brianna Franco, Gabriela Carbone</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Silent Movie</p>
+  <p class="sub">Ashton Bosse, Lexi Delgado, Danielle Sisso</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Deadline Broadcast Commentary</p>
+  <p class="sub">Anna Villalonga, Mark Brent, Harris Ness</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Deadline Commentary</p>
+  <p class="sub">Doug Weimann, Jemma Miller, Emily Ehrlich</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Illustration</p>
+  <p class="sub">Madison Gailboord</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Broadcast Commentary</p>
+  <p class="sub">Lyndsey Kleiman, Brianna Franco, Gabriela Carbone</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1516fspastates.jpg" data-rjs="2">
   <div class="compitition">
     <p class="title">2016 FSPA States</p>
-    <p class="loc">Orlando, Florida - April 25th, 2016</p>
+    <p class="loc">Orlando, Florida - April 25th, 2016 &#x25BC;</p>
   </div>
+
+  <div class="award_container">
+    <img src="ctv_images/bestofthebest.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Show Opening</p>
+  <p class="sub">Shawn Ebanks</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Evaluation</p>
+  <p class="sub">Staff</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS News Feature</p>
+  <p class="sub">Yarden Ben-David, Seren Markovich</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Story</p>
+  <p class="sub">Shawn Ebanks, Lexi Abrahamoff, Jennifer Nevins, Samantha Towle</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Feature</p>
+  <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
 </div>
-<div class="award_container">
-  <img src="ctv_images/bestofthebest.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Show Opening</p>
-<p class="sub">Shawn Ebanks</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/allflorida.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Evaluation</p>
-<p class="sub">Staff</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS News Feature</p>
-<p class="sub">Yarden Ben-David, Seren Markovich</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Short Story</p>
-<p class="sub">Shawn Ebanks, Lexi Abrahamoff, Jennifer Nevins, Samantha Towle</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Feature</p>
-<p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/stngeneric2.jpg">
-<div class="compitition">
-  <p class="title">STN Challenges</p>
-<p class="loc">2015-2016</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Feature</p>
-<p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <div class="compitition">
+    <p class="title">STN Challenges</p>
+  <p class="loc">2015-2016 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Feature</p>
+  <p class="sub">Yarden Ben-David, Jessica Johnson, Isabella Tocci, Jemma Miller</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/16stn.jpg">
 <div class="compitition">
   <p class="title">2016 STN Nationals</p>
-<p class="loc">Atlanta, Georgia - March 13th, 2016</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Crazy 8 - Broadcast Morning Show</p>
-<p class="sub">Staff</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Scriptwriting</p>
-<p class="sub">Seren Markovich</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Action Sports Editing</p>
-<p class="sub">Kalli Rogers</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Atlanta, Georgia - March 13th, 2016 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Crazy 8 - Broadcast Morning Show</p>
+  <p class="sub">Staff</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Scriptwriting</p>
+  <p class="sub">Seren Markovich</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Action Sports Editing</p>
+  <p class="sub">Kalli Rogers</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1516fspa.jpg">
 <div class="compitition">
   <p class="title">2015-2016 FSPA District 7</p>
-<p class="loc">Davie, Florida - November 7, 2015</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS "Selfie"</p>
-<p class="sub">Jaycee Albury</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Feature Package</p>
-<p class="sub">Jessica Johnson, Emily Ehrlich, Felipe Lopez</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Deadline Package</p>
-<p class="sub">Yarden Ben-David, Isabella Tocci, Krzysza Korytkowski</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Play-By-Play Coverage</p>
-<p class="sub">Trace Austin, Karina Suarez, Samantha Towle</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Live To Tape</p>
-<p class="sub">Yarden Ben-David, Kalli Rogers</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">OTS Commentary</p>
-<p class="sub">Jemma Miller, Michael Lynn, Lyndsey Kleiman</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Play-By-Play Coverage</p>
-<p class="sub">Samantha Fowler, Anna Villalonga</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Davie, Florida - November 7, 2015 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS "Selfie"</p>
+  <p class="sub">Jaycee Albury</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Feature Package</p>
+  <p class="sub">Jessica Johnson, Emily Ehrlich, Felipe Lopez</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Deadline Package</p>
+  <p class="sub">Yarden Ben-David, Isabella Tocci, Krzysza Korytkowski</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Play-By-Play Coverage</p>
+  <p class="sub">Trace Austin, Karina Suarez, Samantha Towle</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Live To Tape</p>
+  <p class="sub">Yarden Ben-David, Kalli Rogers</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Commentary</p>
+  <p class="sub">Jemma Miller, Michael Lynn, Lyndsey Kleiman</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Play-By-Play Coverage</p>
+  <p class="sub">Samantha Fowler, Anna Villalonga</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/15stn.jpg">
 <div class="compitition">
   <p class="title">2015 STN Nationals</p>
-<p class="loc">San Diego, California - April 4, 2015</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Short Story</p>
-<p class="sub">Halle Kilman, Shawn Ebanks, Karina Suarez</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Movie Trailer</p>
-<p class="sub">Samantha Caldwell, Zachary Zucker, Jennifer Nevins, Andrew Shweky</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">San Diego, California - April 4, 2015 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Story</p>
+  <p class="sub">Halle Kilman, Shawn Ebanks, Karina Suarez</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Movie Trailer</p>
+  <p class="sub">Samantha Caldwell, Zachary Zucker, Jennifer Nevins, Andrew Shweky</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1415fspa.jpg">
 <div class="compitition">
   <p class="title">2014-2015 FSPA District 7</p>
-<p class="loc">Deerfield Beach, Florida - November 1, 2014</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Short Story</p>
-<p class="sub">Shailee Ben-David, Hayley Hudson, Jennifer Nevins, Neve Kantor</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video Photojournalism</p>
-<p class="sub">Austen Prager, Shailee Ben-David, Trace Austin</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Man on The Street</p>
-<p class="sub">Zackary Zucker, Hayley Hudson, Halle Kilman, Neve Kantor</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast Show Opening</p>
-<p class="sub">Halle Kilman, Jason Chua</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Stand-up</p>
-<p class="sub">Zachery Levine, Samantha Caldwell, Zachary Zucker, Madison Sica</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Halle Kilman</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Product Commercial</p>
-<p class="sub">Zachary Churnetski, Shawn Ebanks, Brandon Aguiar, Samantha Fowler</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - November 1, 2014 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Story</p>
+  <p class="sub">Shailee Ben-David, Hayley Hudson, Jennifer Nevins, Neve Kantor</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video Photojournalism</p>
+  <p class="sub">Austen Prager, Shailee Ben-David, Trace Austin</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Man on The Street</p>
+  <p class="sub">Zackary Zucker, Hayley Hudson, Halle Kilman, Neve Kantor</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Show Opening</p>
+  <p class="sub">Halle Kilman, Jason Chua</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Stand-up</p>
+  <p class="sub">Zachery Levine, Samantha Caldwell, Zachary Zucker, Madison Sica</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Halle Kilman</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Product Commercial</p>
+  <p class="sub">Zachary Churnetski, Shawn Ebanks, Brandon Aguiar, Samantha Fowler</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1314fspa.jpg">
 <div class="compitition">
   <p class="title">2013-2014 FSPA District 7</p>
-<p class="loc">Deerfield Beach, Florida - October 19, 2013</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Show Intro</p>
-<p class="sub">Wasim Hyatt, Rachel Broccoli, Madison Sica, Morgan Correa</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Story Editing</p>
-<p class="sub">Alexis Sherwood-Cotto, Samantha Puglisi</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Commercial</p>
-<p class="sub">Maddison Braddy, Kyle Sabrin, Jordan Burgs</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Package Editing</p>
-<p class="sub">Brooke Sustrin, Olivia Pascale-Wong, Austen Prager, Thais Ackerman</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Leanne Bonello, Brandon Aguiar, Casey Guarasci</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">On The Spot Script Writing</p>
-<p class="sub">Hayley Hudson, Jason Fabiano</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 19, 2013 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Show Intro</p>
+  <p class="sub">Wasim Hyatt, Rachel Broccoli, Madison Sica, Morgan Correa</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Story Editing</p>
+  <p class="sub">Alexis Sherwood-Cotto, Samantha Puglisi</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Commercial</p>
+  <p class="sub">Maddison Braddy, Kyle Sabrin, Jordan Burgs</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Package Editing</p>
+  <p class="sub">Brooke Sustrin, Olivia Pascale-Wong, Austen Prager, Thais Ackerman</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Leanne Bonello, Brandon Aguiar, Casey Guarasci</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">On The Spot Script Writing</p>
+  <p class="sub">Hayley Hudson, Jason Fabiano</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/13stn3.jpg">
 <div class="compitition">
   <p class="title">2013 STN Nationals</p>
-<p class="loc">Los Angeles, California - March 10, 2013</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">STN Excellence Award</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sixty Second Silent</p>
-<p class="sub">Jazlyn Cartaya</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sports Highlights</p>
-<p class="sub">Trent Austin</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Short Story</p>
-<p class="sub">Noah Avidan, Rachel Broccoli</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Los Angeles, California - March 10, 2013 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">STN Excellence Award</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sixty Second Silent</p>
+  <p class="sub">Jazlyn Cartaya</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sports Highlights</p>
+  <p class="sub">Trent Austin</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Story</p>
+  <p class="sub">Noah Avidan, Rachel Broccoli</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1213fspa2.jpg">
 <div class="compitition">
   <p class="title">2012-2013 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 20, 2012</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Mitchel Worley, Noah Avidan, Alexis Sherwood-Cotto</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Scriptwriting</p>
-<p class="sub">Anastasia Pavlinskaya, Alexis Marx, Marti Wein</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has a Story</p>
-<p class="sub">Anastasia Pavlinskaya, Jason Fabiano, Jeremy Haas</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 20, 2012 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Mitchel Worley, Noah Avidan, Alexis Sherwood-Cotto</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Scriptwriting</p>
+  <p class="sub">Anastasia Pavlinskaya, Alexis Marx, Marti Wein</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has a Story</p>
+  <p class="sub">Anastasia Pavlinskaya, Jason Fabiano, Jeremy Haas</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/12stn.jpg">
 <div class="compitition">
   <p class="title">2012 STN Nationals</p>
-<p class="loc">Dallas, Texas - March 24, 2012</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sweet 16</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Spot Feature</p>
-<p class="sub">Tara Butler, Alexis Marx</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Convention Recap</p>
-<p class="sub">Wasim Hayatt</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Dallas, Texas - March 24, 2012 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sweet 16</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Spot Feature</p>
+  <p class="sub">Tara Butler, Alexis Marx</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Convention Recap</p>
+  <p class="sub">Wasim Hayatt</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1112fspa.jpg">
 <div class="compitition">
   <p class="title">2011-2012 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 15, 2011</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Melanie Berra, Taylor Mandel, Michelle Wasserstrom, Laura Goldman</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Yasmin Flasterstein, Haley Castor, Natalie McPherson</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Cody Erickson, James Hirschfeld, Mitchell Worley, Noah Avidan</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 15, 2011 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Melanie Berra, Taylor Mandel, Michelle Wasserstrom, Laura Goldman</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Yasmin Flasterstein, Haley Castor, Natalie McPherson</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Cody Erickson, James Hirschfeld, Mitchell Worley, Noah Avidan</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/11stn.jpg">
 <div class="compitition">
   <p class="title">2011 STN Nationals</p>
-<p class="loc">Orlando, Florida - March 12, 2011</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Laptop Journalism</p>
-<p class="sub">Jenny Tintner</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sweet 16</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Spot Feature</p>
-<p class="sub">Tara Butler, Danielle Noble</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Convention Recap</p>
-<p class="sub">Khaled Hassan</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Documentary</p>
-<p class="sub">Myles Sica, Maxine Shepard</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Orlando, Florida - March 12, 2011 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Laptop Journalism</p>
+  <p class="sub">Jenny Tintner</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sweet 16</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Spot Feature</p>
+  <p class="sub">Tara Butler, Danielle Noble</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Convention Recap</p>
+  <p class="sub">Khaled Hassan</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Documentary</p>
+  <p class="sub">Myles Sica, Maxine Shepard</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/stngeneric2.jpg">
 <div class="compitition">
-  <p class="title">STN National Challenges</p>
-<p class="loc">2010-2011</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sports Challenge</p>
-<p class="sub">Myles Sica, Jody Steel, Tara Butler, TJ Burch</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Challenge</p>
-<p class="sub">Jenny Tintner, Dillon Puswald, Maxine Shepard, Sarah Morris</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+  <p class="title">STN National Challenges &#x25BC;</p>
+<p class="loc">2010-2011</p></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sports Challenge</p>
+  <p class="sub">Myles Sica, Jody Steel, Tara Butler, TJ Burch</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Challenge</p>
+  <p class="sub">Jenny Tintner, Dillon Puswald, Maxine Shepard, Sarah Morris</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1011fspa.jpg">
 <div class="compitition">
   <p class="title">2010-2011 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 2010</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Myles Sica, Cody Erickson, Dillon Puswald</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Jody Steel, Jenny Tintner, Myles Sica</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Maxine Shepard, Melanie Berra, Hannah Sutker</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Show Intro</p>
-<p class="sub">Seth Lyon, Mary Newsome, Michelle Goldman</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Kristen Garcia, Tara Butler, TJ Burch</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 2010 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Myles Sica, Cody Erickson, Dillon Puswald</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Jody Steel, Jenny Tintner, Myles Sica</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Maxine Shepard, Melanie Berra, Hannah Sutker</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Show Intro</p>
+  <p class="sub">Seth Lyon, Mary Newsome, Michelle Goldman</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Kristen Garcia, Tara Butler, TJ Burch</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/pichardo1.jpg">
 <div class="compitition">
   <p class="title">CCHS Teacher Of The Year</p>
-<p class="loc">Cooper City, Florida - 2010-2011</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Teacher Of The Year</p>
-<p class="sub">Mr. Alfredo Pichardo</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Cooper City, Florida - 2010-2011 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Teacher Of The Year</p>
+    <p class="sub">Mr. Alfredo Pichardo</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/10stn3.jpg">
 <div class="compitition">
   <p class="title">2010 STN Nationals</p>
-<p class="loc">Anaheim, California - March 2010</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">STN Excellence Award</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Documentary</p>
-<p class="sub">Nicole Payton, Angela Robledo</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Tell The Story Editing</p>
-<p class="sub">Jessica Alpern, Lauren Lopilato</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast News Writing</p>
-<p class="sub">Maxine Shepard</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Brittany Stout, Michael Tintner</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">News Challenge</p>
-<p class="sub">Jody Steel, Angela Robledo, Max Mittler, Ben Cohen</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Anaheim, California - March 2010 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">STN Excellence Award</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Documentary</p>
+  <p class="sub">Nicole Payton, Angela Robledo</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Tell The Story Editing</p>
+  <p class="sub">Jessica Alpern, Lauren Lopilato</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast News Writing</p>
+  <p class="sub">Maxine Shepard</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Brittany Stout, Michael Tintner</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Challenge</p>
+  <p class="sub">Jody Steel, Angela Robledo, Max Mittler, Ben Cohen</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0910fspa.jpg">
 <div class="compitition">
   <p class="title">2009-2010 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 3, 2009</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Myles Sica, Dustin Schrieber, Ben Cohen</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">PSA</p>
-<p class="sub">Brittany Stout, Michael Tintner</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Francesca Capua, Nicole Payton, Angela Robledo</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Taylor Slingerland, Maxine Shepard</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Show Intro</p>
-<p class="sub">Jody Steel, Max Mittler</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 3, 2009 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Myles Sica, Dustin Schrieber, Ben Cohen</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">PSA</p>
+  <p class="sub">Brittany Stout, Michael Tintner</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Francesca Capua, Nicole Payton, Angela Robledo</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Taylor Slingerland, Maxine Shepard</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Show Intro</p>
+  <p class="sub">Jody Steel, Max Mittler</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/btn09.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
-<p class="loc">Fort Lauderdale, Florida - 2008-2009</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Best School News Show</p>
-<p class="sub">CTV News</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Fort Lauderdale, Florida - 2008-2009 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Best School News Show</p>
+  <p class="sub">CTV News</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/09stn2.jpg">
 <div class="compitition">
   <p class="title">2009 STN Nationals</p>
-<p class="loc">Orlando, Florida - March 2009</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sweet 16</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Spot Feature</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Broadcast News Writing</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sports Challenge</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/honorablemention.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Documentary</p>
-<p class="sub">CTV News</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Orlando, Florida - March 2009 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sweet 16</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Spot Feature</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast News Writing</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sports Challenge</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Documentary</p>
+  <p class="sub">CTV News</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0809fspa.jpg">
 <div class="compitition">
   <p class="title">2008-2009 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - September 27, 2008</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Monica Berra, Taylor Slingerland</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Amanda Katz, Monica Berra, Brittany Reeber</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Amanda Katz, Tyler Routley</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - September 27, 2008 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Monica Berra, Taylor Slingerland</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Amanda Katz, Monica Berra, Brittany Reeber</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Amanda Katz, Tyler Routley</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0708fspa.jpg">
 <div class="compitition">
   <p class="title">2007-2008 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - September 29, 2007</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Dean D'Agati, Travis Burch</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Web Design</p>
-<p class="sub">Dean D'Agati</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Amanda Katz, Monica Berra</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - September 29, 2007 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Dean D'Agati, Travis Burch</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Web Design</p>
+  <p class="sub">Dean D'Agati</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Amanda Katz, Monica Berra</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/ctv08.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
-<p class="loc">Fort Lauderdale, Florida - 2007-2008</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Best School News Show</p>
-<p class="sub">CTV News</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Teacher Of The Year</p>
-<p class="sub">Mr. Alfredo Pichardo</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Fort Lauderdale, Florida - 2007-2008 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Best School News Show</p>
+  <p class="sub">CTV News</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Teacher Of The Year</p>
+  <p class="sub">Mr. Alfredo Pichardo</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/07showopen.jpg">
 <div class="compitition">
   <p class="title">2007 STN Nationals</p>
-<p class="loc">(submission only) - 2007</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/3rdplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Show Opening</p>
-<p class="sub">Dean D'Agati</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">(submission only) - 2007 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Show Opening</p>
+  <p class="sub">Dean D'Agati</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0607fspastates.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA States</p>
-<p class="loc">Tampa, Florida - April 12-14 2007</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Sports Journalism</p>
-<p class="sub">Brandon Block, Travis Burch</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Video-Photo Journalism</p>
-<p class="sub">Justin Vandenbroek, Ben Juster</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Web Design</p>
-<p class="sub">Dean D'Agati</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Tampa, Florida - April 12-14 2007 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sports Journalism</p>
+  <p class="sub">Brandon Block, Travis Burch</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Video-Photo Journalism</p>
+  <p class="sub">Justin Vandenbroek, Ben Juster</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Web Design</p>
+  <p class="sub">Dean D'Agati</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
-<div class="compitition_container">
+<div class="compitition_container" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0607fspa.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 2006</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/1stplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Script Writing</p>
-<p class="sub">Melissa Egan, Ashley Stout</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Web Design</p>
-<p class="sub">Melissa Egan, Ashley Stout</p></div></div>
-<div class="award_container">
-  <img src="ctv_images/2ndplace.png" data-rjs="3">
-<div class="award_text">
-  <p class="head">Every Student Has A Story</p>
-<p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
-<!-- DO NOT DELETE THIS LINE --><div style="clear:both"></div>
+<p class="loc">Deerfield Beach, Florida - October 2006 &#x25BC;</p></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Script Writing</p>
+  <p class="sub">Melissa Egan, Ashley Stout</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Web Design</p>
+  <p class="sub">Melissa Egan, Ashley Stout</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Every Student Has A Story</p>
+  <p class="sub">Dean D'Agati, Melissa Egan, Ashley Stout</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 
 
@@ -1139,6 +1218,48 @@ var MyButton = videojs.extend(Button, {
 });
 videojs.registerComponent('MyButton', MyButton);
 video.getChild('controlBar').addChild('myButton', {});
+
+
+var awards = document.getElementsByClassName('award_container')
+var compitition = document.getElementsByClassName('compitition_container')
+
+for (i = 0; i < awards.length; i++) {
+  awards[i].classList.add("hidden")
+}
+for (i = 0; i < compitition.length; i++) {
+  compitition[i].classList.add("no_margin");
+  compitition[i].classList.add("no_border");
+}
+
+
+function awards_vis(target) {
+  awards2toggle = target.getElementsByClassName('award_container');
+  compitition2toggle = target;
+  border2toggle_m = target;
+
+  if (awards2toggle[0].classList.contains("hidden")) {
+    for (i = 0; i < awards2toggle.length; i++) {
+      awards2toggle[i].classList.remove("hidden");
+    }
+  } else {
+    for (i = 0; i < awards2toggle.length; i++) {
+      awards2toggle[i].classList.add("hidden");
+    }
+  }
+
+  if (compitition2toggle.classList.contains("no_margin")) {
+    compitition2toggle.classList.remove("no_margin");
+  } else {
+    compitition2toggle.classList.add("no_margin");
+  }
+
+  if (border2toggle_m.classList.contains("no_border")) {
+    border2toggle_m.classList.remove("no_border");
+  } else {
+    border2toggle_m.classList.add("no_border");
+  }
+}
+
 </script>
 
 <?php require 'footer.php' ?>
