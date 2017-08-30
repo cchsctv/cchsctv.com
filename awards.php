@@ -111,6 +111,9 @@ a .award_container {
 .main div a p{
   text-decoration: underline;
 }
+.main div a div:not(.topnav){
+  transition: filter .1s linear;
+}
 .main div a div:hover:not(.topnav){
   filter: brightness(1.5);
 }
@@ -118,15 +121,17 @@ a .award_container {
   border-top: solid black 10px;
 }
 .hidden {
-  height:0;
-  visibility:hidden;
+  max-height:0;
+  /*visibility:hidden;*/
 }
-.no_margin img{
-  margin:0;
+.no_margin img{margin:0;}
+.no_margin .compitition {bottom:0;}
+.partition {clear: both;}
+.click_area {
+  transition: filter .1s linear;
+  cursor:pointer;
 }
-.no_margin .compitition {
-  bottom:0;
-}
+.click_area:hover {filter: brightness(1.25);}
 @media only screen and (max-height: 405px) {
   #video:not(.vjs-fullscreen){
     max-height: 100%;
@@ -150,7 +155,7 @@ a .award_container {
     height: 56.25vw;
     width: inherit;
   }
-  .compitition_container>img {
+  .click_area>img {
     width: calc(100% + 20px);
     transform: translateX(-10px);
   }
@@ -169,9 +174,6 @@ a .award_container {
   .award_container {
     float: none;
   }
-}
-.partition {
-  clear: both;
 }
 </style>
 
@@ -217,7 +219,7 @@ require 'topnav.php';
 <!-- IMAGE -->
 
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
@@ -333,7 +335,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/17stn.jpg" data-rjs="2">
 <div class="compitition">
   <p class="title">2017 STN Nationals</p>
@@ -354,7 +356,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/fspad16.jpg">
 <div class="compitition">
   <p class="title">2016-2017 FSPA District 7</p>
@@ -405,7 +407,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1516fspastates.jpg" data-rjs="2">
   <div class="compitition">
     <p class="title">2016 FSPA States</p>
@@ -444,7 +446,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/stngeneric2.jpg">
   <div class="compitition">
     <p class="title">STN Challenges</p>
@@ -461,7 +463,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/16stn.jpg">
 <div class="compitition">
   <p class="title">2016 STN Nationals</p>
@@ -490,7 +492,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1516fspa.jpg">
 <div class="compitition">
   <p class="title">2015-2016 FSPA District 7</p>
@@ -538,7 +540,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/15stn.jpg">
 <div class="compitition">
   <p class="title">2015 STN Nationals</p>
@@ -561,7 +563,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1415fspa.jpg">
 <div class="compitition">
   <p class="title">2014-2015 FSPA District 7</p>
@@ -609,7 +611,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1314fspa.jpg">
 <div class="compitition">
   <p class="title">2013-2014 FSPA District 7</p>
@@ -652,7 +654,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/13stn3.jpg">
 <div class="compitition">
   <p class="title">2013 STN Nationals</p>
@@ -685,7 +687,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1213fspa2.jpg">
 <div class="compitition">
   <p class="title">2012-2013 FSPA Districts</p>
@@ -713,7 +715,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/12stn.jpg">
 <div class="compitition">
   <p class="title">2012 STN Nationals</p>
@@ -741,7 +743,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1112fspa.jpg">
 <div class="compitition">
   <p class="title">2011-2012 FSPA Districts</p>
@@ -769,7 +771,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/11stn.jpg">
 <div class="compitition">
   <p class="title">2011 STN Nationals</p>
@@ -807,7 +809,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/stngeneric2.jpg">
 <div class="compitition">
   <p class="title">STN National Challenges</p>
@@ -830,7 +832,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1011fspa.jpg">
 <div class="compitition">
   <p class="title">2010-2011 FSPA Districts</p>
@@ -868,7 +870,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/pichardo1.jpg">
 <div class="compitition">
   <p class="title">CCHS Teacher Of The Year</p>
@@ -886,7 +888,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/10stn3.jpg">
 <div class="compitition">
   <p class="title">2010 STN Nationals</p>
@@ -929,7 +931,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0910fspa.jpg">
 <div class="compitition">
   <p class="title">2009-2010 FSPA Districts</p>
@@ -967,7 +969,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/btn09.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
@@ -985,7 +987,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/09stn2.jpg">
 <div class="compitition">
   <p class="title">2009 STN Nationals</p>
@@ -1023,7 +1025,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0809fspa.jpg">
 <div class="compitition">
   <p class="title">2008-2009 FSPA Districts</p>
@@ -1051,7 +1053,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0708fspa.jpg">
 <div class="compitition">
   <p class="title">2007-2008 FSPA Districts</p>
@@ -1084,7 +1086,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/ctv08.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
@@ -1107,7 +1109,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/07showopen.jpg">
 <div class="compitition">
   <p class="title">2007 STN Nationals</p>
@@ -1125,7 +1127,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0607fspastates.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA States</p>
@@ -1158,7 +1160,7 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <div href="#" onclick="awards_vis(this)">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/0607fspa.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA Districts</p>
