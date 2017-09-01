@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- EDIT ONLY VIA GIT -->
-<!-- USE "&amp;" IN PLACE OF "&" -->
+<!-- USE "&amp;amp;" IN PLACE OF "&" -->
 <!-- USE "SPECIAL=" FOR MUSICAL/SENIOR/UNDERCLASSMEN -->
 <!-- "YEAR=" IS THE GRADUATING YEAR -->
 <eps>
@@ -109,7 +109,7 @@
   <ep year="2017">
     <title>CTV #424</title>
     <aired>February 10th, 2017</aired>
-    <ft>Career Day at the BB&amp;T, Wrestling Senior Night,The Challenge</ft>
+    <ft>Career Day at the BB&amp;amp;T, Wrestling Senior Night,The Challenge</ft>
     <video>ctv424.mp4</video>
   </ep>
 
@@ -864,7 +864,7 @@
   <ep year="2014">
     <title>CTV #315</title>
     <aired>September 27, 2013</aired>
-    <ft>Jody Steel, Football Highlights, Emmys Recap, Toddlers &amp; Tieras</ft>
+    <ft>Jody Steel, Football Highlights, Emmys Recap, Toddlers &amp;amp; Tieras</ft>
     <video>ctv315.mp4</video>
   </ep>
 
@@ -1184,7 +1184,7 @@
   <ep year="2012">
     <title>CTV #269</title>
     <aired>Aired: March 9, 2012</aired>
-    <ft>Author Seminar, Romeo &amp; Juliet, Bullying Short Film, 5 5econd 5horts</ft>
+    <ft>Author Seminar, Romeo &amp;amp; Juliet, Bullying Short Film, 5 5econd 5horts</ft>
     <video>ctv269.mov</video>
   </ep>
 
@@ -2037,7 +2037,7 @@
   <ep year="2008">
     <title>CTV #146</title>
     <aired>May 9, 2008</aired>
-    <ft>AP Testing, Volleyball Champions, How To Catch A Cheater, Tyler &amp; The Box</ft>
+    <ft>AP Testing, Volleyball Champions, How To Catch A Cheater, Tyler &amp;amp; The Box</ft>
     <video>ctv146.mov</video>
   </ep>
 
