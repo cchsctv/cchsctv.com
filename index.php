@@ -190,9 +190,10 @@ require 'topnav.php';
 </p>
 </div>
 
+
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
 <div class="column left" style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
-<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2016-2017 CTV OFFICERS</p>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2017-2018 CTV OFFICERS</p>
 <p class="oname">Casey Chapter</p></td>
 <p class="oposition">PRESIDENT</p></td>
 <p class="oname">Ashton Bosse</p></td>
@@ -215,7 +216,7 @@ require 'topnav.php';
 </div>
 
 </div>
-
+<iframe width="853" height="480" src="https://www.youtube.com/embed/YUMkHHhMugQ" frameborder="2" allowfullscreen></iframe>
 <!-- ScoreStream Bar -->
 <div class="embed-box bar" style="overflow:hidden; position:relative;padding:0">
   <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
