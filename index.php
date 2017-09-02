@@ -216,7 +216,7 @@ require 'topnav.php';
 </div>
 
 </div>
-<iframe width="853" height="480" src="https://www.youtube.com/embed/YUMkHHhMugQ" frameborder="2" allowfullscreen></iframe>
+
 <!-- ScoreStream Bar -->
 <div class="embed-box bar" style="overflow:hidden; position:relative;padding:0">
   <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=12704" style="max-width:690px; height:100px" title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
