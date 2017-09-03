@@ -182,7 +182,7 @@ require 'topnav.php';
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
 <div class="column left" style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
-<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2016-2017 CTV OFFICERS</p>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2017-2018 CTV OFFICERS</p>
 <p class="oname">Casey Chapter</p></td>
 <p class="oposition">PRESIDENT</p></td>
 <p class="oname">Ashton Bosse</p></td>
