@@ -74,7 +74,7 @@ p.pichardo{
 }
 .officer_container {
   width: calc(calc(calc(100% - 5px) * 0.3333) - 5px);
-  border:5px solid #383838;
+  border:5px solid #777777;
   border-right:none;
   border-bottom:none;
   background-color:black;
@@ -88,14 +88,14 @@ p.pichardo{
   vertical-align: middle;
 }
 .officer_inner {
-  background-color:#c30e0e;
+  background-color:#777777;
   height: auto;
   float: left;
   justify-content: space-between;
 }
 .staff_container {
   width: calc(calc(calc(100% - 5px) * 0.25) - 5px);
-  border:5px solid #383838;
+  border:5px solid #777777;
   border-right:none;
   border-bottom:none;
   height: auto;
@@ -165,7 +165,7 @@ include 'topnav.php';
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
 <div class="officer_container">
-  <img src="ctv_images/staff2/caseychapter.jpg" data-rjs="2">
+  <img src="ctv_images/staff2/ab3.jpg" data-rjs="2">
     <div class="name">
   <p>Casey Chapter</p>
     </div>
@@ -174,7 +174,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff2/ashtonbosse.jpg" data-rjs="2">
+  <img src="ctv_images/staff2/AB3.jpg" data-rjs="2">
     <div class="name">
   <p>Ashton Bosse</p>
     </div>
@@ -183,7 +183,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff2/JakobWolk.jpg" data-rjs="2">
+  <img src="ctv_images/staff2/ab3.jpg" data-rjs="2">
     <div class="name">
   <p>Jakob Wolk</p>
     </div>
@@ -258,7 +258,7 @@ include 'topnav.php';
   <p>Reese Abrahamoff</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff2/chadalen.jpg" data-rjs="2">
+  <img src="ctv_images/staff2/chadallen.jpg" data-rjs="2">
   <div class="name">
   <p>Chad Allen</p></div>
 </div>
