@@ -27,6 +27,7 @@ p.head{
 	letter-spacing:2px;
   width:100%;
 }
+.content_container {background-color: #777777 !important}
 .name {
   position:absolute;
   background-color:rgba(0, 0, 0, 0.8);
