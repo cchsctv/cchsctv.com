@@ -18,7 +18,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 -->
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="ctv_images/favicon.png">
+    <link rel="shortcut icon" href="/ctv_images/favicon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>

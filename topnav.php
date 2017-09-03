@@ -30,11 +30,11 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
     <style>
   </noscript>
   <div class="topnav" id="myTopnav">
-    <a href="index.php">Home</a>
-    <a href="video.php">Video</a>
-    <a href="cast.php">Cast & Crew</a>
-    <a href="alumni.php">Alumni</a>
-    <a href="awards.php">Awards</a>
-    <a href="contact.php">Contact</a>
+    <a href="/index.php">Home</a>
+    <a href="/video.php">Video</a>
+    <a href="/cast.php">Cast & Crew</a>
+    <a href="/alumni.php">Alumni</a>
+    <a href="/awards.php">Awards</a>
+    <a href="/contact.php">Contact</a>
     <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
