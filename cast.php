@@ -224,7 +224,7 @@ include 'topnav.php';
   <p>Alexa Pichardo</p>
     </div>
   <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Bussiness Manager</p>
+  <p class="sub" style="position:relative; text-align:left;">Business Manager</p>
 </div>
 </div>
 <div class="officer_container">
