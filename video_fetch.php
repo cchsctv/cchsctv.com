@@ -14,7 +14,6 @@ foreach( $query as $param ){
 $number_videos = 1;
 
 if (isset($_GET['year'])) {
-  //$attribute = '[@year="'.$_GET['year'].'"]';
   $year = implode("\" or @year=\"",$params['year']);
   $years = '[@year="'.$year.'"]';
   $number_videos = "na";
