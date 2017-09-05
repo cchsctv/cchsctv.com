@@ -207,6 +207,8 @@ function autoplay() {
 
 
 function set_video(videoname){
+  url_ops=false
+  window.scrollTo(0,0)
   hover = document.getElementsByClassName("hover")
   while (hover.length){
   hover[0].className = hover[0].classList.remove("hover");
@@ -257,11 +259,7 @@ if (location.search) location.search.substr(1).split("&").forEach(function(item)
     (URLParams[k] = URLParams[k] || []).push(v)
 })
 
-function load_xml_doc(year, initiator) {
-  if(initiator==1){
-    url_ops=false
-    window.scrollTo(0,0)
-  }
+function load_xml_doc(year) {
   if (isNaN(year)){
     year=URLParams[year].join("\"],[special=\"")
     year="[special=\""+year+"\"]"
@@ -329,47 +327,47 @@ function xml2table(xml,selector) {
 </script>
 <div style="margin-top:1rem; display:inline-block;">
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(active_year,1);">
+    <a href="javascript:load_xml_doc(active_year);">
     <img src="ctv_images/arch.png" data-rjs="3">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2017,1);">
+    <a href="javascript:load_xml_doc(2017);">
     <img src="ctv_images/17arch.jpg" data-rjs="2">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2016,1);">
+    <a href="javascript:load_xml_doc(2016);">
     <img src="ctv_images/16arch.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2015,1);">
+    <a href="javascript:load_xml_doc(2015);">
     <img src="ctv_images/15arch.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2014,1);">
+    <a href="javascript:load_xml_doc(2014);">
     <img src="ctv_images/14arch-d.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2013,1);">
+    <a href="javascript:load_xml_doc(2013);">
     <img src="ctv_images/13arch-d.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2012,1);">
+    <a href="javascript:load_xml_doc(2012);">
     <img src="ctv_images/12arch-d.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2011,1);">
+    <a href="javascript:load_xml_doc(2011);">
     <img src="ctv_images/11arch-d.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2010,1);">
+    <a href="javascript:load_xml_doc(2010);">
     <img src="ctv_images/10arch-d.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2009,1);">
+    <a href="javascript:load_xml_doc(2009);">
     <img src="ctv_images/09arch.jpg">
   </a></div>
   <div class="yearbox">
-    <a href="javascript:load_xml_doc(2008,1);">
+    <a href="javascript:load_xml_doc(2008);">
     <img src="ctv_images/08arch.jpg">
   </a></div>
   <div class="yearbox">
