@@ -19,7 +19,7 @@ require 'topnav.php';
   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-weight:lighter;
 	font-size: 2.25em;
-  ">The page your looking for is forbidden</a>
+  ">The page you're looking for is forbidden</a>
 </div>
 
 
