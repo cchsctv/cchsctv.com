@@ -142,11 +142,13 @@ var url_ops = false;
 var year = false;
 var active_video;
 var epnum;
+var URLParams = {};
 
-load_xml_doc(active_year).then(function(year) {
+//load_xml_doc(active_year).then(function() {
+  get_url_params();
   videoload = false;
   autoplay();
-})
+//})
 
 video.on('ended', function() {
   if(document.getElementsByClassName("hover")[0].parentElement.nextElementSibling){
@@ -187,10 +189,7 @@ function autoplay() {
       videoload = false;
       set_video(epnum);
     }
-  } else if (URLParams.year){
-    load_xml_doc(URLParams.year);
   } else if (URLParams.episode){
-
     epnum=URLParams.episode[0];
     xmlhttp.open("GET", "video_fetch.php?episode2year="+epnum+"", true);
     xmlhttp.send();
@@ -199,13 +198,22 @@ function autoplay() {
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           epnum2file();
-          load_xml_doc(year);
-          videoload = false;
-          set_video(epnum);
+          load_xml_doc(year).then(function() {
+            get_url_params();
+            videoload = false;
+            set_video(epnum);
+          })
         }
       };
     });
-
+  } else if (URLParams.year){
+    load_xml_doc(URLParams.year);
+    if (URLParams.episode) {
+      epnum=URLParams.episode[0];
+      epnum2file();
+      videoload = false;
+      set_video(epnum);
+    }
   } else {
     load_xml_doc(active_year);
   }
@@ -275,9 +283,9 @@ function load_xml_doc(year) {
     video.poster("ctv_images/videoblankl.jpg")
   } else {
     selector="[year=\""+year+"\"]"
-    if (xml_load == true) {
+    //if (xml_load == true) {
       video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
-    }
+    //}
   }
   return new Promise(function(resolve){
     xmlhttp.onreadystatechange = function() {
@@ -329,13 +337,15 @@ function xml2table(xml,selector) {
   document.getElementById("playlist").innerHTML = tableTMP;
 }
 
-var URLParams = {};
-if (location.search) location.search.substr(1).split("&").forEach(function(item) {
-    var s = item.split("="),
-        k = s[0],
-        v = s[1] && decodeURIComponent(s[1]);
-    (URLParams[k] = URLParams[k] || []).push(v)
-})
+function get_url_params(){
+  if (location.search) location.search.substr(1).split("&").forEach(function(item) {
+      var s = item.split("="),
+          k = s[0],
+          v = s[1] && decodeURIComponent(s[1]);
+      (URLParams[k] = URLParams[k] || []).push(v)
+  })
+}
+
 
 </script>
 <div style="margin-top:1rem; display:inline-block;">
