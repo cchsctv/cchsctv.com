@@ -141,6 +141,7 @@ var xml_load = false;
 var url_ops = false;
 var year = false;
 var active_video;
+var epnum;
 
 load_xml_doc(active_year).then(function(year) {
   videoload = false;
@@ -189,11 +190,22 @@ function autoplay() {
   } else if (URLParams.year){
     load_xml_doc(URLParams.year);
   } else if (URLParams.episode){
+
     epnum=URLParams.episode[0];
-    epnum2file();
-    load_xml_doc(year);
-    videoload = false;
-    set_video(epnum);
+    xmlhttp.open("GET", "video_fetch.php?episode2year="+epnum+"", true);
+    xmlhttp.send();
+    xml_load = true;
+    return new Promise(function(resolve){
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          epnum2file();
+          load_xml_doc(year);
+          videoload = false;
+          set_video(epnum);
+        }
+      };
+    });
+
   } else {
     load_xml_doc(active_year);
   }
@@ -207,11 +219,10 @@ function autoplay() {
 
 
 function set_video(videoname){
-  url_ops=false
   window.scrollTo(0,0)
   hover = document.getElementsByClassName("hover")
   while (hover.length){
-  hover[0].className = hover[0].classList.remove("hover");
+    hover[0].className = hover[0].classList.remove("hover");
   };
   vurl = "episodes/"+videoname;
   video.src(vurl);
@@ -238,7 +249,7 @@ function change_url(title, url) {
 }
 
 function epnum2file(){
-  var found = xmlhttp.responseXML.evaluate("/*/ep[video[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML);
+  var found = xmlhttp.responseXML.evaluate("/eps/ep[video[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML);
   getNodes(found).forEach(function (node) {
     year=node.getAttribute("year");
     epnum=node.getElementsByTagName("video")[0].childNodes[0].nodeValue;
@@ -251,25 +262,19 @@ function epnum2file(){
   }
 }
 
-var URLParams = {};
-if (location.search) location.search.substr(1).split("&").forEach(function(item) {
-    var s = item.split("="),
-        k = s[0],
-        v = s[1] && decodeURIComponent(s[1]);
-    (URLParams[k] = URLParams[k] || []).push(v)
-})
 
 function load_xml_doc(year) {
+  var selector;
   if (isNaN(year)){
     year=URLParams[year].join("\"],[special=\"")
     year="[special=\""+year+"\"]"
     selector = year
     video.poster("ctv_images/videoblankl.jpg")
   } else if(year==active_year) {
-    var selector="[year=\""+year+"\"]"
+    selector="[year=\""+year+"\"]"
     video.poster("ctv_images/videoblankl.jpg")
   } else {
-    var selector="[year=\""+year+"\"]"
+    selector="[year=\""+year+"\"]"
     if (xml_load == true) {
       video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
     }
@@ -279,18 +284,19 @@ function load_xml_doc(year) {
       if (this.readyState == 4 && this.status == 200) {
         xml2table(xmlhttp, selector);
         resolve("done!");
+        videoload = false;
+        table.rows[0].cells[0].onclick()
       }
     };
-    if (xml_load == false) {
-      xmlhttp.open("GET", "video.xml", true);
+    //if (xml_load == false) {
+      xmlhttp.open("GET", "video_fetch.php?year="+year+"", true);
       xmlhttp.send();
       xml_load = true;
-    } else if (xml_load == true) {
-    xml2table(xmlhttp, selector);
-    resolve("done!");
-    videoload = false;
-    table.rows[0].cells[0].onclick();
-    };
+    //} else if (xml_load == true) {
+    //xml2table(xmlhttp, selector);
+    //resolve("done!");
+;
+    //};
   });
 }
 
@@ -298,7 +304,6 @@ function xml2table(xml,selector) {
   var i;
   var xmlDoc = xml.responseXML;
   var tableTMP="";
-  //var x = xmlDoc.getElementsByTagName("episode");
   var x =xmlDoc.querySelectorAll(selector);
   for (i = 0; i <x.length; i++) {
     var video_table = x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue
@@ -323,6 +328,14 @@ function xml2table(xml,selector) {
   }
   document.getElementById("playlist").innerHTML = tableTMP;
 }
+
+var URLParams = {};
+if (location.search) location.search.substr(1).split("&").forEach(function(item) {
+    var s = item.split("="),
+        k = s[0],
+        v = s[1] && decodeURIComponent(s[1]);
+    (URLParams[k] = URLParams[k] || []).push(v)
+})
 
 </script>
 <div style="margin-top:1rem; display:inline-block;">

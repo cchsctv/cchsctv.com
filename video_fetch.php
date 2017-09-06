@@ -27,6 +27,15 @@ if (isset($_GET['number_videos'])) {
   $number_videos = $_GET['number_videos'];
 }
 
+if (isset($_GET['episode2year'])) {
+  $episode = (string)$_GET['episode2year'];
+  $episode = $xml->xpath('/*/ep[video[contains(.,'.$episode.')]]');
+  $year = $episode[0]['year'];
+  $years = '[@year="'.$year.'"]';
+  //var_dump($episode[0]['year']);
+  $number_videos = "na";
+}
+
 $attribute = "";
 if (isset($years    )){$attribute .= $years;}
 if (isset($specials )){$attribute .= $specials;}
