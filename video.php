@@ -272,47 +272,35 @@ function epnum2file(){
 
 
 function load_xml_doc(year) {
-  var selector;
   if (isNaN(year)){
-    year=URLParams[year].join("\"],[special=\"")
-    year="[special=\""+year+"\"]"
-    selector = year
     video.poster("ctv_images/videoblankl.jpg")
   } else if(year==active_year) {
-    selector="[year=\""+year+"\"]"
     video.poster("ctv_images/videoblankl.jpg")
   } else {
-    selector="[year=\""+year+"\"]"
-    //if (xml_load == true) {
+    if (xml_load == true) {
       video.poster('ctv_images/'+String(year).substr(-2)+'arch.jpg')
-    //}
+    }
   }
   return new Promise(function(resolve){
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        xml2table(xmlhttp, selector);
+        xml2table(xmlhttp);
         resolve("done!");
         videoload = false;
         table.rows[0].cells[0].onclick()
       }
     };
-    //if (xml_load == false) {
-      xmlhttp.open("GET", "video_fetch.php?year="+year+"", true);
-      xmlhttp.send();
-      xml_load = true;
-    //} else if (xml_load == true) {
-    //xml2table(xmlhttp, selector);
-    //resolve("done!");
-;
-    //};
+    xmlhttp.open("GET", "video_fetch.php?year="+year+"", true);
+    xmlhttp.send();
+    xml_load = true;
   });
 }
 
-function xml2table(xml,selector) {
+function xml2table(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   var tableTMP="";
-  var x =xmlDoc.querySelectorAll(selector);
+  var x =xmlDoc.getElementsByTagName("ep")
   for (i = 0; i <x.length; i++) {
     var video_table = x[i].getElementsByTagName("video")[0].childNodes[0].nodeValue
     var title_table = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue
