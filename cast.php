@@ -82,6 +82,7 @@ p.pichardo{
   border: solid black;
 	border-width: 0;
   margin-top: 5px;
+	border-top-width: 10px;
 }
 .officer_container {
   width: calc(calc(calc(100% - 5px) * 0.3333) - 5px);
