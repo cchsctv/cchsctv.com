@@ -27,15 +27,17 @@ p.head{
 	letter-spacing:2px;
   width:100%;
 }
-.content_container {background-color: #777777 !important}
+.content_container {background-color: #ffffff !important}
 .officer_container, .staff_container {
-	border:5px solid #777777;
+	border:5px solid #ffffff;
 	border-right:none;
 	border-bottom:none;
 	height: auto;
 	float: left;
 	justify-content: space-between;
 }
+.staff_container .name {background-color:rgba(0, 0, 0, 0.8);}
+.officer_container .name {background-color:rgba(195, 14, 14, 0.8);}
 .name {
   position:absolute;
   background-color:rgba(0, 0, 0, 0.8);
