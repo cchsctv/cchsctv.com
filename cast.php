@@ -27,9 +27,9 @@ p.head{
 	letter-spacing:2px;
   width:100%;
 }
-.content_container {background-color: #ffffff !important}
+.content_container {background-color: #777777 !important}
 .officer_container, .staff_container {
-	border:5px solid #ffffff;
+	border:5px solid #777777;
 	border-right:none;
 	border-bottom:none;
 	height: auto;
@@ -69,7 +69,7 @@ p.sub{
 p.pichardo{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
 	font-size: .9em;
-	color:black;
+	color:white;
 	margin:5px;
 	line-height:150%;
 	letter-spacing:1px;
