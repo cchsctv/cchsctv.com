@@ -177,11 +177,11 @@ function fade(){
     }
 };
 </script>
-<div style="background-color:#000000; line-height:0;">
+<div style="background-color:#000000; position:relative; line-height:0;">
   <!--<img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">-->
 
-	<img id="top" style="width: 100%;position:inline; z-index:1;border:5px;" data-rjs="1" src="ctv_images/homepics/homepic0.jpg" />
-	<img id="bottom" style="width: 100%;border:5px;position:inline;" data-rjs="1" src="ctv_images/homepics/homepic1.jpg" />
+	<img id="top" style="width: 100%;position:relative; z-index:1;border:5px;" data-rjs="1" src="ctv_images/homepics/homepic0.jpg" />
+	<img id="bottom" style="width: 100%;border:5px;position:absolute;top:0px;left:0px;" data-rjs="1" src="ctv_images/homepics/homepic1.jpg" />
 
 	<div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
     <a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
