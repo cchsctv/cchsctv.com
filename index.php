@@ -140,6 +140,7 @@ iframe {
 require 'topnav.php';
 ?>
 <script>
+//Slideshow Script
 var BPic = document.getElementById("bottom");
 var TPic = document.getElementById('top');
 var counter = 0;
@@ -156,7 +157,6 @@ function fade(){
       document.getElementById("top").src = "ctv_images/homepics/homepic" + counter + ".jpg";
     },1000);
       clock = "tock";
-      console.log("1 " + clock);
       return clock;
     }
     if(clock === "tock"){
@@ -165,21 +165,17 @@ function fade(){
       document.getElementById("bottom").src = "ctv_images/homepics/homepic" + counter + ".jpg";
     },1000);
       clock = "tick";
-      console.log("2 " + clock);
       return;
     }
   }
   tiktok();
     counter++;
-    console.log("counter " + counter);
     if (counter >= images){
       counter = 0;
     }
 };
 </script>
 <div style="background-color:#000000; position:relative; line-height:0;">
-  <!--<img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">-->
-
 	<img id="top" style="width: 100%;position:relative; z-index:1;border:5px;" data-rjs="1" src="ctv_images/homepics/homepic0.jpg" />
 	<img id="bottom" style="width: 100%;border:5px;position:absolute;top:0px;left:0px;" data-rjs="1" src="ctv_images/homepics/homepic1.jpg" />
 
