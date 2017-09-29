@@ -130,15 +130,60 @@ iframe {
     bottom: 0;
   }
 }
+#top {
+	transition: 1s;
+	display:
+}
 </style>
 
 <?php
 require 'topnav.php';
 ?>
+<script>
+var BPic = document.getElementById("bottom");
+var TPic = document.getElementById('top');
+var counter = 0;
+var images = 4; //set images to amount of homepics
+var clock = "tick";
 
-<div style="background-color:#000000; position:relative; line-height:0;">
-  <img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">
-  <div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
+setInterval(fade, 5000);
+
+function fade(){
+  function tiktok(){
+    if(clock === "tick"){
+      document.getElementById('top').style.opacity='0';
+      setTimeout(function srcChange(){
+      document.getElementById("top").src = "ctv_images/homepics/homepic" + counter + ".jpg";
+    },1000);
+      clock = "tock";
+      console.log("1 " + clock);
+      return clock;
+    }
+    if(clock === "tock"){
+      document.getElementById("top").style.opacity='1';
+      setTimeout(function srcChange(){
+      document.getElementById("bottom").src = "ctv_images/homepics/homepic" + counter + ".jpg";
+    },1000);
+      clock = "tick";
+      console.log("2 " + clock);
+      return;
+    }
+  }
+  tiktok();
+    counter++;
+    console.log("counter " + counter);
+    if (counter >= images){
+      counter = 0;
+    }
+};
+</script>
+<div style="background-color:#000000; line-height:0;">
+  <!--<img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">-->
+
+	<img id="top" style="width: 100%;position:inline; z-index:1;border:5px;" data-rjs="1" src="ctv_images/homepics/homepic0.jpg" />
+	<img id="bottom" style="width: 100%;border:5px;position:inline;" data-rjs="1" src="ctv_images/homepics/homepic1.jpg" />
+
+	<div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
     <a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
     <div class="fb-like" data-href="https://facebook.com/cchsctv" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
