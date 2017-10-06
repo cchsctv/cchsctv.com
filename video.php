@@ -182,7 +182,17 @@ function autoplay() {
       url_ops=URLParams.special.join("\&special=")
       url_ops="special="+url_ops
     }
-    load_xml_doc("special");
+    console.log(url_ops);
+    xmlhttp.open("GET", "video_fetch.php?"+url_ops+"", true);
+    xmlhttp.send();
+    xml_load = true;
+    return new Promise(function(resolve){
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          xml2table(xmlhttp)
+        }
+      };
+    });
     if (URLParams.episode) {
       epnum=URLParams.episode[0];
       epnum2file();
