@@ -1,21 +1,32 @@
+# Episode Files
+/episodes
 *.mov
 *.mp4
+
+# Source Image Files
 *.psd
+hi_res
+
+# GoDaddy / Webhost stuff
 .htaccess
 .ftpquota
-hi_res
-.htaccess
-error_log
-video.xml
-/booked
 /cgi-bin
+
+# PHP Error Log (Mostly lariat_forwarder errors)
+error_log
+
+# Video Database
+video.xml
+
+# Internal Directories
+/booked
 /cguide
-/episodes
 /pdf
 /protected
 /templates
 /tutorials
 /test
 
+# OS specific files
 .DS_Store
 Thumbs.db
