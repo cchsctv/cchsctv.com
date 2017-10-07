@@ -5,9 +5,15 @@
 <!-- "YEAR=" IS THE GRADUATING YEAR -->
 <eps>
   <ep year="2018">
+   <title>CTV #442</title>
+   <aired>September 29th, 2017</aired>
+   <ft>Make A Wish, White Out Game, QOW</ft>
+   <video>ctv442.mp4</video>
+ </ep>
+   <ep year="2018">
     <title>CTV #441</title>
     <aired>September 29th, 2017</aired>
-    <ft>New LIA Club, Swimming, GIF in Real Life</ft>
+    <ft>New LIA Club, Swimming, GIF in real Life</ft>
     <video>ctv441.mp4</video>
   </ep>
    <ep year="2018">
