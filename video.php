@@ -182,23 +182,23 @@ function autoplay() {
       url_ops=URLParams.special.join("\&special=")
       url_ops="special="+url_ops
     }
-    console.log(url_ops);
     xmlhttp.open("GET", "video_fetch.php?"+url_ops+"", true);
     xmlhttp.send();
     xml_load = true;
     return new Promise(function(resolve){
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          xml2table(xmlhttp)
+          xml2table(xmlhttp);
+          table.rows[0].cells[0].onclick()
+          if (URLParams.episode) {
+            epnum=URLParams.episode[0];
+            epnum2file();
+            videoload = false;
+            set_video(epnum);
+          }
         }
       };
     });
-    if (URLParams.episode) {
-      epnum=URLParams.episode[0];
-      epnum2file();
-      videoload = false;
-      set_video(epnum);
-    }
   } else if (URLParams.episode){
     epnum=URLParams.episode[0];
     xmlhttp.open("GET", "video_fetch.php?episode2year="+epnum+"", true);
@@ -252,7 +252,9 @@ function set_video(videoname){
     video.play();
   }
   document.getElementById(videoname).classList.add("hover");
+  videoname = document.getElementById(videoname).textContent;
   videoname = videoname.match(/\d\d\d/i);
+
   if (url_ops){
     change_url("","video.php?"+url_ops+"\&episode="+videoname)
   } else {
@@ -267,7 +269,7 @@ function change_url(title, url) {
 }
 
 function epnum2file(){
-  var found = xmlhttp.responseXML.evaluate("/eps/ep[video[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML);
+  var found = xmlhttp.responseXML.evaluate("/eps/ep[title[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML);
   getNodes(found).forEach(function (node) {
     year=node.getAttribute("year");
     epnum=node.getElementsByTagName("video")[0].childNodes[0].nodeValue;
