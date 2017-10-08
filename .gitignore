@@ -17,6 +17,7 @@ error_log
 
 # Video Database
 video.xml
+*.xml
 
 # Internal Directories
 /booked
