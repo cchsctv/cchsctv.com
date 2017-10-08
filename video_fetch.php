@@ -55,17 +55,19 @@ function xml_out($xml,$attribute,$number_videos) {
   }
 
   for ($i = 0; $i <= $count-1; $i++){
-    echo '<ep year="'.$xml[$i]['year'];
+    $content = "";
+    $content .= '<ep year="'.$xml[$i]['year'];
     $special = $xml[$i]['special'];
     if (!empty($special)) {
-      echo '" special="'.$special;
+      $content .= '" special="'.$special;
     }
-    echo '">';
-    echo '<title>'.$xml[$i]->title.'</title>';
-    echo '<aired>'.$xml[$i]->aired.'</aired>';
-    echo '<ft>'.$xml[$i]->ft.'</ft>';
-    echo '<video>'.$xml[$i]->video.'</video>';
-    echo '</ep>';
+    $content .= '">';
+    $content .= '<title>'.$xml[$i]->title.'</title>';
+    $content .= '<aired>'.$xml[$i]->aired.'</aired>';
+    $content .= '<ft>'.$xml[$i]->ft.'</ft>';
+    $content .= '<video>'.$xml[$i]->video.'</video>';
+    $content .= '</ep>';
+    echo str_replace("&","&amp;", $content);
   }
 }
 ?>
