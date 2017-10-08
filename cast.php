@@ -28,6 +28,16 @@ p.head{
   width:100%;
 }
 .content_container {background-color: #777777 !important}
+.officer_container, .staff_container {
+	border:5px solid #777777;
+	border-right:none;
+	border-bottom:none;
+	height: auto;
+	float: left;
+	justify-content: space-between;
+}
+.staff_container .name {background-color:rgba(0, 0, 0, 0.8);}
+.officer_container .name {background-color:rgba(195, 14, 14, 0.8);}
 .name {
   position:absolute;
   background-color:rgba(0, 0, 0, 0.8);
@@ -59,7 +69,7 @@ p.sub{
 p.pichardo{
 	font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
 	font-size: .9em;
-	color:black;
+	color:white;
 	margin:5px;
 	line-height:150%;
 	letter-spacing:1px;
@@ -72,16 +82,11 @@ p.pichardo{
   border: solid black;
 	border-width: 0;
   margin-top: 5px;
+	border-top-width: 10px;
 }
 .officer_container {
   width: calc(calc(calc(100% - 5px) * 0.3333) - 5px);
-  border:5px solid #777777;
-  border-right:none;
-  border-bottom:none;
-  background-color:black;
-  height: auto;
-  float: left;
-  justify-content: space-between;
+	background-color:black;
 }
 .officer_container img {
   width: 100%;
@@ -96,12 +101,6 @@ p.pichardo{
 }
 .staff_container {
   width: calc(calc(calc(100% - 5px) * 0.25) - 5px);
-  border:5px solid #777777;
-  border-right:none;
-  border-bottom:none;
-  height: auto;
-  float: left;
-  justify-content: space-between;
 }
 .staff_container img {
   width: 100%;

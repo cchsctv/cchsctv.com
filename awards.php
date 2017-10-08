@@ -122,7 +122,7 @@ a .award_container {
 }
 .hidden {
   max-height:0;
-  /*visibility:hidden;*/
+  visibility:hidden;
 }
 .no_margin img{margin:0;}
 .no_margin .compitition {bottom:0;}
@@ -192,28 +192,49 @@ require 'topnav.php';
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
-  <img src="ctv_images/1617fspastates.jpg" data-rjs="3">
-<div class="compitition">
-  <p class="title">2017 FSPA States</p>
-<p class="loc">Orlando, Florida - April 26th, 2017 &#x25BC;</p></div></div>
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/CHANGE_IMAGE.jpg" data-rjs="2">
+  <div class="compitition">
+    <p class="title">2CHANGE_TITLE</p>
+    <p class="loc">CHANGE_LOCATION &#x25BC;</p>
+  </div></div>
 
-  <a onclick="video_popup('episodes/Competition/video.mp4');">
+  <a onclick="video_popup('episodes/Competition/PATH.mp4');">
   <div class="award_container">
-    <img src="ctv_images/1stplace.png" data-rjs="3">
+    <img src="ctv_images/CHANGE_IMAGE.png" data-rjs="3">
   <div class="award_text">
-    <p class="head">Name of Compitition</p>
-  <p class="sub">Person's names</p></div></div>
+    <p class="head">CHANGE_BEST_VIDEO</p>
+  <p class="sub">CHANGE_NAME</p></div></div>
   </a>
 
   <div class="award_container">
-    <img src="ctv_images/2ndplace.png" data-rjs="3">
+    <img src="ctv_images/CHANGE_IMAGE.png" data-rjs="3">
   <div class="award_text">
-    <p class="head">Name of Compitition</p>
-  <p class="sub">Person's names</p></div></div>
+    <p class="head">CHANGE_COMPITION</p>
+  <p class="sub">CHANGE_NAME</p></div></div>
 </div>
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 */ ?>
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/stngeneric2.jpg" data-rjs="1">
+  <div class="compitition">
+    <p class="title">STN Craft Achievement</p>
+    <p class="loc">2016-2017 &#x25BC;</p>
+  </div></div>
+  <a href="/">
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Silver Award</p>
+  <p class="sub">Staff</p></div></div>
+  </a>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->

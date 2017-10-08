@@ -12,5 +12,5 @@
     </div>
     </div>
   </div>
-<script type="text/javascript" src="scripts/retina.min.js"></script>
+<script type="text/javascript" src="/scripts/retina.min.js"></script>
 </body>
