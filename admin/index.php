@@ -7,9 +7,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "ADMIN";
 require 'header.php';
-
-define("API_INCLUDED", true);
-include_once "auth.php";
+require "auth.php";
 ?>
 
 <style type="text/css">
