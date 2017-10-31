@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	session_regenerate_id();
-	var_dump($_SESSION["admin_auth"]);
 	function show_login($error = null) {
 		if($error == null)
 			unset($error);
