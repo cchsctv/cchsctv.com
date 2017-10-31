@@ -7,6 +7,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "Video";
 require 'header.php';
+require 'auth.php';
 ?>
 <style type="text/css">
 .yearbox {
@@ -99,7 +100,7 @@ td, th {
 </style>
 
 <?php
-require '../topnav.php';
+require 'admin_topnav.php';
 ?>
 
 <link href="https://vjs.zencdn.net/5.19.2/video-js.min.css" rel="stylesheet">

@@ -4,19 +4,20 @@
 	function show_login($error = null) {
 		if($error == null)
 			unset($error);
-		echo "
+			include "admin_topnav.php";
+		echo '
 	<body>
-	<form data-ajax=\"false\" method=\"post\">
-		<label for=\"username\">Username:</label>
-		<input data-clear-btn=\"true\" type=\"username\" name=\"username\" id=\"username\" placeholder=\"Username\" />
-
-		<label for=\"password\">Password:</label>
-		<input data-clear-btn=\"true\" type=\"password\" name=\"password\" id=\"password\" placeholder=\"Password\" />
-
-		<input type=\"submit\" style=\"visibility: hidden;\"/>
-	</form>" .
-  (isset($error) ? "<div class=\"error\">$error</div>" : "") .
-  "</body>";
+	<form data-ajax="false" method="post">
+		<label for="username"><p>Username:</p></label>
+		<input data-clear-btn="true" type="username" name="username" id="username" placeholder="Username" />
+		<label for="password"><p>Password:</p></label>
+		<input data-clear-btn="true" type="password" name="password" id="password" placeholder="Password" />
+		<br>
+		<input type="submit" style="visibility: hidden;"/>
+	</form>' .
+  (isset($error) ? '<div class="error">$error</div>' : '') .
+  '</body>';
+			include "../footer.php";
 
 		exit();
 	}
