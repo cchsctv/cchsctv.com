@@ -8,12 +8,22 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 $page_title = "ADMIN";
 require 'header.php';
 require "auth.php";
-require 'admin_topnav.php';
 ?>
 
 <style type="text/css">
-
+<?php include "admin_css.css"; ?>
+@media only screen and (max-width: 720px) {
+  .topnav a:not(:nth-child(1)) {
+    display: none;
+  }
+  .topnav a:nth-child(1) {
+    display: inherit;
+  }
+  .topnav a:first-child {display: block !important;}
+}
 </style>
+
+<?php require 'admin_topnav.php'; ?>
 
 <p> Herro World! </p>
 

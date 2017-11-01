@@ -8,32 +8,50 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 $page_title = "ADMIN";
 require 'header.php';
 require "auth.php";
-require 'admin_topnav.php';
 ?>
 <style type="text/css">
+<?php include "admin_css.css"; ?>
 textarea {
     box-sizing: border-box;
     width: 100%;
 		height: calc(100vh - 60px);
 }
+@media only screen and (max-width: 720px) {
+  .topnav a:not(:nth-child(4)) {
+    display: none;
+  }
+  .topnav a:nth-child(4) {
+    display: inherit;
+  }
+}
 </style>
 
 <?php
-if(isset($_POST['edited_xml'])){
+require 'admin_topnav.php';
+$contents = "";
+if(isset($_POST['stage'])){
 	$contents = $_POST['edited_xml'];
 	$contents = str_replace("&","&amp;", $contents);
-	file_put_contents("video.xml", $contents, LOCK_EX);
+	file_put_contents("video.staging.xml", $contents, LOCK_EX);
 	echo '<p>XML Staged <a href="/admin/video.php">Video Page Preview</a></p>';
+}
+if(isset($_POST['discard'])){
+	$contents = file_get_contents('../video.xml');
+	file_put_contents("video.staging.xml", $contents, LOCK_EX);
+	echo '<p>Changes Discarded <a href="/admin/video.php">Video Page Preview</a></p>';
 }
 ?>
 
-<form data-ajax="false" method="post">
-	<input type="hidden" name="submit" value="true" />
-	<button type="submit" data-role="button" data-mini="true">submit</button>
-	<textarea name="edited_xml">
+<form  class="adminbar" data-ajax="false" method="post">
+	<button style="float:right" name="stage" type="submit" data-role="button" data-mini="true">Stage Changes</button>
+  <p><b>Staging Preview</b></p>
+  <button style="float:left" name="discard" type="submit" data-role="button" data-mini="true">Discard Changes</button>
+
+  <textarea style="grid-area: aux;" name="edited_xml">
 <?php
-$contents = file_get_contents('../video.xml');
-echo $contents;
+$to_edit = (empty($contents)) ? file_get_contents('../video.xml'): $contents;
+echo $to_edit;
 ?>
 	</textarea>
 </form>
+<?php require '../footer.php' ?>

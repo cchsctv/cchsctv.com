@@ -1,7 +1,7 @@
 <?php
 header( 'Content-type: text/xml' );
 echo '<?xml version="1.0" encoding="UTF-8"?>';
-$xml=simplexml_load_file("video.xml") or die("Error: Cannot create object");
+$xml=simplexml_load_file("video.staging.xml") or die("Error: Cannot create object");
 
 $query  = explode('&', $_SERVER['QUERY_STRING']);
 $params = array();

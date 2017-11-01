@@ -15,7 +15,7 @@
 		<br>
 		<input type="submit" style="visibility: hidden;"/>
 	</form>' .
-  (isset($error) ? '<div class="error">$error</div>' : '') .
+  (isset($error) ? '<div class="error"><p>'.$error.'</p></div>' : '') .
   '</body>';
 			include "../footer.php";
 
