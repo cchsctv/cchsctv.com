@@ -10,7 +10,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 </head>
 <body>
 <style type="text/css">
-<?php include 'style.css'; ?>
+<?php include '../style.css'; ?>
 </style>
 <div class="main">
   <a class="" href="index.php" style="display:block; line-height:0"> <img src="/admin/admin_images/background_logo.png" data-rjs="3">  </a>

@@ -6,8 +6,8 @@ This file is mamanged by GIT
 Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "ADMIN";
-require 'header.php';
-require "auth.php";
+require '../header.php';
+require 'auth.php';
 ?>
 <style type="text/css">
 <?php include "admin_css.css"; ?>

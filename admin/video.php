@@ -6,7 +6,7 @@ This file is mamanged by GIT
 Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "Video";
-require 'header.php';
+require '../header.php';
 require 'auth.php';
 ?>
 <style type="text/css">
