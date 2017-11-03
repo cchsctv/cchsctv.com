@@ -43,10 +43,9 @@ if(isset($_POST['discard'])){
 ?>
 
 <form  class="adminbar" data-ajax="false" method="post">
-	<button style="float:right" name="stage" type="submit" data-role="button" data-mini="true">Stage Changes</button>
-  <p><b>Staging Preview</b></p>
   <button style="float:left" name="discard" type="submit" data-role="button" data-mini="true">Discard Changes</button>
-
+  <p><b>Staging Preview</b></p>
+	<button style="float:right" name="stage" type="submit" data-role="button" data-mini="true">Stage Changes</button>
   <textarea style="grid-area: aux;" name="edited_xml">
 <?php
 $to_edit = (empty($contents)) ? file_get_contents('../video.xml'): $contents;
