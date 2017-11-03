@@ -126,7 +126,7 @@ if(isset($_POST['discard'])){
 
 
         <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="/ctv_images/videoblankl.jpg"
-        data-setup='{"playbackRates": [1, 1.25, 1.5]}' onClick="playpause()">
+        data-setup='{"playbackRates": [1, 1.25, 1.5]}'>
           <source id="srcvideo" src="/episodes/ctv400.mp4" >
         </video>
 
@@ -158,14 +158,11 @@ var srcvideo = document.getElementById('srcvideo');
 var xmlhttp = new XMLHttpRequest();
 var videoload = false;
 var xml_load = false;
-var url_ops = false;
 var year = false;
 var active_video;
 var epnum;
-var URLParams = {};
 
 //load_xml_doc(active_year).then(function() {
-  get_url_params();
   videoload = false;
   autoplay();
 //})
@@ -173,8 +170,6 @@ var URLParams = {};
 video.on('ended', function() {
   if(document.getElementsByClassName("hover")[0].parentElement.nextElementSibling){
     epnum = document.getElementsByClassName("hover")[0].parentElement.nextElementSibling.childNodes[0].id
- } else if (url_ops) {
-    epnum = table.rows[0].cells[0].id;
  } else if (active_video=="117"){
    window.location.href = "video.php?special=musical&autoplay";
  } else {
@@ -185,74 +180,8 @@ video.on('ended', function() {
  set_video(epnum,1);
 });
 
-function playpause() {
-  //Obsolete as this is the default behaviour in video.js
-  /*
-  if (video.paused){
-    video.play();
-  } else {
-    video.pause();
-  }
-  */
-}
-
 function autoplay() {
-  if (URLParams.special){
-    for (i = 0; i < URLParams.special.length; i++){
-      url_ops=URLParams.special.join("\&special=")
-      url_ops="special="+url_ops
-    }
-    xmlhttp.open("GET", "video_fetch.php?"+url_ops+"", true);
-    xmlhttp.send();
-    xml_load = true;
-    return new Promise(function(resolve){
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          xml2table(xmlhttp);
-          table.rows[0].cells[0].onclick()
-          if (URLParams.episode) {
-            epnum=URLParams.episode[0];
-            epnum2file();
-            videoload = false;
-            set_video(epnum);
-          }
-        }
-      };
-    });
-  } else if (URLParams.episode){
-    epnum=URLParams.episode[0];
-    xmlhttp.open("GET", "video_fetch.php?episode2year="+epnum+"", true);
-    xmlhttp.send();
-    xml_load = true;
-    return new Promise(function(resolve){
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          epnum2file();
-          load_xml_doc(year).then(function() {
-            get_url_params();
-            videoload = false;
-            set_video(epnum);
-          })
-        }
-      };
-    });
-  } else if (URLParams.year){
-    load_xml_doc(URLParams.year);
-    if (URLParams.episode) {
-      epnum=URLParams.episode[0];
-      epnum2file();
-      videoload = false;
-      set_video(epnum);
-    }
-  } else {
-    load_xml_doc(active_year);
-  }
-  if (URLParams.autoplay){
-    setTimeout(function() {
-      video.play();
-      videoload = "true";
-    }, 1000);
-  }
+  load_xml_doc(active_year);
 }
 
 
@@ -274,18 +203,7 @@ function set_video(videoname){
   document.getElementById(videoname).classList.add("hover");
   videoname = document.getElementById(videoname).textContent;
   videoname = videoname.match(/\d\d\d/i);
-
-  if (url_ops){
-    //change_url("","video.php?"+url_ops+"\&episode="+videoname)
-  } else {
-    //change_url("","video.php?episode="+videoname)
-  }
   active_video = videoname
-}
-
-function change_url(title, url) {
-  var obj = { Title: title, Url: url };
-  history.replaceState(obj, obj.Title, obj.Url);
 }
 
 function epnum2file(){
@@ -355,15 +273,6 @@ function xml2table(xml) {
     "</span></td></tr>";
   }
   document.getElementById("playlist").innerHTML = tableTMP;
-}
-
-function get_url_params(){
-  if (location.search) location.search.substr(1).split("&").forEach(function(item) {
-      var s = item.split("="),
-          k = s[0],
-          v = s[1] && decodeURIComponent(s[1]);
-      (URLParams[k] = URLParams[k] || []).push(v)
-  })
 }
 
 
