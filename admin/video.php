@@ -127,7 +127,7 @@ if(isset($_POST['discard'])){
 
         <video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="/ctv_images/videoblankl.jpg"
         data-setup='{"playbackRates": [1, 1.25, 1.5]}' onClick="playpause()">
-          <source id="srcvideo" src="episodes/ctv400.mp4" >
+          <source id="srcvideo" src="/episodes/ctv400.mp4" >
         </video>
 
 <script src="https://vjs.zencdn.net/5.19.2/video.min.js"></script>
@@ -136,7 +136,7 @@ if(isset($_POST['discard'])){
           <!--
           <tr>
             <td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
-            <a class="download" href="episodes/ctv400.mp4"download>(mp4)</a>
+            <a class="download" href="/episodes/ctv400.mp4"download>(mp4)</a>
             CTV #888 - Example Show<span>
             Aired: October 7th, 1998<br>
             Featuring: Chua's Birthday, HTML5, and XML!</span>
@@ -262,7 +262,7 @@ function set_video(videoname){
   while (hover.length){
     hover[0].className = hover[0].classList.remove("hover");
   };
-  vurl = "episodes/"+videoname;
+  vurl = "/episodes/"+videoname;
   video.src(vurl);
   video.load();
   if (videoload === false){
@@ -276,9 +276,9 @@ function set_video(videoname){
   videoname = videoname.match(/\d\d\d/i);
 
   if (url_ops){
-    change_url("","video.php?"+url_ops+"\&episode="+videoname)
+    //change_url("","video.php?"+url_ops+"\&episode="+videoname)
   } else {
-    change_url("","video.php?episode="+videoname)
+    //change_url("","video.php?episode="+videoname)
   }
   active_video = videoname
 }
@@ -341,7 +341,7 @@ function xml2table(xml) {
 
     tableTMP += "<tr><td href=\"#\"  id=\"" +
     video_table +
-    "\" onclick=set_video(this.id);><a class=\"download\" href=\"episodes/" +
+    "\" onclick=set_video(this.id);><a class=\"download\" href=\"/episodes/" +
     video_table +
     "\"download>("+
     //TODO handle if file has no extention
