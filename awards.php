@@ -220,6 +220,22 @@ require 'topnav.php';
 <!-- IMAGE -->
 <div class="compitition_container">
   <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/fspatoy2017.jpg">
+<div class="compitition">
+  <p class="title">FSPA D7 Teacher Of The Year</p>
+<p class="loc">Davie, Florida - 2017-2018</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">D7 Teacher Of The Year</p>
+    <p class="sub">Mr. Alfredo Pichardo</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/1718fspa.jpg">
 <div class="compitition">
   <p class="title">2017-2018 FSPA DISTRICT 7</p>
