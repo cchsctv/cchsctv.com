@@ -220,6 +220,33 @@ require 'topnav.php';
 <!-- IMAGE -->
 <div class="compitition_container">
   <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img src="ctv_images/1718fspa.jpg">
+<div class="compitition">
+  <p class="title">2017-2018 FSPA DISTRICT 7</p>
+<p class="loc">Davie, FL - November 4th, 2017 &#x25BC;</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Selfie</p>
+  <p class="sub">Jessica Less</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Man on the Street</p>
+  <p class="sub">Harris Ness, </p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Live to Tape</p>
+  <p class="sub">Ethan Silverman,</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
   <img src="ctv_images/stngeneric2.jpg" data-rjs="1">
   <div class="compitition">
     <p class="title">STN Craft Achievement</p>
