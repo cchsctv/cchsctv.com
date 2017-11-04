@@ -233,12 +233,12 @@ require 'topnav.php';
     <img src="ctv_images/honorablemention.png" data-rjs="3">
   <div class="award_text">
     <p class="head">Man on the Street</p>
-  <p class="sub">Harris Ness, </p></div></div>
+  <p class="sub">Brianna Franco, Jacob Mayer, Harris Ness, Matthew Schwam</p></div></div>
   <div class="award_container">
     <img src="ctv_images/honorablemention.png" data-rjs="3">
   <div class="award_text">
     <p class="head">Live to Tape</p>
-  <p class="sub">Ethan Silverman,</p></div></div>
+  <p class="sub">Andrew Rothschild, Ethan Silverman</p></div></div>
 </div>
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
