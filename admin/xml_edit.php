@@ -28,7 +28,6 @@ textarea {
 
 <?php
 require 'admin_topnav.php';
-$contents = "";
 if(isset($_POST['stage'])){
 	$contents = $_POST['edited_xml'];
 	$contents = str_replace("&","&amp;", $contents);
@@ -48,7 +47,7 @@ if(isset($_POST['discard'])){
 	<button style="float:right" name="stage" type="submit" data-role="button" data-mini="true">Stage Changes</button>
   <textarea style="grid-area: aux;" name="edited_xml">
 <?php
-$to_edit = (empty($contents)) ? file_get_contents('../video.xml'): $contents;
+$to_edit = (file_exists('video.staging.xml')) ? file_get_contents('video.staging.xml') : file_get_contents('../video.xml');
 echo $to_edit;
 ?>
 	</textarea>
