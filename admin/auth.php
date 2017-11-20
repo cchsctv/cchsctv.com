@@ -30,7 +30,6 @@
   (isset($error) ? '<div class="error"><p>'.$error.'</p></div>' : '') .
   '</body>';
 			include "../footer.php";
-
 		exit();
 	}
 
@@ -42,8 +41,8 @@
 		$login_username = $_POST['username'];
 		$login_password = $_POST['password'];
 		$xml=simplexml_load_file("passwd.xml");
-		if (isset($xml->xpath('/users[user[contains(.,'."\"".$login_username."\"".')]]')[0]->user)){
-			$user = $xml->xpath('/users[user[contains(.,'."\"".$login_username."\"".')]]')[0]->user;
+		if (isset($xml->xpath('/users/user[username[contains(.,'."\"".$login_username."\"".')]]')[0])){
+			$user = $xml->xpath('/users/user[username[contains(.,'."\"".$login_username."\"".')]]')[0];
 			$username = $user[0]->username;
 			$password_hash = $user[0]->password;
 			$auth = password_verify($login_password, $password_hash);
