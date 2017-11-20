@@ -59,6 +59,7 @@ if(isset($_POST['stage'])){
   </ep>
    <ep year=";
     $xml_out = str_replace($xml_shim, $xml_toadd, $xml_staging);
+    $xml_out = str_replace("&","&amp;", $xml_out);
     file_put_contents('./video.staging.xml', $xml_out, LOCK_EX);
   }
 	echo '<p>XML Staged <a href="/admin/video.php">Video Page Preview</a></p>';
