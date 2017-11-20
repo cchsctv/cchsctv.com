@@ -48,10 +48,15 @@ if(isset($_POST['stage'])){
 
   if($is_safe){
     $xml_staging = file_get_contents('./video.staging.xml');
+    if(isset($special)){
+      $special=" special=\"$special\"";
+    } else {
+      $special = "";
+    }
     $xml_shim = "<eps>
   <ep year=";
     $xml_toadd="<eps>
-  <ep year=\"$year\">
+  <ep year=\"$year\"$special>
    <title>$title</title>
    <aired>$aired</aired>
    <ft>$ft</ft>
