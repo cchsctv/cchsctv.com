@@ -48,14 +48,16 @@ if(isset($_POST['stage'])){
 
   if($is_safe){
     $xml_staging = file_get_contents('./video.staging.xml');
-    $xml_shim = "<insert></insert>";
-    $xml_toadd="<insert></insert>
+    $xml_shim = "<eps>
+  <ep year=";
+    $xml_toadd="<eps>
   <ep year=\"$year\">
    <title>$title</title>
    <aired>$aired</aired>
    <ft>$ft</ft>
    <video>$video</video>
-  </ep>";
+  </ep>
+   <ep year=";
     $xml_out = str_replace($xml_shim, $xml_toadd, $xml_staging);
     file_put_contents('./video.staging.xml', $xml_out, LOCK_EX);
   }
