@@ -17,10 +17,10 @@ textarea {
 		height: calc(100vh - 60px);
 }
 @media only screen and (max-width: 720px) {
-  .topnav a:not(:nth-child(4)) {
+  .topnav a:not(:nth-child(5)) {
     display: none;
   }
-  .topnav a:nth-child(4) {
+  .topnav a:nth-child(5) {
     display: inherit;
   }
 }

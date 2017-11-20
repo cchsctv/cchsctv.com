@@ -24,12 +24,6 @@ textarea {
   grid-row-gap: 0.25em;
   padding: 0.25em 0.25em;
 }
-.aux label{
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
-  text-align: right;
-  padding-right: 0.5em;
-  color: white;
-}
 @media only screen and (max-width: 720px) {
   .topnav a:not(:nth-child(4)) {
     display: none;
