@@ -6,6 +6,18 @@
 			unset($error);
 			include "admin_topnav.php";
 		echo '
+	<style type="text/css">
+	@media only screen and (max-width: 720px) {
+	  .topnav a:not(:nth-child(1)) {
+	    display: none;
+	  }
+	  .topnav a:nth-child(1) {
+	    display: inherit;
+	  }
+	  .topnav a:first-child {display: block !important;}
+	}
+	</style>
+
 	<body>
 	<form data-ajax="false" method="post">
 		<label for="username"><p>Username:</p></label>

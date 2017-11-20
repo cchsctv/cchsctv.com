@@ -1,6 +1,14 @@
+textarea{
+-webkit-appearance: none;
+border-radius: 0;
+}
 button {
   padding: 0.5em;
 	font-size: 13px;
+  border:0;
+  background-color: darkgrey;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .adminbar{
   display: grid;
