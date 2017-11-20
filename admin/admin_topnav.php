@@ -30,6 +30,7 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
     <a href="/index.php">Main Site</a>
     <a href="/admin/video.php">Test Video</a>
     <a href="/admin/xml_edit.php">XML Edit</a>
+      <a href="/admin/easy_xml.php">XML Add</a>
     <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
     <?php
     if(isset($_SESSION['admin_auth']))
