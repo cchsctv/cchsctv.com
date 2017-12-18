@@ -20,7 +20,7 @@ require 'auth.php';
   display:grid;
   grid-column-start: 1;
   grid-column-end: 4;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   grid-row-gap: 0.25em;
   padding: 0.25em 0.25em;
 }

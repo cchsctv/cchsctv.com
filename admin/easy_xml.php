@@ -13,14 +13,13 @@ require 'auth.php';
 <?php include "admin_css.css"; ?>
 textarea {
     box-sizing: border-box;
-    width: 8em;
-    height: 1.5em;
+    height: 2.5em;
 }
 .aux{
   grid-area: aux;
   background-color:#383838;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   grid-row-gap: 0.25em;
   padding: 0.25em 0.25em;
 }
@@ -45,10 +44,9 @@ if(isset($_POST['stage'])){
   $ft =      (isset($_POST['ft']))      ? $_POST['ft']:      fasle;
   $video =   (isset($_POST['video']))   ? $_POST['video']:   fasle;
   $is_safe = !(!$year ||!$title || !$aired || !$ft ||!$video);
-
   if($is_safe){
     $xml_staging = file_get_contents('./video.staging.xml');
-    if(isset($special)){
+    if(!empty($special)){
       $special=" special=\"$special\"";
     } else {
       $special = "";
@@ -82,11 +80,17 @@ if(isset($_POST['discard'])){
 	<button style="float:right" name="stage" type="submit" data-role="button" data-mini="true">Stage Changes</button>
   <div class="aux">
   <label>Year: </label><textarea name="year"></textarea>
-  <label>Sepcial: </label style="color:grey;"><textarea name="special"></textarea>
-  <label>Title: </label><textarea name="title"></textarea>
+  <label>Sepcial: </label style="color:grey;">
+    <select name="special">
+      <option value="">None</option>
+      <option value="senior">Senior</option>
+      <option value="underclassmen">Underclassmen</option>
+      <option value="musical">Musical</option>
+    </select>
+  <label>Title: </label><textarea name="title">CTV#</textarea>
   <label>Aired: </label><textarea name="aired"></textarea>
   <label>Featuring: </label><textarea name="ft"></textarea>
   <label>Filename: </label><textarea name="video"></textarea>
-  </div
+</div>
 </form>
 <?php require '../footer.php' ?>
