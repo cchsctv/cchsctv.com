@@ -236,7 +236,7 @@ function change_url(title, url) {
 }
 
 function epnum2file(){
-  var found = xmlhttp.responseXML.evaluate("/*/ep[video[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML);
+  var found = xmlhttp.responseXML.evaluate("/eps/ep[title[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
   getNodes(found).forEach(function (node) {
     year=node.getAttribute("year");
     epnum=node.getElementsByTagName("video")[0].childNodes[0].nodeValue;
