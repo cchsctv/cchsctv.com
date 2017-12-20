@@ -21,9 +21,14 @@ require 'header.php';
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+	cursor: pointer;
+	transition: filter .1s linear;
 }
 .yearbox img {
   width: 100%;
+}
+.yearbox:hover {
+	filter: brightness(1.25);
 }
 img {
   max-width: 100%;
@@ -361,7 +366,7 @@ function xml2table(xml) {
 	"\" onclick=set_video(this.id);><a class=\"download\" href=\"/episodes/" +
 	video_table +
 	"\"download>("+
-	//TODO handle if file has no extention
+	//TODO: handle if file has no extention
 	video_table.split('.').pop() +
 	")</a>"+
 	title_table  +
@@ -390,47 +395,47 @@ function get_url_params(){
 <!--TODO: Fix functionaity in firefox-->
 <div style="margin-top:1rem; display:inline-block;">
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(active_year);">
+	<a onclick="load_xml_doc(active_year);">
 	<img src="ctv_images/arch.png" data-rjs="3">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2017);">
+	<a onclick="load_xml_doc(2017);">
 	<img src="ctv_images/17arch.jpg" data-rjs="2">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2016);">
+	<a onclick="load_xml_doc(2016);">
 	<img src="ctv_images/16arch.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2015);">
+	<a onclick="load_xml_doc(2015);">
 	<img src="ctv_images/15arch.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2014);">
+	<a onclick="load_xml_doc(2014);">
 	<img src="ctv_images/14arch-d.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2013);">
+	<a onclick="load_xml_doc(2013);">
 	<img src="ctv_images/13arch-d.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2012);">
+	<a onclick="load_xml_doc(2012);">
 	<img src="ctv_images/12arch-d.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2011);">
+	<a onclick="load_xml_doc(2011);">
 	<img src="ctv_images/11arch-d.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2010);">
+	<a onclick="load_xml_doc(2010);">
 	<img src="ctv_images/10arch-d.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2009);">
+	<a onclick="load_xml_doc(2009);">
 	<img src="ctv_images/09arch.jpg">
   </a></div>
   <div class="yearbox">
-	<a href="javascript:load_xml_doc(2008);">
+	<a onclick="load_xml_doc(2008);">
 	<img src="ctv_images/08arch.jpg">
   </a></div>
   <div class="yearbox">

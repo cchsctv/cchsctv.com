@@ -47,7 +47,8 @@ require 'header.php';
 <style type="text/css">
   body {
     background-color: #292F33;
-    margin:0
+    margin:0;
+	overflow:hidden;
   }
   a {
 		font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
