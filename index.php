@@ -104,14 +104,6 @@ iframe {
   .topnav a:nth-child(1) {
     display: inherit;
   }
-  .bar{
-    width: calc(100% + 20px);
-    transform: translateX(-10px);
-  }
-  p.bar {
-    width: calc(100% - 20px);
-    transform: translateX(10px);
-  }
   .topnav a:first-child {display: block !important;}
 }
 @media only screen and (max-width: 540px){
@@ -170,12 +162,12 @@ require 'topnav.php';
 
 
 <!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE-->
-  <div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="bar">
+  <div class="edge2edge bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="edge2edge bar">
     <a href="video.php?autoplay=true">Watch This Week's Episode</a>
   </p></td></tr></table></div>
 
 <!-- TO CHANGE RED BAR, USE THIS CODE
-<div class="bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="bar">
+<div class="edge2edge bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="edge2edge bar">
   <a href="https://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
 

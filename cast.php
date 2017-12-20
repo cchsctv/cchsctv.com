@@ -125,8 +125,6 @@ p.pichardo{
     display: inherit;
   }
   .bardivider{
-    width: calc(100% + 20px);
-    transform: translateX(-10px);
 		border-width: 10px 0;
   }
 }
@@ -143,12 +141,22 @@ p.pichardo{
     width: calc(calc(calc(100% - 5px) * 0.5) - 5px);
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .officer_container {
-    width: calc(100% - 10px);
+    width:  50%;
+    border: none;
   }
   .staff_container {
-    width: calc(100% - 10px);
+    width:  50%;
+    border: none;
+  }
+  .bardivider {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 350px) {
+  div .content_container {
+    border: none;
   }
 }
 }
@@ -160,7 +168,7 @@ include 'topnav.php';
 
 <div style="clear:both"></div>
 
-<div class="bardivider" style="margin:0;border-top:none"><p class="head">2017-2018 OFFICERS</p></div>
+<div class="edge2edge bardivider" style="margin:0;border-top:none"><p class="head">2017-2018 OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
@@ -248,7 +256,7 @@ include 'topnav.php';
 
 <!-- END OFFICERS -->
 
-<div class="bardivider"><p class="head">2017-2018 STAFF</p></div>
+<div class="edge2edge bardivider"><p class="head">2017-2018 STAFF</p></div>
 
 <!-- BEGIN STAFF -->
 <!-- STAFF PICTURES MUST HAVE SQUARE (170x170) ASPECT RATIO -->
@@ -384,7 +392,7 @@ include 'topnav.php';
 
 
 
-<div class="bardivider" style="border-bottom:none"><p class="head">ADVISOR</p></div>
+<div class="edge2edge bardivider" style="border-bottom:none"><p class="head">ADVISOR</p></div>
 <!-- BEGIN ADVISOR -->
 <!-- ALL PICTURES MUST BE 170x170 -->
 <div class="chardo_bio">
