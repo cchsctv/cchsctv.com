@@ -186,7 +186,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/CHANGE_IMAGE.jpg" data-rjs="2">
   <div class="compitition">
     <p class="title">2CHANGE_TITLE</p>
-    <p class="loc">CHANGE_LOCATION &#x25BC;</p>
+    <p class="loc">CHANGE_LOCATION</p>
   </div></div>
 
   <a onclick="video_popup('episodes/Competition/PATH.mp4');">
@@ -229,7 +229,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img"  src="ctv_images/1718fspa.jpg" data-rjs="1">
 <div class="compitition">
   <p class="title">2017-2018 FSPA DISTRICT 7</p>
-<p class="loc">Davie, FL - November 4th, 2017 &#x25BC;</p></div></div>
+<p class="loc">Davie, FL - November 4th, 2017</p></div></div>
   <div class="award_container">
     <img src="ctv_images/3rdplace.png" data-rjs="3">
   <div class="award_text">
@@ -256,7 +256,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img"  src="ctv_images/stngeneric2.jpg" data-rjs="1">
   <div class="compitition">
     <p class="title">STN Craft Achievement</p>
-    <p class="loc">2016-2017 &#x25BC;</p>
+    <p class="loc">2016-2017</p>
   </div></div>
   <a href="/">
   <div class="award_container">
@@ -277,7 +277,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1617fspastates.jpg" data-rjs="3">
 <div class="compitition">
   <p class="title">2017 FSPA States</p>
-<p class="loc">Orlando, Florida - April 26th, 2017 &#x25BC;</p></div></div>
+<p class="loc">Orlando, Florida - April 26th, 2017</p></div></div>
 
   <a onclick="video_popup('episodes/Competition/FSPAS1stNewsPKG_WEB.mp4');">
   <div class="award_container">
@@ -393,7 +393,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/17stn.jpg" data-rjs="2">
 <div class="compitition">
   <p class="title">2017 STN Nationals</p>
-<p class="loc">Anaheim California - March 31st, 2017 &#x25BC;</p></div></div>
+<p class="loc">Anaheim California - March 31st, 2017</p></div></div>
 
   <a onclick="video_popup('episodes/ctv431.mp4');">
   <div class="award_container">
@@ -414,7 +414,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/fspad16.jpg">
 <div class="compitition">
   <p class="title">2016-2017 FSPA District 7</p>
-<p class="loc">Davie, Florida - October 22nd, 2016 &#x25BC;</p></div></div>
+<p class="loc">Davie, Florida - October 22nd, 2016</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -465,7 +465,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1516fspastates.jpg" data-rjs="2">
   <div class="compitition">
     <p class="title">2016 FSPA States</p>
-    <p class="loc">Orlando, Florida - April 25th, 2016 &#x25BC;</p>
+    <p class="loc">Orlando, Florida - April 25th, 2016</p>
   </div></div>
 
   <div class="award_container">
@@ -504,7 +504,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/stngeneric2.jpg">
   <div class="compitition">
     <p class="title">STN Challenges</p>
-  <p class="loc">2015-2016 &#x25BC;</p></div></div>
+  <p class="loc">2015-2016</p></div></div>
   <div class="award_container">
     <img src="ctv_images/honorablemention.png" data-rjs="3">
   <div class="award_text">
@@ -521,7 +521,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/16stn.jpg">
 <div class="compitition">
   <p class="title">2016 STN Nationals</p>
-<p class="loc">Atlanta, Georgia - March 13th, 2016 &#x25BC;</p></div></div>
+<p class="loc">Atlanta, Georgia - March 13th, 2016</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -550,7 +550,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1516fspa.jpg">
 <div class="compitition">
   <p class="title">2015-2016 FSPA District 7</p>
-<p class="loc">Davie, Florida - November 7, 2015 &#x25BC;</p></div></div>
+<p class="loc">Davie, Florida - November 7, 2015</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -598,7 +598,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/15stn.jpg">
 <div class="compitition">
   <p class="title">2015 STN Nationals</p>
-<p class="loc">San Diego, California - April 4, 2015 &#x25BC;</p></div></div>
+<p class="loc">San Diego, California - April 4, 2015</p></div></div>
   <div class="award_container">
     <img src="ctv_images/honorablemention.png" data-rjs="3">
   <div class="award_text">
@@ -621,7 +621,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1415fspa.jpg">
 <div class="compitition">
   <p class="title">2014-2015 FSPA District 7</p>
-<p class="loc">Deerfield Beach, Florida - November 1, 2014 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - November 1, 2014</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -669,7 +669,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1314fspa.jpg">
 <div class="compitition">
   <p class="title">2013-2014 FSPA District 7</p>
-<p class="loc">Deerfield Beach, Florida - October 19, 2013 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 19, 2013</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -712,7 +712,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/13stn3.jpg">
 <div class="compitition">
   <p class="title">2013 STN Nationals</p>
-<p class="loc">Los Angeles, California - March 10, 2013 &#x25BC;</p></div></div>
+<p class="loc">Los Angeles, California - March 10, 2013</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -745,7 +745,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1213fspa2.jpg">
 <div class="compitition">
   <p class="title">2012-2013 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 20, 2012 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 20, 2012</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -773,7 +773,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/12stn.jpg">
 <div class="compitition">
   <p class="title">2012 STN Nationals</p>
-<p class="loc">Dallas, Texas - March 24, 2012 &#x25BC;</p></div></div>
+<p class="loc">Dallas, Texas - March 24, 2012</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -801,7 +801,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1112fspa.jpg">
 <div class="compitition">
   <p class="title">2011-2012 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 15, 2011 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 15, 2011</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -829,7 +829,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/11stn.jpg">
 <div class="compitition">
   <p class="title">2011 STN Nationals</p>
-<p class="loc">Orlando, Florida - March 12, 2011 &#x25BC;</p></div></div>
+<p class="loc">Orlando, Florida - March 12, 2011</p></div></div>
   <div class="award_container">
     <img src="ctv_images/2ndplace.png" data-rjs="3">
   <div class="award_text">
@@ -867,7 +867,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/stngeneric2.jpg">
 <div class="compitition">
   <p class="title">STN National Challenges</p>
-<p class="loc">2010-2011 &#x25BC;</p></div></div>
+<p class="loc">2010-2011</p></div></div>
   <div class="award_container">
     <img src="ctv_images/2ndplace.png" data-rjs="3">
   <div class="award_text">
@@ -890,7 +890,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1011fspa.jpg">
 <div class="compitition">
   <p class="title">2010-2011 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 2010 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 2010</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -928,7 +928,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/pichardo1.jpg">
 <div class="compitition">
   <p class="title">CCHS Teacher Of The Year</p>
-<p class="loc">Cooper City, Florida - 2010-2011 &#x25BC;</p></div></div>
+<p class="loc">Cooper City, Florida - 2010-2011</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -946,7 +946,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/10stn3.jpg">
 <div class="compitition">
   <p class="title">2010 STN Nationals</p>
-<p class="loc">Anaheim, California - March 2010 &#x25BC;</p></div></div>
+<p class="loc">Anaheim, California - March 2010</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -989,7 +989,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/0910fspa.jpg">
 <div class="compitition">
   <p class="title">2009-2010 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 3, 2009 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 3, 2009</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1027,7 +1027,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/btn09.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
-<p class="loc">Fort Lauderdale, Florida - 2008-2009 &#x25BC;</p></div></div>
+<p class="loc">Fort Lauderdale, Florida - 2008-2009</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1045,7 +1045,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/09stn2.jpg">
 <div class="compitition">
   <p class="title">2009 STN Nationals</p>
-<p class="loc">Orlando, Florida - March 2009 &#x25BC;</p></div></div>
+<p class="loc">Orlando, Florida - March 2009</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1083,7 +1083,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/0809fspa.jpg">
 <div class="compitition">
   <p class="title">2008-2009 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - September 27, 2008 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - September 27, 2008</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1111,7 +1111,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/0708fspa.jpg">
 <div class="compitition">
   <p class="title">2007-2008 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - September 29, 2007 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - September 29, 2007</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1144,7 +1144,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/ctv08.jpg">
 <div class="compitition">
   <p class="title">BTN Awards</p>
-<p class="loc">Fort Lauderdale, Florida - 2007-2008 &#x25BC;</p></div></div>
+<p class="loc">Fort Lauderdale, Florida - 2007-2008</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1167,7 +1167,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/07showopen.jpg">
 <div class="compitition">
   <p class="title">2007 STN Nationals</p>
-<p class="loc">(submission only) - 2007 &#x25BC;</p></div></div>
+<p class="loc">(submission only) - 2007</p></div></div>
   <div class="award_container">
     <img src="ctv_images/3rdplace.png" data-rjs="3">
   <div class="award_text">
@@ -1185,7 +1185,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/0607fspastates.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA States</p>
-<p class="loc">Tampa, Florida - April 12-14 2007 &#x25BC;</p></div></div>
+<p class="loc">Tampa, Florida - April 12-14 2007</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1218,7 +1218,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/0607fspa.jpg">
 <div class="compitition">
   <p class="title">2006-2007 FSPA Districts</p>
-<p class="loc">Deerfield Beach, Florida - October 2006 &#x25BC;</p></div></div>
+<p class="loc">Deerfield Beach, Florida - October 2006</p></div></div>
   <div class="award_container">
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
@@ -1304,8 +1304,9 @@ videojs.registerComponent('MyButton', MyButton);
 video.getChild('controlBar').addChild('myButton', {});
 
 
-var awards = document.getElementsByClassName('award_container')
-var compitition = document.getElementsByClassName('compitition_container')
+var awards = document.getElementsByClassName('award_container');
+var compitition = document.getElementsByClassName('compitition_container');
+var loc = document.getElementsByClassName('loc');
 
 for (i = 0; i < awards.length; i++) {
   awards[i].classList.add("hidden")
@@ -1314,22 +1315,30 @@ for (i = 0; i < compitition.length; i++) {
   compitition[i].classList.add("no_margin");
   compitition[i].classList.add("no_border");
 }
+for (i = 0; i < loc.length; i++) {
+  loc[i].innerHTML += (" &#x25BC;");
+}
 
 
 function awards_vis(target) {
-  target = target.parentNode
-  awards2toggle = target.getElementsByClassName('award_container');
-  compitition2toggle = target;
-  border2toggle_m = target;
+  parent = target.parentNode
+  awards2toggle = parent.getElementsByClassName('award_container');
+  dropdown_hint = target.getElementsByClassName('loc')[0];
+  compitition2toggle = parent;
+  border2toggle_m = parent;
 
   if (awards2toggle[0].classList.contains("hidden")) {
     for (i = 0; i < awards2toggle.length; i++) {
       awards2toggle[i].classList.remove("hidden");
       target.scrollIntoView({behavior: "smooth", block: "start",});
+      dropdown_hint.innerHTML = dropdown_hint.innerHTML.replace("▼", "▲");
     }
   } else {
     for (i = 0; i < awards2toggle.length; i++) {
       awards2toggle[i].classList.add("hidden");
+      dropdown_hint.innerHTML = dropdown_hint.innerHTML.replace("▲", "▼");
+      console.log(dropdown_hint.innerHTML);
+      
     }
   }
 
