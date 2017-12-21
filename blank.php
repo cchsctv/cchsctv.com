@@ -8,5 +8,5 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 require 'header.php';
 require 'topnav.php';
 ?>
-<p> Herro World! </p>
+<p> Hello World! </p>
 <?php require 'footer.php' ?>

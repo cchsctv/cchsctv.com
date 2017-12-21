@@ -210,7 +210,50 @@ require 'topnav.php';
 <!-- IMAGE -->
 <div class="compitition_container">
   <div class="click_area" href="#" onclick="awards_vis(this)">
-  <img class="edge2edge comp_img" src="ctv_images/stngeneric2.jpg" data-rjs="1">
+  <img class="edge2edge comp_img"  src="ctv_images/fspatoy2017.jpg" data-rjs="1">
+<div class="compitition">
+  <p class="title">FSPA D7 Teacher Of The Year</p>
+<p class="loc">Davie, Florida - 2017-2018</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">D7 Teacher Of The Year</p>
+    <p class="sub">Mr. Alfredo Pichardo</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img"  src="ctv_images/1718fspa.jpg" data-rjs="1">
+<div class="compitition">
+  <p class="title">2017-2018 FSPA DISTRICT 7</p>
+<p class="loc">Davie, FL - November 4th, 2017 &#x25BC;</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Selfie</p>
+  <p class="sub">Jessica Less</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Man on the Street</p>
+  <p class="sub">Brianna Franco, Jacob Mayer, Harris Ness, Matthew Schwam</p></div></div>
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Live to Tape</p>
+  <p class="sub">Andrew Rothschild, Ethan Silverman</p></div></div>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img"  src="ctv_images/stngeneric2.jpg" data-rjs="1">
   <div class="compitition">
     <p class="title">STN Craft Achievement</p>
     <p class="loc">2016-2017 &#x25BC;</p>

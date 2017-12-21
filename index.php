@@ -137,7 +137,7 @@ require 'topnav.php';
 ?>
 
 <div style="background-color:#000000; position:relative; line-height:0;">
-  <img src="ctv_images/homeimg16-8.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">
+  <img src="ctv_images/homeimg17.jpg" style="border:5px; position:relative; width: 100%;" data-rjs="1">
   <div style="text-align:right; padding-top:10px; z-index:100; position:absolute; width: 99%; top:0px; line-height:normal;">
     <a href="https://twitter.com/cchsctv" class="twitter-follow-button" data-show-count="false">Follow @cchsctv</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
