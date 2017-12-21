@@ -1282,6 +1282,7 @@ function awards_vis(target) {
   if (awards2toggle[0].classList.contains("hidden")) {
     for (i = 0; i < awards2toggle.length; i++) {
       awards2toggle[i].classList.remove("hidden");
+      target.scrollIntoView({behavior: "smooth", block: "start",});
     }
   } else {
     for (i = 0; i < awards2toggle.length; i++) {

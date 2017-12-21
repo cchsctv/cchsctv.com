@@ -263,7 +263,11 @@ function autoplay() {
 
 
 function set_video(videoname){
-	window.scrollTo(0,0);		//Scroll to the top
+	//Scroll to the top, smoothly
+	window.scroll({
+		top: 0, 
+		behavior: 'smooth' 
+	});
 	hover = document.getElementsByClassName("hover");		//Gets the current "hover" element
 	
 	//Removes the "hover" from the "hover" element
