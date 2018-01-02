@@ -10,10 +10,10 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 </head>
 <body>
 <style type="text/css">
-<?php include 'style.css'; ?>
+<?php include '../style.css'; ?>
 </style>
 <div class="main">
-  <a class="" href="index.php" style="display:block; line-height:0"> <img src="/ctv_images/background_logo.png" data-rjs="3">  </a>
+  <a class="" href="index.php" style="display:block; line-height:0"> <img src="/admin/admin_images/background_logo.png" data-rjs="3">  </a>
   <div class="content_container">
   <script>
     function myFunction() {
@@ -25,16 +25,18 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
       }
     }
   </script>
-  <noscript>
-    <style type="text/css">
-    <style>
-  </noscript>
   <div class="topnav" id="myTopnav">
-    <a href="/index.php">Home</a>
-    <a href="/video.php">Video</a>
-    <a href="/cast.php">Cast & Crew</a>
-    <a href="/alumni.php">Alumni</a>
-    <a href="/awards.php">Awards</a>
-    <a href="/contact.php">Contact</a>
+    <a href="/admin/index.php">Admin Home</a>
+    <a href="/index.php">Main Site</a>
+    <a href="/admin/video.php">Test Video</a>
+    <a href="/admin/xml_edit.php">XML Edit</a>
     <a href="javascript:void(0);" style="font-size:30px; margin: 5px; margin-right: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <?php
+    if(isset($_SESSION['admin_auth']))
+      echo'
+    <form data-ajax="false" method="post">
+      <input type="hidden" name="logout" value="true" />
+      <button style="float:right;margin-top:0.8em" type="submit" data-role="button" data-mini="true">Log out</button>
+    </form>
+    ';?>
   </div>

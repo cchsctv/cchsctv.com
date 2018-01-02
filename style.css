@@ -5,7 +5,7 @@ This file is mamanged by GIT
 Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 body {
-  background-image: url(ctv_images/background_slim.jpg);
+  background-image: url(/ctv_images/background_slim.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-color: #c30e0e;
@@ -112,5 +112,21 @@ p {
   }
   .main {
     width: calc(100% - 0px);
+  }
+  .edge2edge {
+    width: calc(100% + 20px);
+    transform: translateX(-10px);
+  }
+}
+@media only screen and (max-width: 350px) {
+  div .content_container {
+    border: none;
+  }
+  .topnav a {
+    margin-left: 0.5em;
+  }
+  .edge2edge {
+    width: 100%;
+    transform: none;
   }
 }

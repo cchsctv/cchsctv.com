@@ -1,0 +1,13 @@
+button {
+  padding: 0.5em;
+	font-size: 13px;
+}
+.adminbar{
+  display: grid;
+  height:auto;
+  width: 100%;
+  background-color: white;
+  grid-template:  "left center  right"
+                  "aux  aux     aux";
+}
+.adminbar p{color: black}
