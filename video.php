@@ -129,6 +129,49 @@ require 'topnav.php';
 			</td>
 		  </tr>
 		-->
+    <?php
+    $xml = simplexml_load_file("video.xml") or die("Error: Cannot create object");
+    if (isset($_GET['episode'])) {
+      $episode = (string)'#'.$_GET['episode'];
+      $episode = $xml->xpath('/*/ep[title[contains(.,'."\"".$episode."\"".')]]');
+      $year = $episode[0]['year'];
+      $years = '[@year="'.$year.'"]';
+      $number_videos = false;
+    }
+    $no_print = true; require 'video_fetch.php';
+    $xml = xml_trim($xml,$attributes);
+
+    $count = count($xml);
+
+    for ($i = 0; $i <= $count-1; $i++){
+      $video_table = (string)$xml[$i]->video;
+      $content = "";
+      $content .= 
+        '<tr><td href="#"  id="'
+        .$xml[$i]->video
+        .'" onclick=set_video(this.id);><a class="download" href="/episodes/'
+        .$xml[$i]->video
+        .'"download>('
+        .pathinfo($video_table, PATHINFO_EXTENSION)
+        .')</a>'
+        .$xml[$i]->title
+        .'<span> Aired: '
+        .$xml[$i]->aired
+        .'<br>Featuring: '
+        .$xml[$i]->ft
+        .'</span></td></tr>';
+      
+      /*
+      $content .= '<title>'.$xml[$i]->title.'</title>';
+      $content .= '<aired>'.$xml[$i]->aired.'</aired>';
+      $content .= '<ft>'.$xml[$i]->ft.'</ft>';
+      $content .= '<video>'.$xml[$i]->video.'</video>';
+      $content .= '</ep>';*/
+      echo $content;
+    }
+    
+    $active_year = 2018;
+    ?>
 		  </table>
 
 <script type="text/javascript">
@@ -144,7 +187,7 @@ require 'topnav.php';
   $output = trim($output);
   echo($output);
 ?>
-let active_year = 2018; //CHANGE THIS TO THE CURRENT YEAR
+let active_year = <?=$active_year ?>;
 //Fetch URL Params, if any
 get_url_params();
 //Main Function

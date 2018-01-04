@@ -55,46 +55,19 @@ function autoplay() {
 		let url_ops = ''; //Make "url_ops" a string
 		url_ops=URLParams.special.join("\&special=");
 		url_ops="special="+url_ops;
-		//Assemble query
-		xmlhttp.open("GET", "video_fetch.php?"+url_ops+"", true);
-		xmlhttp.send();		//Send query
-		xml_load = true;
+		epnum=URLParams.episode[0];		//Gets the top episode in table
+		epnum2file();
+		videoload = false;
+		set_video(videoname);
 
-		return new Promise(function(resolve){
-			xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					xml2table(xmlhttp);		//Send the response to table
-					table.rows[0].cells[0].onclick();		//Sets the video to be played
-					//If an episode was specified also, set the video to be played
-					if (URLParams.episode) {
-						epnum=URLParams.episode[0];		//Gets the top episode in table
-						epnum2file();
-						videoload = false;
-						set_video(videoname);
-					}
-				}
-			};
-		});
 	} 
 	//If episode was specified in URL Params...
 	else if (URLParams.episode){
 		epnum=URLParams.episode[0];		//Value from the first in array, just in case multiple were specified
-		//Query server to find year of the episode
-		xmlhttp.open("GET", "video_fetch.php?episode2year="+epnum+"", true);
-		xmlhttp.send();
-		xml_load = true;
-		return new Promise(function(resolve){
-			xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					epnum2file();
-					load_xml_doc(year).then(function() {
-						get_url_params();
-						videoload = false;
-						set_video(videoname);
-					});
-				}
-			};
-		});
+		epnum2file();
+		get_url_params();
+		videoload = false;
+		set_video(videoname);
 	} 
 	//If year was specified in URL Params...
 	else if (URLParams.year){
