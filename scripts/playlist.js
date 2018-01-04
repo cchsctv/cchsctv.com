@@ -11,10 +11,7 @@ let active_video;
 let videoname;
 let epnum;
 
-//Fetch URL Params, if any
-get_url_params();
-//Main Function
-autoplay();
+
 
 //Logic, Decides what video to play next on video end
 video.on("ended", function() {
