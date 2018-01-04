@@ -132,20 +132,23 @@ require 'topnav.php';
 		  </table>
 
 <script type="text/javascript">
-let active_year = 2018; //CHANGE THIS TO THE CURRENT YEAR
 <?php 
-//Remove Comments from JS before serving
-$output = file_get_contents('scripts/playlist.js');
-$pattern1 = '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/';
-$pattern2 = '/\r|\n/';
-$pattern3 = '/\t+/';
-$output = preg_replace($pattern1, '', $output); 
-//$output = preg_replace($pattern2, '', $output);
-//$output = preg_replace($pattern3, '', $output);
-$output = trim($output);
-
-echo($output);
+  //Remove Comments from JS before serving
+  $output = file_get_contents('scripts/playlist.js');
+  $pattern1 = '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/';
+  $pattern2 = '/\r|\n/';
+  $pattern3 = '/\t+/';
+  $output = preg_replace($pattern1, '', $output); 
+  //$output = preg_replace($pattern2, '', $output);
+  //$output = preg_replace($pattern3, '', $output);
+  $output = trim($output);
+  echo($output);
 ?>
+let active_year = 2018; //CHANGE THIS TO THE CURRENT YEAR
+//Fetch URL Params, if any
+get_url_params();
+//Main Function
+autoplay();
 </script>
 <!--TODO: Fix functionaity in firefox-->
 <div style="margin-top:1rem; display:inline-block;">
