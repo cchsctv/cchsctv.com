@@ -41,8 +41,8 @@ if (isset($_GET['special'])) {
 }
 
 //Takes an episode number to return all episodes from that year
-if (isset($_GET['episode2year'])) {
-  $episode = (string)'#'.$_GET['episode2year'];
+if (isset($_GET['episode'])) {
+  $episode = (string)'#'.$_GET['episode'];
   $episode = $xml->xpath('/*/ep[title[contains(.,'."\"".$episode."\"".')]]');
   $year = $episode[0]['year'];
   $years = '[@year="'.$year.'"]';

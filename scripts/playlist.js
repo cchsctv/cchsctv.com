@@ -20,7 +20,7 @@ video.on("ended", function() {
 		videoname = document.getElementsByClassName("hover")[0].parentElement.nextElementSibling.childNodes[0].id;
 	} 
 	//If there are URL operators, set "epnum" to... results in loop
-	else if (url_ops) {
+	else if (URLParams.special) {
 		videoname = table.rows[0].cells[0].id;
 	} 
 	//If the last episode is finished, redirect to musicals
@@ -31,7 +31,7 @@ video.on("ended", function() {
 	else {
 		epnum2file();							//Get the filename, sets "epnum" and "year" of ended video
 		load_xml_doc(year*1-1).then(function() {					//Go to the previous year
-			table.rows[0].cells[0].onclick();				//Set to the top episode
+		table.rows[0].cells[0].onclick();				//Set to the top episode
 		});
 	}
 	set_video(videoname);		//Set video to "epnum"
@@ -50,39 +50,17 @@ function playpause() {
 
 function autoplay() {
 	//Filter for the "sepcial" URL Param
-	if (URLParams.special){
-		//Joins multiple "special" Params into 1 query
-		let url_ops = ''; //Make "url_ops" a string
-		url_ops=URLParams.special.join("\&special=");
-		url_ops="special="+url_ops;
-		epnum=URLParams.episode[0];		//Gets the top episode in table
-		epnum2file();
-		videoload = false;
-		set_video(videoname);
-
-	} 
-	//If episode was specified in URL Params...
-	else if (URLParams.episode){
+	if (URLParams.episode){
 		epnum=URLParams.episode[0];		//Value from the first in array, just in case multiple were specified
-		epnum2file();
 		get_url_params();
+		videoname = table.querySelectorAll("[id*='"+epnum+"']")[0].id;
 		videoload = false;
 		set_video(videoname);
-	} 
-	//If year was specified in URL Params...
-	else if (URLParams.year){
-		load_xml_doc(URLParams.year);
-		//If the episode was also specified in URL Params..
-		if (URLParams.episode) {
-			epnum=URLParams.episode[0];
-			epnum2file();
-			videoload = false;
-			set_video(videoname);
-		}
 	}
 	//If no year or episode was specified in URL Params...
 	else {
-		load_xml_doc(active_year);
+		videoload = false;
+		table.rows[0].cells[0].onclick();
 	}
 	//If autoplay was specified in URL Params
 	if (URLParams.autoplay){
@@ -138,23 +116,6 @@ function set_video(videoname){
 function change_url(title, url) {
 	var obj = { Title: title, Url: url };
 	history.replaceState(obj, obj.Title, obj.Url);
-}
-
-//Func: Searcher that gets the "epnum" and "year" from the "responseXML"
-function epnum2file(){
-	//XPath Expression to select episode
-	var found = xmlhttp.responseXML.evaluate("/eps/ep[title[contains(.,'"+String(epnum)+"')]]", xmlhttp.responseXML, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-	getNodes(found).forEach(function (node) {
-		year=node.getAttribute("year");
-		videoname=node.getElementsByTagName("video")[0].childNodes[0].nodeValue;		//Just in case XPath has multiple results, take the first one
-	});
-	//Counts the length of XPath Result.
-	function getNodes(iterator) {
-		var nodes = [],
-			next = iterator.iterateNext();
-		nodes.push(next);
-		return nodes;
-	}
 }
 
 function load_xml_doc(year) {

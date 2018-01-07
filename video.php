@@ -7,6 +7,33 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 */
 $page_title = "Video";
 require 'header.php';
+
+//Select XML File to use...
+$xml = simplexml_load_file("video.xml") or die("Error: Cannot create object");
+//Get, and use xml_trim()
+$no_print = true; require 'video_fetch.php';
+$xml = xml_trim($xml,$attributes);
+
+$season = $xml[0]['year'];
+
+$content = '';
+for ($i = 0; $i <= count($xml)-1; $i++){
+  $video_table = (string)$xml[$i]->video;
+  $content .= 
+    '<tr><td href="#"  id="'
+    .$xml[$i]->video
+    .'" onclick=set_video(this.id);><a class="download" href="/episodes/'
+    .$xml[$i]->video
+    .'"download>('
+    .pathinfo($video_table, PATHINFO_EXTENSION)
+    .')</a>'
+    .$xml[$i]->title
+    .'<span> Aired: '
+    .$xml[$i]->aired
+    .'<br>Featuring: '
+    .$xml[$i]->ft
+    .'</span></td></tr>';
+}
 ?>
 <style type="text/css">
 .yearbox {
@@ -117,7 +144,7 @@ require 'topnav.php';
 
 <script src="https://vjs.zencdn.net/6.4.0/video.min.js"></script>
 <noscript>Your browser does not support JavaScript!</noscript>
-		<table id=playlist style="margin-top:1rem">
+		<table id=playlist style="margin-top:1rem" year="<?= $season ?>">
 		  <!--
 		  <tr>
 			<td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
@@ -130,47 +157,7 @@ require 'topnav.php';
 		  </tr>
 		-->
     <?php
-    $xml = simplexml_load_file("video.xml") or die("Error: Cannot create object");
-    if (isset($_GET['episode'])) {
-      $episode = (string)'#'.$_GET['episode'];
-      $episode = $xml->xpath('/*/ep[title[contains(.,'."\"".$episode."\"".')]]');
-      $year = $episode[0]['year'];
-      $years = '[@year="'.$year.'"]';
-      $number_videos = false;
-    }
-    $no_print = true; require 'video_fetch.php';
-    $xml = xml_trim($xml,$attributes);
-
-    $count = count($xml);
-
-    for ($i = 0; $i <= $count-1; $i++){
-      $video_table = (string)$xml[$i]->video;
-      $content = "";
-      $content .= 
-        '<tr><td href="#"  id="'
-        .$xml[$i]->video
-        .'" onclick=set_video(this.id);><a class="download" href="/episodes/'
-        .$xml[$i]->video
-        .'"download>('
-        .pathinfo($video_table, PATHINFO_EXTENSION)
-        .')</a>'
-        .$xml[$i]->title
-        .'<span> Aired: '
-        .$xml[$i]->aired
-        .'<br>Featuring: '
-        .$xml[$i]->ft
-        .'</span></td></tr>';
-      
-      /*
-      $content .= '<title>'.$xml[$i]->title.'</title>';
-      $content .= '<aired>'.$xml[$i]->aired.'</aired>';
-      $content .= '<ft>'.$xml[$i]->ft.'</ft>';
-      $content .= '<video>'.$xml[$i]->video.'</video>';
-      $content .= '</ep>';*/
-      echo $content;
-    }
-    
-    $active_year = 2018;
+    echo $content;
     ?>
 		  </table>
 
@@ -187,7 +174,6 @@ require 'topnav.php';
   $output = trim($output);
   echo($output);
 ?>
-let active_year = <?=$active_year ?>;
 //Fetch URL Params, if any
 get_url_params();
 //Main Function
