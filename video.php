@@ -10,11 +10,27 @@ require 'header.php';
 
 //Select XML File to use...
 $xml = simplexml_load_file("video.xml") or die("Error: Cannot create object");
-//Get, and use xml_trim()
+//Parse url parameters and prepare attributes
 $no_print = true; require 'video_fetch.php';
+
+//Find the current year / season
+$season_active = $xml->xpath('/eps/ep')[0]['year'];
+
+//If no URL Params, display the active year / season
+if ($attributes === false) {
+  $year = $xml->xpath('/eps/ep')[0]['year'];
+	$years = '[@year="'.$year.'"]';
+	$number_videos = false;
+	$attributes .= $years;
+}
+
 $xml = xml_trim($xml,$attributes);
 
-$season = $xml[0]['year'];
+$season_fetched = $xml[0]['year'];
+
+if (isset($_GET['special'])) {
+	$season_fetched = $season_active = "special";
+}
 
 $content = '';
 for ($i = 0; $i <= count($xml)-1; $i++){
@@ -144,7 +160,7 @@ require 'topnav.php';
 
 <script src="https://vjs.zencdn.net/6.4.0/video.min.js"></script>
 <noscript>Your browser does not support JavaScript!</noscript>
-		<table id=playlist style="margin-top:1rem" year="<?= $season ?>">
+		<table id=playlist style="margin-top:1rem" season_active="<?= $season_active ?>" season_fetched="<?= $season_fetched ?>" >
 		  <!--
 		  <tr>
 			<td href="#" id="ctv400.mp4" onclick=set_video(this.id);>
@@ -182,7 +198,7 @@ autoplay();
 <!--TODO: Fix functionaity in firefox-->
 <div style="margin-top:1rem; display:inline-block;">
   <div class="yearbox">
-	<a onclick="load_xml_doc(active_year);">
+	<a onclick="load_xml_doc(season_active);">
 	<img src="ctv_images/arch.png" data-rjs="3">
   </a></div>
   <div class="yearbox">

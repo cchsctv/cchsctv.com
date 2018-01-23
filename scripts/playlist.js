@@ -2,6 +2,8 @@
 const video = videojs("video"); 
 const table = document.getElementById("playlist");
 const xmlhttp = new XMLHttpRequest();
+let season_active = table.getAttribute("season_active");
+let season_fetched = table.getAttribute("season_fetched");
 let videoload = false;
 let xml_load = false;
 let url_ops = false;
@@ -29,8 +31,7 @@ video.on("ended", function() {
 	} 
 	//If no other conditions met, go to the previous year
 	else {
-		epnum2file();							//Get the filename, sets "epnum" and "year" of ended video
-		load_xml_doc(year*1-1).then(function() {					//Go to the previous year
+		load_xml_doc(season_fetched*1-1).then(function() {					//Go to the previous year
 		table.rows[0].cells[0].onclick();				//Set to the top episode
 		});
 	}
@@ -119,9 +120,11 @@ function change_url(title, url) {
 }
 
 function load_xml_doc(year) {
+	table.setAttribute("season_fetched", year);
+	let url_ops = false;
 	if (isNaN(year)){
 		video.poster("ctv_images/videoblankl.jpg");
-	} else if(year==active_year) {
+	} else if(year==season_active) {
 		video.poster("ctv_images/videoblankl.jpg");
 	} else {
 		if (xml_load === true) {
