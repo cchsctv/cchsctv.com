@@ -26,20 +26,6 @@ if (isset($_GET['number_videos'])) {
   }
 }
 
-//?year=....
-if (isset($_GET['year'])) {
-  $year = implode("\" or @year=\"",$params['year']);
-  $years = '[@year="'.$year.'"]';
-  $number_videos = false;
-}
-//?Special= [musical/underclassmen/senior]
-//Accepts multiple
-if (isset($_GET['special'])) {
-  $special = implode("\" or @special=\"",$params['special']);
-  $specials = '[@special="'.$special.'"]';
-  $number_videos = false;
-}
-
 //Takes an episode number to return all episodes from that year
 if (isset($_GET['episode'])) {
   $episode = (string)'#'.$_GET['episode'];
@@ -48,6 +34,24 @@ if (isset($_GET['episode'])) {
   $years = '[@year="'.$year.'"]';
   $number_videos = false;
 }
+
+//?Special= [musical/underclassmen/senior]
+//Accepts multiple
+//Overrides any year attributes!
+if (isset($_GET['special'])) {
+  $special = implode("\" or @special=\"",$params['special']);
+  $specials = '[@special="'.$special.'"]';
+  $number_videos = false;
+  $years = '';
+}
+
+//?year=....
+if (isset($_GET['year'])) {
+  $year = implode("\" or @year=\"",$params['year']);
+  $years = '[@year="'.$year.'"]';
+  $number_videos = false;
+}
+
 
 //Assemble XPath 
 $attributes = "";
@@ -76,19 +80,19 @@ function xml_print($xml, $number_videos){
   
   //Interate through filtered xml to form valid xml
   for ($i = 0; $i <= $count-1; $i++){
-    $content = "";
-    $content .= '<ep year="'.$xml[$i]['year'];
-    $special = $xml[$i]['special'];
-    if (!empty($special)) {
-      $content .= '" special="'.$special;
-    }
-    $content .= '">';
-    $content .= '<title>'.$xml[$i]->title.'</title>';
-    $content .= '<aired>'.$xml[$i]->aired.'</aired>';
-    $content .= '<ft>'.$xml[$i]->ft.'</ft>';
-    $content .= '<video>'.$xml[$i]->video.'</video>';
-    $content .= '</ep>';
-    echo str_replace("&","&amp;", $content);
+	$content = "";
+	$content .= '<ep year="'.$xml[$i]['year'];
+	$special = $xml[$i]['special'];
+	if (!empty($special)) {
+		$content .= '" special="'.$special;
+	}
+	$content .= '">';
+	$content .= '<title>'.$xml[$i]->title.'</title>';
+	$content .= '<aired>'.$xml[$i]->aired.'</aired>';
+	$content .= '<ft>'.$xml[$i]->ft.'</ft>';
+	$content .= '<video>'.$xml[$i]->video.'</video>';
+	$content .= '</ep>';
+	echo str_replace("&","&amp;", $content);
   }
 }
 if(!isset($no_print)){

@@ -121,7 +121,7 @@ function change_url(title, url) {
 
 function load_xml_doc(year) {
 	table.setAttribute("season_fetched", year);
-	let url_ops = false;
+	url_ops = false;
 	if (isNaN(year)){
 		video.poster("ctv_images/videoblankl.jpg");
 	} else if(year==season_active) {

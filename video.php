@@ -29,13 +29,14 @@ $xml = xml_trim($xml,$attributes);
 $season_fetched = $xml[0]['year'];
 
 if (isset($_GET['special'])) {
-	$season_fetched = $season_active = "special";
+  $season_fetched = $season_active = "special";
+  
 }
 
-$content = '';
+$playlist_content = '';
 for ($i = 0; $i <= count($xml)-1; $i++){
   $video_table = (string)$xml[$i]->video;
-  $content .= 
+  $playlist_content .= 
     '<tr><td href="#"  id="'
     .$xml[$i]->video
     .'" onclick=set_video(this.id);><a class="download" href="/episodes/'
@@ -173,7 +174,7 @@ require 'topnav.php';
 		  </tr>
 		-->
     <?php
-    echo $content;
+    echo $playlist_content;
     ?>
 		  </table>
 
@@ -185,13 +186,21 @@ require 'topnav.php';
   $pattern2 = '/\r|\n/';
   $pattern3 = '/\t+/';
   $output = preg_replace($pattern1, '', $output); 
-  //$output = preg_replace($pattern2, '', $output);
-  //$output = preg_replace($pattern3, '', $output);
+  $output = preg_replace($pattern2, '', $output);
+  $output = preg_replace($pattern3, '', $output);
   $output = trim($output);
   echo($output);
 ?>
 //Fetch URL Params, if any
 get_url_params();
+//Set any special filters
+if (URLParams.special){
+  let specials = URLParams.special.join('&special=');
+  specials = 'special='+specials;
+  url_ops = specials;
+} else {
+  url_ops = false;
+}
 //Main Function
 autoplay();
 </script>
