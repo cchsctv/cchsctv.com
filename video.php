@@ -151,7 +151,7 @@ td, th {
 require 'topnav.php';
 ?>
 
-<link href="https://vjs.zencdn.net/6.4.0/video-js.min.css" rel="stylesheet">
+<link href="https://vjs.zencdn.net/6.6.0/video-js.min.css" rel="stylesheet">
 
 
 		<video controls id="video" class="video-js vjs-16-9 vjs-big-play-centered" preload="none" poster="ctv_images/videoblankl.jpg"
@@ -159,7 +159,7 @@ require 'topnav.php';
 		  <source id="srcvideo" src="/episodes/ctv400.mp4" >
 		</video>
 
-<script src="https://vjs.zencdn.net/6.4.0/video.min.js"></script>
+<script src="https://vjs.zencdn.net/6.6.0/video.min.js"></script>
 <noscript>Your browser does not support JavaScript!</noscript>
 		<table id=playlist style="margin-top:1rem" season_active="<?= $season_active ?>" season_fetched="<?= $season_fetched ?>" >
 		  <!--
