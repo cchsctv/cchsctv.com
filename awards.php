@@ -206,6 +206,36 @@ require 'topnav.php';
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 */ ?>
+
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img" src="ctv_images/fspapholder.jpg" data-rjs="2">
+  <div class="compitition">
+    <p class="title">2018 FSPA States</p>
+    <p class="loc">Orlando, Florida</p>
+  </div></div>
+
+  <a onclick="video_popup('episodes/Competition/Make A Wish.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Feature Package</p>
+  <p class="sub">Reese Abrahamoff, Gabriela Carbone</p></div></div>
+  </a>
+<a onclick="video_popup('episodes/Competition/FSPA Quick Turn News.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - News Package</p>
+  <p class="sub">Casey Chapter, Gabriela Carbone, Rebecca Smitherman</p></div></div>
+</a>
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
@@ -1338,7 +1368,7 @@ function awards_vis(target) {
       awards2toggle[i].classList.add("hidden");
       dropdown_hint.innerHTML = dropdown_hint.innerHTML.replace("▲", "▼");
       console.log(dropdown_hint.innerHTML);
-      
+
     }
   }
 
