@@ -218,7 +218,43 @@ require 'topnav.php';
     <p class="loc">Orlando, Florida</p>
   </div></div>
 
-  <a onclick="video_popup('episodes/Competition/Make A Wish.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile - Joania Hernandez</p>
+  <p class="sub">Alexa Pichardo, Reese Abrahamoff</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Feature Package - Ella Cafe</p>
+  <p class="sub">Ashton Bosse, Jenna Knight</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile - Cosmic</p>
+  <p class="sub">Jacob Mayer, Andrew Rothschild</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile - Stephanie</p>
+  <p class="sub">Brianna Franco, Gabriela Carbone</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile - Cosmic</p>
+  <p class="sub">Jacob Mayer, Andrew Rothschild</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Animation - Labrynth</p>
+  <p class="sub">Robert Hidalgo</p></div></div>
+
+  <a onclick="video_popup('episodes/Competition/Make a Wish.mp4');">
   <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
   <div class="award_text">
