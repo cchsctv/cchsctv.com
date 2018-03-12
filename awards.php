@@ -231,12 +231,6 @@ require 'topnav.php';
   <p class="sub">Ashton Bosse, Jenna Knight</p></div></div>
 
   <div class="award_container">
-    <img src="ctv_images/excellent.png" data-rjs="3">
-  <div class="award_text">
-    <p class="head">Broadcast Profile - Cosmic</p>
-  <p class="sub">Jacob Mayer, Andrew Rothschild</p></div></div>
-
-  <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
   <div class="award_text">
     <p class="head">Broadcast Profile - Stephanie</p>
