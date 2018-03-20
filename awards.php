@@ -207,6 +207,26 @@ require 'topnav.php';
 <!-- AWARD GROUP END -->
 */ ?>
 
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img" src="ctv_images/1718stn.jpg" data-rjs="2">
+  <div class="compitition">
+    <p class="title">2018 STN Nationals</p>
+    <p class="loc">Nashville, Tennesse - March 18th, 2018</p>
+  </div></div>
+
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Crazy 8 - Broadcast Morning Show</p>
+  <p class="sub">Staff</p></div></div>
+
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
