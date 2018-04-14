@@ -211,32 +211,37 @@ require 'topnav.php';
 <!-- IMAGE -->
 <div class="compitition_container">
   <div class="click_area" href="#" onclick="awards_vis(this)">
-  <img class="edge2edge comp_img" src="ctv_images/1718stn.jpg" data-rjs="2">
-  <div class="compitition">
-    <p class="title">2018 STN Nationals</p>
-    <p class="loc">Nashville, Tennesse - March 18th, 2018</p>
-  </div></div>
-
-
-  <div class="award_container">
-    <img src="ctv_images/honorablemention.png" data-rjs="3">
-  <div class="award_text">
-    <p class="head">Crazy 8 - Broadcast Morning Show</p>
-  <p class="sub">Staff</p></div></div>
-
-</div>
-<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
-<!-- AWARD GROUP END -->
-
-<!-- AWARD GROUP START -->
-<!-- IMAGE -->
-<div class="compitition_container">
-  <div class="click_area" href="#" onclick="awards_vis(this)">
-  <img class="edge2edge comp_img" src="ctv_images/fspapholder.jpg" data-rjs="2">
+  <img class="edge2edge comp_img" src="ctv_images/1718fspastates.jpg" data-rjs="3">
   <div class="compitition">
     <p class="title">2018 FSPA States</p>
     <p class="loc">Orlando, Florida</p>
   </div></div>
+
+  <a onclick="video_popup('episodes/Competition/FSPAStates1stMOTS.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Man on the Street</p>
+  <p class="sub">Jacob Mayer, Brianna Franco, Jenna Knight, Melissa Luque</p></div></div>
+  </a>
+  <a href="https://cchapter.wixsite.com/caseychapter" target="_blank">
+  <div class="award_container">
+    <img src="ctv_images/2ndplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Studnet Journalist of the Year</p>
+  <p class="sub">Casey Chapter</p></div></div>
+</a>
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS News Package</p>
+  <p class="sub">Casey Chapter, Alexa Pichardo</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/3rdplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS Team Broadcast</p>
+  <p class="sub">Staff</p></div></div>
 
   <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
@@ -281,16 +286,39 @@ require 'topnav.php';
     <p class="head">Feature Package</p>
   <p class="sub">Reese Abrahamoff, Gabriela Carbone</p></div></div>
   </a>
-<a onclick="video_popup('episodes/Competition/FSPA Quick Turn News.mp4');">
+  <a onclick="video_popup('episodes/Competition/FSPA Quick Turn News.mp4');">
   <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
   <div class="award_text">
     <p class="head">Quick Turn - News Package</p>
   <p class="sub">Casey Chapter, Gabriela Carbone, Rebecca Smitherman</p></div></div>
-</a>
+  </a>
 </div>
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
+
+
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img" src="ctv_images/1718stn.jpg" data-rjs="2">
+  <div class="compitition">
+    <p class="title">2018 STN Nationals</p>
+    <p class="loc">Nashville, Tennesse - March 18th, 2018</p>
+  </div></div>
+
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Crazy 8 - Broadcast Morning Show</p>
+  <p class="sub">Staff</p></div></div>
+
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
+
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
