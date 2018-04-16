@@ -228,7 +228,7 @@ require 'topnav.php';
   <div class="award_container">
     <img src="ctv_images/2ndplace.png" data-rjs="3">
   <div class="award_text">
-    <p class="head">Studnet Journalist of the Year</p>
+    <p class="head">Student Journalist of the Year</p>
   <p class="sub">Casey Chapter</p></div></div>
 </a>
   <div class="award_container">
@@ -293,6 +293,37 @@ require 'topnav.php';
     <p class="head">Quick Turn - News Package</p>
   <p class="sub">Casey Chapter, Gabriela Carbone, Rebecca Smitherman</p></div></div>
   </a>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Cooking Video</p>
+  <p class="sub">Rebecca Smitherman, Gabriela Carbone, Brianna Franco</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Show Opening</p>
+  <p class="sub">Ashton Bosse</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Cooking Video</p>
+  <p class="sub">Casey Chapter, Matheus Lima, Andrew Rothschild</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Documentary</p>
+  <p class="sub">Casey Chapter, Alexa Pichardo, Reese Abrahamoff</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Film</p>
+  <p class="sub">Alexa Pichardo, Ashton Bosse, Melissa Luque</p></div></div>
+
 </div>
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
