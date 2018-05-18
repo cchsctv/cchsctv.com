@@ -123,7 +123,7 @@ require 'topnav.php';
 <div class="row"><p class="alum title"><b>2018 SENIOR STAFF:</b></p></div>
 <div class="row"><p class="alum"><b class="name">Chad Allen</b> Broward College</p></div>
 <div class="row"><p class="alum"><b class="name">Mark Brent</b> Florida Institute of Technology</p></div>
-<div class="row"><p class="alum"><b class="name">Kalya Burge</b> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Kayla Burge</b> University of Central Florida</p></div>
 <div class="row"><p class="alum"><b class="name">Adam Glantz</b> <i>Sports Director,</i> University of Central Florida</p></div>
 <div class="row"><p class="alum"><b class="name">Jenna Knight</b> University of Central Florida</p></div>
 <div class="row"><p class="alum"><b class="name">Jessica Less</b> University of Central Florida</p></div>
