@@ -129,7 +129,7 @@ require 'topnav.php';
 <div class="row"><p class="alum"><b class="name">Jessica Less</b> University of Central Florida</p></div>
 <div class="row"><p class="alum"><b class="name">Felipe Lopez</b> Boston University</p></div>
 <div class="row"><p class="alum"><b class="name">Harris Ness</b> <i>Entertainment Director,</i> San Diego State University</p></div>
-<div class="row"><p class="alum"><b class="name">Maro Sculac</b> University of Twente</p></div>
+<div class="row"><p class="alum"><b class="name">Mario Sculac</b> University of Twente</p></div>
 <div class="row"><p class="alum"><b class="name">Isabella Tocci</b> <i>News Director, </i> Florida State University</p></div>
 </div>
 <!-- CLASS YEAR END -->
