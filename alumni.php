@@ -111,6 +111,29 @@ require 'topnav.php';
 </div>-->
 <!-- CLASS YEAR END -->
 
+<!-- CLASS YEAR START --><a name="18"></a>
+<img class="edge2edge class_of" src="ctv_images/co2018.jpg" alt="Class Of 2018" data-rjs="3"><div class="stripe">
+<div class="row"><p class="alum title"><b>2018 SENIOR OFFICERS:</b></div>
+<div class="row"><p class="alum"><b class="name">Casey Chapter</b> <i>President,</i> Florida State University </p></div>
+<div class="row"><p class="alum"><b class="name">Ashton Bosse</b> <i>Vice President,</i> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Jakob Wolk</b> <i>Assistant Vice President,</i> Arizona State University</p></div>
+<div class="row"><p class="alum"><b class="name">Brianna Franco</b> <i>Treasurer,</i> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Rebecca Smitherman</b> <i>Historian,</i> Florida State University</p></div>
+<div class="row"><p class="alum"><b class="name">Jacob Mayer</b> <i>Operations Manager,</i> Florida State University</p></div>
+<div class="row"><p class="alum title"><b>2018 SENIOR STAFF:</b></p></div>
+<div class="row"><p class="alum"><b class="name">Chad Allen</b> Broward College</p></div>
+<div class="row"><p class="alum"><b class="name">Mark Brent</b> Florida Institute of Technology</p></div>
+<div class="row"><p class="alum"><b class="name">Kalya Burge</b> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Adam Glantz</b> <i>Sports Director,</i> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Jenna Knight</b> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Jessica Less</b> University of Central Florida</p></div>
+<div class="row"><p class="alum"><b class="name">Felipe Lopez</b> Boston University</p></div>
+<div class="row"><p class="alum"><b class="name">Harris Ness</b> <i>Entertainment Director,</i> San Diego State University</p></div>
+<div class="row"><p class="alum"><b class="name">Maro Sculac</b> University of Twente</p></div>
+<div class="row"><p class="alum"><b class="name">Isabella Tocci</b> <i>News Director, </i> Florida State University</p></div>
+</div>
+<!-- CLASS YEAR END -->
+
 <!-- CLASS YEAR START --><a name="17"></a>
 <img class="edge2edge class_of" src="ctv_images/co2017.jpg" alt="Class Of 2017" data-rjs="3"><div class="stripe">
 <div class="row"><p class="alum title"><b>2017 SENIOR OFFICERS:</b></div>
