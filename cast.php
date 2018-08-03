@@ -168,62 +168,17 @@ include 'topnav.php';
 
 <div style="clear:both"></div>
 
-<div class="edge2edge bardivider" style="margin:0;border-top:none"><p class="head">2017-2018 OFFICERS</p></div>
+<div class="edge2edge bardivider" style="margin:0;border-top:none"><p class="head">2018-2019 OFFICERS</p></div>
 
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
-<div class="officer_container">
-  <img src="ctv_images/staff/CaseyChapter.jpg" data-rjs="2">
-    <div class="name">
-  <p>Casey Chapter</p>
-    </div>
-  <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">President</p>
-</div>
-</div>
-<div class="officer_container">
-  <img src="ctv_images/staff/AshtonBosse.jpg" data-rjs="2">
-    <div class="name">
-  <p>Ashton Bosse</p>
-    </div>
-  <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Vice President</p>
-</div>
-</div>
-<div class="officer_container">
-  <img src="ctv_images/staff/JakobWolk.jpg" data-rjs="2">
-    <div class="name">
-  <p>Jakob Wolk</p>
-    </div>
-  <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Asst. Vice President</p>
-</div>
-</div>
 <div class="officer_container">
   <img src="ctv_images/staff/GabrielaCarbone.jpg" data-rjs="2">
     <div class="name">
   <p>Gabriela Carbone</p>
     </div>
   <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Secretary</p>
-</div>
-</div>
-<div class="officer_container">
-  <img src="ctv_images/staff/BriannaFranco.jpg" data-rjs="2">
-    <div class="name">
-  <p>Brianna Franco</p>
-    </div>
-  <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Treasurer</p>
-</div>
-</div>
-<div class="officer_container">
-  <img src="ctv_images/staff/RebeccaSmitherman.jpg" data-rjs="2">
-    <div class="name">
-  <p>Rebecca Smitherman</p>
-    </div>
-  <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Historian</p>
+  <p class="sub" style="position:relative; text-align:left;">President</p>
 </div>
 </div>
 <div class="officer_container">
@@ -232,7 +187,34 @@ include 'topnav.php';
   <p>Alexa Pichardo</p>
     </div>
   <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Business Manager</p>
+  <p class="sub" style="position:relative; text-align:left;">Vice President</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/EthanSilverman.jpg" data-rjs="2">
+    <div class="name">
+  <p>Ethan Silverman</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Asst. Vice President</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/MelissaLuque.jpg" data-rjs="2">
+    <div class="name">
+  <p>Melissa Luque</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Secretary</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/NicoleNelson.jpg" data-rjs="2">
+    <div class="name">
+  <p>Nicole Nelson</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Treasurer</p>
 </div>
 </div>
 <div class="officer_container">
@@ -241,13 +223,31 @@ include 'topnav.php';
   <p>Andrew Rothschild</p>
     </div>
   <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Historian</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/MatthewSchwam.jpg" data-rjs="2">
+    <div class="name">
+  <p>Matthew Schwam</p>
+    </div>
+  <div style="position:relative;">
+  <p class="sub" style="position:relative; text-align:left;">Business Manager</p>
+</div>
+</div>
+<div class="officer_container">
+  <img src="ctv_images/staff/ChristopherWill.jpg" data-rjs="2">
+    <div class="name">
+  <p>Chris Will</p>
+    </div>
+  <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Equipment Manager</p>
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/JacobMayer.jpg" data-rjs="2">
+  <img src="ctv_images/staff/RobertHidalgo.jpg" data-rjs="2">
     <div class="name">
-  <p>Jacob Mayer</p>
+  <p>Robert Hidalgo</p>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Operations Manager</p>
@@ -256,62 +256,24 @@ include 'topnav.php';
 
 <!-- END OFFICERS -->
 
-<div class="edge2edge bardivider"><p class="head">2017-2018 STAFF</p></div>
+<div class="edge2edge bardivider"><p class="head">2018-2019 STAFF</p></div>
 
 <!-- BEGIN STAFF -->
 <!-- STAFF PICTURES MUST HAVE SQUARE (170x170) ASPECT RATIO -->
 <div class="staff_container">
   <img src="ctv_images/staff/ReeseAbrahamoff.jpg" data-rjs="2">
   <div class="name">
-  <p>Reese Abrahamoff</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/ChadAllen.jpg" data-rjs="2">
-  <div class="name">
-  <p>Chad Allen</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/MarkBrent.jpg" data-rjs="2">
-  <div class="name">
-  <p>Mark Brent</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/KaylaBurge.jpg" data-rjs="2">
-  <div class="name">
-  <p>Kayla Burge</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/AdamGlantz.jpg" data-rjs="2">
-	<div class="director"><p class="sub">Sports Director</p></div>
-  <div class="name">
-  <p>Adam Glantz</p></div>
+  <p>Reese Abrahamoff</p></div></div>
+
+<!--
+
 </div>
 <div class="staff_container">
   <img src="ctv_images/staff/RobertHidalgo.jpg" data-rjs="2">
   <div class="name">
   <p>Robert Hidalgo</p></div>
 </div>
-<div class="staff_container">
-  <img src="ctv_images/staff/JennaKnight.jpg" data-rjs="2">
-  <div class="name">
-  <p>Jenna Knight</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/JessicaLess.jpg" data-rjs="2">
-  <div class="name">
-  <p>Jessica Less</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/MatheusLima.jpg" data-rjs="2">
-  <div class="name">
-  <p>Matheus Lima</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/FelipeLopez.jpg" data-rjs="2">
-  <div class="name">
-  <p>Felipe Lopez</p>
 
-</div>
 </div>
 <div class="staff_container">
   <img src="ctv_images/staff/MelissaLuque.jpg" data-rjs="2">
@@ -323,40 +285,24 @@ include 'topnav.php';
   <div class="name">
   <p>Nicole Nelson</p></div>
 </div>
-<div class="staff_container">
-  <img src="ctv_images/staff/HarrisNess.jpg" data-rjs="2">
-  <div class="director"><p class="sub">Entertainment Director</p></div>
-  <div class="name">
-  <p>Harris Ness</p>
-  </div>
+
 </div>
 <div class="staff_container">
   <img src="ctv_images/staff/MatthewSchwam.jpg" data-rjs="2">
   <div class="name">
   <p>Matthew Schwam</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/MarioSculac.jpg" data-rjs="2">
-  <div class="name">
-  <p>Mario Sculac</p></div>
-</div>
+
 <div class="staff_container">
   <img src="ctv_images/staff/EthanSilverman.jpg" data-rjs="2">
   <div class="name">
   <p>Ethan Silverman</p></div>
-</div>
-<div class="staff_container">
-  <img src="ctv_images/staff/IsabellaTocci.jpg" data-rjs="2">
-	<div class="director"><p class="sub">News Director</p></div>
-  <div class="name">
-  <p>Isabella Tocci</p></div>
-</div>
+
 <div class="staff_container">
   <img src="ctv_images/staff/ChristopherWill.jpg" data-rjs="2">
   <div class="name">
   <p>Christopher Will</p></div>
 </div>
-<!--
+
 <div class="staff_container">
   <img src="ctv_images/staff/daniellesiso.jpg" data-rjs="2">
   <div class="name">

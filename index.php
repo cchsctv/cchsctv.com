@@ -185,24 +185,24 @@ require 'topnav.php';
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
 <div class="column left" style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
-<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2017-2018 CTV OFFICERS</p>
-<p class="oname">Casey Chapter</p></td>
-<p class="oposition">PRESIDENT</p></td>
-<p class="oname">Ashton Bosse</p></td>
-<p class="oposition">Vice President</p></td>
-<p class="oname">Jakob Wolk</p></td>
-<p class="oposition">Asst Vice President</p></td>
-<p class="oname">Gabriela Carbone</p></td>
-<p class="oposition">Secretary</p></td>
-<p class="oname">Brianna Franco</p></td>
-<p class="oposition">Treasurer</p></td>
-<p class="oname">Rebecca Smitherman</p></td>
-<p class="oposition">Historian</p></td>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2018-2019 CTV OFFICERS</p>
+<p class="oname">Gabby Carbone</p></td>
+<p class="oposition">President</p></td>
 <p class="oname">Alexa Pichardo</p></td>
-<p class="oposition">Business Manager</p></td>
+<p class="oposition">Vice President</p></td>
+<p class="oname">Ethan Silverman</p></td>
+<p class="oposition">Asst Vice President</p></td>
+<p class="oname">Melissa Luque</p></td>
+<p class="oposition">Secretary</p></td>
+<p class="oname">Nicole Nelson</p></td>
+<p class="oposition">Treasurer</p></td>
 <p class="oname">Andrew Rothschild</p></td>
+<p class="oposition">Historian</p></td>
+<p class="oname">Matthew Schwam</p></td>
+<p class="oposition">Business Manager</p></td>
+<p class="oname">Chris Will</p></td>
 <p class="oposition">Equipment Manager</p></td>
-<p class="oname">Jacob Mayer</p></td>
+<p class="oname">Robert Hidalgo</p></td>
 <p class="oposition">Operatons Manager</p></td>
 <p class="style" style="padding:10px; text-align:center; font-size:.6em;"><a href="cast.html">View our full cast &raquo;</a></p>
 </div>
