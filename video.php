@@ -30,13 +30,13 @@ $season_fetched = $xml[0]['year'];
 
 if (isset($_GET['special'])) {
   $season_fetched = $season_active = "special";
-  
+
 }
 
 $playlist_content = '';
 for ($i = 0; $i <= count($xml)-1; $i++){
   $video_table = (string)$xml[$i]->video;
-  $playlist_content .= 
+  $playlist_content .=
     '<tr><td href="#"  id="'
     .$xml[$i]->video
     .'" onclick=set_video(this.id);><a class="download" href="/episodes/'
@@ -179,13 +179,13 @@ require 'topnav.php';
 		  </table>
 
 <script type="text/javascript">
-<?php 
+<?php
   //Remove Comments from JS before serving
   $output = file_get_contents('scripts/playlist.js');
   $pattern1 = '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/';
   $pattern2 = '/\r|\n/';
   $pattern3 = '/\t+/';
-  $output = preg_replace($pattern1, '', $output); 
+  $output = preg_replace($pattern1, '', $output);
   $output = preg_replace($pattern2, '', $output);
   $output = preg_replace($pattern3, '', $output);
   $output = trim($output);
@@ -209,6 +209,10 @@ autoplay();
   <div class="yearbox">
 	<a onclick="load_xml_doc(season_active);">
 	<img src="ctv_images/arch.png" data-rjs="3">
+  </a></div>
+  <div class="yearbox">
+  <a onclick="load_xml_doc(2018);">
+  <img src="ctv_images/18arch.jpg" data-rjs="2">
   </a></div>
   <div class="yearbox">
 	<a onclick="load_xml_doc(2017);">
