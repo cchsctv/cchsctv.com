@@ -173,7 +173,7 @@ include 'topnav.php';
 <!-- BEGIN OFFICERS -->
 <!-- OFFICER PICTURES MUST HAVE 230x170 ASPECT RATIO -->
 <div class="officer_container">
-  <img src="ctv_images/staff/Gabby.png" data-rjs="2">
+  <img src="ctv_images/staff/Gabby@1x.png" data-rjs="2">
     <div class="name">
   <p>Gabriela Carbone</p>
     </div>
@@ -182,7 +182,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Alexa.png" data-rjs="2">
+  <img src="ctv_images/staff/Alexa@1x.png" data-rjs="2">
     <div class="name">
   <p>Alexa Pichardo</p>
     </div>
@@ -191,7 +191,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Ethan.png" data-rjs="2">
+  <img src="ctv_images/staff/Ethan@1x.png" data-rjs="2">
     <div class="name">
   <p>Ethan Silverman</p>
     </div>
@@ -200,7 +200,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Melissa.png" data-rjs="2">
+  <img src="ctv_images/staff/Melissa@1x.png" data-rjs="2">
     <div class="name">
   <p>Melissa Luque</p>
     </div>
@@ -209,7 +209,7 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Nicole.png" data-rjs="2">
+  <img src="ctv_images/staff/Nicole@1x.png" data-rjs="2">
     <div class="name">
   <p>Nicole Nelson</p>
     </div>
@@ -218,16 +218,17 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/AndrewRothschild.jpg" data-rjs="2">
+  <img src="ctv_images/staff/Andrew@1x.png" data-rjs="2">
     <div class="name">
   <p>Andrew Rothschild</p>
+  	<div class="director"><p class="sub">Graphics Director</p></div>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Historian</p>
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Schwam.png" data-rjs="2">
+  <img src="ctv_images/staff/Schwam@1x.png" data-rjs="2">
     <div class="name">
   <p>Matthew Schwam</p>
     </div>
@@ -236,16 +237,17 @@ include 'topnav.php';
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/ChrisWill.png" data-rjs="2">
+  <img src="ctv_images/staff/Chris@1x.png" data-rjs="2">
     <div class="name">
-  <p>Chris Will</p>
+  <p>Christopher Will</p>
+	<div class="director"><p class="sub">Sports Director</p></div>
     </div>
   <div style="position:relative;">
   <p class="sub" style="position:relative; text-align:left;">Equipment Manager</p>
 </div>
 </div>
 <div class="officer_container">
-  <img src="ctv_images/staff/Robert.png" data-rjs="2">
+  <img src="ctv_images/staff/Robert@1x.png" data-rjs="2">
     <div class="name">
   <p>Robert Hidalgo</p>
     </div>
@@ -261,76 +263,77 @@ include 'topnav.php';
 <!-- BEGIN STAFF -->
 <!-- STAFF PICTURES MUST HAVE SQUARE (170x170) ASPECT RATIO -->
 <div class="staff_container">
-  <img src="ctv_images/staff/Emily.png" data-rjs="2">
+  <img src="ctv_images/staff/Emily@1x.png" data-rjs="2">
   <div class="name">
   <p>Emily Aaron</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Reese.png" data-rjs="2">
+  <img src="ctv_images/staff/Reese@1x.png" data-rjs="2">
   <div class="name">
   <p>Reese Abrahamoff</p></div>
+	<div class="director"><p class="sub">News Director</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Imani.png" data-rjs="2">
+  <img src="ctv_images/staff/Imani@1x.png" data-rjs="2">
   <div class="name">
   <p>Imani Armand</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Franchesca.png" data-rjs="2">
+  <img src="ctv_images/staff/Franchesca@1x.png" data-rjs="2">
   <div class="name">
   <p>Francesca Duarte</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Jake.png" data-rjs="2">
-	<div class="director"><p class="sub">Sports Director</p></div>
+  <img src="ctv_images/staff/Jake@1x.png" data-rjs="2">
+<!--	<div class="director"><p class="sub">Sports Director</p></div> -->
   <div class="name">
   <p>Jake Glantz</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Lucas.png" data-rjs="2">
+  <img src="ctv_images/staff/Lucas@1x.png" data-rjs="2">
   <div class="name">
   <p>Lucas Hemingway</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Kayla.png" data-rjs="2">
+  <img src="ctv_images/staff/Kayla@1x.png" data-rjs="2">
   <div class="name">
   <p>Kayla Kissel</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Lefty.png" data-rjs="2">
+  <img src="ctv_images/staff/Lefty@1x.png" data-rjs="2">
   <div class="name">
   <p>Ryan Lewis</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Isabella.png" data-rjs="2">
+  <img src="ctv_images/staff/Isabella@1x.png" data-rjs="2">
   <div class="name">
   <p>Isabella Marcon</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/FelipeLopez.jpg" data-rjs="2">
+  <img src="ctv_images/staff/Veronica@1x.png" data-rjs="2">
   <div class="name">
   <p>Verónica Martínez</p>
 </div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Sofia.png" data-rjs="2">
+  <img src="ctv_images/staff/Sofia@1x.png" data-rjs="2">
   <div class="name">
   <p>Sofia Mendez</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Gio.png" data-rjs="2">
+  <img src="ctv_images/staff/Gio@1x.png" data-rjs="2">
   <div class="name">
   <p>Giovanni Papini</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Mike.png" data-rjs="2">
-  <div class="director"><p class="sub">Entertainment Director</p></div>
+  <img src="ctv_images/staff/Mike@1x.png" data-rjs="2">
+<!--  <div class="director"><p class="sub">Entertainment Director</p></div> -->
   <div class="name">
   <p>Michael Potes</p>
   </div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Righty.png" data-rjs="2">
+  <img src="ctv_images/staff/Righty@1x.png" data-rjs="2">
   <div class="name">
   <p>Ryan Rothschild</p></div>
 </div>
