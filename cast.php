@@ -223,7 +223,7 @@ include 'topnav.php';
   <p>Andrew Rothschild</p>
     </div>
   <div style="position:relative;">
-  <p class="sub" style="position:relative; text-align:left;">Historian</p>
+  <p class="sub" style="position:relative; text-align:left;">Historian/TEST</p>
 </div>
 </div>
 <div class="officer_container">
