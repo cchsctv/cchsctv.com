@@ -206,6 +206,59 @@ require 'topnav.php';
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 */ ?>
+<!-- AWARD GROUP START -->
+<!-- IMAGE -->
+<div class="compitition_container">
+  <div class="click_area" href="#" onclick="awards_vis(this)">
+  <img class="edge2edge comp_img" src="ctv_images/1819fspa.jpg" data-rjs="2">
+  <div class="compitition">
+    <p class="title">2018 FSPA Districts</p>
+    <p class="loc">Davie, Florida</p>
+  </div></div>
+
+<!--  <a onclick="video_popup('episodes/Competition/PATH.mp4');">
+  <div class="award_container">
+    <img src="ctv_images/CHANGE_IMAGE.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">CHANGE_BEST_VIDEO</p>
+  <p class="sub">CHANGE_NAME</p></div></div>
+</a> -->
+
+  <div class="award_container">
+    <img src="ctv_images/1stplace.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">OTS - Press Conference</p>
+  <p class="sub">Francesca Duate, Imani Armand</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Student Body President Profile</p>
+  <p class="sub">Alexa Pichardo, Gabby Carbone, Imani Armand</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Food Segement</p>
+  <p class="sub">CTV Staff</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Multi Media Event Coverage</p>
+  <p class="sub">Chris Will, Isabella Marcon, Sofia Mendex</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">9/11 Broadcast Package</p>
+  <p class="sub">Reese Abrahamoff, Michael Potes</p></div></div>
+
+
+
+</div>
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+<!-- AWARD GROUP END -->
 
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
