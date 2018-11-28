@@ -9,6 +9,10 @@ Contribute at https://github.com/cchsctv/cchsctv.com/
 // Use in the "Post-Receive URLs" section of your GitHub repo.
 
 if ( $_POST['payload'] ) {
-  shell_exec( 'cd /home/ctvserver/public_html && git reset --hard HEAD && git pull' ); 
+  $output = shell_exec( 'cd /home/ctvserver/public_html && git reset --hard HEAD && git pull' ); 
+  error_log($output, 3, "/var/tmp/my-errors.log");
+  echo "$output";
+} else {
+  echo "hi"
 }
-?>hi
+?>
