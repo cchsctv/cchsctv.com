@@ -206,6 +206,9 @@ require 'topnav.php';
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
 */ ?>
+
+<!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
+
 <!-- AWARD GROUP START -->
 <!-- IMAGE -->
 <div class="compitition_container">
