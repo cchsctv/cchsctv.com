@@ -231,7 +231,7 @@ require 'topnav.php';
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
     <p class="head">OTS - Press Conference</p>
-  <p class="sub">Francesca Duarte, Imani Armand</p></div></div>
+  <p class="sub">Reese Abrahamoff, Francesca Duarte, Imani Armand</p></div></div>
 
   <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
