@@ -231,7 +231,7 @@ require 'topnav.php';
     <img src="ctv_images/1stplace.png" data-rjs="3">
   <div class="award_text">
     <p class="head">OTS - Press Conference</p>
-  <p class="sub">Francesca Duate, Imani Armand</p></div></div>
+  <p class="sub">Francesca Duarte, Imani Armand</p></div></div>
 
   <div class="award_container">
     <img src="ctv_images/allflorida.png" data-rjs="3">
@@ -249,7 +249,7 @@ require 'topnav.php';
     <img src="ctv_images/excellent.png" data-rjs="3">
   <div class="award_text">
     <p class="head">Multi Media Event Coverage</p>
-  <p class="sub">Chris Will, Isabella Marcon, Sofia Mendex</p></div></div>
+  <p class="sub">Chris Will, Isabella Marcon, Sofia Mendes</p></div></div>
 
   <div class="award_container">
     <img src="ctv_images/excellent.png" data-rjs="3">
