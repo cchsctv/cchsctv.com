@@ -279,11 +279,6 @@ include 'topnav.php';
   <p>Imani Armand</p></div>
 </div>
 <div class="staff_container">
-  <img src="ctv_images/staff/Becker@1x.png" data-rjs="2">
-  <div class="name">
-  <p>Brian Becker</p></div>
-</div>
-<div class="staff_container">
   <img src="ctv_images/staff/Franchesca@1x.png" data-rjs="2">
   <div class="name">
   <p>Francesca Duarte</p></div>
