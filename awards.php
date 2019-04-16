@@ -230,7 +230,7 @@ require 'topnav.php';
     <p class="head">Action Sports</p>
   <p class="sub">Brian Becker</p></div></div>
 
-
+</div>
 
 <!-- DO NOT DELETE THIS LINE --><div class="partition"></div>
 <!-- AWARD GROUP END -->
