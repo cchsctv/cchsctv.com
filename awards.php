@@ -218,7 +218,7 @@ require 'topnav.php';
 <!-- IMAGE -->
 <div class="compitition_container">
   <div class="click_area" href="#" onclick="awards_vis(this)">
-  <img class="edge2edge comp_img" src="ctv_images/1819stn.jpg" data-rjs="2">
+  <img class="edge2edge comp_img" src="ctv_images/1819stn.png" data-rjs="2">
   <div class="compitition">
     <p class="title">2019 STN Nationals</p>
     <p class="loc">Seattle,  Washington</p>
