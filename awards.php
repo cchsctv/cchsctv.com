@@ -230,6 +230,79 @@ require 'topnav.php';
     <p class="head">Feature Package</p>
   <p class="sub">Christopher Will, Brian Becker, Francesca Duarte</p></div></div>
 
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Show Opening</p>
+  <p class="sub">Alexa Pichardo</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Film Editing Challenge</p>
+  <p class="sub">Christopher Will, Robert Hidalgo, Andrew Rothschild</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Cooking Video</p>
+  <p class="sub">Brian Becker, Ryan Rothschild, Lucas Hemingway</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/allflorida.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Podcast</p>
+  <p class="sub">Brian Becker, Andrew Rothschild, Jake Glantz</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Broadcast Profile</p>
+  <p class="sub">Matthew Schwam</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Short Film</p>
+  <p class="sub">Gabriela Carbone, Reese Abrahamoff</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Comedy Sketch</p>
+  <p class="sub">Gabriela Carbone, Giovanni Papini, Alexa Pichardo, Emily Aaron</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Commercial</p>
+  <p class="sub">Francesca Duarte, Isabella Marcon</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">News Package</p>
+  <p class="sub">Reese Abrahamoff, Kayla Kissel</p></div></div>
+
+  <div class="award_container">
+  <img src="ctv_images/excellent.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Sports Package</p>
+  <p class="sub">Emily Aaron</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Photography Challenge</p>
+  <p class="sub">Imani Armand, Kayla Kissel, Francesca Duarte</p></div></div>
+
+  <div class="award_container">
+    <img src="ctv_images/honorablemention.png" data-rjs="3">
+  <div class="award_text">
+    <p class="head">Quick Turn - Deadline News Package</p>
+  <p class="sub">Chris Will, Reese Abrahamoff, Ryan Lewis</p></div></div>
+
+
 
 </div>
 
