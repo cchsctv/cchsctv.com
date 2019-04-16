@@ -318,7 +318,7 @@ require 'topnav.php';
   <img class="edge2edge comp_img" src="ctv_images/1819stn.png" data-rjs="2">
   <div class="compitition">
     <p class="title">2019 STN Nationals</p>
-    <p class="loc">Seattle,  Washington</p>
+    <p class="loc">Seattle,  Washington - March 26th, 2019</p>
   </div></div>
 
     <div class="award_container">
