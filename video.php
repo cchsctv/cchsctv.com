@@ -211,6 +211,10 @@ autoplay();
 	<img src="ctv_images/arch.png" data-rjs="3">
   </a></div>
   <div class="yearbox">
+  <a onclick="load_xml_doc(2019);">
+  <img src="ctv_images/19arch.jpg" data-rjs="2">
+  </a></div>
+  <div class="yearbox">
   <a onclick="load_xml_doc(2018);">
   <img src="ctv_images/18arch.jpg" data-rjs="2">
   </a></div>

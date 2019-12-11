@@ -20,13 +20,15 @@ video.xml
 *.xml
 
 # Internal Directories
-/booked
+/booked*
 /cguide
 /pdf
 /protected
 /templates
 /tutorials
 /test
+/cchsroomreservations
+/segments
 
 # OS specific files
 .DS_Store

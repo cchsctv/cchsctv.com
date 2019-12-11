@@ -111,6 +111,19 @@ require 'topnav.php';
 </div>-->
 <!-- CLASS YEAR END -->
 
+<!-- CLASS YEAR START --><a name="19"></a>
+<img class="edge2edge class_of" src="ctv_images/co19.jpg" alt="Class Of 2019" data-rjs="3"><div class="stripe">
+<div class="row"><p class="alum title"><b>2019 SENIOR OFFICERS:</b></div>
+<div class="row"><p class="alum"><b class="name">Gabriela Carbone</b> <i>President,</i> FSU Film School</p></div>
+<div class="row"><p class="alum"><b class="name">Alexa Pichardo</b> <i>Vice President,</i> Florida Atlantic University</p></div>
+<div class="row"><p class="alum"><b class="name">Andrew Rothschild</b> <i>Historian,</i> Florida State University</p></div>
+<div class="row"><p class="alum title"><b>2019 SENIOR STAFF:</b></p></div>
+<div class="row"><p class="alum"><b class="name">Francesca Duarte</b> University of Central Florida</p></div>
+</div>
+<!-- CLASS YEAR END -->
+
+
+
 <!-- CLASS YEAR START --><a name="18"></a>
 <img class="edge2edge class_of" src="ctv_images/co2018.jpg" alt="Class Of 2018" data-rjs="3"><div class="stripe">
 <div class="row"><p class="alum title"><b>2018 SENIOR OFFICERS:</b></div>
@@ -147,7 +160,7 @@ require 'topnav.php';
 <div class="row"><p class="alum"><b class="name">Sergio Owen</b> Broward College</p></div>
 <div class="row"><p class="alum"><b class="name">Kalli Rogers</b> Florida State University</p></div>
 <div class="row"><p class="alum"><b class="name">Justine Russo</b> University of Central Florida</p></div>
-<div class="row"><p class="alum"><b class="name">Anna Villalonga</b> <i>Sports Director,</i> Columbia College Chicago</p></div>
+<div class="row"><p class="alum"><b class="name">Anna Villalonga</b> <i>Sports Director,</i> University of Florida</p></div>
 <div class="row"><p class="alum title"><b>OTHER DEPARTING STAFF:</b></p></div>
 <div class="row"><p class="alum"><b class="name">Kiara Bencosme</b> </p></div>
 <div class="row"><p class="alum"><b class="name">Lexi Delgado</b> <i>Vice President</i></p></div>

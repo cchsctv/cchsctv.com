@@ -161,12 +161,17 @@ require 'topnav.php';
 </div>
 
 
-<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE-->
+<!-- TO CHANGE RED BAR, REPLACE THIS CODE WITH THE BELOW CODE WATCH CTV-->
   <div class="edge2edge bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="edge2edge bar">
     <a href="video.php?autoplay=true">Watch This Week's Episode</a>
-  </p></td></tr></table></div>
+  </p></td></tr></table></div> -->
 
-<!-- TO CHANGE RED BAR, USE THIS CODE
+<!-- TO CHANGE RED BAR, USE THIS CODE FOR HHN -->
+<!--<div class="edge2edge bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="edge2edge bar">
+  <a href="https://cchsctv.com/pdf/hhn.pdf">HHN Field Trip Form: Oct 25th $150 sale dates Sept. 9-13</a>
+</p></td></tr></table></div> -->
+
+<!-- TO CHANGE RED BAR, USE THIS CODE FOR STN
 <div class="edge2edge bar" style="background-image:url(ctv_images/barblank.png);" data-rjs="2"><table><tr><td><p class="edge2edge bar">
   <a href="https://blog.cchsctv.com">STN BLOG - Follow CTV's progress at STN Nationals in Los Angeles</a>
 </p></td></tr></table></div> -->
@@ -185,24 +190,24 @@ require 'topnav.php';
 
 <!--<div style="width:380px; height:400px; background-color:#000000; float:left; border:5px solid white; border-top:0px; border-right:0px; background-image:url(ctv_images/officerbg.jpg); background-position:right;">-->
 <div class="column left" style="background-color:#c30e0e;background-image:url(ctv_images/officerbg.jpg); background-position:center;background-size:cover">
-<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2018-2019 CTV OFFICERS</p>
-<p class="oname">Gabby Carbone</p></td>
+<p class="oname" style="font-weight:bold; padding:10px 0; text-align:center; color:#c30e0e;margin:0">2019-2020 CTV OFFICERS</p>
+<p class="oname">Christopher Will</p></td>
 <p class="oposition">President</p></td>
-<p class="oname">Alexa Pichardo</p></td>
+<p class="oname">Reese Abrahamoff</p></td>
 <p class="oposition">Vice President</p></td>
-<p class="oname">Ethan Silverman</p></td>
-<p class="oposition">Asst Vice President</p></td>
-<p class="oname">Melissa Luque</p></td>
-<p class="oposition">Secretary</p></td>
 <p class="oname">Nicole Nelson</p></td>
+<p class="oposition">Asst Vice President</p></td>
+<p class="oname">Kayla Kissel</p></td>
+<p class="oposition">Secretary</p></td>
+<p class="oname">Emily Aaron</p></td>
 <p class="oposition">Treasurer</p></td>
-<p class="oname">Andrew Rothschild</p></td>
+<p class="oname">Imani Armand</p></td>
 <p class="oposition">Historian</p></td>
-<p class="oname">Matthew Schwam</p></td>
+<p class="oname">Ryan Lewis</p></td>
 <p class="oposition">Business Manager</p></td>
-<p class="oname">Chris Will</p></td>
+<p class="oname">Giovanni Papini</p></td>
 <p class="oposition">Equipment Manager</p></td>
-<p class="oname">Robert Hidalgo</p></td>
+<p class="oname">Brian Becker</p></td>
 <p class="oposition">Operatons Manager</p></td>
 <p class="style" style="padding:10px; text-align:center; font-size:.6em;"><a href="cast.html">View our full cast &raquo;</a></p>
 </div>
