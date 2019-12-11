@@ -112,7 +112,7 @@ require 'topnav.php';
 <!-- CLASS YEAR END -->
 
 <!-- CLASS YEAR START --><a name="19"></a>
-<img class="edge2edge class_of" src="ctv_images/co19.jpg" alt="Class Of 2019" data-rjs="3"><div class="stripe">
+<img class="edge2edge class_of" src="ctv_images/co19.jpg" alt="Class Of 2019" data-rjs="1"><div class="stripe">
 <div class="row"><p class="alum title"><b>2019 SENIOR OFFICERS:</b></div>
 <div class="row"><p class="alum"><b class="name">Gabriela Carbone</b> <i>President,</i> FSU Film School</p></div>
 <div class="row"><p class="alum"><b class="name">Alexa Pichardo</b> <i>Vice President,</i> Florida Atlantic University</p></div>
